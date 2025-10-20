@@ -1,6 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: calc(1vw / 14.4);
+}
+
 body {
   font-family: "PT Root UI", Helvetica, sans-serif;
-  background-color: aquamarine;
+  background-color: rgb(0, 0, 0);
+  font-size: 14rem;
 }
 
 h1 {
@@ -17,4 +26,53 @@ h5 {
 
 p {
   font-weight: 300;
+}
+
+.header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo img {
+  width: 3rem;
+  aspect-ratio: 1 / 1;
+}
+
+.socials {
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.hero {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.hero__content {
+  width: 50%;
+  height: auto;
+}
+
+.hero-title {
+  font-size: 8rem;
+  color: #00cb4e;
+}
+
+.hero-title p {
+  color: #00cb4e;
+  font-size: 2rem;
+}
+
+.hero__media {
+  width: 50%;
+  height: auto;
+}
+
+.hero__media img {
+  display: block;
 }

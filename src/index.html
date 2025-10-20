@@ -4,17 +4,69 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Главная</title>
+    <link
+      rel="shortcut icon"
+      href="/src/img/icons/favicon.svg"
+      type="image/x-icon"
+    />
   </head>
   <body>
-    <h1>ЛЯЛЯЛ ВИКА</h1>
-    <h1>Главная</h1>
+    <header class="header">
+      <a href="/" class="logo">
+        <img
+          src="/src/img/icons/favicon.svg"
+          alt="logo"
+          width="64"
+          height="64"
+          decoding="async"
+          fetchpriority="high"
+        />
+        <span class="logo__text">TRACE</span>
+      </a>
 
-    <h2>Категории</h2>
+      <div class="socials">
+        <a href="#" aria-label="Telegram"
+          ><img src="/src/img/icons/telegram.svg" alt="Telegram"
+        /></a>
+        <a href="#" aria-label="VK"
+          ><img src="/src/img/icons/vk.svg" alt="VK"
+        /></a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__content">
+          <h1 id="hero-title">Вклад в природу — это ваш актив</h1>
+          <p>
+            Мы TRACE — онлайн-сервис о переработке и об экологичных привычках,
+            которые окупаются
+          </p>
+        </div>
+
+        <figure class="hero__media" aria-hidden="true">
+          <img
+            src="/src/img/figure-bottles.svg"
+            width="500"
+            height="400"
+            decoding="async"
+            fetchpriority="high"
+            alt="bottle-illusration"
+          />
+        </figure>
+      </section>
+    </main>
+
+    <!-- <div class="tire-list">
+      <h2>Категории</h2>
     <ul>
       <li><a href="pages/about.html">О нас</a></li>
       <li><a href="pages/study.html">Обучение</a></li>
       <li><a href="pages/articles.html">Статьи</a></li>
       <li><a href="pages/map.html">Карта</a></li>
     </ul>
+    </div> -->
+
+    <!-- <input type="email" autocomplete="email" inputmode="email" /> -->
   </body>
 </html>
