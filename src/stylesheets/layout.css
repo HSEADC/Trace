@@ -1,20 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: calc(1vw / 14.4);
+}
 body {
-  font-family: "PT Root UI", Helvetica, sans-serif;
-  background-color: aquamarine;
-}
-
-h1 {
-  font-weight: 700;
-}
-
-h2 {
-  font-weight: 500;
-}
-
-h5 {
-  font-weight: 400;
-}
-
-p {
-  font-weight: 300;
+  font-family: 'PT Root UI', Helvetica, sans-serif;
+  background-color: #333;
+  font-size: 20rem;
 }
