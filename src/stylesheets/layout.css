@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+<<<<<<< HEAD
 
 html {
   font-size: calc(1vw / 19.2);
@@ -156,4 +157,13 @@ ul {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+=======
+html {
+  font-size: calc(1vw / 14.4);
+}
+body {
+  font-family: 'PT Root UI', Helvetica, sans-serif;
+  background-color: #333;
+  font-size: 20rem;
+>>>>>>> main
 }

@@ -1,19 +1,36 @@
 @font-face {
+<<<<<<< HEAD
   font-family: "DIN Condensed";
   src: url("../fonts/DINCondensed-Regular.woff"),
     ("../fonts/DINCondensed-Regular.woff2");
+=======
+  font-family: 'DIN Condensed';
+  src: url('../fonts/DINCondensed-Regular.woff'),
+    ('../fonts/DINCondensed-Regular.woff2');
+>>>>>>> main
   font-weight: 400;
 }
 
 @font-face {
+<<<<<<< HEAD
   font-family: "Futura PT Condensed";
   src: url("../fonts/futura_pt_cond_bold.woff"),
     ("../fonts/futura_pt_cond_bold.woff2");
+=======
+  font-family: 'Futura PT Condensed';
+  src: url('../fonts/futura_pt_cond_bold.woff'),
+    ('../fonts/futura_pt_cond_bold.woff2');
+>>>>>>> main
   font-weight: 700;
 }
 
 @font-face {
+<<<<<<< HEAD
   font-family: "Helvetica Neue";
   src: url("../fonts/HelveticaNeueCyr-Medium.woff");
+=======
+  font-family: 'Helvetica Neue';
+  src: url('../fonts/HelveticaNeueCyr-Medium.woff');
+>>>>>>> main
   font-weight: 500;
 }
