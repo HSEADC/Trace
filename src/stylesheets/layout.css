@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+<<<<<<< HEAD
 
 html {
   font-size: calc(1vw / 14.4);
@@ -26,6 +27,15 @@ h5 {
 
 p {
   font-weight: 300;
+=======
+html {
+  font-size: calc(1vw / 14.4);
+}
+body {
+  font-family: 'PT Root UI', Helvetica, sans-serif;
+  background-color: #333;
+  font-size: 20rem;
+>>>>>>> f323a3b239eaa1a6ad17239bf4d3234c76704b32
 }
 
 .header {
