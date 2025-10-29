@@ -3,76 +3,110 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<<<<<<< HEAD
     <title>Главная</title>
-    <link
-      rel="shortcut icon"
-      href="/src/img/icons/favicon.svg"
-      type="image/x-icon"
+    <link rel="shortcut icon" href="./img/icons/favicon.svg" type="image/x-icon"
     />
   </head>
   <body>
+<!-- sunshine -->
+    <div class="load-sweep" id="loadSweep"></div>
+
+    <!-- header -->
     <header class="header">
-      <a href="/" class="logo">
+      <a href="index.html" class="logo">
         <img
-          src="/src/img/icons/favicon.svg"
-          alt="logo"
-          width="64"
-          height="64"
-          decoding="async"
-          fetchpriority="high"
-        />
+          src="./img/icons/favicon.svg" alt="logo"/>
         <span class="logo__text">TRACE</span>
       </a>
 
       <div class="socials">
-        <a href="#" aria-label="Telegram"
-          ><img src="/src/img/icons/telegram.svg" alt="Telegram"
-        /></a>
-        <a href="#" aria-label="VK"
-          ><img src="/src/img/icons/vk.svg" alt="VK"
-        /></a>
+        <a href="https://t.me/trace_media" target="_blank">
+          <img src="./img/icons/telegram.svg" alt="Telegram"/>
+        </a>
+        <a href="https://vk.com/club233568845">
+          <img src="./img/icons/vk.svg" alt="VK"/>
+      </a>
       </div>
     </header>
 
     <main>
-      <section class="hero" aria-labelledby="hero-title">
+      <!-- HERO -->
+      <section class="hero">
         <div class="hero__content">
           <h1 id="hero-title">Вклад в природу — это ваш актив</h1>
-          <p>
-            Мы TRACE — онлайн-сервис о переработке и об экологичных привычках,
+          <p id="hero-text">
+            Мы TRACE — онлайн-сервис о переработке <br> и об экологичных привычках,
             которые окупаются
           </p>
         </div>
 
-        <figure class="hero__media" aria-hidden="true">
+        <div class="hero__media">
           <img
-            src="/src/img/figure-bottles.svg"
-            width="500"
-            height="400"
+            src="./img/figure-bottles.svg"
             decoding="async"
             fetchpriority="high"
             alt="bottle-illusration"
           />
-        </figure>
+        </div>
       </section>
+
+      <section class="dashboard">
+        <!-- ЛЕВЫЙ БЛОК: Карточка дня -->
+        <article class="feature-card">
+          <h2 class="feature-card__title">Карточка дня</h3>
+          <p class="feature-card__text">
+            Каждая третья футболка из полиэстера сделана из переработанных
+            пластиковых бутылок
+          </p>
+          <a class="feature-card__more" href="/articles"
+            >Увидеть больше статей</a
+          >
+        </article>
+
+        <!-- ПРАВЫЙ БЛОК: плитки-навигация -->
+        <nav class="tiles">
+          <ul class="tiles__list">
+            <li class="tile">
+              <a class="tile__link" href="./pages/about.html" target="_blank">
+                <span class="tile__label">О нас</span>
+                <span class="tile__arrow"><img class="arrow__img" src="./img/Arrow.svg" alt="arrow"></span>
+              </a>
+            </li>
+            <li class="tile">
+              <a class="tile__link" href="./pages/study.html" target="_blank">
+                <span class="tile__label">Обучение</span>
+                                <span class="tile__arrow"><img class="arrow__img" src="./img/Arrow.svg" alt="arrow"></span>
+
+              </a>
+            </li>
+            <li class="tile">
+              <a class="tile__link" href="./pages/articles.html" target="_blank">
+                <span class="tile__label">Статьи</span>
+                                <span class="tile__arrow"><img class="arrow__img" src="./img/Arrow.svg" alt="arrow"></span>
+
+              </a>
+            </li>
+            <li class="tile">
+              <a class="tile__link" href="./pages/map.html" target="_blank">
+                <span class="tile__label">Карта</span>
+                                <span class="tile__arrow"><img class="arrow__img" src="./img/Arrow.svg" alt="arrow"></span>
+
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+
+      <section class="formbox">
+
+        <h3>Узнай о запуске первым!</h3>
+
+  <form action="https://formspree.io/f/{lunyco@mail.ru}" method="post">
+    <input type="email" name="Email" id="email" placeholder="Введите ваш email..." required>
+    <button class="button__email" type="submit">Отправить</button>
+  </form>
+      </section>
+
     </main>
-
-    <!-- <div class="tire-list">
-      <h2>Категории</h2>
-    <ul>
-      <li><a href="pages/about.html">О нас</a></li>
-      <li><a href="pages/study.html">Обучение</a></li>
-      <li><a href="pages/articles.html">Статьи</a></li>
-      <li><a href="pages/map.html">Карта</a></li>
-    </ul>
-    </div> -->
-
-    <!-- <input type="email" autocomplete="email" inputmode="email" /> -->
   </body>
-=======
-    <title></title>
-  </head>
-  <body></body>
->>>>>>> f323a3b239eaa1a6ad17239bf4d3234c76704b32
 </html>
