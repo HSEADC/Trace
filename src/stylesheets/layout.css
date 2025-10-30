@@ -31,6 +31,11 @@ a {
   box-sizing: border-box;
 }
 
+.media-img-header {
+  width: 3vw;
+  height: 3vw;
+}
+
 .logo {
   width: 6vw;
   height: 4vw;
