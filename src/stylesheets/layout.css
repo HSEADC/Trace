@@ -45,6 +45,16 @@ a {
   margin: 20rem 0 0 0;
 }
 
+.logo-img {
+  height: 5vw;
+  width: 10vw;
+}
+
+.media-img {
+  height: 5vw;
+  width: 10vw;
+}
+
 .socials {
   width: 6vw;
   height: auto;
@@ -97,12 +107,30 @@ a {
 }
 
 .hero__media {
+  left: -4vw;
+  background-repeat: no-repeat;
   width: 50%;
-  height: auto;
+  top: 1vw;
+  display: block;
   position: relative;
+  height: 39vw;
+  background-image: url(../img/figure-bottles.svg);
+  cursor: pointer;
+  background-size: contain;
+  will-change: transform;
+  animation: heroMove 1s steps(2, jump-none) infinite alternate;
 }
 
-.hero__media img {
+@keyframes heroMove {
+  0% {
+    background-image: url(../img/figure-bottles.svg);
+  }
+  100% {
+    background-image: url(../img/figure-bottles_two.svg);
+  }
+}
+
+/* .hero__media img {
   top: -4vw;
   display: block;
   position: relative;
@@ -110,7 +138,7 @@ a {
   height: 45vw;
   width: 47vw;
   max-width: 100%;
-}
+} */
 
 .dashboard {
   width: calc(100% - 40rem);
@@ -119,12 +147,13 @@ a {
   justify-content: space-between;
   margin: 20rem;
   box-sizing: border-box;
+  z-index: 2;
 }
 
 .feature-card {
   background-color: #fff;
   width: 50vw;
-  height: 57vw;
+  height: 47vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -145,11 +174,40 @@ a {
   margin: 20rem;
 }
 
+.botton-part {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 0rem 0 20rem;
+}
+
+.botton-part__illustration {
+  flex: 0 0 auto;
+  width: 30vw;
+  height: 24vw;
+  background-image: url(../img/cloth-stroke.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
+  will-change: transform;
+  animation: clothMove 1s steps(2, jump-none) infinite alternate;
+}
+
+@keyframes clothMove {
+  0% {
+    background-image: url(../img/cloth-stroke.svg);
+  }
+  100% {
+    background-image: url(../img/cloth-fill.svg);
+  }
+}
+
 ol,
 ul {
   flex-wrap: wrap;
   width: 100%;
-  max-width: 60vw;
+  max-width: 70vw;
   display: flex;
   list-style: none;
   margin: 0;
@@ -160,22 +218,24 @@ ul {
   font-family: "Helvetica Neue";
   font-size: 32rem;
   color: #101010;
-  margin: 20rem;
+  flex: 0 0 auto;
+  white-space: nowrap;
+  margin: 20rem 0;
 }
 
 .tiles {
   flex-direction: row;
   width: 100%;
-  max-width: 60vw;
-  height: 28vw;
+  max-width: 47vw;
+  height: 17vw;
   display: flex;
   flex-wrap: wrap;
   box-sizing: border-box;
 }
 
 .tile {
-  width: calc(49% - 10rem);
-  height: 28vw;
+  width: calc(48% - 10rem);
+  height: 23vw;
   margin: 0 0 20rem 20rem;
   display: flex;
   flex-direction: column;
@@ -201,12 +261,12 @@ ul {
 .tile__link {
   display: flex;
   flex-direction: column;
-  gap: 20vw;
+  gap: 15vw;
   margin: 10rem 0 0 20rem;
 }
 
 .tile__arrow {
-  margin: 0 0 0 430rem;
+  margin: 0 0 0 300rem;
   width: 4vw;
   height: 3vw;
   display: flex;

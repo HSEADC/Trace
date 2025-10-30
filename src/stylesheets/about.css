@@ -17,7 +17,7 @@
 }
 
 .hero__about {
-  width: 100vw;
+  width: 98vw;
   height: 30vw;
   display: flex;
   justify-content: center;
@@ -160,6 +160,7 @@
 
 /* Профиль */
 .creater-card__profile {
+  width: 21vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -172,6 +173,11 @@
   width: 9vw;
   height: 9vw;
   margin: 70rem 0 25rem 0;
+}
+
+.creater-card__img {
+  width: 8vw;
+  height: 8vw;
 }
 
 .creater__text {
@@ -213,19 +219,113 @@
   justify-content: space-between;
 }
 
-/* swiper */
-.mySwiper {
-  width: 100%;
-  height: 35vw;
+/* Контейнер со скроллом */
+.creater-scroll {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 2vw;
+  padding: 2vw;
+  scrollbar-width: none; /* Firefox */
+}
+.creater-scroll::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
 }
 
-.swiper-wrapper {
+/* Карточки */
+.creater-card {
+  flex: 0 0 75vw; /* ширина каждой карточки */
+  height: 30vw;
+  background-color: #101010;
+  border: 0.2vw solid #5a5a5a;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  scroll-snap-align: center;
+  box-sizing: border-box;
 }
 
-.swiper-slide {
+/* Остальной твой стиль оставляем как есть */
+.line-one__text {
+  gap: 25vw;
+  margin: 50rem;
   display: flex;
+}
+
+.line-two__levels {
+  margin: 0 0 0 50rem;
+  display: flex;
+  width: 42vw;
+  height: 1vw;
+  background-color: #4c4c4c;
+  border-radius: 1vw;
+}
+
+.line-inside__levels {
+  width: 10vw;
+  height: 1vw;
+  background-color: #00cb4e;
+  border-radius: 1vw;
+}
+
+.line-three__text {
+  display: flex;
+  margin: 40rem 0 0 0;
+}
+
+.line-text__one {
+  width: 10vw;
+  margin: 0 100rem 0 50rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.green-number {
+  font-size: 152rem;
+  color: #00cb4e;
+  font-family: "DIN Condensed";
+}
+
+.line-text__one h6 {
+  color: #fff;
+  font-size: 20rem;
+  width: 10vw;
+  text-align: center;
+}
+
+.divider {
+  width: 0.2vw;
+  height: 80%;
+  background-color: #5a5a5a;
+  margin: 0 2vw;
+}
+
+.creater-card__profile {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.creater-card__profile img {
+  width: 9vw;
+  height: 9vw;
+  margin: 70rem 0 25rem 0;
+}
+
+.upgrade-btn {
+  margin-top: 1vw;
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 0.6vw 1.2vw;
+  border-radius: 0.5vw;
+  font-size: 18rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.upgrade-btn:hover {
+  background-color: #e05500;
 }

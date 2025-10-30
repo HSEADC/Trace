@@ -4,28 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Главная</title>
-    <link rel="shortcut icon" href="./img/icons/favicon.svg" type="image/x-icon"
+    <link
+      rel="shortcut icon"
+      href="./img/icons/favicon.svg"
+      type="image/x-icon"
     />
   </head>
   <body>
-<!-- sunshine -->
+    <!-- sunshine -->
     <div class="load-sweep" id="loadSweep"></div>
 
     <!-- header -->
     <header class="header">
       <a href="index.html" class="logo">
-        <img
-          src="./img/icons/favicon.svg" alt="logo"/>
+        <img class="logo-img" src="./img/icons/favicon.svg" alt="logo" />
         <span class="logo__text">TRACE</span>
       </a>
 
       <div class="socials">
         <a href="https://t.me/trace_media" target="_blank">
-          <img src="./img/icons/telegram.svg" alt="Telegram"/>
+          <img
+            class="media-img"
+            src="./img/icons/telegram.svg"
+            alt="Telegram"
+          />
         </a>
         <a href="https://vk.com/club233568845">
-          <img src="./img/icons/vk.svg" alt="VK"/>
-      </a>
+          <img class="media-img" src="./img/icons/vk.svg" alt="VK" />
+        </a>
       </div>
     </header>
 
@@ -35,32 +41,35 @@
         <div class="hero__content">
           <h1 id="hero-title">Вклад в природу — это ваш актив</h1>
           <p id="hero-text">
-            Мы TRACE — онлайн-сервис о переработке <br> и об экологичных привычках,
-            которые окупаются
+            Мы TRACE — онлайн-сервис о переработке <br />
+            и об экологичных привычках, которые окупаются
           </p>
         </div>
 
         <div class="hero__media">
-          <img
+          <!-- <img
             src="./img/figure-bottles.svg"
             decoding="async"
             fetchpriority="high"
             alt="bottle-illusration"
-          />
+          /> -->
         </div>
       </section>
 
       <section class="dashboard">
         <!-- ЛЕВЫЙ БЛОК: Карточка дня -->
         <article class="feature-card">
-          <h2 class="feature-card__title">Карточка дня</h3>
+          <h2 class="feature-card__title">Карточка дня</h2>
           <p class="feature-card__text">
             Каждая третья футболка из полиэстера сделана из переработанных
             пластиковых бутылок
           </p>
-          <a class="feature-card__more" href="/articles"
-            >Увидеть больше статей</a
-          >
+          <div class="botton-part">
+            <a class="feature-card__more" href="/articles"
+              >Увидеть больше статей</a
+            >
+            <div class="botton-part__illustration" aria-hidden="true"></div>
+          </div>
         </article>
 
         <!-- ПРАВЫЙ БЛОК: плитки-навигация -->
@@ -69,28 +78,37 @@
             <li class="tile">
               <a class="tile__link" href="./pages/about.html" target="_blank">
                 <span class="tile__label">О нас</span>
-                <span class="tile__arrow"><img class="arrow__img" src="./img/Arrow.svg" alt="arrow"></span>
+                <span class="tile__arrow"
+                  ><img class="arrow__img" src="./img/Arrow.svg" alt="arrow"
+                /></span>
               </a>
             </li>
             <li class="tile">
               <a class="tile__link" href="./pages/study.html" target="_blank">
                 <span class="tile__label">Обучение</span>
-                                <span class="tile__arrow"><img class="arrow__img" src="./img/Arrow.svg" alt="arrow"></span>
-
+                <span class="tile__arrow"
+                  ><img class="arrow__img" src="./img/Arrow.svg" alt="arrow"
+                /></span>
               </a>
             </li>
             <li class="tile">
-              <a class="tile__link" href="./pages/articles.html" target="_blank">
+              <a
+                class="tile__link"
+                href="./pages/articles.html"
+                target="_blank"
+              >
                 <span class="tile__label">Статьи</span>
-                                <span class="tile__arrow"><img class="arrow__img" src="./img/Arrow.svg" alt="arrow"></span>
-
+                <span class="tile__arrow"
+                  ><img class="arrow__img" src="./img/Arrow.svg" alt="arrow"
+                /></span>
               </a>
             </li>
             <li class="tile">
               <a class="tile__link" href="./pages/map.html" target="_blank">
                 <span class="tile__label">Карта</span>
-                                <span class="tile__arrow"><img class="arrow__img" src="./img/Arrow.svg" alt="arrow"></span>
-
+                <span class="tile__arrow"
+                  ><img class="arrow__img" src="./img/Arrow.svg" alt="arrow"
+                /></span>
               </a>
             </li>
           </ul>
@@ -98,15 +116,19 @@
       </section>
 
       <section class="formbox">
-
         <h3>Узнай о запуске первым!</h3>
 
-  <form action="https://formspree.io/f/{lunyco@mail.ru}" method="post">
-    <input type="email" name="Email" id="email" placeholder="Введите ваш email..." required>
-    <button class="button__email" type="submit">Отправить</button>
-  </form>
+        <form action="https://formspree.io/f/{lunyco@mail.ru}" method="post">
+          <input
+            type="email"
+            name="Email"
+            id="email"
+            placeholder="Введите ваш email..."
+            required
+          />
+          <button class="button__email" type="submit">Отправить</button>
+        </form>
       </section>
-
     </main>
   </body>
 </html>
