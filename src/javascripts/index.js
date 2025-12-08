@@ -2,29 +2,29 @@ import "../stylesheets/style.css";
 
 // sunshine
 
-window.addEventListener("load", () => {
-  const overlay = document.getElementById("loadSweep");
+// window.addEventListener("load", () => {
+//   const overlay = document.getElementById("loadSweep");
 
-  const onAnimationEnd = (e) => {
-    if (e.target !== overlay && e.animationName === "sweep") {
-      overlay.classList.add("done");
-    }
-  };
-  overlay.addEventListener("animationend", onAnimationEnd, { once: true });
+//   const onAnimationEnd = (e) => {
+//     if (e.target !== overlay && e.animationName === "sweep") {
+//       overlay.classList.add("done");
+//     }
+//   };
+//   overlay.addEventListener("animationend", onAnimationEnd, { once: true });
 
-  overlay.addEventListener(
-    "transitionend",
-    () => {
-      overlay.remove();
-    },
-    { once: true }
-  );
+//   overlay.addEventListener(
+//     "transitionend",
+//     () => {
+//       overlay.remove();
+//     },
+//     { once: true }
+//   );
 
-  setTimeout(() => {
-    overlay.classList.add("done");
-    setTimeout(() => overlay.remove(), 350);
-  }, 1600);
-});
+//   setTimeout(() => {
+//     overlay.classList.add("done");
+//     setTimeout(() => overlay.remove(), 350);
+//   }, 1600);
+// });
 
 // noise
 function generateNoise(opacity = 0.45, density = 0.1, size = 130) {

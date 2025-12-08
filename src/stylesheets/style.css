@@ -1,6 +1,12 @@
 @import "reset.css";
 @import "fonts.css";
 @import "layout.css";
-@import "about.css";
+@import "style-guide.css";
+@import "articles.css";
+@import "game.css";
+@import "tests.css";
 @import "animation.css";
+@import "artical-degree.css";
+@import "artical-cup.css";
+@import "artical-razer.css";
 @import "adaptive.css";

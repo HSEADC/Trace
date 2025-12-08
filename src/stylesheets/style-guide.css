@@ -1,0 +1,333 @@
+.header__navigation {
+  margin: 30rem 50rem 0 0;
+}
+
+.header__navigation a {
+  color: #fff;
+  margin: 0 0 0 70rem;
+  transition: color 0.4s ease, transform 0.4s ease, opacity 0.4s ease;
+  transform-origin: center;
+  display: inline-block;
+}
+
+.header__navigation a:hover {
+  color: #00cb4e;
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.hero__about {
+  width: 98vw;
+  height: 30vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.primary-section {
+  margin: 0 0 40rem 80rem;
+  width: calc(90% - 40rem);
+  gap: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.primary-section__useful-info {
+  width: calc(90% - 40rem);
+  height: 20vw;
+  margin: 0 0 0 20rem;
+  display: flex;
+  flex-direction: column;
+  font-family: "DIN Condensed";
+  font-size: 64rem;
+  text-decoration: none;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.primary-section__about-us {
+  width: calc(60% - 40rem);
+  height: 20vw;
+  background-color: #fff;
+}
+
+.primary-section__title {
+  font-family: "DIN Condensed";
+  font-size: 64rem;
+  margin: 25rem 0 60rem 20rem;
+}
+
+.primary-section__text {
+  font-family: "Helvetica Neue";
+  font-size: 32rem;
+  margin: 0 0 0 20rem;
+}
+
+.hero__content__about {
+  width: calc(70% - 40rem);
+  background-color: #fd6a06;
+}
+
+.about__title {
+  font-family: "DIN Condensed";
+  font-size: 128rem;
+  color: #00cb4e;
+  text-transform: uppercase;
+}
+
+.gradient {
+  width: calc(70% - 40rem);
+  height: 4vw;
+  background: linear-gradient(180deg, rgba(17, 17, 17, 0) 0%, #fd6a06 96%);
+}
+
+.hero__text__about {
+  margin: 42rem 94rem;
+}
+
+.creater-card {
+  margin: 0 0 0 80rem;
+  display: flex;
+  width: calc(100% - 80rem);
+  height: 30vw;
+  background-color: #101010;
+  border: 0.2vw solid #5a5a5a;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.line-one__text {
+  gap: 25vw;
+  margin: 50rem;
+  display: flex;
+}
+
+.line-two__levels {
+  margin: 0 0 0 50rem;
+  display: flex;
+  width: 42vw;
+  height: 1vw;
+  background-color: #4c4c4c;
+  border-radius: 1vw;
+}
+
+.line-inside__levels {
+  width: 10vw;
+  height: 1vw;
+  background-color: #00cb4e;
+  border-radius: 1vw;
+}
+
+.line-three__text {
+  display: flex;
+  margin: 40rem 0 0 0;
+}
+
+.line-text__one {
+  width: 10vw;
+  margin: 0 0 0 170rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.green-number {
+  font-size: 152rem;
+  color: #00cb4e;
+  font-family: "DIN Condensed";
+}
+
+.line-text__one h6 {
+  color: #fff;
+  font-size: 20rem;
+  width: 10vw;
+  text-align: center;
+}
+
+/* Вертикальная линия */
+.divider {
+  width: 0.2vw;
+  height: 80%;
+  background-color: #5a5a5a;
+  margin: 0 2vw;
+}
+
+/* Профиль */
+.creater-card__profile {
+  width: 21vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.creater-card__profile img {
+  width: 9vw;
+  height: 9vw;
+  margin: 70rem 0 25rem 0;
+}
+
+.creater-card__img {
+  width: 8vw;
+  height: 8vw;
+}
+
+.creater__text {
+  color: #fff;
+}
+
+/* Кнопка "Повысить уровень" */
+.upgrade-btn {
+  margin-top: 1vw;
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 0.6vw 1.2vw;
+  border-radius: 0.5vw;
+  font-size: 18rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.upgrade-btn:hover {
+  background-color: #e05500;
+}
+
+.social__img {
+  display: flex;
+  margin: 20rem 0 0 50rem;
+  gap: 1vw;
+}
+
+.footer__about {
+  padding: 5vw 2vw;
+  margin: 90rem 0 0 0;
+  background-color: #101010;
+  border-top: 0.2vw solid #5a5a5a;
+  width: calc(100% - 40rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+/* Контейнер со скроллом */
+.creater-scroll {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 2vw;
+  padding: 2vw;
+  scrollbar-width: none; /* Firefox */
+}
+.creater-scroll::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+/* Карточки */
+.creater-card {
+  flex: 0 0 75vw; /* ширина каждой карточки */
+  height: 30vw;
+  background-color: #101010;
+  border: 0.2vw solid #5a5a5a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  scroll-snap-align: center;
+  box-sizing: border-box;
+}
+
+/* Остальной твой стиль оставляем как есть */
+.line-one__text {
+  gap: 25vw;
+  margin: 50rem;
+  display: flex;
+}
+
+.line-two__levels {
+  margin: 0 0 0 50rem;
+  display: flex;
+  width: 42vw;
+  height: 1vw;
+  background-color: #4c4c4c;
+  border-radius: 1vw;
+}
+
+.line-inside__levels {
+  width: 10vw;
+  height: 1vw;
+  background-color: #00cb4e;
+  border-radius: 1vw;
+}
+
+.line-three__text {
+  display: flex;
+  margin: 40rem 0 0 0;
+}
+
+.line-text__one {
+  width: 10vw;
+  margin: 0 100rem 0 50rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.green-number {
+  font-size: 152rem;
+  color: #00cb4e;
+  font-family: "DIN Condensed";
+}
+
+.line-text__one h6 {
+  color: #fff;
+  font-size: 20rem;
+  width: 10vw;
+  text-align: center;
+}
+
+.divider {
+  width: 0.2vw;
+  height: 80%;
+  background-color: #5a5a5a;
+  margin: 0 2vw;
+}
+
+.creater-card__profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.creater-card__profile img {
+  width: 9vw;
+  height: 9vw;
+  margin: 70rem 0 25rem 0;
+}
+
+.upgrade-btn {
+  margin-top: 1vw;
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 0.6vw 1.2vw;
+  border-radius: 0.5vw;
+  font-size: 18rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.upgrade-btn:hover {
+  background-color: #e05500;
+}
