@@ -4,28 +4,29 @@
 
 // sunshine
 
-window.addEventListener("load", function () {
-  var overlay = document.getElementById("loadSweep");
-  var onAnimationEnd = function onAnimationEnd(e) {
-    if (e.target !== overlay && e.animationName === "sweep") {
-      overlay.classList.add("done");
-    }
-  };
-  overlay.addEventListener("animationend", onAnimationEnd, {
-    once: true
-  });
-  overlay.addEventListener("transitionend", function () {
-    overlay.remove();
-  }, {
-    once: true
-  });
-  setTimeout(function () {
-    overlay.classList.add("done");
-    setTimeout(function () {
-      return overlay.remove();
-    }, 350);
-  }, 1600);
-});
+// window.addEventListener("load", () => {
+//   const overlay = document.getElementById("loadSweep");
+
+//   const onAnimationEnd = (e) => {
+//     if (e.target !== overlay && e.animationName === "sweep") {
+//       overlay.classList.add("done");
+//     }
+//   };
+//   overlay.addEventListener("animationend", onAnimationEnd, { once: true });
+
+//   overlay.addEventListener(
+//     "transitionend",
+//     () => {
+//       overlay.remove();
+//     },
+//     { once: true }
+//   );
+
+//   setTimeout(() => {
+//     overlay.classList.add("done");
+//     setTimeout(() => overlay.remove(), 350);
+//   }, 1600);
+// });
 
 // noise
 function generateNoise() {
