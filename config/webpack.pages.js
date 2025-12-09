@@ -13,6 +13,9 @@ const htmlPages = [
   createPages("./src/pages/articles.html", "./pages/articles.html"),
   createPages("./src/pages/game.html", "./pages/game.html"),
   createPages("./src/pages/tests.html", "./pages/tests.html"),
+  createPages("./src/pages/artical-degree.html", "./pages/artical-degree.html"),
+  createPages("./src/pages/artical-cup.html", "./pages/artical-cup.html"),
+  createPages("./src/pages/artical-razer.html", "./pages/artical-razer.html"),
 ];
 
 module.exports = htmlPages;
