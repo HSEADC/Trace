@@ -1,0 +1,89 @@
+/* =========================
+   C — Component
+   ========================= */
+
+.C_Card {
+  position: relative;
+  width: 420rem;
+  height: 420rem;
+  border-radius: 28rem;
+  overflow: hidden;
+
+  box-shadow: var(--glass-shadow-dark);
+}
+
+/* =========================
+   Q — Quarks
+   ========================= */
+
+/* фон */
+.Q_CardMedia {
+  position: absolute;
+  inset: 0;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transform: scale(1.02);
+}
+
+/* иконка */
+.Q_CardIcon {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* =========================
+   M — Molecules
+   ========================= */
+
+/* стеклянная подложка */
+.M_CardGlass {
+  position: absolute;
+  inset: 0;
+
+  padding: 36rem 34rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 14rem;
+
+  background: var(--glass-bg-dark);
+  backdrop-filter: blur(var(--blur-md));
+  -webkit-backdrop-filter: blur(var(--blur-md));
+}
+
+/* =========================
+   A — Atoms
+   ========================= */
+
+.A_CardIconWrap {
+  position: absolute;
+  top: 64rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 140rem;
+  height: 140rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.A_CardTitle {
+  font: var(--font-h3);
+  color: var(--color-white);
+  margin: 0;
+}
+
+.A_CardText {
+  font: var(--font-body);
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  max-width: 320rem;
+}

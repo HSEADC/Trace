@@ -1,19 +1,25 @@
 @font-face {
-  font-family: 'DIN Condensed';
-  src: url('../fonts/DINCondensed-Regular.woff'),
-    ('../fonts/DINCondensed-Regular.woff2');
+  font-family: "Nasalization";
+  src: url("../fonts/nasalization-rg.woff") format("woff");
   font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'Futura PT Condensed';
-  src: url('../fonts/futura_pt_cond_bold.woff'),
-    ('../fonts/futura_pt_cond_bold.woff2');
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: 'Helvetica Neue';
-  src: url('../fonts/HelveticaNeueCyr-Medium.woff');
+  font-family: "PT Root UI";
+  src: url("../fonts/PTRootUI-Medium.woff2") format("woff2"),
+    url("../fonts/PTRootUI-Medium.woff") format("woff");
   font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Root UI";
+  src: url("../fonts/PTRootUI-Regular.woff2") format("woff2"),
+    url("../fonts/PTRootUI-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }

@@ -1,19 +1,21 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const htmlPages = require("./webpack.pages.js");
+const HtmlWebpackPartialsPlugin = require("html-webpack-partials-plugin");
 
-const webpack = require("webpack");
+const htmlPages = require("./webpack.pages.js");
 const path = require("path");
 
 module.exports = {
   entry: {
     index: "./src/javascripts/index.js",
   },
+
   output: {
     filename: "[name].js",
     path: path.resolve(".", "docs"),
+    clean: true, // чистит docs перед сборкой (не обязательно, но удобно)
   },
+
   module: {
     rules: [
       {
@@ -51,10 +53,44 @@ module.exports = {
       },
     ],
   },
-  plugins: [new MiniCssExtractPlugin(), ...htmlPages],
+
+  plugins: [
+    new MiniCssExtractPlugin(),
+
+    ...htmlPages,
+
+    // partials: header / footer / card / button
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: "./src/components/header/header.html",
+        location: "header",
+        template_filename: "*",
+      },
+      {
+        path: "./src/components/footer/footer.html",
+        location: "footer",
+        template_filename: "*",
+      },
+
+      // components UI
+      {
+        path: "./src/components/card/card.html",
+        location: "card",
+        template_filename: "*",
+      },
+      {
+        path: "./src/components/button/button.html",
+        location: "button",
+        template_filename: "*",
+      },
+    ]),
+  ],
+
   optimization: {
-    minimizer: [new CssMinimizerPlugin()],
+    minimize: true,
+    minimizer: ["...", new CssMinimizerPlugin()],
   },
+
   resolve: {
     fallback: {
       stream: require.resolve("stream-browserify"),

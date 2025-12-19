@@ -1,0 +1,63 @@
+:root {
+  /* =========================
+     COLORS — Base
+     ========================= */
+
+  --color-dark-grey: #34444e;
+  --color-light-grey: #8b9ba5;
+  --color-grey-white: #c0cdd5;
+  --color-white: #fafafa;
+  --color-neon-green: #e8ff01;
+
+  /* =========================
+     COLORS — Semantic
+     ========================= */
+
+  --color-text-primary: var(--color-dark-grey);
+  --color-text-secondary: var(--color-light-grey);
+
+  --color-bg-page: var(--color-grey-white);
+  --color-bg-card: var(--color-white);
+
+  /* =========================
+     COLORS — Gradient
+     ========================= */
+
+  /* ✅ теперь как в header.css: #8696a1 -> #dceaf3 -> #8696a1 */
+  --color-bg-gradient-primary: linear-gradient(
+    90deg,
+    #8696a1 9%,
+    #dceaf3 49%,
+    #8696a1 100%
+  );
+
+  /* =========================
+     TYPOGRAPHY
+     ========================= */
+
+  --font-family-base: "PT Root UI", system-ui, -apple-system, sans-serif;
+  --font-family-display: "Nasalization", "PT Root UI", system-ui, sans-serif;
+
+  --font-h1: 400 96rem/104rem var(--font-family-display);
+  --font-h2: 500 32rem/40rem var(--font-family-base);
+  --font-h3: 500 24rem/32rem var(--font-family-base);
+  --font-body: 500 20rem/24rem var(--font-family-base);
+
+  /* =========================
+     GLASS / BLUR TOKENS
+     ========================= */
+
+  --blur-xs: 4px;
+  --blur-sm: 8px;
+  --blur-md: 12px;
+  --blur-lg: 20px;
+
+  --glass-bg-light: rgba(222, 235, 243, 0.6);
+  --glass-bg-dark: rgba(52, 68, 78, 0.55);
+
+  --glass-border-light: 1px solid rgba(255, 255, 255, 0.35);
+  --glass-border-dark: 1px solid rgba(52, 68, 78, 0.2);
+
+  --glass-shadow-light: 0 6px 18px rgba(52, 68, 78, 0.12);
+  --glass-shadow-dark: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
