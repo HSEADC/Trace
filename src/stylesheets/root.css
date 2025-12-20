@@ -61,3 +61,7 @@
   --glass-shadow-light: 0 6px 18px rgba(52, 68, 78, 0.12);
   --glass-shadow-dark: 0 8px 24px rgba(0, 0, 0, 0.18);
 }
+
+h1 {
+  text-transform: uppercase;
+}
