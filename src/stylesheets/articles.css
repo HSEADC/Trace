@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--color-bg-gradient-primary);
+  font-size: calc(1vw / 19.2);
+  margin: calc(1vw / 19.2);
+} /* 100vw / 1440 */
+
+body {
+  height: auto;
+  margin: 0;
+  padding: 0;
+  background-image: url(../img/articles/Bg_image_articles.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+main {
+  /* width: 100%; */
+  height: 50vw;
+  margin: 3vw 3vw 0 3vw;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+}
+
+.W_First_line,
+.W_Second_line,
+.W_Third_line,
+.W_Fourth_line {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 23vw;
+}
+
+.M_Tg_ad_card {
+  background-color: var(--color-dark-grey);
+  width: 46vw;
+  border-radius: 0.5vw;
+}
+
+.M_30degree_article {
+  padding: 1.5vw;
+  width: 46vw;
+  background-image: url(../img/articles/30degree_article.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.W_second_card_img_text {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 80%;
+}
+
+.W_second_card_img_text img {
+  width: 40%;
+}

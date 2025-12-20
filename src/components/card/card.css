@@ -3,12 +3,11 @@
    ========================= */
 
 .C_Card {
+  width: 23vw;
+  height: 23vw;
   position: relative;
-  width: 420rem;
-  height: 420rem;
-  border-radius: 28rem;
+  border-radius: 0.5vw;
   overflow: hidden;
-
   box-shadow: var(--glass-shadow-dark);
 }
 
