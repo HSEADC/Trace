@@ -59,49 +59,119 @@
   <body>
     <header></header>
     <!-- проверка -->
-    <main>
-      <nav class="header-nav__menu"></nav>
+    <main class="W_index_margins">
+      <!-- <nav class="header-nav__menu"></nav>
         <a class="header-nav__link" href="index.html">Главная</a>
         <a class="header-nav__link" href="./pages/articles.html">Статьи</a>
         <a class="header-nav__link" href="./pages/game.html">Интерактив</a>
         <a class="header-nav__link" href="./pages/tests.html">Тесты</a>
-      </nav>
-      
-      <article class="C_Card">
-          <div class="M_CardClip">
-            <div class="Q_CardMedia" style="background-image: url('#')"></div>
+      </nav> -->
+      <section class="W_First_screen-index">
+        <img class="Q_LogoImg" src="#" alt="logo-img" />
+        <h2>
+          TRACE — онлайн-сервис о переработке. Узнай, как отходы превращать в
+          доходы!
+        </h2>
+        <section class="C_DayCard">
+          <div class="M_DayCardStack">
+            <!-- задняя карточка 2 -->
+            <div class="Q_DayCardBack Q_DayCardBack--far"></div>
 
-            <div class="M_CardGlass">
-              <a class="A_CardBadge" href="#" aria-label="Тег карточки">
-                <img
-                  class="Q_CardBadgeIcon"
-                  src="https://raw.githubusercontent.com/HSEADC/Trace/45b6fece0bc3399b49999054eec49a4a4fc486af/src/img/card/Arrow-card-img.svg"
-                  alt="стрелка"
-                />
-              </a>
+            <!-- задняя карточка 1 -->
+            <div class="Q_DayCardBack Q_DayCardBack--near"></div>
 
-              <div class="A_CardIconWrap">
-                <img class="Q_CardIcon" src="#" alt="Иконка карточки" />
+            <!-- основная карточка -->
+            <div class="M_DayCardBox">
+              <div class="M_DayCardHead">
+                <h3 class="A_DayCardTitle">Карточка дня</h3>
+
+                <button
+                  class="Q_DayCardInfo"
+                  type="button"
+                  aria-label="Информация"
+                >
+                  <span class="Q_DayCardInfoIcon">i</span>
+                </button>
               </div>
 
-              <h3 class="A_CardTitle">А в чём выгода?</h3>
-              <p class="A_CardText">
-                Как правильно сортировать отходы дома и получать за это «плюшки»
+              <p class="A_DayCardText">
+                По оценкам Всемирного банка, загрязнения воздуха обходятся
+                мировой экономике в $ 8.1 трлн ежегодно из-за падения
+                производительности и здоровья людей
               </p>
             </div>
           </div>
-        </article>
+        </section>
+      </section>
 
-<!-- обычная -->
+      <section class="W_Second_screen-index">
+        <div class="W_Second_screen-Text-Bottom">
+          <h1>Бросай!</h1>
+          <h2 class="h2-second-screen">
+            Каждый ловкий твой бросок <br />
+            сортирует мусорок
+          </h2>
+          <button class="A_Button A_Button--primary" disabled>
+            <a href="./pages/game.html" class="A_Button A_Button--primary"
+              >Играть</a
+            >
+          </button>
+        </div>
+        <img
+          class="Q_Trashers"
+          src="./img/index-img/trashers.png"
+          alt="мусорки"
+        />
+      </section>
 
+      <section class="W_Third_screen-index">
+        <h1 class="Q_text_read">Читай</h1>
+        <div class="W_Third_screen-line-index">
+          <h2>Последние новости</h2>
+          <div class="W_cards-index"></div>
+        </div>
+        <div class="W_Third_screen-line-index">
+          <h2>Рекомендация для вас</h2>
+          <div class="W_cards-index"></div>
+        </div>
+        <div class="W_button_third_screen">
+          <button class="A_Button A_Button--primary" disabled>
+            <a href="./pages/articles.html" class="A_Button A_Button--primary"
+              >Читать все статьи</a
+            >
+          </button>
+        </div>
+        <div class="O_ad_vk">
+          <div class="W_Second_screen-Text-Bottom">
+            <h1>Может в вк?</h1>
+            <h2 class="h2-second-screen">
+              В сообществе пишем экологично,<br />
+              без лишнего информационного мусора
+            </h2>
+            <button class="A_Button A_Button--primary" disabled>
+              <a
+                href="https://vk.com/club233568845"
+                class="A_Button A_Button--primary"
+                >Подписаться</a
+              >
+            </button>
+          </div>
+        </div>
 
-
-
-
-<button class="A_Button A_Button--primary" disabled><a href="#" class="A_Button A_Button--primary"> Узнать подробнее </a>
-</button>
-
-
+        <div class="W-about-block">
+          <h1 class="Q_Titile-about-block">О TRACE</h1>
+          <h2 class="Q_h2-about-block">
+            Медиа-сервис про привычки, которые спасают планету <br />
+            и ваш кошелек. Узнайте, как выгодно сохранить<br />
+            экологию вместе с Trace
+          </h2>
+          <button class="A_Button A_Button--primary" disabled>
+            <a href="./pages/about.html" class="A_Button A_Button--primary"
+              >Узнать подробнее</a
+            >
+          </button>
+        </div>
+      </section>
     </main>
 
     <footer></footer>

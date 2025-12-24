@@ -36,12 +36,12 @@
      TYPOGRAPHY
      ========================= */
 
-  --font-family-base: 'PT Root UI', system-ui, -apple-system, sans-serif;
-  --font-family-display: 'Nasalization', 'PT Root UI', system-ui, sans-serif;
+  --font-family-base: "PT Root UI", system-ui, -apple-system, sans-serif;
+  --font-family-display: "Nasalization", "PT Root UI", system-ui, sans-serif;
 
-  --font-h1: 400 96rem/104rem var(--font-family-display);
-  --font-h2: 500 32rem/40rem var(--font-family-base);
-  --font-h3: 500 24rem/32rem var(--font-family-base);
+  --font-h1: 400 96rem/122rem var(--font-family-display);
+  --font-h2: 400 32rem/40rem var(--font-family-base);
+  --font-h3: 400 24rem/32rem var(--font-family-base);
   --font-body: 400 20rem/24rem var(--font-family-base);
 
   /* =========================
@@ -63,12 +63,37 @@
   --glass-shadow-dark: 0 8px 24px rgba(0, 0, 0, 0.18);
 }
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--color-bg-gradient-primary);
+  font-size: calc(1vw / 19.2);
+  margin: calc(1vw / 19.2);
+} /* 100vw / 1440 */
+
+body {
+  background-image: none;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
+  font: var(--font-h1);
+  color: var(--color-white);
   text-transform: uppercase;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  outline: none;
 }
 
 main {
   height: 50vw;
-  margin: 3vw 3vw 0 3vw;
+  margin: 3vw 3vw 3vw 3vw;
   height: auto;
 }
