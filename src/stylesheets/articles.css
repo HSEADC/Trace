@@ -28,6 +28,10 @@ h2 {
   font: var(--font-h2);
 }
 
+.h2_articles {
+  margin-bottom: 1vw;
+}
+
 h3 {
   font: var(--font-h3);
 }
@@ -55,14 +59,14 @@ h3 {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
-  width: 46vw;
+  width: 45vw;
   border-radius: 1.5vw;
   color: var(--color-white);
 }
 
 .M_30degree_article {
   padding: 2vw;
-  width: 46vw;
+  width: 45vw;
   background-image: url(../img/articles/30degree_article.png);
   background-size: contain;
   background-repeat: no-repeat;
