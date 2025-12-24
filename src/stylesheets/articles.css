@@ -18,6 +18,11 @@ body {
   background-position: right;
 }
 
+.W_articles_margins {
+  padding: 0;
+  margin: 0;
+}
+
 a {
   color: inherit;
   text-decoration: none;
