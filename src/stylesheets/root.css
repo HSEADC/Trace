@@ -8,6 +8,7 @@
   --color-grey-white: #c0cdd5;
   --color-white: #fafafa;
   --color-neon-green: #e8ff01;
+  --color-white-bg-card: #ffffff40;
 
   /* =========================
      COLORS — Semantic
@@ -35,13 +36,13 @@
      TYPOGRAPHY
      ========================= */
 
-  --font-family-base: "PT Root UI", system-ui, -apple-system, sans-serif;
-  --font-family-display: "Nasalization", "PT Root UI", system-ui, sans-serif;
+  --font-family-base: 'PT Root UI', system-ui, -apple-system, sans-serif;
+  --font-family-display: 'Nasalization', 'PT Root UI', system-ui, sans-serif;
 
   --font-h1: 400 96rem/104rem var(--font-family-display);
   --font-h2: 500 32rem/40rem var(--font-family-base);
   --font-h3: 500 24rem/32rem var(--font-family-base);
-  --font-body: 500 20rem/24rem var(--font-family-base);
+  --font-body: 400 20rem/24rem var(--font-family-base);
 
   /* =========================
      GLASS / BLUR TOKENS
