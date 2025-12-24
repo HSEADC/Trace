@@ -1,128 +1,211 @@
-* {
-  box-sizing: border-box;
+.W_index_margins {
+  padding: 0;
+  margin: 0;
 }
 
-html {
-  font-size: calc(1vw / 19.2);
-  margin: calc(1vw / 19.2);
-} /* 100vw / 1440 */
-
-body {
-  font-family: "Helvetica Neue";
-  /* background-color: rgb(0, 0, 0); */
-  font-size: 32rem;
+.W_First_screen-index {
+  background-image: url(../img/index-img/First-screen-bg.png);
+  height: 50vw;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
   margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5vw;
+}
+
+.Q_LogoImg {
+  width: 20vw;
+  height: 10vw;
+}
+
+h2 {
+  font: var(--font-h2);
+  width: 32vw;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.C_DayCard {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.M_DayCardStack {
+  position: relative;
+  width: 35vw;
+}
+
+.Q_DayCardBack {
+  position: absolute;
+  inset: 0;
+  border-radius: 1vw;
+  background: rgba(192, 205, 213, 0.3);
+  backdrop-filter: blur(var(--blur-sm));
+  -webkit-backdrop-filter: blur(var(--blur-sm));
+
+  border: var(--glass-border-light);
+}
+
+/* ближняя задняя */
+.Q_DayCardBack--near {
+  transform: translateY(-0.6vw);
+  opacity: 0.7;
+  z-index: 1;
+}
+
+/* дальняя задняя */
+.Q_DayCardBack--far {
+  transform: translateY(-1.2vw);
+  opacity: 0.45;
+  z-index: 0;
+}
+
+.M_DayCardBox {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 1.6vw 1.8vw;
+  border-radius: 1.2vw;
+  background: rgba(192, 205, 213, 0.3);
+  color: var(--color-white);
+  backdrop-filter: blur(var(--blur-md));
+  -webkit-backdrop-filter: blur(var(--blur-md));
+  border: var(--glass-border-light);
+  box-shadow: var(--glass-shadow-light);
+}
+
+.M_DayCardHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1vw;
+  margin-bottom: 1vw;
+}
+
+.A_DayCardTitle {
+  font: var(--font-h3);
+  color: var(--color-white);
+  margin: 0;
+}
+
+.Q_DayCardInfo {
+  width: 2.2vw;
+  height: 2.2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: transparent;
+  border: 0.12vw solid rgba(250, 250, 250, 0.75);
+  color: var(--color-white);
+  cursor: pointer;
   padding: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-  outline: none;
+.Q_DayCardInfoIcon {
+  font: 500 1.2vw/1 var(--font-family-base);
+  transform: translateY(-0.05vw);
 }
 
-.header {
-  margin: 20rem;
-  width: calc(100% - 40rem);
+.A_DayCardText {
+  font: var(--font-body);
+  color: var(--color-white);
+  opacity: 0.9;
+  margin: 0;
+  max-width: 26vw;
+}
+
+/* второй экран */
+.W_Second_screen-index {
+  width: 100%;
+  height: auto;
+  background-image: url(../img/index-img/second-screen-bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+}
+
+.W_Second_screen-Text-Bottom {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 3vw 3vw 3vw 3vw;
+}
+
+h1 {
+  font: var(--font-h1);
+  color: var(--color-white);
+  margin-bottom: 1vw;
+}
+
+.h2-second-screen {
+  text-align: left;
+  margin-bottom: 9vw;
+}
+
+/* третий экран */
+
+.W_Third_screen-index {
+  width: 100%;
+  height: 132vw;
+  background-image: url(../img/index-img/third-screen-bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.Q_text_read {
+  padding: 6vw 0 0 0;
+  text-align: center;
+}
+
+.W_Third_screen-line-index {
+  width: 100%;
+  height: 28vw;
+}
+
+.W_cards-index {
+  width: 100%;
+  height: 23vw;
+  display: flex;
+}
+
+.W_button_third_screen {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.O_ad_vk {
+  background-image: url(../img/index-img/vk-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  margin: 3vw 0;
+  width: 100%;
+  height: auto;
+}
+
+.W-about-block {
+  width: 100%;
   height: auto;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  box-sizing: border-box;
+  justify-content: center;
 }
 
-.media-img-header {
-  width: 3vw;
-  height: 3vw;
+.Q_Titile-about-block {
+  text-align: center;
 }
 
-.logo {
-  width: 6vw;
-  height: 4vw;
-  display: flex;
-  align-items: center;
-}
-
-.logo__text {
-  font-family: "DIN Condensed";
-  color: #ffffff;
-  font-size: 40rem;
-  margin: 20rem 0 0 0;
-}
-
-.logo-img {
-  height: 5vw;
-  width: 10vw;
-}
-
-.media-img {
-  height: 4vw;
-  width: 4vw;
-}
-
-.socials {
-  width: 6vw;
-  height: auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 1vw;
-  margin: 0 20rem 0 0;
-}
-
-.socials a {
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease;
-  transform-origin: center;
-}
-
-.socials a:hover {
-  transform: scale(1.1);
-  opacity: 0.8;
-}
-
-.header-nav {
-  width: calc(100% - 40rem);
-  margin: 20rem auto;
-  padding: 0 20rem;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  box-sizing: border-box;
-  color: black;
-  font-family: "DIN Condensed";
-}
-
-/* логотип */
-.header-nav__logo {
-  font-size: 48rem;
-  text-decoration: none;
-  color: #fff;
-  letter-spacing: 0.05em;
-  transition: opacity 0.3s ease;
-}
-
-.header-nav__logo:hover {
-  opacity: 0.7;
-}
-
-/* меню */
-.header-nav__menu {
-  display: flex;
-  gap: 40rem;
-}
-
-/* ссылки */
-.header-nav__link {
-  font-size: 32rem;
-  text-decoration: none;
-  color: black;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  transform-origin: center;
-}
-
-.header-nav__link:hover {
-  opacity: 0.7;
-  transform: translateY(-2rem);
+.Q_h2-about-block {
+  width: 60vw;
+  margin-bottom: 2vw;
+  text-align: center;
 }
