@@ -15,13 +15,6 @@ body {
   padding: 0;
 }
 
-main {
-  /* width: 100%; */
-  height: 50vw;
-  margin: 3vw 3vw 0 3vw;
-  overflow-x: hidden;
-}
-
 h1 {
   font: var(--font-h1);
   color: var(--color-white);

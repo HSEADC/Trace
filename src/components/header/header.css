@@ -1,7 +1,3 @@
-/* ============================= */
-/* HEADER */
-/* ============================= */
-
 .C_Header {
   height: 4vw;
   display: flex;
@@ -12,39 +8,25 @@
   width: 100%;
   height: 4vw;
   padding: 0 1vw;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   position: relative;
-
-  /* ✅ градиент только из root */
   background: var(--color-bg-gradient-primary);
-
   box-shadow: inset 0 0.25vw 0.25vw rgba(0, 0, 0, 0.25),
     inset 0 -0.5vw 0.875vw rgba(255, 255, 255, 0.18),
     inset 0 0 0 0.0625vw rgba(0, 0, 0, 0.12);
 }
 
-/* ============================= */
-/* LOGO */
-/* ============================= */
-
 .A_HeaderLogoLink {
-  width: 5vw;
+  width: 2vw;
   display: flex;
   align-items: center;
 }
 
 .Q_HeaderLogoImg {
-  width: 1.75vw;
-  height: 1.75vw;
+  width: 2vw;
 }
-
-/* ============================= */
-/* NAV */
-/* ============================= */
 
 .M_HeaderNav {
   display: flex;
@@ -53,24 +35,16 @@
 
 .M_NavPill {
   position: relative;
-
   display: flex;
   align-items: center;
-  gap: 0.5vw;
-
+  gap: 1vw;
   padding: 0.375vw;
   border-radius: 50vw;
-
   background: rgba(255, 255, 255, 0.14);
-
   box-shadow: inset 0 0.25vw 0.25vw rgba(0, 0, 0, 0.25),
     inset 0 -0.375vw 0.625vw rgba(255, 255, 255, 0.18),
     inset 0 0 0 0.0625vw rgba(0, 0, 0, 0.12);
 }
-
-/* ============================= */
-/* INDICATOR */
-/* ============================= */
 
 .Q_NavIndicator {
   position: absolute;
@@ -78,44 +52,29 @@
   bottom: 0.375vw;
   left: 0;
   width: 0;
-
   border-radius: 50vw;
   background: rgba(20, 24, 30, 0.5);
-
   pointer-events: none;
-
   box-shadow: inset 0 0.25vw 0.25vw rgba(0, 0, 0, 0.25),
     inset 0 -0.375vw 0.625vw rgba(0, 0, 0, 0.35),
     0 0.5vw 1.125vw rgba(0, 0, 0, 0.25);
-
   transition: left 0.35s cubic-bezier(0.2, 0.9, 0.2, 1),
     width 0.35s cubic-bezier(0.2, 0.9, 0.2, 1);
 }
 
-/* ============================= */
-/* LINKS */
-/* ============================= */
-
 .A_NavLink {
   position: relative;
   z-index: 1;
-
   height: 2.25vw;
   padding: 0 1vw;
   border-radius: 50vw;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   font: var(--font-h3);
   text-decoration: none;
-
-  /* ✅ цвет из root */
   color: var(--color-text-primary);
-
   background: transparent;
-
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
@@ -123,39 +82,24 @@
   transform: translateY(-0.0625vw);
 }
 
-/* Активный/ховер — белый текст (берём из root базовый white) */
 .A_NavLink:hover,
 .A_NavLink.is-active {
   color: var(--color-white);
 }
 
-/* ============================= */
-/* SOCIAL */
-/* ============================= */
-
 .M_HeaderSocial {
   display: flex;
   align-items: center;
-  gap: 0.625vw;
+  gap: 0.5vw;
 }
 
-/* ✅ только flexbox, без grid */
 .A_SocialLink {
-  width: 2.125vw;
-  height: 2.125vw;
-  border-radius: 50vw;
-
+  width: 2vw;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  background: rgba(255, 255, 255, 0.22);
-
-  box-shadow: inset 0 0.25vw 0.25vw rgba(0, 0, 0, 0.25),
-    inset 0 -0.375vw 0.625vw rgba(255, 255, 255, 0.15);
 }
 
 .Q_SocialImg {
-  width: 1.125vw;
-  height: 1.125vw;
+  width: 2vw;
 }

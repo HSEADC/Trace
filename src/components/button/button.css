@@ -1,0 +1,37 @@
+/* =========================
+   A — Button (base)
+   ========================= */
+
+.A_Button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font: var(--font-body);
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  outline: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background-color 0.2s ease, color 0.2s ease;
+}
+
+.A_Button--primary {
+  width: 14vw;
+  background-color: var(--color-neon-green);
+  border-radius: 1vw;
+  color: var(--color-dark-grey);
+  height: 3.5vw;
+}
+
+.A_Button--primary:hover,
+.A_Button--primary:focus-visible {
+  transform: translateY(-0.15vw);
+  box-shadow: 0 0.6vw 1.4vw rgba(52, 68, 78, 0.22);
+}
+
+.A_Button--primary:active {
+  transform: translateY(0.05vw) scale(0.99);
+
+  box-shadow: 0 0.25vw 0.7vw rgba(52, 68, 78, 0.18);
+}
