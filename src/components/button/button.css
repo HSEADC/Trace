@@ -32,6 +32,5 @@
 
 .A_Button--primary:active {
   transform: translateY(0.05vw) scale(0.99);
-
   box-shadow: 0 0.25vw 0.7vw rgba(52, 68, 78, 0.18);
 }
