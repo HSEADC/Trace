@@ -32,7 +32,7 @@
   gap: 0.5vw;
   inset: 0;
   justify-content: flex-end;
-  padding: 2vw 3vw;
+  padding: 2vw 2vw;
   position: absolute;
   background-color: var(--color-white-bg-card);
 }
@@ -91,9 +91,9 @@
   height: 3.5vw;
   justify-content: center;
   position: absolute;
-  right: 22rem;
+  right: 2vw;
   text-decoration: none;
-  top: 22rem;
+  top: 2vw;
   width: 3.5vw;
   z-index: 3;
 }
