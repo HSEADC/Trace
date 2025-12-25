@@ -1,0 +1,43 @@
+.W_final_article_razer {
+  display: flex;
+  flex-direction: column;
+}
+
+.W_Second_screen_art_razer {
+  background-image: url(../img/articles/article_razer_bg.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.First_vertical_line_art_razer_block {
+  display: flex;
+  flex-direction: row;
+  padding: 0 0 0 3vw;
+  width: 90vw;
+}
+
+.infographic_article-razer_degree_1,
+.infographic-razer_article_degree_2,
+.infographic-razer_article_degree_3,
+.infographic-razer_article_degree_4 {
+  align-content: flex-end;
+  height: 20vw;
+  width: 20vw;
+  margin-right: 10vw;
+}
+
+.Second_vertical_line_art_razer_block {
+  display: flex;
+  flex-direction: column;
+  width: 75vw;
+  padding: 3vw 0 6vw 3vw;
+}
+
+.h2_Second_vertical_line_art_razer_stroke1 {
+  width: 18%;
+}
