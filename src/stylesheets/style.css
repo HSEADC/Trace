@@ -1,18 +1,19 @@
-@import "reset.css";
-@import "root.css";
-@import "fonts.css";
+@import 'reset.css';
+@import 'root.css';
+@import 'fonts.css';
 /* components */
-@import url("../components/header/header.css");
-@import url("../components/footer/footer.css");
-@import url("../components/card/card.css");
-@import url("../components/button/button.css");
+@import url('../components/header/header.css');
+@import url('../components/footer/footer.css');
+@import url('../components/card/card.css');
+@import url('../components/button/button.css');
 
-@import "layout.css";
-@import "style-guide.css";
-@import "articles.css";
-@import "game.css";
-@import "animation.css";
-@import "artical-degree.css";
-@import "artical-cup.css";
-@import "artical-razer.css";
-@import "adaptive.css";
+@import 'layout.css';
+@import 'style-guide.css';
+@import 'articles.css';
+@import 'game.css';
+@import 'animation.css';
+@import 'artical-degree.css';
+@import 'artical-cup.css';
+@import 'artical-razer.css';
+@import 'artical-liquid.css';
+@import 'adaptive.css';
