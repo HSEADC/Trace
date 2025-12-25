@@ -1,7 +1,5 @@
 :root {
-  /* =========================
-     COLORS — Base
-     ========================= */
+  /* COLORS  */
 
   --color-dark-grey: #34444e;
   --color-light-grey: #8b9ba5;
@@ -9,10 +7,9 @@
   --color-white: #fafafa;
   --color-neon-green: #e8ff01;
   --color-white-bg-card: #ffffff40;
+  --color-light-blue: #deebf3;
 
-  /* =========================
-     COLORS — Semantic
-     ========================= */
+  /* COLORS — Semantic*/
 
   --color-text-primary: var(--color-dark-grey);
   --color-text-secondary: var(--color-light-grey);
@@ -20,21 +17,15 @@
   --color-bg-page: var(--color-grey-white);
   --color-bg-card: var(--color-white);
 
-  /* =========================
-     COLORS — Gradient
-     ========================= */
+  /* COLORS — Gradient */
 
-  /* теперь как в header.css: #8696a1 -> #dceaf3 -> #8696a1 */
   --color-bg-gradient-primary: linear-gradient(
-    90deg,
-    #8696a1 9%,
-    #dceaf3 49%,
-    #8696a1 100%
+    135deg,
+    #8b9ba4 18%,
+    #34444e 68%
   );
 
-  /* =========================
-     TYPOGRAPHY
-     ========================= */
+  /* TYPOGRAPHY*/
 
   --font-family-base: "PT Root UI", system-ui, -apple-system, sans-serif;
   --font-family-display: "Nasalization", "PT Root UI", system-ui, sans-serif;
@@ -44,9 +35,7 @@
   --font-h3: 400 24rem/32rem var(--font-family-base);
   --font-body: 400 20rem/24rem var(--font-family-base);
 
-  /* =========================
-     GLASS / BLUR TOKENS
-     ========================= */
+  /* GLASS / BLUR TOKENS */
 
   --blur-xs: 4px;
   --blur-sm: 8px;
