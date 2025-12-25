@@ -50,6 +50,8 @@
 
   --glass-shadow-light: 0 6px 18px rgba(52, 68, 78, 0.12);
   --glass-shadow-dark: 0 8px 24px rgba(0, 0, 0, 0.18);
+
+  scroll-padding-top: 2vw;
 }
 
 * {
@@ -59,7 +61,7 @@
 html {
   background: var(--color-bg-gradient-primary);
   font-size: calc(1vw / 19.2);
-  margin: calc(1vw / 19.2);
+  scroll-behavior: smooth;
 } /* 100vw / 1440 */
 
 body {
