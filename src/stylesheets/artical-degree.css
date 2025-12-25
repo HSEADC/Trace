@@ -94,6 +94,7 @@ a {
 .W_Second_screen_art_degree {
   width: 100%;
   display: flex;
+  flex-direction: column;
   height: 191vw;
   background-image: url(/src/img/articles/article_degree_bg.png);
   background-size: contain;
@@ -105,4 +106,109 @@ a {
   flex-direction: row;
   height: 30vw;
   padding: 9vw 3vw 0;
+}
+
+.First_vertical_line_art_degree {
+  text-align: left;
+  width: 25vw;
+}
+
+.Second_vertical_line {
+  display: flex;
+  flex-direction: column;
+  gap: 3vw;
+  width: 50vw;
+}
+
+.Second_vertical_line_art_degree {
+  text-align: left;
+  width: 50vw;
+}
+
+.W_begin_article_2 {
+  display: flex;
+  flex-direction: row;
+  height: 56vw;
+  padding: 9vw 3vw 0;
+}
+
+.Second_vertical_line_2lev {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  width: 80vw;
+  height: 49vw;
+}
+
+.Second_horizontal_line_2lev {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+  width: 80vw;
+  height: 23vw;
+}
+.Second_horizontal_line_3lev {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+  width: 80vw;
+  height: 23vw;
+  justify-content: right;
+}
+
+.M_CardGlass_articles {
+  background-color: var(--color-white-bg-card);
+  border: var(--glass-border-light);
+  border-radius: 1.5vw;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
+  inset: 0;
+  justify-content: flex-end;
+  padding: 2vw;
+  position: absolute;
+}
+
+.A_CardTitle {
+  width: 20vw;
+}
+
+.A_CardBadge_articles {
+  align-items: center;
+  color: var(--color-white);
+  border-radius: 6vw;
+  border: solid;
+  border-width: 3px;
+  display: flex;
+  height: 3.5vw;
+  justify-content: center;
+  position: absolute;
+  right: 2vw;
+  text-decoration: none;
+  top: 2vw;
+  width: 3.5vw;
+  z-index: 3;
+}
+
+.A_CardIconWrap_articals {
+  align-items: center;
+  display: flex;
+  height: 160rem;
+  justify-content: center;
+  left: 50%;
+  position: absolute;
+  top: 106rem;
+  transform: translateX(-50%);
+  width: 160rem;
+  z-index: 2;
+}
+
+.O_ad_tg {
+  background-image: url(../img/articles/telegram\ add.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  margin: 3vw 0;
+  width: 100%;
+  height: auto;
 }
