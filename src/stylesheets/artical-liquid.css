@@ -105,7 +105,7 @@ a {
   display: flex;
   flex-direction: row;
   height: 24vw;
-  padding: 9vw 3vw 3vw;
+  padding: 9vw 0 0 3vw;
 }
 
 .First_vertical_line_art_liquid_h2 {
@@ -113,11 +113,11 @@ a {
   width: 34vw;
 }
 
-.Second_vertical_line {
+.Second_vertical_line_first_screen {
   display: flex;
   flex-direction: column;
-  gap: 3vw;
-  width: 50vw;
+  width: 70vw;
+  gap: 2vw;
 }
 
 .Second_vertical_line_art_degree {
@@ -215,7 +215,6 @@ a {
   display: flex;
   flex-direction: row;
   width: 93vw;
-  padding-left: 3vw;
 }
 
 .Second_vertical_line_art_degree_block {
@@ -227,6 +226,18 @@ a {
   text-align: left;
   width: 25vw;
   margin-bottom: 9vw;
+}
+
+.First_vertical_line_art_liquid {
+  text-align: left;
+  width: 25vw;
+  padding-left: 3vw;
+}
+
+.First_vertical_line_art_liquid_5 {
+  text-align: left;
+  width: 29vw;
+  padding-left: 3vw;
 }
 
 .W_infographic_article_liquid {
@@ -268,5 +279,31 @@ a {
 .W_begin_article_liquid_5 {
   display: flex;
   flex-direction: row;
-  height: 24vw;
+  height: 10vw;
+}
+
+.Second_vertical_line_liquid {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  width: 15vw;
+}
+
+.Second_vertical_line_liquid2 {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  width: 50vw;
+}
+
+.Second_vertical_line_liq {
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+  width: 75vw;
+}
+
+.Second_vertical_line_art_liquid {
+  text-align: left;
+  width: 35vw;
 }

@@ -125,6 +125,7 @@
   display: block;
   height: auto;
   object-fit: contain;
+  width: 18vw;
 }
 
 .A_CardTitle {
