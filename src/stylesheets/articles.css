@@ -8,7 +8,7 @@ html {
   margin: calc(1vw / 19.2);
 } /* 100vw / 1440 */
 
-body {
+.body_articles {
   height: auto;
   margin: 0;
   padding: 0;
