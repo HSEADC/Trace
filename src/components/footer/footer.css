@@ -83,3 +83,39 @@
   border-color: rgba(255, 255, 255, 0.6);
   outline: none;
 }
+
+@media screen and (max-width: 414px) {
+  .A_FooterTitle {
+    color: var(--color-white);
+    font: var(--font-h3);
+    margin: 0;
+    font-size: 61rem;
+    line-height: 69rem;
+  }
+
+  .A_FooterLink {
+    color: hsla(0, 0%, 100%, 0.7);
+    font: var(--font-body);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 55rem;
+    line-height: 83rem;
+  }
+
+  .A_FooterLogo {
+    display: none;
+  }
+
+  .A_FooterText {
+    font-size: 55rem;
+    line-height: 83rem;
+  }
+
+  .M_FooterSocial {
+    gap: 5.1vw;
+  }
+
+  .Q_SocialIcon {
+    width: 2.2vw;
+  }
+}

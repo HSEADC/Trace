@@ -1,0 +1,324 @@
+.W_Game {
+  margin: 0;
+  min-height: 50vw;
+  background: var(--color-bg-gradient-primary);
+  background-image: url(../img/game/bg-img-game.png);
+  background-size: cover;
+}
+
+.C_Game {
+  min-height: 50vw;
+  box-sizing: border-box;
+  /* margin: 0;
+  padding: 0; */
+}
+
+.C_GameHud {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2vw;
+}
+
+.M_HudLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+.M_Score {
+  display: flex;
+  align-items: center;
+  gap: 0.8vw;
+}
+
+.Q_Star {
+  font: var(--font-h2);
+  color: var(--color-neon-green);
+  line-height: 1;
+}
+
+.A_ScoreNum {
+  font: var(--font-h1);
+  color: var(--color-white);
+  line-height: 1;
+}
+
+.M_Progress {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6vw;
+  width: 28vw;
+}
+
+.Q_ProgressTrack {
+  width: 100%;
+  height: 0.9vw;
+  border-radius: 99vw;
+  background: rgba(250, 250, 250, 0.18);
+  box-shadow: inset 0 0.25vw 0.35vw rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.Q_ProgressFill {
+  height: 100%;
+  width: 0%;
+  border-radius: 99vw;
+  background: var(--color-neon-green);
+  transition: width 0.25s ease;
+}
+
+.A_Task {
+  margin: 0;
+  font: var(--font-body);
+  color: rgba(250, 250, 250, 0.75);
+}
+
+.M_HudRight {
+  display: flex;
+  align-items: center;
+  gap: 1.2vw;
+}
+
+.M_Lives {
+  display: flex;
+  gap: 0.6vw;
+}
+
+.Q_Heart {
+  font: var(--font-h2);
+  line-height: 1;
+  opacity: 0.25;
+  color: rgba(250, 250, 250, 0.8);
+}
+
+.Q_Heart.is-on {
+  opacity: 1;
+  color: rgba(250, 250, 250, 0.9);
+}
+
+.A_ControlBtn {
+  width: 3.2vw;
+  height: 3.2vw;
+  border-radius: 99vw;
+  border: 0;
+  cursor: pointer;
+  font: var(--font-h3);
+  color: rgba(250, 250, 250, 0.9);
+  background: rgba(250, 250, 250, 0.14);
+  box-shadow: inset 0 0.25vw 0.25vw rgba(0, 0, 0, 0.25),
+    0 0.8vw 2vw rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(1.1vw);
+  -webkit-backdrop-filter: blur(1.1vw);
+  transition: transform 0.2s ease;
+}
+
+.A_ControlBtn:hover {
+  transform: translateY(-0.1vw);
+}
+
+.C_GameStage {
+  position: relative;
+  width: 100%;
+  height: 37vw;
+  border-radius: 2vw;
+  background: rgba(192, 205, 213, 0.22);
+  border: 0.08vw solid rgba(250, 250, 250, 0.22);
+  backdrop-filter: blur(1.1vw);
+  -webkit-backdrop-filter: blur(1.1vw);
+  box-shadow: inset 0 0.25vw 0.25vw rgba(0, 0, 0, 0.25),
+    0 1vw 3vw rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.A_Back {
+  position: relative;
+  left: 1.2vw;
+  top: 1.2vw;
+  width: 3.2vw;
+  height: 3.2vw;
+  border-radius: 99vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font: var(--font-h3);
+  color: rgba(250, 250, 250, 0.9);
+  background: rgba(250, 250, 250, 0.12);
+  border: 0.08vw solid rgba(250, 250, 250, 0.22);
+  backdrop-filter: blur(1.1vw);
+  -webkit-backdrop-filter: blur(1.1vw);
+  z-index: 100;
+}
+
+.M_Items {
+  position: absolute;
+  inset: 0;
+}
+
+.A_Item {
+  position: absolute;
+  width: 5.2vw;
+  height: 5.2vw;
+
+  border: 0;
+  padding: 0;
+  cursor: grab;
+
+  background: transparent;
+  border-radius: 1.2vw;
+
+  touch-action: none;
+}
+
+.A_Item:active {
+  cursor: grabbing;
+}
+
+.Q_ItemImg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 0.6vw 1.2vw rgba(0, 0, 0, 0.25));
+}
+
+.A_Item.is-dragging {
+  z-index: 20;
+  transform: scale(1.05);
+}
+
+.A_Item.is-done {
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.M_Bins {
+  position: absolute;
+  left: 50%;
+  bottom: 2.2vw;
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 1.2vw;
+  align-items: flex-end;
+}
+
+.C_Bin {
+  width: 10vw;
+  height: 6vw;
+  border-radius: 1.2vw;
+
+  background: rgba(250, 250, 250, 0.16);
+  border: 0.08vw solid rgba(250, 250, 250, 0.22);
+
+  backdrop-filter: blur(0.9vw);
+  -webkit-backdrop-filter: blur(0.9vw);
+
+  box-shadow: inset 0 0.25vw 0.25vw rgba(0, 0, 0, 0.22),
+    0 1vw 2.4vw rgba(0, 0, 0, 0.18);
+
+  position: relative;
+}
+
+.A_BinLabel {
+  position: absolute;
+  top: -1.3vw;
+  left: 50%;
+  transform: translateX(-50%);
+  font: var(--font-body);
+  color: rgba(250, 250, 250, 0.85);
+  background: rgba(20, 24, 30, 0.45);
+  padding: 0.35vw 0.8vw;
+  border-radius: 99vw;
+}
+
+.Q_BinDropzone {
+  position: absolute;
+  inset: 0;
+  border-radius: 1.2vw;
+}
+
+.C_Bin.is-hover {
+  outline: 0.12vw solid rgba(232, 255, 1, 0.75);
+  outline-offset: 0.2vw;
+}
+
+.C_Modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4vw;
+  box-sizing: border-box;
+}
+
+.M_ModalCard {
+  width: 34vw;
+  border-radius: 2vw;
+  background: rgba(192, 205, 213, 0.32);
+  border: 0.08vw solid rgba(250, 250, 250, 0.22);
+  backdrop-filter: blur(1.4vw);
+  -webkit-backdrop-filter: blur(1.4vw);
+  box-shadow: 0 1.2vw 3.2vw rgba(0, 0, 0, 0.28);
+  padding: 2.2vw;
+}
+
+.A_ModalTitle {
+  margin: 0 0 1vw 0;
+  font: var(--font-h2);
+  color: var(--color-white);
+}
+
+.A_ModalText {
+  margin: 0 0 1.6vw 0;
+  font: var(--font-body);
+  color: rgba(250, 250, 250, 0.78);
+}
+
+.M_ModalActions {
+  display: flex;
+  gap: 1vw;
+}
+
+/* .A_Button {
+  height: 3.4vw;
+  padding: 0 1.6vw;
+  border-radius: 99vw;
+  border: 0;
+  cursor: pointer;
+  font: var(--font-h3);
+}
+
+.A_Button--primary {
+  background: var(--color-neon-green);
+  color: var(--color-dark-grey);
+} */
+
+.A_Button--ghost {
+  border-radius: 0.9vw;
+  background: rgba(250, 250, 250, 0.12);
+  color: rgba(250, 250, 250, 0.9);
+  border: 0.08vw solid rgba(250, 250, 250, 0.22);
+}
+.C_Modal {
+  pointer-events: auto;
+}
+
+.M_ModalCard,
+.M_ModalActions,
+.A_Button {
+  pointer-events: auto;
+}
+
+.C_GameStage.is-locked {
+  pointer-events: none;
+}
+
+.C_Modal[hidden] {
+  display: none !important;
+}

@@ -96,6 +96,12 @@
   top: 2vw;
   width: 3.5vw;
   z-index: 3;
+  transition: all 0.3s ease;
+}
+
+.A_CardBadge:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .Q_CardBadgeIcon {
@@ -103,6 +109,11 @@
   height: 26rem;
   display: block;
   object-fit: contain;
+  transition: transform 0.6s ease-in-out;
+}
+
+.Q_CardBadgeIcon:hover {
+  transform: rotate(45deg);
 }
 
 .A_CardIconWrap {
@@ -126,6 +137,10 @@
   height: auto;
   object-fit: contain;
   width: 18vw;
+}
+
+.Q_CardSvg {
+  width: 10vw;
 }
 
 .A_CardTitle {

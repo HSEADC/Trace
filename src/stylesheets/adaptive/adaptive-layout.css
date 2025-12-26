@@ -1,0 +1,201 @@
+@media screen and (min-width: 1921px) {
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+}
+
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+}
+
+@media screen and (min-width: 415px) and (max-width: 768px) {
+}
+
+@media screen and (max-width: 414px) {
+  .W_First_screen-index {
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+    height: 100vw;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .Q_Trashers {
+    overflow-x: hidden;
+  }
+
+  .Q_h2_first_screen {
+    text-align: center;
+    width: 82vw;
+  }
+
+  .Q_LogoImg {
+    height: auto;
+    width: 81vw;
+  }
+
+  .M_DayCardStack {
+    position: relative;
+    width: 75vw;
+  }
+  .A_DayCardText {
+    color: var(--color-white);
+    font: var(--font-body);
+    margin: 0;
+    max-width: 200vw;
+    opacity: 0.9;
+    font-size: 69rem;
+    line-height: 69rem;
+  }
+
+  .A_DayCardTitle {
+    color: var(--color-white);
+    font: var(--font-h3);
+    margin: 0;
+    font-size: 90rem;
+    line-height: 100rem;
+  }
+
+  .Q_DayCardInfoIcon {
+    font: 500 1.2vw / 1 var(--font-family-base);
+    transform: translateY(-0.05vw);
+    font-size: 80rem;
+  }
+
+  .Q_DayCardInfo {
+    height: 5.2vw;
+    width: 5.2vw;
+  }
+
+  .Q_Trashers {
+    width: 95vw;
+  }
+
+  .W_Second_screen-index {
+    background-size: cover;
+  }
+
+  h1 {
+    color: var(--color-white);
+    font: var(--font-h1);
+    line-height: 1.3;
+    font-size: 156rem;
+  }
+
+  .W_button_third_screen,
+  .W_cards-index {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .W_Third_screen-index {
+    height: 522vw;
+  }
+
+  .W_Third_screen-line-index {
+    height: 348vw;
+    width: 100%;
+  }
+
+  .W_cards-index {
+    gap: 1vw;
+    height: 333vw;
+    align-items: center;
+  }
+
+  .W_index_margins {
+    height: 980vw;
+  }
+
+  .C_Card_index {
+    border-radius: 1.5vw;
+    height: 86vw !important;
+    overflow: visible;
+    position: relative;
+    width: 86vw !important;
+  }
+
+  .Q_CardSvg-index {
+    margin: 42vw 0 0 !important;
+    width: 45vw !important;
+  }
+
+  .Q_card_titile {
+    margin: 0 0 0.5vw 7vw;
+  }
+
+  .O_ad_vk,
+  .W-about-block {
+    display: flex;
+    height: auto;
+    width: 100%;
+  }
+
+  .W_button_third_screen,
+  .W_cards-index {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+  }
+
+  .O_ad_vk {
+    background-size: cover;
+    margin: 3vw 0;
+  }
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////// */
+
+/* Большие экраны */
+@media screen and (min-width: 1921px) and (orientation: landscape) {
+  /* Горизонтальная ориентация */
+}
+
+@media screen and (min-width: 1921px) and (orientation: portrait) {
+  /* Вертикальная ориентация */
+}
+
+/* От 1441px до 1920px */
+@media screen and (min-width: 1441px) and (max-width: 1920px) and (orientation: landscape) {
+  /* Горизонтальная ориентация */
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1920px) and (orientation: portrait) {
+  /* Вертикальная ориентация */
+}
+
+/* От 769px до 1440px */
+@media screen and (min-width: 769px) and (max-width: 1440px) and (orientation: landscape) {
+  /* Горизонтальная ориентация */
+}
+
+@media screen and (min-width: 769px) and (max-width: 1440px) and (orientation: portrait) {
+  /* Вертикальная ориентация */
+}
+
+/* От 415px до 768px */
+@media screen and (min-width: 415px) and (max-width: 768px) and (orientation: landscape) {
+  /* Горизонтальная ориентация */
+}
+
+@media screen and (min-width: 415px) and (max-width: 768px) and (orientation: portrait) {
+  /* Вертикальная ориентация */
+}
+
+/* Максимум 414px */
+@media screen and (max-width: 414px) and (orientation: landscape) {
+  /* Горизонтальная ориентация */
+}
+
+@media screen and (max-width: 414px) and (orientation: portrait) {
+  /* Вертикальная ориентация */
+}

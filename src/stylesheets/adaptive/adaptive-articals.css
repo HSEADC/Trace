@@ -1,0 +1,156 @@
+@media screen and (min-width: 1921px) {
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+}
+
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+}
+
+@media screen and (min-width: 415px) and (max-width: 768px) {
+}
+
+@media screen and (max-width: 414px) {
+  .W_First_line_articles,
+  .W_Fourth_line_articles,
+  .W_Second_line_articles,
+  .W_Third_line_articles {
+    align-items: stretch;
+    display: flex;
+    gap: 1vw;
+    height: auto;
+    justify-content: left;
+    margin-top: 1vw;
+    width: 100%;
+    margin: 19vw 0 0 0;
+    flex-wrap: wrap;
+  }
+
+  .M_30degree_article,
+  .M_Tg_ad_card {
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw;
+    width: 95vw;
+    height: 46vw;
+  }
+
+  .A_Button--primary {
+    background-color: var(--color-neon-green);
+    border-radius: 2vw;
+    color: var(--color-dark-grey);
+    height: 9.5vw;
+    width: 44vw;
+  }
+
+  .C_Card {
+    border-radius: 1.5vw;
+    height: 94vw;
+    overflow: visible;
+    position: relative;
+    width: 94vw;
+  }
+
+  h2 {
+    font: var(--font-h2);
+    font-size: 80rem;
+    line-height: 95rem;
+  }
+
+  h3 {
+    font: var(--font-h3);
+    font-size: 49rem;
+    line-height: 64rem;
+  }
+
+  .Q_CardSvg {
+    margin: 58vw 0 0;
+    width: 50vw;
+  }
+
+  .A_CardTitle {
+    font: var(--font-h2);
+    font-size: 141rem;
+    line-height: 173rem;
+    width: 104vw;
+    z-index: 100;
+  }
+
+  .A_Button,
+  .A_CardText {
+    font: var(--font-h2);
+    font-size: 94rem;
+    line-height: 109rem;
+  }
+
+  .Q_CardBadgeIcon {
+    display: block;
+    height: 96rem;
+    object-fit: contain;
+    width: 96rem;
+  }
+
+  .A_CardBadge {
+    align-items: center;
+    background: var(--color-neon-green);
+    border-radius: 0.5vw;
+    display: flex;
+    height: 10.5vw;
+    justify-content: center;
+    position: absolute;
+    right: 2vw;
+    text-decoration: none;
+    top: 2vw;
+    width: 10.5vw;
+    z-index: 3;
+  }
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////// */
+
+/* Большие экраны */
+@media screen and (min-width: 1921px) and (orientation: landscape) {
+  /* Горизонтальная ориентация */
+}
+
+@media screen and (min-width: 1921px) and (orientation: portrait) {
+  /* Вертикальная ориентация */
+}
+
+/* От 1441px до 1920px */
+@media screen and (min-width: 1441px) and (max-width: 1920px) and (orientation: landscape) {
+  /* Горизонтальная ориентация */
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1920px) and (orientation: portrait) {
+  /* Вертикальная ориентация */
+}
+
+/* От 769px до 1440px */
+@media screen and (min-width: 769px) and (max-width: 1440px) and (orientation: landscape) {
+  /* Горизонтальная ориентация */
+}
+
+@media screen and (min-width: 769px) and (max-width: 1440px) and (orientation: portrait) {
+  /* Вертикальная ориентация */
+}
+
+/* От 415px до 768px */
+@media screen and (min-width: 415px) and (max-width: 768px) and (orientation: landscape) {
+  /* Горизонтальная ориентация */
+}
+
+@media screen and (min-width: 415px) and (max-width: 768px) and (orientation: portrait) {
+  /* Вертикальная ориентация */
+}
+
+/* Максимум 414px */
+@media screen and (max-width: 414px) and (orientation: landscape) {
+  /* Горизонтальная ориентация */
+}
+
+@media screen and (max-width: 414px) and (orientation: portrait) {
+  /* Вертикальная ориентация */
+}

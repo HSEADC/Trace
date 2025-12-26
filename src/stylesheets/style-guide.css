@@ -73,6 +73,10 @@
     0 0.45vw 0.3vw rgba(255, 255, 255, 0.55);
 }
 
+.Q_Photo-style_img {
+  width: 60vw;
+}
+
 .Q_ScreenTwo_elements_img {
   width: 65vw;
 }

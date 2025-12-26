@@ -45,8 +45,192 @@
       type="image/x-icon"
     />
   </head>
-  <body>
-    <a href="../index.html">На главную</a>
-    <h1>Интерактив-игра от trace</h1>
+  <body class="W_Game">
+    <header></header>
+    <main class="C_Game">
+      <section class="C_GameHud">
+        <div class="M_HudLeft">
+          <div class="M_Score">
+            <span class="Q_Star" aria-hidden="true">★</span>
+            <span class="A_ScoreNum" id="score">0</span>
+          </div>
+
+          <div class="M_Progress">
+            <div class="Q_ProgressTrack">
+              <div class="Q_ProgressFill" id="progressFill"></div>
+            </div>
+            <p class="A_Task" id="task">Собери 5 правильных предметов</p>
+          </div>
+        </div>
+
+        <div class="M_HudRight">
+          <div class="M_Lives" aria-label="Жизни">
+            <span class="Q_Heart is-on" id="life1">♥</span>
+            <span class="Q_Heart is-on" id="life2">♥</span>
+            <span class="Q_Heart is-on" id="life3">♥</span>
+          </div>
+          <button class="A_ControlBtn" type="button" id="restartBtn">↻</button>
+        </div>
+      </section>
+
+      <section class="C_GameStage" id="stage">
+        <a class="A_Back" href="/" aria-label="Назад">←</a>
+
+        <div class="M_Items" id="items">
+          <button
+            class="A_Item"
+            type="button"
+            data-type="plastic"
+            aria-label="Пластиковая бутылка"
+          >
+            <img
+              class="Q_ItemImg"
+              src="../img/game/plastic-cont-img.png"
+              alt="пластиковый контейнер"
+            />
+          </button>
+
+          <button
+            class="A_Item"
+            type="button"
+            data-type="paper"
+            aria-label="Бумага"
+          >
+            <img
+              class="Q_ItemImg"
+              src="../img/game/paper-img.png"
+              alt="бумажка"
+            />
+          </button>
+
+          <button
+            class="A_Item"
+            type="button"
+            data-type="glass"
+            aria-label="Стекло"
+          >
+            <img
+              class="Q_ItemImg"
+              src="../img/game/glass-img.png"
+              alt="осколки"
+            />
+          </button>
+
+          <button
+            class="A_Item"
+            type="button"
+            data-type="plastic"
+            aria-label="Пакет"
+          >
+            <img
+              class="Q_ItemImg"
+              src="../img/game/plastic-bottle-img.png"
+              alt="бутылка"
+            />
+          </button>
+
+          <button
+            class="A_Item"
+            type="button"
+            data-type="paper"
+            aria-label="Картон"
+          >
+            <img
+              class="Q_ItemImg"
+              src="../img/game/newspaper-img.png"
+              alt="газета"
+            />
+          </button>
+
+          <button
+            class="A_Item"
+            type="button"
+            data-type="glass"
+            aria-label="Банка"
+          >
+            <img
+              class="Q_ItemImg"
+              src="../img/game/bottle-img.png"
+              alt="бутылка"
+            />
+          </button>
+        </div>
+
+        <div class="M_Bins">
+          <!-- Пластик -->
+          <div class="C_Bin" data-accept="plastic" aria-label="Корзина пластик">
+            <div class="Q_BinImgWrap">
+              <img
+                class="Q_BinImg"
+                src="../img/game/bin-plastic.png"
+                alt="Корзина для пластика"
+              />
+            </div>
+
+            <div class="A_BinLabel">Пластик</div>
+            <div class="Q_BinDropzone"></div>
+          </div>
+
+          <!-- Бумага -->
+          <div class="C_Bin" data-accept="paper" aria-label="Корзина бумага">
+            <div class="Q_BinImgWrap">
+              <img
+                class="Q_BinImg"
+                src="../img/game/bin-paper.png"
+                alt="Корзина для бумаги"
+              />
+            </div>
+
+            <div class="A_BinLabel">Бумага</div>
+            <div class="Q_BinDropzone"></div>
+          </div>
+
+          <!-- Стекло -->
+          <div class="C_Bin" data-accept="glass" aria-label="Корзина стекло">
+            <div class="Q_BinImgWrap">
+              <img
+                class="Q_BinImg"
+                src="../img/game/bin-glass.png"
+                alt="Корзина для стекла"
+              />
+            </div>
+
+            <div class="A_BinLabel">Стекло</div>
+            <div class="Q_BinDropzone"></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="C_Modal" id="modal" hidden>
+        <div
+          class="M_ModalCard"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modalTitle"
+        >
+          <h2 class="A_ModalTitle" id="modalTitle">Победа!</h2>
+          <p class="A_ModalText" id="modalText">
+            Ты правильно отсортировала 5 предметов.
+          </p>
+          <div class="M_ModalActions">
+            <button
+              class="A_Button A_Button--primary"
+              type="button"
+              id="modalRestart"
+            >
+              Перезапуск
+            </button>
+            <button
+              class="A_Button A_Button--ghost"
+              type="button"
+              id="modalClose"
+            >
+              Закрыть
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
   </body>
 </html>

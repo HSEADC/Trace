@@ -107,7 +107,6 @@ h2 {
   background: transparent;
   border: 0.12vw solid rgba(250, 250, 250, 0.75);
   color: var(--color-white);
-  cursor: pointer;
   padding: 0;
 }
 
@@ -169,6 +168,10 @@ h1 {
 
 .Q_card_titile {
   margin: 0 0 0.5vw 2vw;
+}
+
+.Q_Trashers {
+  width: 58vw;
 }
 
 .W_Third_screen-line-index {
