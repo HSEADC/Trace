@@ -1,13 +1,16 @@
 :root {
   /* COLORS  */
-
-  --color-dark-grey: #34444e;
-  --color-light-grey: #8b9ba5;
-  --color-grey-white: #c0cdd5;
-  --color-white: #fafafa;
-  --color-neon-green: #e8ff01;
-  --color-white-bg-card: #ffffff40;
-  --color-light-blue: #deebf3;
+  --color-green: #02973b;
+  --color-dark-green: #008633;
+  --color-pink: #ee36b0;
+  --color-light-pink: #feaae1;
+  --color-dark-grey: #535353;
+  --color-text: #ececec;
+  --color-bg-grey: #d4d4d4;
+  --color-white: #f4f4f4;
+  --color-yellow: #f2f53a;
+  --color-dark-yellow: #d1e01b;
+  --color-read: #b7b7b7;
 
   /* COLORS — Semantic*/
 
@@ -25,33 +28,27 @@
     #34444e 68%
   );
 
-  /* TYPOGRAPHY*/
+  /* Font families */
+  --font-family-base: "Inter", system-ui, -apple-system, sans-serif;
+  --font-family-display: "Inter", system-ui, -apple-system, sans-serif;
 
-  --font-family-base: "PT Root UI", system-ui, -apple-system, sans-serif;
-  --font-family-display: "Nasalization", "PT Root UI", system-ui, sans-serif;
+  /* Typography scale */
 
-  --font-h1: 400 96rem/122rem var(--font-family-display);
-  --font-h2: 400 32rem/40rem var(--font-family-base);
-  --font-h3: 400 24rem/32rem var(--font-family-base);
-  --font-body: 400 20rem/24rem var(--font-family-base);
+  /* inter bold 32 / 40, letter-spacing: -4 */
+  --font-h1: 700 32rem/40rem var(--font-family-display);
+  --ls-h2: -0.04em;
 
-  /* GLASS / BLUR TOKENS */
+  /* inter bold 24 / 32, letter-spacing: -6 */
+  --font-h2: 700 24rem/32rem var(--font-family-base);
+  --ls-body-strong: -0.06em;
 
-  --blur-xs: 4px;
-  --blur-sm: 8px;
-  --blur-md: 12px;
-  --blur-lg: 20px;
+  /* inter semi-bold 24 / 32, letter-spacing: -6 */
+  --font-h3: 600 24rem/32rem var(--font-family-base);
+  --ls-h3: -0.06em;
 
-  --glass-bg-light: rgba(222, 235, 243, 0.6);
-  --glass-bg-dark: rgba(52, 68, 78, 0.55);
-
-  --glass-border-light: 1px solid rgba(255, 255, 255, 0.35);
-  --glass-border-dark: 1px solid rgba(52, 68, 78, 0.2);
-
-  --glass-shadow-light: 0 6px 18px rgba(52, 68, 78, 0.12);
-  --glass-shadow-dark: 0 8px 24px rgba(0, 0, 0, 0.18);
-
-  scroll-padding-top: 2vw;
+  /* inter medium 24 / 32, letter-spacing: -6 */
+  --font-h4: 500 24rem/32rem var(--font-family-base);
+  --ls-body-lg: -0.06em;
 }
 
 * {
@@ -69,6 +66,7 @@ body {
   height: auto;
   margin: 0;
   padding: 0;
+  background-color: var(--color-bg-grey);
 }
 
 h1 {
@@ -84,7 +82,6 @@ a {
 }
 
 main {
-  height: 50vw;
-  margin: 3vw 3vw 3vw 3vw;
+  margin: 3vw 2vw 3vw 2vw;
   height: auto;
 }
