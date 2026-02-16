@@ -1,229 +1,56 @@
-.C_Header {
-  height: 4vw;
-  display: flex;
-  justify-content: center;
-}
-
-.M_HeaderLayout {
+.O-Header {
   width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  padding: 1vw 0;
+}
+
+.W-HeaderFrame {
+  background-color: var(--color-text);
+  border-radius: 0.2vw;
   height: 4vw;
-  padding: 0 1vw;
-  display: flex;
+  width: 94%;
+}
+
+.O-Navbar {
+  height: auto;
+  width: auto;
+}
+
+.M-NavGroup {
   align-items: center;
+  display: flex;
   justify-content: space-between;
-  position: relative;
-  background: linear-gradient(90deg, #8696a1 9%, #dceaf3 49%, #8696a1 100%);
-  box-shadow: inset 0 0.25vw 0.25vw rgba(0, 0, 0, 0.25),
-    inset 0 -0.5vw 0.875vw rgba(255, 255, 255, 0.18),
-    inset 0 0 0 0.0625vw rgba(0, 0, 0, 0.12);
-}
-
-.A_HeaderLogoLink {
-  width: 2vw;
-  display: flex;
-  align-items: center;
-}
-
-.Q_HeaderLogoImg {
-  width: 2vw;
-  transition: all 0.5s ease-in-out;
-}
-
-.Q_HeaderLogoImg:hover {
-  transform: scale(1.2);
-}
-
-.Q_SocialImg {
-  width: 2vw;
-  transition: all 0.5s ease-in-out;
-}
-
-.Q_SocialImg:hover {
-  transform: scale(1.2);
-}
-
-.M_HeaderNav {
-  display: flex;
-  align-items: center;
-}
-
-.M_NavPill {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 1vw;
-  padding: 0.375vw;
-  border-radius: 50vw;
-  background: rgba(255, 255, 255, 0.14);
-  box-shadow: inset 0 0.25vw 0.25vw rgba(0, 0, 0, 0.25),
-    inset 0 -0.375vw 0.625vw rgba(255, 255, 255, 0.18),
-    inset 0 0 0 0.0625vw rgba(0, 0, 0, 0.12);
-}
-
-.Q_NavIndicator {
-  position: absolute;
-  top: 0vw;
-  bottom: 0vw;
-  left: 0;
-  width: 0;
-  border-radius: 50vw;
-  background: var(--color-dark-grey);
-  box-shadow: inset 0 0.25vw 0.25vw rgba(0, 0, 0, 0.28),
-    inset 0 -0.35vw 0.7vw rgba(0, 0, 0, 0.35),
-    0 0.55vw 1.25vw rgba(0, 0, 0, 0.25);
-  opacity: 0;
-  transition: left 0.5s ease-in-out, width 0.35s cubic-bezier(0.2, 0.9, 0.2, 1),
-    opacity 0.2s ease;
-  pointer-events: none;
-}
-
-.A_NavLink {
-  position: relative;
-  z-index: 1;
-  height: 2.25vw;
   padding: 0 1vw;
-  border-radius: 50vw;
-  display: flex;
-  align-items: center;
+}
+
+.A-NavItem {
+  text-transform: uppercase;
+  font: var(--font-h1);
+  color: var(--color-dark-grey);
+  line-height: var(-ls-h2);
+  padding: 0.2% 1%;
+  transition:
+    transform 0.5s ease-in-out 0.1s,
+    color 0.3s ease;
+}
+
+.A-NavItem:hover {
   justify-content: center;
-  font: var(--font-h3);
-  text-decoration: none;
-  color: var(--color-text-primary);
-  background: transparent;
-  transition: color 0.2s ease, transform 0.2s ease;
-}
-
-.A_NavLink:hover {
-  transform: translateY(-0.0625vw);
-}
-
-.A_NavLink:hover,
-.A_NavLink.is-active {
-  color: var(--color-white);
-}
-
-.M_HeaderSocial {
   display: flex;
-  align-items: center;
-  gap: 0.5vw;
+  background-color: var(--color-dark-grey);
+  color: var(--color-yellow);
+  padding: 0.2% 1%;
+  border-radius: 0.3vw;
+  transform: scale(1.1);
 }
 
-.A_SocialLink {
-  width: 2vw;
-  display: flex;
-  align-items: center;
+.is-active {
   justify-content: center;
-}
-
-.A_HeaderBurger {
-  display: none;
-}
-
-@media screen and (max-width: 414px) {
-  .C_Header {
-    height: auto;
-    position: sticky;
-    z-index: 1000;
-  }
-
-  .M_HeaderLayout {
-    height: 14vw;
-    padding: 0 4vw;
-    position: fixed;
-  }
-
-  .A_HeaderLogoLink {
-    width: 8vw;
-  }
-
-  .Q_HeaderLogoImg {
-    width: 8vw;
-  }
-
-  /* hide desktop nav */
-  .M_HeaderNav {
-    position: fixed;
-    top: 14vw;
-    left: 0;
-    width: 100vw;
-    height: calc(100vh - 14vw);
-
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-
-    background: var(--color-dark-grey);
-    backdrop-filter: blur(3vw);
-    -webkit-backdrop-filter: blur(3vw);
-
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-2vw);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-
-  .M_HeaderNav.is-open {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
-  }
-
-  /* mobile pill */
-  .M_NavPill {
-    flex-direction: column;
-    gap: 3vw;
-
-    width: 86vw;
-    padding: 3vw;
-    border-radius: 6vw;
-  }
-
-  .A_NavLink {
-    height: 10vw;
-    font-size: 4.2vw;
-  }
-
-  .Q_NavIndicator {
-    height: 10vw;
-  }
-
-  /* socials hidden on mobile */
-  .M_HeaderSocial {
-    display: none;
-  }
-
-  /* burger */
-  .A_HeaderBurger {
-    width: 8vw;
-    height: 6vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-  }
-
-  .Q_BurgerLine {
-    width: 100%;
-    height: 0.6vw;
-    border-radius: 99vw;
-    background: var(--color-text-primary);
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
-
-  /* burger active */
-  .A_HeaderBurger.is-active .Q_BurgerLine:nth-child(1) {
-    transform: translateY(2.7vw) rotate(45deg);
-  }
-
-  .A_HeaderBurger.is-active .Q_BurgerLine:nth-child(2) {
-    opacity: 0;
-  }
-
-  .A_HeaderBurger.is-active .Q_BurgerLine:nth-child(3) {
-    transform: translateY(-2.7vw) rotate(-45deg);
-  }
+  display: flex;
+  background-color: var(--color-dark-grey);
+  color: var(--color-yellow);
+  padding: 0.2% 1%;
+  border-radius: 0.3vw;
 }

@@ -1,108 +1,46 @@
-const pill = document.querySelector(".M_NavPill");
-const indicator = document.querySelector(".Q_NavIndicator");
-const links = Array.from(document.querySelectorAll(".A_NavLink"));
+// function setActiveNavItem(clickedItem) {
+//   // 1. Находим ВСЕ элементы навигации
+//   const navItems = document.querySelectorAll(".nav-link");
 
-if (pill && indicator && links.length) {
-  const PILL_PAD_VW = 0.375;
+//   // 2. Убираем класс 'active' у ВСЕХ элементов
+//   navItems.forEach((item) => {
+//     item.classList.remove("active");
+//   });
 
-  const vwToPx = (vw) => (vw / 100) * window.innerWidth;
+//   // 3. Добавляем класс 'active' к кликнутому элементу
+//   clickedItem.classList.add("active");
+// }
 
-  const normalizePath = (p) => {
-    if (!p) return "/";
-    return p.replace(/\/+$/, "").toLowerCase();
-  };
+// // ============================================
+// // ИНИЦИАЛИЗАЦИЯ ПРИ ЗАГРУЗКЕ СТРАНИЦЫ
+// // ============================================
+// document.addEventListener("DOMContentLoaded", function () {
+//   // Находим ВСЕ ссылки в навигации
+//   const navLinks = document.querySelectorAll(".nav-link");
 
-  const currentPath = normalizePath(window.location.pathname);
+//   // Для КАЖДОЙ ссылки добавляем обработчик клика
+//   navLinks.forEach((link) => {
+//     link.addEventListener("click", function (e) {
+//       // Предотвращаем переход по ссылке
+//       e.preventDefault();
 
-  function findActiveLink() {
-    let best = null;
+//       // Получаем ID секции из href ссылки
+//       const targetId = this.getAttribute("href");
 
-    links.forEach((a) => {
-      const href = a.getAttribute("href") || "";
-      const urlPath = normalizePath(href.split("#")[0].split("?")[0]);
+//       // Устанавливаем активный класс
+//       setActiveNavItem(this);
 
-      if (urlPath && currentPath.endsWith(urlPath)) best = a;
+//       // ДОПОЛНИТЕЛЬНО: Плавная прокрутка к секции
+//       const targetSection = document.querySelector(targetId);
+//       if (targetSection) {
+//         targetSection.scrollIntoView({
+//           behavior: "smooth", // Плавная анимация
+//           block: "start", // Выровнять по верху
+//         });
+//       }
+//     });
+//   });
 
-      if (!best) {
-        const isHome =
-          currentPath === "" ||
-          currentPath === "/" ||
-          currentPath.endsWith("/index.html");
-        if (isHome && (urlPath.endsWith("/index.html") || urlPath === "/")) {
-          best = a;
-        }
-      }
-    });
-
-    return best || links[0];
-  }
-
-  function moveIndicator(el) {
-    const padPx = vwToPx(PILL_PAD_VW);
-    const left = el.offsetLeft - padPx;
-    const width = el.offsetWidth + padPx * 2;
-
-    indicator.style.left = `${left}px`;
-    indicator.style.width = `${width}px`;
-  }
-
-  function showIndicator() {
-    indicator.style.opacity = "1";
-  }
-
-  function hideIndicator() {
-    indicator.style.opacity = "0";
-  }
-
-  const activeLink = findActiveLink();
-  links.forEach((l) => l.classList.remove("is-active"));
-  activeLink.classList.add("is-active");
-
-  moveIndicator(activeLink);
-  showIndicator();
-
-  links.forEach((link) => {
-    link.addEventListener("mouseenter", () => {
-      moveIndicator(link);
-      showIndicator();
-    });
-
-    link.addEventListener("focus", () => {
-      moveIndicator(link);
-      showIndicator();
-    });
-  });
-
-  pill.addEventListener("mouseleave", () => {
-    moveIndicator(activeLink);
-    showIndicator();
-  });
-
-  pill.addEventListener("focusout", (e) => {
-    if (!pill.contains(e.relatedTarget)) {
-      moveIndicator(activeLink);
-      showIndicator();
-    }
-  });
-
-  window.addEventListener("resize", () => {
-    moveIndicator(activeLink);
-  });
-}
-
-const burger = document.querySelector(".A_HeaderBurger");
-const nav = document.querySelector(".M_HeaderNav");
-
-if (burger && nav) {
-  burger.addEventListener("click", () => {
-    burger.classList.toggle("is-active");
-    nav.classList.toggle("is-open");
-  });
-
-  document.querySelectorAll(".A_NavLink").forEach((link) => {
-    link.addEventListener("click", () => {
-      burger.classList.remove("is-active");
-      nav.classList.remove("is-open");
-    });
-  });
-}
+//   console.log("✅ Навигация готова к работе!");
+//   console.log("Кликайте по пунктам меню для переключения активного состояния");
+// });

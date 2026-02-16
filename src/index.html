@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -58,362 +58,203 @@
   </head>
   <body>
     <header></header>
-    <!-- проверка -->
-    <main class="W_index_margins">
-      <!-- <nav class="header-nav__menu"></nav>
-        <a class="header-nav__link" href="index.html">Главная</a>
-        <a class="header-nav__link" href="./pages/articles.html">Статьи</a>
-        <a class="header-nav__link" href="./pages/game.html">Интерактив</a>
-        <a class="header-nav__link" href="./pages/tests.html">Тесты</a>
-      </nav> -->
-      <section class="W_First_screen-index">
-        <img
-          class="Q_LogoImg"
-          src="./img/index-img/Trace-title.png"
-          alt="logo-img"
-        />
-        <h2 class="Q_h2_first_screen">
-          TRACE — онлайн-сервис о переработке. Узнай, как отходы превращать в
-          доходы!
-        </h2>
-        <section class="C_DayCard">
-          <div class="M_DayCardStack">
-            <!-- задняя карточка 2 -->
-            <div class="Q_DayCardBack Q_DayCardBack--far"></div>
 
-            <!-- задняя карточка 1 -->
-            <div class="Q_DayCardBack Q_DayCardBack--near"></div>
-
-            <!-- основная карточка -->
-            <div class="M_DayCardBox">
-              <div class="M_DayCardHead">
-                <h3 class="A_DayCardTitle">Карточка дня</h3>
-
-                <button
-                  class="Q_DayCardInfo"
-                  type="button"
-                  aria-label="Информация"
-                >
-                  <span class="Q_DayCardInfoIcon">i</span>
-                </button>
+    <main>
+      <section class="W-ScreenOne">
+        <div class="W-Screen1-left">
+          <img
+            class="A-LogoTitile"
+            src="./img/index-img/trace-title.svg"
+            alt="trace"
+          />
+          <h1 class="A-Title">онлайн-сервис о переработке</h1>
+          <img
+            class="A-TrashS1"
+            src="./img/index-img/trash-s1.svg"
+            alt="мусор"
+          />
+          <div class="O-DayCard">
+            <div class="W-DayCardLeft">
+              <div class="W-DayCard-LineTitle">
+                <img
+                  class="A-WarnerIcon"
+                  src="./img/icons/warner-icon.svg"
+                  alt="icon"
+                />
+                <h1 class="A-TitileDayCard">Карточка дня</h1>
               </div>
-
-              <p class="A_DayCardText">
-                По оценкам Всемирного банка, загрязнения воздуха обходятся
-                мировой экономике в $ 8.1 трлн ежегодно из-за падения
-                производительности и здоровья людей
+              <p class="A-DayCardText">
+                загрязнения воздуха обходятся экономике в $ 8.1 трлн. Основной
+                причиной являются расходы <br />
+                на здравоохранение
               </p>
             </div>
-          </div>
-        </section>
-      </section>
-      <!-- второй экран -->
-      <section class="W_Second_screen-index">
-        <div class="W_Second_screen-Text-Bottom">
-          <h1>Бросай!</h1>
-          <h2 class="h2-second-screen">
-            Каждый ловкий твой бросок <br />
-            сортирует мусорок
-          </h2>
-          <button class="A_Button A_Button--primary" disabled>
-            <a href="./pages/game.html" class="A_Button A_Button--primary"
-              >Играть</a
-            >
-          </button>
-        </div>
-        <img
-          class="Q_Trashers"
-          src="./img/index-img/trashers.png"
-          alt="мусорки"
-        />
-      </section>
-      <!-- третий экран -->
-      <section class="W_Third_screen-index">
-        <h1 class="Q_text_read">Читай</h1>
-        <div class="W_Third_screen-line-index">
-          <h2 class="Q_card_titile">Последние новости</h2>
-          <div class="W_cards-index">
-            <!-- четвертая карточка статьи -->
-            <article class="C_Card C_Card_index">
-              <div class="M_CardClip">
-                <div
-                  class="Q_CardMedia"
-                  style="background-image: url('#')"
-                ></div>
-
-                <div class="M_CardGlass">
-                  <a
-                    class="A_CardBadge"
-                    href="./pages/articals/artical-razer.html"
-                    aria-label="Тег карточки"
-                  >
-                    <img
-                      class="Q_CardBadgeIcon"
-                      src="https://raw.githubusercontent.com/HSEADC/Trace/45b6fece0bc3399b49999054eec49a4a4fc486af/src/img/card/Arrow-card-img.svg"
-                      alt="стрелка"
-                    />
-                  </a>
-
-                  <div class="A_CardIconWrap">
-                    <img
-                      class="Q_CardIcon Q_CardSvg Q_CardSvg-index"
-                      src="https://raw.githubusercontent.com/HSEADC/Trace/591a4b6b44e739985e357e19e94229efc9edec07/src/img/icons/razer-iocn.svg"
-                      alt="Иконка карточки"
-                    />
-                  </div>
-
-                  <h3 class="A_CardTitle">Бесконечная резня</h3>
-                  <p class="A_CardText">
-                    Многоразовая стальная бритва срежет ваши лишние траты.
-                    Узнайте как...
-                  </p>
-                </div>
-              </div>
-            </article>
-
-            <!-- шестая карточка статьи -->
-            <article class="C_Card C_Card_index">
-              <div class="M_CardClip">
-                <div
-                  class="Q_CardMedia"
-                  style="background-image: url('#')"
-                ></div>
-
-                <div class="M_CardGlass">
-                  <div class="A_CardIconWrap">
-                    <img
-                      class="Q_CardIcon Q_CardSvg Q_CardSvg-index"
-                      src="https://raw.githubusercontent.com/HSEADC/Trace/50702204a5b6e53abd4251ed679291090f3aa931/src/img/icons/banknote-icon.svg"
-                      alt="Иконка карточки"
-                    />
-                  </div>
-
-                  <h3 class="A_CardTitle">Стакан на миллион</h3>
-                  <p class="A_CardText">
-                    Скоро здесь появится интересная статья! Уже пишем..
-                  </p>
-                </div>
-              </div>
-            </article>
-
-            <article class="C_Card C_Card_index">
-              <div class="M_CardClip">
-                <div
-                  class="Q_CardMedia"
-                  style="background-image: url('#')"
-                ></div>
-
-                <div class="M_CardGlass">
-                  <a
-                    class="A_CardBadge"
-                    href="./pages/articals/artical-liquid-or-solid.html"
-                    aria-label="Тег карточки"
-                  >
-                    <img
-                      class="Q_CardBadgeIcon"
-                      src="https://raw.githubusercontent.com/HSEADC/Trace/45b6fece0bc3399b49999054eec49a4a4fc486af/src/img/card/Arrow-card-img.svg"
-                      alt="стрелка"
-                    />
-                  </a>
-
-                  <div class="A_CardIconWrap">
-                    <img
-                      class="Q_CardIcon Q_CardSvg Q_CardSvg-index"
-                      src="https://raw.githubusercontent.com/HSEADC/Trace/591a4b6b44e739985e357e19e94229efc9edec07/src/img/icons/bottle-icon.svg"
-                      alt="Иконка карточки"
-                    />
-                  </div>
-
-                  <h3 class="A_CardTitle">Твердый VS Жидкий</h3>
-                  <p class="A_CardText">
-                    Почему твердый шампунь экологичнее и выгоднее жидкого?
-                    Объясним...
-                  </p>
-                </div>
-              </div>
-            </article>
-
-            <article class="C_Card C_Card_index">
-              <div class="M_CardClip">
-                <div
-                  class="Q_CardMedia"
-                  style="background-image: url('#')"
-                ></div>
-
-                <div class="M_CardGlass">
-                  <a
-                    class="A_CardBadge"
-                    href="./pages/articals/artical-liquid-or-solid.html"
-                    aria-label="Тег карточки"
-                  >
-                    <img
-                      class="Q_CardBadgeIcon"
-                      src="https://raw.githubusercontent.com/HSEADC/Trace/45b6fece0bc3399b49999054eec49a4a4fc486af/src/img/card/Arrow-card-img.svg"
-                      alt="стрелка"
-                    />
-                  </a>
-
-                  <div class="A_CardIconWrap">
-                    <img
-                      class="Q_CardIcon Q_CardSvg Q_CardSvg-index"
-                      src="https://raw.githubusercontent.com/HSEADC/Trace/591a4b6b44e739985e357e19e94229efc9edec07/src/img/icons/bottle-icon.svg"
-                      alt="Иконка карточки"
-                    />
-                  </div>
-
-                  <h3 class="A_CardTitle">Твой шанс на успех</h3>
-                  <p class="A_CardText">
-                    Получай выгоду при стирке 30 °C. Скорее попробуй...
-                  </p>
-                </div>
-              </div>
-            </article>
+            <div class="W-DayCardRight">
+              <img
+                class="A-WorldIcon"
+                src="./img/index-img/A-WorldIcon.svg"
+                alt="земля"
+              />
+              <h1><a href="./pages/articles.html">статьи</a></h1>
+              <h1><a href="./pages/learn.html">обучение</a></h1>
+            </div>
           </div>
         </div>
-        <div class="W_Third_screen-line-index">
-          <h2 class="Q_card_titile">Рекомендация для вас</h2>
-          <div class="W_cards-index">
-            <!-- первая карточка статьи -->
-            <article class="C_Card C_Card_index">
-              <div class="M_CardClip">
-                <div
-                  class="Q_CardMedia"
-                  style="background-image: url('#')"
-                ></div>
-
-                <div class="M_CardGlass">
-                  <div class="A_CardIconWrap">
-                    <img
-                      class="Q_CardIcon Q_CardSvg Q_CardSvg-index"
-                      src="https://raw.githubusercontent.com/HSEADC/Trace/591a4b6b44e739985e357e19e94229efc9edec07/src/img/icons/coin-icon.svg"
-                      alt="Иконка карточки"
-                    />
-                  </div>
-
-                  <h3 class="A_CardTitle">А в чём выгода?</h3>
-                  <p class="A_CardText">
-                    Скоро здесь появится интересная статья! Уже пишем..
-                  </p>
-                </div>
-              </div>
-            </article>
-
-            <!-- вторая карточка статьи -->
-            <article class="C_Card C_Card_index">
-              <div class="M_CardClip">
-                <div
-                  class="Q_CardMedia"
-                  style="background-image: url('#')"
-                ></div>
-
-                <div class="M_CardGlass">
-                  <div class="A_CardIconWrap">
-                    <img
-                      class="Q_CardIcon Q_CardSvg Q_CardSvg-index"
-                      src="https://raw.githubusercontent.com/HSEADC/Trace/591a4b6b44e739985e357e19e94229efc9edec07/src/img/icons/lamp-icon.svg"
-                      alt="Иконка карточки"
-                    />
-                  </div>
-
-                  <h3 class="A_CardTitle">Зажигайся и сияй</h3>
-                  <p class="A_CardText">
-                    Скоро здесь появится интересная статья! Уже пишем..
-                  </p>
-                </div>
-              </div>
-            </article>
-
-            <!-- вторая карточка статьи -->
-            <article class="C_Card C_Card_index">
-              <div class="M_CardClip">
-                <div
-                  class="Q_CardMedia"
-                  style="background-image: url('#')"
-                ></div>
-
-                <div class="M_CardGlass">
-                  <div class="A_CardIconWrap">
-                    <img
-                      class="Q_CardIcon Q_CardSvg Q_CardSvg-index"
-                      src="https://raw.githubusercontent.com/HSEADC/Trace/591a4b6b44e739985e357e19e94229efc9edec07/src/img/icons/lamp-icon.svg"
-                      alt="Иконка карточки"
-                    />
-                  </div>
-
-                  <h3 class="A_CardTitle">Страшно-ужасно!</h3>
-                  <p class="A_CardText">
-                    Скоро здесь появится интересная статья! Уже пишем..
-                  </p>
-                </div>
-              </div>
-            </article>
-
-            <!-- третья карточка статьи -->
-            <article class="C_Card C_Card_index">
-              <div class="M_CardClip">
-                <div
-                  class="Q_CardMedia"
-                  style="background-image: url('#')"
-                ></div>
-
-                <div class="M_CardGlass">
-                  <div class="A_CardIconWrap">
-                    <img
-                      class="Q_CardIcon Q_CardSvg Q_CardSvg-index"
-                      src="https://raw.githubusercontent.com/HSEADC/Trace/591a4b6b44e739985e357e19e94229efc9edec07/src/img/icons/food-icon.svg"
-                      alt="Иконка карточки"
-                    />
-                  </div>
-
-                  <h3 class="A_CardTitle">Не компостируй мне..</h3>
-                  <p class="A_CardText">
-                    Скоро здесь появится интересная статья! Уже пишем..
-                  </p>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-        <div class="W_button_third_screen">
-          <button class="A_Button A_Button--primary" disabled>
-            <a href="./pages/articles.html" class="A_Button A_Button--primary"
-              >Читать все статьи</a
-            >
-          </button>
-        </div>
-        <div class="O_ad_vk">
-          <div class="W_Second_screen-Text-Bottom">
-            <h1>Может в вк?</h1>
-            <h2 class="h2-second-screen">
-              В сообществе пишем экологично,<br />
-              без лишнего информационного мусора
-            </h2>
-            <button class="A_Button A_Button--primary" disabled>
-              <a
-                href="https://vk.com/club233568845"
-                class="A_Button A_Button--primary"
-                >Подписаться</a
-              >
-            </button>
-          </div>
-        </div>
-
-        <div class="W-about-block">
-          <h1 class="Q_Titile-about-block">О TRACE</h1>
-          <h2 class="Q_h2-about-block">
-            Медиа-сервис про привычки, которые спасают планету <br />
-            и ваш кошелек. Узнайте, как выгодно сохранить<br />
-            экологию вместе с Trace
-          </h2>
-          <button class="A_Button A_Button--primary" disabled>
-            <a
-              href="https://t.me/trace_media"
-              class="A_Button A_Button--primary"
-              >Узнать подробнее</a
-            >
-          </button>
+        <div class="W-Screen1-right">
+          <div class="O-KickCard"></div>
         </div>
       </section>
+
+      <section class="W-ScreenTwo">
+        <div class="O-ArticlesAdd">
+          <div class="W-ArticlesAdd-Right">
+            <img
+              class="A-ArticlesAdd-img"
+              src="./img/index-img/A-ArticlesAdd.svg"
+              alt="реклама статей"
+            />
+            <div class="W-ReadTitile-Button">
+              <h1 class="A-ReadTitile">
+                Каждый ловкий твой бросок <br />
+                сортирует мусорок
+              </h1>
+              <button class="A-AllArticlesButton">Все статьи</button>
+            </div>
+          </div>
+          <div class="W-ArticlesAdd-Left">
+            <div class="M-ArticlesCard">
+              <div class="W-ArticlesCard-Title">
+                <h2 class="A-ArticlesCard-Title">Твой шанс на успех</h2>
+                <img
+                  class="A-ArrowIcon"
+                  src="./img/icons/A-ArrowIcon.svg"
+                  alt="стрелка"
+                />
+              </div>
+              <div class="W-ArticlesCard-img">
+                <img src="#" alt="Карточка" />
+              </div>
+              <h3 class="A-ReadFurther">
+                Многоразовая стальная бритва срежет ваши
+                <a class="A-ReadFurther-link" href="#">Читать далее</a>
+              </h3>
+            </div>
+            <!--  -->
+            <div class="M-ArticlesCard">
+              <div class="W-ArticlesCard-Title">
+                <h2 class="A-ArticlesCard-Title">Твой шанс на успех</h2>
+                <img
+                  class="A-ArrowIcon"
+                  src="./img/icons/A-ArrowIcon.svg"
+                  alt="стрелка"
+                />
+              </div>
+              <div class="W-ArticlesCard-img">
+                <img src="#" alt="Карточка" />
+              </div>
+              <h3 class="A-ReadFurther">
+                Многоразовая стальная бритва срежет ваши
+                <a class="A-ReadFurther-link" href="#">Читать далее</a>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="W-ScreenThree">
+        <div class="O-Post">
+          <div class="M-TitilePost">
+            <img
+              class="A-logoPost"
+              src="./img/index-img/A-logoPost.svg"
+              alt="logo"
+            />
+            <h1 class="A-TitilePost">Trace — Подпишись и сортируй выгодно</h1>
+          </div>
+          <div class="M-PostInformation">
+            <img
+              class="A-Cursor"
+              src="./img/index-img/A-Cursor.svg"
+              alt="Cursor"
+            />
+            <button class="A-ButtonPost">Подпишись</button>
+          </div>
+          <div class="W-PostIcons">
+            <div class="W-PostIcons-Right">
+              <img src="./img/icons/A-LikeIcon.svg" alt="like icon" />
+              <img src="./img/icons/A-CommentIcon.svg" alt="comment icon" />
+              <img src="./img/icons/A-ShareIcon.svg" alt="share icon" />
+            </div>
+            <img src="./img/icons/A-SaveIcon.svg" alt="save icon" />
+          </div>
+        </div>
+        <div class="O-Map"></div>
+      </section>
+
+      <section class="W-Screen-Four">
+        <div class="M-AboutUs">
+          <img
+            class="A-LogoAboutUs"
+            src="./img/index-img/A-LogoAboutUs.svg"
+            alt="Лого о нас"
+          />
+          <div class="W-AboutUsTitile-Button">
+            <h3 class="A-ReadTitile">
+              Познакомимся поближе? Научим <br />
+              Спасать и планету, и монету
+            </h3>
+            <button class="A-DetailedButton">Подробнее</button>
+          </div>
+        </div>
+        <div class="W-ScreenFour-Img">
+          <img
+            class="A-TrashImg"
+            src="./img/index-img/A-TrashImg.svg"
+            alt="Мусор"
+          />
+        </div>
+      </section>
+
+      <div class="O-Learn">
+        <div class="W-Learn-Right">
+          <div class="W-Questions">
+            <div class="M-Question">
+              <div class="W-Questions-Text">
+                <h3 class="A-QuestionTitile">Q1</h3>
+                <h3 class="A-QuestionText">
+                  Что ты делаешь с пластиковыми бутылками от воды/газировки?
+                </h3>
+              </div>
+            </div>
+            <!--  -->
+            <div class="M-Question">
+              <div class="W-Questions-Text">
+                <h3 class="A-QuestionTitile">Q1</h3>
+                <h3 class="A-QuestionText">
+                  Что ты делаешь с пластиковыми бутылками от воды/газировки?
+                </h3>
+              </div>
+            </div>
+            <img class="A-Book" src="./img/index-img/A-Book.svg" alt="книга" />
+            <img class="A-Loop" src="./img/index-img/A-Loop.svg" alt="лупа" />
+          </div>
+          <!--  -->
+        </div>
+        <div class="W-Learn-Left">
+          <img
+            class="A-Learn-img"
+            src="./img/index-img/A-TtileLearn.svg"
+            alt="реклама статей"
+          />
+          <div class="W-LearnTitile-Button">
+            <h1 class="A-LearnTitile">
+              Каждый ловкий твой бросок <br />
+              сортирует мусорок
+            </h1>
+            <button class="A-Button">Все статьи</button>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer></footer>
