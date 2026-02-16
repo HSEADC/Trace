@@ -17,18 +17,26 @@ const htmlPages = [
   createPages(
     './src/pages/articals/artical-degree.html',
     './pages/articals/artical-degree.html'
+    "./src/pages/articals/artical-degree.html",
+    "./pages/articals/artical-degree.html",
   ),
   createPages(
     './src/pages/articals/artical-cup.html',
     './pages/articals/artical-cup.html'
+    "./src/pages/articals/artical-cup.html",
+    "./pages/articals/artical-cup.html",
   ),
   createPages(
     './src/pages/articals/artical-razer.html',
     './pages/articals/artical-razer.html'
+    "./src/pages/articals/artical-razer.html",
+    "./pages/articals/artical-razer.html",
   ),
   createPages(
     './src/pages/articals/artical-liquid-or-solid.html',
     './pages/articals/artical-liquid-or-solid.html'
+    "./src/pages/articals/artical-liquid-or-solid.html",
+    "./pages/articals/artical-liquid-or-solid.html",
   ),
 
   createPages('./src/pages/theory.html', './pages/theory.html', ['theory']),
