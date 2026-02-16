@@ -58,5 +58,51 @@
   </head>
   <body>
     <header></header>
+    <main class="W_TestPage">
+      <section class="O_TestCard" id="testCard">
+        <div class="W_TestTop">
+          <p class="A_TestLabel" id="testLabel">ПРОВЕРЬ СЕБЯ</p>
+          <h2 class="A_TestQuestion" id="testQuestion"></h2>
+        </div>
+
+        <div class="C_TestAnswers" id="answers"></div>
+
+        <div class="W_TestNav">
+          <button
+            class="A_TestNavBtn A_TestNavBtnLeft"
+            id="prevBtn"
+            type="button"
+          >
+            ‹
+          </button>
+          <button
+            class="A_TestNavBtn A_TestNavBtnRight"
+            id="nextBtn"
+            type="button"
+          >
+            ›
+          </button>
+        </div>
+      </section>
+
+      <section class="O_TestCard O_TestResult isHidden" id="resultCard">
+        <div class="W_TestTop">
+          <p class="A_TestLabel">РЕЗУЛЬТАТ</p>
+          <h2 class="A_TestQuestion" id="resultHeader"></h2>
+          <p class="A_TestResultText" id="resultText"></p>
+        </div>
+
+        <div class="W_TestNav">
+          <button
+            class="A_TestNavBtn A_TestNavBtnLeft"
+            id="restartBtn"
+            type="button"
+          >
+            ↺
+          </button>
+          <a class="A_TestNavBtn A_TestNavBtnRight" href="./articles.html">↗</a>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

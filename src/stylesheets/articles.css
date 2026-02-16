@@ -13,3 +13,108 @@ html {
   display: flex;
   flex-wrap: wrap;
 }
+
+.W-ScreenTwo-Art {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.W-ScreenTwo-Art-Left,
+.W-ScreenTwo-Art-Right {
+  width: 49%;
+  height: 30vw;
+}
+
+.W-ScreenTwo-Art-Right {
+  border-radius: 2vw;
+  background-color: var(--color-green);
+  border-radius: 2vw;
+  border-bottom: 1vw solid var(--color-dark-grey);
+  border-right: 1vw solid var(--color-dark-grey);
+}
+
+.O_ArticleTeasers {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.M_ArticlesCard {
+  width: 47%;
+  min-width: 280px;
+  height: 30vw;
+  min-height: 360px;
+  background-color: var(--color-text);
+  border-radius: 2vw;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.W_ArticlesCard-Title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4.2vw;
+  min-height: 54px;
+  padding: 0 1.2vw;
+  background-color: var(--color-yellow);
+}
+
+.A_ArticlesCard-Title {
+  margin: 0;
+  font: var(--font-h2);
+  color: var(--color-dark-grey);
+  text-transform: uppercase;
+}
+
+.A_ArrowIcon {
+  width: 2.2vw;
+  height: 2.2vw;
+  min-width: 32px;
+  min-height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.6vw;
+  font: var(--font-h3);
+  color: var(--color-dark-grey);
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+.W_ArticlesCard-img {
+  width: 100%;
+  height: 12vw;
+  min-height: 160px;
+  background-color: var(--color-bg-grey);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.W_ArticlesCard-Bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.2vw;
+  flex: 1;
+}
+
+.A_ArticlesCard-Text {
+  margin: 0;
+  font: var(--font-h3);
+  color: var(--color-dark-grey);
+  text-transform: uppercase;
+}
+
+.A_ReadFurther {
+  font: var(--font-h3);
+  text-transform: uppercase;
+  color: var(--color-read);
+  opacity: 0.6;
+}

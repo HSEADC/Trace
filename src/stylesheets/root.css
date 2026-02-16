@@ -22,12 +22,6 @@
 
   /* COLORS — Gradient */
 
-  --color-bg-gradient-primary: linear-gradient(
-    135deg,
-    #8b9ba4 18%,
-    #34444e 68%
-  );
-
   /* Font families */
   --font-family-base: "Inter", system-ui, -apple-system, sans-serif;
   --font-family-display: "Inter", system-ui, -apple-system, sans-serif;
@@ -56,7 +50,6 @@
 }
 
 html {
-  background: var(--color-bg-gradient-primary);
   font-size: calc(1vw / 19.2);
   scroll-behavior: smooth;
 } /* 100vw / 1440 */
@@ -66,7 +59,6 @@ body {
   height: auto;
   margin: 0;
   padding: 0;
-  background-color: var(--color-bg-grey);
 }
 
 h1 {
