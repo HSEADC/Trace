@@ -13,6 +13,7 @@ const htmlPages = [
   createPages("./src/pages/articles.html", "./pages/articles.html"),
   createPages("./src/pages/learn.html", "./pages/learn.html"),
   createPages("./src/pages/game.html", "./pages/game.html"),
+  createPages("./src/pages/about-us.html", "./pages/about-us.html"),
   createPages(
     './src/pages/articals/artical-degree.html',
     './pages/articals/artical-degree.html'

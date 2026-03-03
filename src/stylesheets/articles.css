@@ -12,13 +12,73 @@ html {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .W-ScreenTwo-Art {
+  margin-top: 2vw;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.W-Articles-Right {
+  width: 49%;
+}
+
+.W-Articles-Left {
+  width: 49%;
+  background-color: #fff;
+}
+
+.O-Filters-Articles {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.A-Searcher-Articles {
+  width: 100%;
+  height: 4.5vw;
+  border-radius: 50vw;
+  background-color: var(--color-read);
+}
+
+.W-Filter-Buttons {
+  width: 100%;
+  height: 12vw;
+  display: flex;
+  justify-content: start;
+  gap: 1vw;
+  flex-wrap: wrap;
+  margin-top: 2vw;
+}
+
+.A-Filter-Button {
+  width: fit-content;
+  height: 3vw;
+  border-radius: 2vw;
+  background-color: var(--color-read);
+  font: var(--font-h3);
+  text-transform: uppercase;
+  color: var(--color-white);
+  gap: 1vw;
+  align-items: center;
+  display: flex;
+  padding: 0 1vw;
+}
+
+.A-Filter-Choose-Button {
+  width: fit-content;
+  height: 3vw;
+  text-transform: uppercase;
+  background-color: var(--color-white);
+  color: var(--color-dark-grey);
+  padding: 0 1vw;
+  font: var(--font-h3);
+  border-radius: 2vw;
 }
 
 .W-ScreenTwo-Art-Left,
@@ -27,20 +87,14 @@ html {
   height: 30vw;
 }
 
-.W-ScreenTwo-Art-Right {
-  border-radius: 2vw;
-  background-color: var(--color-green);
-  border-radius: 2vw;
-  border-bottom: 1vw solid var(--color-dark-grey);
-  border-right: 1vw solid var(--color-dark-grey);
-}
-
 .O_ArticleTeasers {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+/*  */
 
 .M_ArticlesCard {
   width: 47%;
@@ -117,4 +171,43 @@ html {
   text-transform: uppercase;
   color: var(--color-read);
   opacity: 0.6;
+}
+/*  */
+
+.W-ScreenTwo-Art-Right {
+  border-radius: 2vw;
+  background-color: var(--color-green);
+  border-radius: 2vw;
+  border-bottom: 1vw solid var(--color-dark-grey);
+  border-right: 1vw solid var(--color-dark-grey);
+  height: 26vw;
+}
+
+.M-Bobule-Articles {
+  height: 12vw;
+  margin: 1.5vw 1vw;
+  width: 24vw;
+  background-image: url(../img/articles/A-Bobule-Articles.svg);
+  background-size: cover;
+}
+
+.A-Bobule-Articles-Img {
+  width: 100%;
+}
+
+.A-Degree30-Artical-Titile {
+  color: var(--color-text);
+  font: var(--font-h3);
+  line-height: var(--ls-h4);
+  text-transform: uppercase;
+  padding: 2vw 0 1.5vw 1.5vw;
+}
+
+.A-Degree30-Artical-Button {
+  margin-left: 1.5vw;
+}
+
+.A-Washing-Machine-Img {
+  width: 174%;
+  margin: -3vw 0 0 1vw;
 }

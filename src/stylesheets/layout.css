@@ -131,9 +131,8 @@ h1 {
   width: 95%;
 }
 
-button {
+.button-yellow {
   background-color: var(--color-yellow);
-  border: none;
   border-radius: 0.5vw;
   color: var(--color-dark-grey);
   font: var(--font-h4);

@@ -1,0 +1,132 @@
+.W-ScreenOne-AboutUs {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+}
+
+.A-Title-AboutUs {
+  margin: -2.3vw 0 0 13vw;
+}
+
+.W-ScreenOne-AboutUs-Left,
+.W-ScreenOne-AboutUs-Right {
+  width: 49%;
+  height: 100%;
+}
+
+.W-Profile-AboutUs {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+  flex-wrap: wrap;
+}
+
+.M-Profile-AboutUs {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1vw;
+}
+
+.A-Profile-Img {
+  width: 89%;
+}
+
+.A-Profile-Name {
+  font: var(--font-h3);
+  color: var(--color-read);
+  text-transform: uppercase;
+}
+
+.W-ScreenTwo-AboutUs {
+  width: 100%;
+  height: fit-content;
+  margin-top: 2vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.W-ScreenTwo-AboutUs-Right,
+.W-ScreenTwo-AboutUs-Left {
+  width: 49%;
+  height: 40vw;
+  background-color: var(--color-white);
+  border-radius: 2vw;
+  padding: 2vw;
+}
+
+.W-traceAboutPrinciples {
+  width: 100%;
+  margin-top: 2vw;
+}
+
+.W-traceAboutPrinciplesBlocks {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.W-traceAboutFeatureHeader {
+  width: 100%;
+}
+
+.A-traceAboutPrinciplesHeader,
+.A-traceAboutFeatureHeader {
+  font: var(--font-h1);
+  color: var(--color-read);
+  margin-bottom: 1.5vw;
+  text-transform: uppercase;
+}
+
+.A-traceAboutFeatureHeader-Text {
+  width: 100%;
+  font: var(--font-h3);
+  color: var(--color-read);
+  text-transform: uppercase;
+}
+
+.M-PrinciplesBlock {
+  width: 32%;
+  height: 30%;
+  background-color: #8b7171;
+  border-radius: 1vw;
+  padding: 1vw;
+}
+
+.A-PrinciplesBlock {
+  width: 100%;
+  font: var(--font-h2);
+  color: var(--color-read);
+  text-transform: uppercase;
+}
+
+.A-Wallet-Img {
+  width: 98%;
+}
+
+.W-ScreenThree-AboutUs {
+  margin-top: 2vw;
+  align-items: center;
+  background-color: var(--color-pink);
+  border-radius: 2vw;
+  display: flex;
+  flex-direction: column;
+  height: 20vw;
+  width: 100%;
+  padding: 3vw 3vw;
+  gap: 1vw;
+}
+
+.A-TelegramAdd {
+  width: 98%;
+}
+
+.A-TelegramAdd-Text {
+  font: var(--font-h1);
+  color: var(--color-text);
+}
