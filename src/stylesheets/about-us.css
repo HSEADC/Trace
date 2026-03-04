@@ -109,6 +109,17 @@
   width: 98%;
 }
 
+.W-LettersValues {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.A-LettersValues-Img {
+  width: 75%;
+}
+
 .W-ScreenThree-AboutUs {
   margin-top: 2vw;
   align-items: center;
