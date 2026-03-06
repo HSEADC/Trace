@@ -23,8 +23,8 @@
   /* COLORS — Gradient */
 
   /* Font families */
-  --font-family-base: "Inter", system-ui, -apple-system, sans-serif;
-  --font-family-display: "Inter", system-ui, -apple-system, sans-serif;
+  --font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-family-display: 'Inter', system-ui, -apple-system, sans-serif;
 
   /* Typography scale */
 
@@ -64,7 +64,6 @@ body {
 
 h1 {
   font: var(--font-h1);
-  color: var(--color-white);
   text-transform: uppercase;
 }
 
@@ -80,6 +79,6 @@ button {
 }
 
 main {
-  margin: 3vw 2vw 3vw 2vw;
+  margin: 3vw 3vw;
   height: auto;
 }
