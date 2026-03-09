@@ -29,7 +29,7 @@ h2 {
 }
 
 p {
-  font: var(--font-body);
+  font: var(--font-family-base);
 }
 
 a {
@@ -140,7 +140,7 @@ a {
 /* текстовый столбец */
 .M_Second_block_text_column_art_degree {
   width: 60%;
-  height: 70vw;
+  height: auto;
   display: flex;
   flex-direction: column;
 }
@@ -153,12 +153,21 @@ a {
 }
 
 .O_Second_block_text_column_art_degree p {
+  font: var(--font-family-base);
   color: var(--color-dark-grey);
   font-family: 'Inter';
-  font-size: 1vw;
+  font-size: 1.6vw;
   display: flex;
   flex-direction: column;
+  line-height: 1.6;
   gap: 1vw;
   width: 100%;
   height: fit-content;
+}
+
+.O_Second_block_text_column_art_degree_video {
+  background-color: var(--color-text);
+  width: 100%;
+  height: 33vw;
+  border-radius: 1vw;
 }
