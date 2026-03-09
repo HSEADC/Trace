@@ -43,6 +43,10 @@
   /* inter medium 24 / 32, letter-spacing: -6 */
   --font-h4: 500 24rem/32rem var(--font-family-base);
   --ls-body-lg: -0.06em;
+
+  /* inter regular 32 / 40, letter-spacing: -4 */
+  --font-p: 500 32rem/40rem var(--font-family-base);
+  --ls-p: -0.06em;
 }
 
 * {
