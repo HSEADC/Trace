@@ -4,7 +4,7 @@ const articlesData = [
     title: "Зажигайся сияй",
     description: "Всё, что нужно знать о переработке",
     category: ["recycling", "waste reduction", "practical"],
-    image: "./images/articles/lightbulb.png",
+    image: "../img/articles/A-LampCardImg.png",
     link: "/pages/article-1.html",
   },
   {
@@ -12,7 +12,7 @@ const articlesData = [
     title: "Не компостируй мне",
     description: "Компостирование органических отходов",
     category: ["recycling", "waste reduction", "home"],
-    image: "./images/articles/organic.png",
+    image: "../img/articles/A-FoodCardImg.png",
     link: "/pages/article-2.html",
   },
   {
@@ -20,7 +20,7 @@ const articlesData = [
     title: "Стакан на миллион",
     description: "Кофейни платят вам за ваш кофе",
     category: ["saving money", "waste reduction", "daily habits"],
-    image: "./images/articles/cup.png",
+    image: "../img/articles/A-CupCardImg.png",
     link: "/pages/article-3.html",
   },
   {
@@ -28,7 +28,7 @@ const articlesData = [
     title: "В чем выгода?",
     description: "Как получать деньги за сортировку",
     category: ["recycling", "saving money", "waste reduction"],
-    image: "./images/articles/money.png",
+    image: "../img/articles/A-BenefitCardImg.png",
     link: "/pages/article-4.html",
   },
   {
@@ -36,7 +36,7 @@ const articlesData = [
     title: "Твой шанс на успех",
     description: "Многоразовая стальная бритва",
     category: ["personal care", "sustainable products", "waste reduction"],
-    image: "./images/articles/razor.png",
+    image: "../img/articles/A-RazerCardImg.png",
     link: "/pages/article-5.html",
   },
   {
@@ -49,7 +49,7 @@ const articlesData = [
       "waste reduction",
       "daily habits",
     ],
-    image: "./images/articles/shampoo.png",
+    image: "../img/articles/A-ShampoCardImg.png",
     link: "/pages/article-6.html",
   },
 ];

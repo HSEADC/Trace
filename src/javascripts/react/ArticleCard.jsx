@@ -2,23 +2,25 @@ import React from "react";
 
 export default function ArticleCard({ article }) {
   return (
-    <a className="article-card" href={article.link}>
-      <div className="article-card__top">
-        <h3 className="article-card__title">{article.title}</h3>
-        <span className="article-card__icon">↗</span>
+    <a className="O-article-card" href={article.link}>
+      <div className="M-article-card-top">
+        <h3 className="A-article-card-title">{article.title}</h3>
+        <span className="A-article-card-icon">↗</span>
       </div>
 
-      <div className="article-card__image-wrapper">
+      <div className="W-article-card-img">
         <img
-          className="article-card__image"
+          className="A-article-card-img"
           src={article.image}
           alt={article.title}
         />
       </div>
 
-      <div className="article-card__bottom">
-        <p className="article-card__description">{article.description}</p>
-        <span className="article-card__more">читать далее</span>
+      <div className="M-article-card-bottom">
+        <p className="A-article-card-description">
+          {article.description}{" "}
+          <a className="A-article-card-readMore">читать далее</a>
+        </p>
       </div>
     </a>
   );
