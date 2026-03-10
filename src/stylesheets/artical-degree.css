@@ -29,7 +29,7 @@ h2 {
 }
 
 p {
-  font: var(--font-family-base);
+  font: var(--font-p);
 }
 
 a {
@@ -153,13 +153,13 @@ a {
 }
 
 .O_Second_block_text_column_art_degree p {
-  font: var(--font-family-base);
+  /* font: var(--font-family-base); */
   color: var(--color-dark-grey);
-  font-family: 'Inter';
-  font-size: 1.6vw;
+  /* font-family: 'Inter';
+  font-size: 1.6vw; */
   display: flex;
   flex-direction: column;
-  line-height: 1.6;
+  /* line-height: 1.6; */
   gap: 1vw;
   width: 100%;
   height: fit-content;
