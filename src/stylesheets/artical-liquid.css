@@ -33,7 +33,7 @@ h2 {
 }
 
 p {
-  font: var(--font-body);
+  font-family: var(--font-family-base);
 }
 
 a {
