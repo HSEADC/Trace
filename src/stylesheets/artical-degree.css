@@ -108,6 +108,23 @@ a {
 .A_First_block_right_art_degree img {
   width: 100%;
   height: 17vw;
+  opacity: 0;
+  transform: translateX(3vw);
+  animation: heroImageAppear 1.2s ease forwards;
+  animation-delay: 0.4s;
+}
+
+/* анимация для первого блока с фото */
+@keyframes heroImageAppear {
+  0% {
+    opacity: 0;
+    transform: translateX(3vw);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* второй блок */
@@ -135,6 +152,121 @@ a {
   text-transform: uppercase;
   width: 100%;
   display: flex;
+  align-items: center;
+}
+
+.infographic_circle {
+  width: 20vw;
+  height: 20vw;
+}
+
+.circle_bg {
+  fill: none;
+  stroke: var(--color-read);
+  stroke-width: 2vw;
+}
+
+.circle_progress {
+  fill: none;
+  stroke: var(--color-yellow);
+  stroke-width: 2vw;
+  stroke-linecap: round;
+
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+
+  animation: circleFill 4s ease-in-out infinite;
+}
+
+@keyframes circleFill {
+  0% {
+    stroke-dashoffset: 502;
+  }
+
+  40% {
+    stroke-dashoffset: 100;
+  }
+
+  60% {
+    stroke-dashoffset: 100;
+  }
+
+  100% {
+    stroke-dashoffset: 502;
+  }
+}
+/* анимация инфографики */
+.infographic_item {
+  opacity: 0;
+  transform: translateY(3vw) scale(0.95);
+  animation: infographicAppear 1s ease forwards;
+}
+
+.infographic_item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.infographic_item:nth-child(2) {
+  animation-delay: 0.6s;
+}
+.infographic_item:nth-child(3) {
+  animation-delay: 1s;
+}
+.infographic_item:nth-child(4) {
+  animation-delay: 1.4s;
+}
+
+@keyframes infographicAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(3vw) scale(0.95);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(-0.5vw) scale(1.02);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/*  */
+.infographic_item img {
+  animation: infographicFloat 6s ease-in-out infinite;
+}
+
+@keyframes infographicFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-0.6vw);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.infographic_item:hover img {
+  transform: scale(1.05);
+  transition: transform 0.4s ease;
+}
+
+.infographic_item:hover h1 {
+  color: var(--color-accent);
+  transition: color 0.3s ease;
+}
+
+/* анимация подсвечивания текста */
+.infographic_item:hover img {
+  filter: drop-shadow(0 0 1vw rgba(255, 255, 255, 0.6));
 }
 
 /* текстовый столбец */
@@ -150,6 +282,24 @@ a {
   padding: 2vw;
   width: 100%;
   border-radius: 1vw;
+  user-select: none;
+
+  box-shadow: 0 0.6vw 1.2vw rgba(0, 0, 0, 0.15),
+    0 0.2vw 0.4vw rgba(0, 0, 0, 0.08);
+
+  position: relative;
+}
+
+.O_Second_block_text_column_art_degree::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 1vw;
+
+  box-shadow: inset 0 0.2vw 0.4vw rgba(255, 255, 255, 0.5),
+    inset 0 -0.3vw 0.6vw rgba(0, 0, 0, 0.08);
+
+  pointer-events: none;
 }
 
 .O_Second_block_text_column_art_degree p {
@@ -170,4 +320,16 @@ a {
   width: 100%;
   height: 33vw;
   border-radius: 1vw;
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-dark-grey);
+  cursor: pointer;
+}
+
+.O_Second_block_text_column_art_degree_video img {
+  height: fit-content;
+  width: 49vw;
 }
