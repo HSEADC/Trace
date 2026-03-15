@@ -76,12 +76,11 @@ a {
   height: 100%;
   display: flex;
   flex-direction: row;
-  padding: 1vw;
   align-items: center;
 }
 
 .A_First_block_right_art_degree img {
-  width: 100%;
+  width: auto;
   height: 17vw;
   opacity: 0;
   transform: translateX(3vw);
@@ -213,6 +212,7 @@ a {
 /*  */
 .infographic_item img {
   animation: infographicFloat 6s ease-in-out infinite;
+  width: 94%;
 }
 
 @keyframes infographicFloat {
