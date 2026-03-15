@@ -1,0 +1,44 @@
+.O_Second_block_text_column_art_liquid_facts {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  flex-wrap: wrap;
+}
+
+.O_Second_block_fact {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  align-items: center;
+  width: 50%;
+  background-color: var(--color-text);
+  height: 28vw;
+  padding: 2vw;
+  border-radius: 1vw;
+  user-select: none;
+  box-shadow: 0 0.6vw 1.2vw rgba(0, 0, 0, 0.15),
+    0 0.2vw 0.4vw rgba(0, 0, 0, 0.08);
+  position: relative;
+  color: var(--color-read);
+}
+
+.O_Second_block_fact::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 1vw;
+
+  box-shadow: inset 0 0.2vw 0.4vw rgba(255, 255, 255, 0.5),
+    inset 0 -0.3vw 0.6vw rgba(0, 0, 0, 0.08);
+  pointer-events: none;
+}
+
+.Q_Second_block_fact_number {
+  border: 0.3vw solid var(--color-read);
+  border-radius: 3vw;
+  height: 3.5vw;
+  padding: 1vw;
+  width: 3.5vw;
+  align-items: center;
+  display: flex;
+}
