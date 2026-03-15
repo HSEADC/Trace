@@ -1,13 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
-html {
-  background: var(--color-bg-gradient-primary);
-  font-size: calc(1vw / 19.2);
-  margin: calc(1vw / 19.2);
-} /* 100vw / 1440 */
-
 .W-ScreenOne-Art {
   width: 100%;
   display: flex;
