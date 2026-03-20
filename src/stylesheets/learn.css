@@ -273,7 +273,7 @@
 
 /* вертикальная линия таймлайна */
 .steps::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 2.2vw;
   top: 1vw;
