@@ -67,24 +67,67 @@
 
         <div class="W-Articles-Left">
           <div class="O-Filters-Articles">
-            <div class="A-Searcher-Articles"></div>
+            <div class="A-Searcher-Articles">
+              <input
+                id="articles-search"
+                class="A-Searcher-Articles-Input"
+                type="text"
+                placeholder="найти на trace"
+              />
+            </div>
             <div class="W-Filter-Buttons">
               <button class="A-Filter-Button">
-                <img
-                  src="../img/articles/A-Filter-Icon.svg"
-                  alt="фильтр"
-                />Каталог тем
+                <img src="../img/articles/A-Filter-Icon.svg" alt="фильтр" />
+                Каталог тем
               </button>
-              <button class="A-Filter-Choose-Button">экология</button>
-              <button class="A-Filter-Choose-Button">выгода</button>
-              <button class="A-Filter-Choose-Button">электроника</button>
-              <button class="A-Filter-Choose-Button">стирка</button>
-              <button class="A-Filter-Choose-Button">
+
+              <button
+                class="A-Filter-Choose-Button is-active-button"
+                data-category="all"
+              >
+                все
+              </button>
+
+              <button class="A-Filter-Choose-Button" data-category="recycling">
+                экология
+              </button>
+
+              <button
+                class="A-Filter-Choose-Button"
+                data-category="electronics"
+              >
+                электроника
+              </button>
+
+              <button
+                class="A-Filter-Choose-Button"
+                data-category="saving money"
+              >
+                выгода
+              </button>
+
+              <button
+                class="A-Filter-Choose-Button"
+                data-category="organic waste"
+              >
                 органические отходы
               </button>
-              <button class="A-Filter-Choose-Button">бытовые привычки</button>
-              <button class="A-Filter-Choose-Button">природные ресурсы</button>
-              <button class="A-Filter-Choose-Button">
+
+              <button
+                class="A-Filter-Choose-Button"
+                data-category="daily habits"
+              >
+                бытовые привычки
+              </button>
+
+              <button class="A-Filter-Choose-Button" data-category="resources">
+                природные ресурсы
+              </button>
+
+              <button
+                class="A-Filter-Choose-Button"
+                data-category="waste reduction"
+              >
                 осознанная переработка
               </button>
             </div>
