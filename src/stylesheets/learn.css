@@ -273,7 +273,7 @@
 
 /* вертикальная линия таймлайна */
 .steps::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 2.2vw;
   top: 1vw;
@@ -361,7 +361,9 @@
 }
 
 .A-Award-Img {
-  height: 22%;
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
   transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
@@ -429,7 +431,7 @@
 .W-Lesson-Img {
   width: 100%;
   height: 75%;
-  background-image: url(../img/learn/A-Phone.png);
+  /* background-image: url(../img/learn/A-Phone.png); */
   background-size: cover;
   background-repeat: no-repeat;
   overflow-x: hidden;
@@ -461,4 +463,284 @@
 
 .A-Arrow-Button {
   width: 35%;
+}
+
+/* ===== TEST FLOW ===== */
+
+.M-AwardSlot {
+  width: 100%;
+  height: 22%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.A-Award-Line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 0.25vw;
+  background-color: var(--color-bg-grey);
+  border-radius: 1vw;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: 0;
+}
+
+.M-AwardSlot.isCurrent .A-Award-Line {
+  opacity: 1;
+}
+
+.M-AwardSlot .A-Award-Img {
+  position: relative;
+  z-index: 1;
+}
+
+.M-AwardSlot.isCompleted .A-Award-Line {
+  opacity: 0;
+}
+
+.W-Card-Swipe-Right {
+  width: 63%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.O-TestFlowCard,
+.O-TestResultCard {
+  width: 100%;
+  height: 95%;
+  background-color: var(--color-white);
+  border-radius: 1vw;
+  padding: 1.7vw 1.7vw 1.5vw 1.7vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.W-TestFlowTop,
+.W-TestResultTop {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8vw;
+}
+
+.A-TestFlowLabel {
+  margin: 0;
+  font: var(--font-h3);
+  text-transform: uppercase;
+  color: var(--color-bg-grey);
+}
+
+.A-TestFlowLabel--green {
+  color: var(--color-green);
+}
+
+.A-TestFlowQuestion {
+  margin: 0;
+  font: var(--font-h1);
+  text-transform: uppercase;
+  color: var(--color-dark-grey);
+}
+
+.W-TestFlowText p {
+  font: var(--font-h4);
+  color: var(--color-dark-grey);
+}
+
+.W-TestFlowText p {
+  margin: 0;
+}
+
+.C-TestLearnList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vw;
+  margin-top: 1vw;
+  flex: 1;
+}
+
+.M-TestLearnRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 1vw;
+}
+
+.A-TestLeafIcon {
+  width: 2.5vw;
+  height: 2.5vw;
+  margin-top: 0.1vw;
+}
+
+.A-TestLearnText {
+  font: var(--font-h3);
+  text-transform: uppercase;
+  color: var(--color-dark-grey);
+}
+
+.C-TestAnswers {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4vw;
+  margin-top: 1vw;
+  flex: 1;
+}
+
+.M-TestAnswer {
+  display: flex;
+  align-items: center;
+  gap: 1.2vw;
+  cursor: pointer;
+  user-select: none;
+}
+
+.A-TestBox {
+  width: 1.5vw;
+  height: 1.5vw;
+  border-radius: 50%;
+  border: 0.25vw solid var(--color-bg-grey);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.M-TestAnswer.isActive .A-TestBox {
+  background-color: var(--color-yellow);
+  border-color: var(--color-yellow);
+}
+
+.A-TestAnswerText {
+  font: var(--font-h3);
+  text-transform: uppercase;
+  color: var(--color-dark-grey);
+}
+
+.W-TestNav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.2vw;
+}
+
+.A-TestNavBtn {
+  width: 3vw;
+  height: 3vw;
+  border: none;
+  border-radius: 0.6vw;
+  background-color: var(--color-yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.A-TestNavBtn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.A-Arrow-ButtonLeft {
+  transform: rotate(180deg);
+}
+
+.O-TestResultCard {
+  background-color: var(--color-dark-green);
+  color: var(--color-white);
+}
+
+.A-TestResultTitle {
+  font: var(--font-h1);
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+
+.W-TestResultImage {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.A-TestResultArt {
+  width: 92%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.W-TestResultFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.A-TestResultBtn {
+  width: 65%;
+  height: 4vw;
+  border: none;
+  border-radius: 0.2vw;
+  background-color: var(--color-yellow);
+  font: var(--font-h4);
+  color: var(--color-dark-grey);
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0 1.6vw;
+  margin-left: 7vw;
+}
+
+.isHidden {
+  display: none !important;
+}
+
+.A-Progress-Line {
+  width: 0%;
+  height: 100%;
+  background-color: var(--color-bg-grey);
+  border-radius: 0.2vw;
+  transition: width 0.25s ease;
+}
+
+#coverTitle {
+  margin: 0 0 1vw 0;
+}
+
+#coverLessonNumber,
+#coverDuration {
+  margin: 0;
+}
+
+#coverImage {
+  display: block;
+}
+
+.M-TestTextContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+.A-TestTextParagraph {
+  margin: 0;
+  font: var(--font-h4);
+  color: var(--color-dark-grey);
+  line-height: 1.25;
+}
+
+.W-TestFlowText {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+.A-TestFlowQuestion:empty,
+.A-TestFlowLabel:empty,
+.W-TestFlowText:empty {
+  display: none;
 }

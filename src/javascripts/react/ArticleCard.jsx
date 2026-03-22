@@ -17,10 +17,7 @@ export default function ArticleCard({ article }) {
       </div>
 
       <div className="M-article-card-bottom">
-        <p className="A-article-card-description">
-          {article.description}{" "}
-          <a className="A-article-card-readMore">читать далее</a>
-        </p>
+        <p className="A-article-card-description">{article.description} </p>
       </div>
     </a>
   );

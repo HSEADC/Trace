@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -185,53 +185,90 @@
             <h3>Звание за урок: биоактивный</h3>
           </div>
         </div>
-        <div class="O-Card-Lesson-Two-Swipe">
+        <div
+          class="O-Card-Lesson-Two-Swipe"
+          id="ecoBusinessTest"
+          data-lesson-id="2"
+        >
           <div class="W-Card-Swipe-Left">
-            <img
-              class="A-Award-Img"
-              src="../img/learn/A-Award-Zelenka.png"
-              alt="награда"
-            />
-            <img
-              class="A-Award-Img"
-              src="../img/learn/A-Award-Bioactive.png"
-              alt="награда"
-            />
-            <img
-              class="A-Award-Img"
-              src="../img/learn/A-Award-Econytu.png"
-              alt="награда"
-            />
-            <img
-              class="A-Award-Img"
-              src="../img/learn/A-Award-Darvin.png"
-              alt="награда"
-            />
+            <div class="M-AwardSlot" data-award-index="1">
+              <div class="A-Award-Line"></div>
+              <img
+                class="A-Award-Img"
+                id="awardImg1"
+                src="../img/learn/A-Award-Zelenka-disable.png"
+                alt="Зелёнка"
+                data-default="../img/learn/A-Award-Zelenka-disable.png"
+                data-complete="../img/learn/A-Award-Zelenka-active.png"
+              />
+            </div>
+
+            <div class="M-AwardSlot" data-award-index="2">
+              <div class="A-Award-Line"></div>
+              <img
+                class="A-Award-Img"
+                id="awardImg2"
+                src="../img/learn/A-Award-Bioactive-disable.png"
+                alt="Биоактивный"
+                data-default="../img/learn/A-Award-Bioactive-disable.png"
+                data-complete="../img/learn/A-Award-Bioactive-active.png"
+              />
+            </div>
+
+            <div class="M-AwardSlot" data-award-index="3">
+              <div class="A-Award-Line"></div>
+              <img
+                class="A-Award-Img"
+                id="awardImg3"
+                src="../img/learn/A-Award-Econytu-disable.png"
+                alt="Эконутый"
+                data-default="../img/learn/A-Award-Econytu-disable.png"
+                data-complete="../img/learn/A-Award-Econytu-active.png"
+              />
+            </div>
+
+            <div class="M-AwardSlot" data-award-index="4">
+              <div class="A-Award-Line"></div>
+              <img
+                class="A-Award-Img"
+                id="awardImg4"
+                src="../img/learn/A-Award-Darvin-disable.png"
+                alt="Дарвин"
+                data-default="../img/learn/A-Award-Darvin-disable.png"
+                data-complete="../img/learn/A-Award-Darvin-active.png"
+              />
+            </div>
           </div>
+
           <div class="W-Card-Swipe-Right">
             <div class="W-ProgressBar">
               <div class="A-Progress">
-                <div class="A-Progress-Line"></div>
+                <div class="A-Progress-Line" id="testProgressLine"></div>
               </div>
             </div>
-            <div class="O-Lesson-Cover">
+
+            <div class="O-Lesson-Cover" id="coverScreen">
               <div class="W-Lesson-Cover-Titile">
-                <h1 class="A-Lesson-Cover-Titile">
-                  Как поднять деньги <br />на «зеленых» темках
-                </h1>
+                <h1 class="A-Lesson-Cover-Titile" id="coverTitle"></h1>
                 <div class="W-Lesson-Cover-Filters">
-                  <h3>2 урок</h3>
-                  <h3>5 мин</h3>
+                  <h3 id="coverLessonNumber"></h3>
+                  <h3 id="coverDuration"></h3>
                 </div>
               </div>
 
               <div class="W-Lesson-Img">
                 <img
                   class="A-Finger-Img"
+                  id="coverImage"
                   src="../img/learn/A-Finger-Img.png"
-                  alt="палец"
+                  alt="обложка урока"
                 />
-                <button class="A-Lesson-NextSlide-Button">
+                <button
+                  class="A-Lesson-NextSlide-Button"
+                  id="startTestBtn"
+                  type="button"
+                  aria-label="Начать тест"
+                >
                   <img
                     class="A-Arrow-Button"
                     src="../img/icons/A-Arrow-Button.svg"
@@ -240,6 +277,99 @@
                 </button>
               </div>
             </div>
+
+            <section class="O-TestFlowCard isHidden" id="testCard">
+              <div class="W-TestFlowTop">
+                <p class="A-TestFlowLabel" id="testLabel"></p>
+                <h2 class="A-TestFlowQuestion" id="testQuestion"></h2>
+                <div class="W-TestFlowText" id="testText"></div>
+              </div>
+
+              <div class="C-TestLearnList isHidden" id="learnList"></div>
+              <div class="C-TestAnswers isHidden" id="answers"></div>
+
+              <div class="W-TestNav">
+                <button
+                  class="A-TestNavBtn A-TestNavBtnLeft"
+                  id="prevBtn"
+                  type="button"
+                  aria-label="Назад"
+                >
+                  <img
+                    class="A-Arrow-Button A-Arrow-ButtonLeft"
+                    src="../img/icons/A-Arrow-Button.svg"
+                    alt="назад"
+                  />
+                </button>
+
+                <button
+                  class="A-TestNavBtn A-TestNavBtnRight"
+                  id="nextBtn"
+                  type="button"
+                  aria-label="Далее"
+                >
+                  <img
+                    class="A-Arrow-Button"
+                    src="../img/icons/A-Arrow-Button.svg"
+                    alt="далее"
+                  />
+                </button>
+              </div>
+            </section>
+
+            <section
+              class="O-TestResultCard O-TestResultCard--win isHidden"
+              id="winCard"
+            >
+              <div class="W-TestResultTop">
+                <p class="A-TestFlowLabel A-TestFlowLabel--green">РЕЗУЛЬТАТ</p>
+                <h2 class="A-TestResultTitle">
+                  ТЫ РЕШИЛ ВСЕ ПРАВИЛЬНО!<br />
+                  ПЕРЕЙДЁМ К НОВОЙ ТЕМЕ?
+                </h2>
+              </div>
+
+              <div class="W-TestResultImage">
+                <img
+                  class="A-TestResultArt"
+                  src="../img/learn/A-Test-Win.png"
+                  alt="Победа"
+                />
+              </div>
+
+              <div class="W-TestResultFooter">
+                <button class="A-TestResultBtn" id="continueBtn" type="button">
+                  ПРОДОЛЖИТЬ
+                </button>
+              </div>
+            </section>
+
+            <section
+              class="O-TestResultCard O-TestResultCard--lose isHidden"
+              id="loseCard"
+            >
+              <div class="W-TestResultTop">
+                <p class="A-TestFlowLabel A-TestFlowLabel--green">РЕЗУЛЬТАТ</p>
+                <h2 class="A-TestResultTitle">
+                  ОЙ ЧТО-ТО ПОШЛО НЕ ТАК,<br />
+                  ПОПРОБУЙ ЕЩЁ РАЗ
+                </h2>
+              </div>
+
+              <div class="W-TestResultImage">
+                <img
+                  class="A-TestResultArt"
+                  src="../img/learn/A-Test-Lose.png"
+                  alt="Поражение"
+                />
+              </div>
+
+              <div class="W-TestResultFooter">
+                <button class="A-TestResultBtn" id="restartBtn" type="button">
+                  ПРОЙТИ ЕЩЁ РАЗ
+                </button>
+              </div>
+            </section>
           </div>
         </div>
       </section>

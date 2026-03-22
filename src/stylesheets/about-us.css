@@ -67,6 +67,7 @@
 
 .W-traceAboutPrinciplesBlocks {
   width: 100%;
+  height: 66vw;
   display: flex;
   justify-content: space-between;
 }
@@ -93,9 +94,12 @@
 .M-PrinciplesBlock {
   width: 32%;
   height: 30%;
-  background-color: #8b7171;
+  background-color: var(--color-text);
   border-radius: 1vw;
   padding: 1vw;
+  box-shadow:
+    inset 0 6px 6px 0 rgba(255, 255, 255, 0.8),
+    inset 0 -4px 6px 0 rgba(0, 0, 0, 0.2);
 }
 
 .A-PrinciplesBlock {
@@ -105,20 +109,118 @@
   text-transform: uppercase;
 }
 
+.A-Wallet-Img,
+.A-Earth-Img,
+.A-Book-Img {
+  height: 60%;
+  width: 100%;
+  margin-bottom: 0.5vw;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .A-Wallet-Img {
-  width: 98%;
+  background-image: url(../img/about-us/A-Wallet-Img.png);
+}
+
+.A-Earth-Img {
+  background-image: url(../img/about-us/A-Earth-Img.png);
+}
+
+.A-Book-Img {
+  background-image: url(../img/about-us/A-Book-Img.png);
 }
 
 .W-LettersValues {
   width: 100%;
+  height: 80%;
+  margin: 1vw 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  /* background-image: url(../img/about-us/A-Trace-Letters.svg); */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 0.2vw;
+  position: relative;
 }
 
 .A-LettersValues-Img {
-  width: 75%;
+  /* z-index: -1; */
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
+
+/* .W-Rational, .W-Active {
+  width: 40%;
+} */
+
+.A-Tranier-img {
+  width: 38%;
+}
+
+.A-Flacon-img {
+  width: 40%;
+  position: absolute;
+  /* z-index: 1; */
+  top: 0vw;
+  left: -1vw;
+}
+
+.A-Kettle-img {
+  width: 60%;
+}
+
+.W-Economy,
+.W-Active,
+.W-Rational,
+.W-Transform {
+  width: 50%;
+  height: 40%;
+  position: absolute;
+}
+
+.W-Transform {
+  left: 1vw;
+  top: 1vw;
+}
+
+.W-Rational {
+  left: 26vw;
+  top: 7vw;
+  /* width: 30%; */
+}
+
+.W-Active {
+  left: 1vw;
+  top: 12vw;
+  /* width: 47%; */
+}
+
+.W-Economy {
+  left: 28vw;
+  top: 25vw;
+  /* width: 47%; */
+}
+
+.A-Values-Text {
+  width: fit-content;
+  font: var(--font-h3);
+  color: var(--color-text);
+  text-transform: uppercase;
+  background-color: var(--color-pink);
+  padding: 0.5vw;
+  border-radius: 0.2vw;
+  position: absolute;
+}
+
+/* .A-LettersValues-Img {
+  margin-top: 3vw;
+  width: 75%;
+} */
 
 .W-ScreenThree-AboutUs {
   margin-top: 2vw;
