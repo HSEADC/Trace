@@ -1,9 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Primary Meta Tags -->
     <title>Trace — Игра</title>
     <meta name="title" content="Trace — Игра" />
     <meta
@@ -11,7 +10,6 @@
       content="Игра Trace по сортировке мусора: ловите отходы и отправляйте их в правильные контейнеры. Лёгкий способ потренировать экопривычки и понять, что сдавать в переработку."
     />
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://hseadc.github.io/Trace/" />
     <meta property="og:title" content="Trace — Игра" />
@@ -24,7 +22,6 @@
       content="https://github.com/HSEADC/Trace/blob/main/src/img/meta-img/game.jpg?raw=true"
     />
 
-    <!-- X (Twitter) -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://hseadc.github.io/Trace/" />
     <meta property="twitter:title" content="Trace — Игра" />
@@ -37,200 +34,250 @@
       content="https://github.com/HSEADC/Trace/blob/main/src/img/meta-img/game.jpg?raw=true"
     />
 
-    <!-- Meta Tags Generated with https://metatags.io -->
-
     <link
       rel="shortcut icon"
       href="../img/icons/favicon.svg"
       type="image/x-icon"
     />
   </head>
+
   <body class="W_Game">
     <header></header>
-    <main class="C_Game">
-      <section class="C_GameHud">
-        <div class="M_HudLeft">
-          <div class="M_Score">
-            <span class="Q_Star" aria-hidden="true">★</span>
-            <span class="A_ScoreNum" id="score">0</span>
-          </div>
 
-          <div class="M_Progress">
-            <div class="Q_ProgressTrack">
-              <div class="Q_ProgressFill" id="progressFill"></div>
+    <main>
+      <section class="O-GameScreen">
+        <div class="W-GameLayout">
+          <div class="W-GamePanelLeft">
+            <div class="O-GamePanelLeft">
+              <img
+                class="A-GamePanelTitle A-GamePanelTitle-Goal"
+                src="../img/icons/A-Goal-Text.png"
+                alt="Цель"
+              />
+
+              <div class="M-GameGoalBox">
+                <div class="W-GameGoalItem">
+                  <img
+                    class="A-GameGoalIcon"
+                    src="../img/game/A-GameGoalIcon1.png"
+                    alt="мусорная корзина"
+                  />
+                </div>
+
+                <div class="W-GameGoalItem">
+                  <img
+                    class="A-GameGoalIcon"
+                    src="../img/game/A-GameGoalIcon2.png"
+                    alt="бутылка"
+                  />
+                </div>
+              </div>
+
+              <div class="M-GameLinesBox">
+                <span class="A-GamePanelTitle A-GamePanelTitle-Lines">
+                  <span id="lines-value">6</span> LINES
+                </span>
+              </div>
             </div>
-            <p class="A_Task" id="task">Собери 5 правильных предметов</p>
-          </div>
-        </div>
 
-        <div class="M_HudRight">
-          <div class="M_Lives" aria-label="Жизни">
-            <span class="Q_Heart is-on" id="life1">♥</span>
-            <span class="Q_Heart is-on" id="life2">♥</span>
-            <span class="Q_Heart is-on" id="life3">♥</span>
+            <div class="O-GamePanelRight-Mobile">
+              <img
+                class="A-GamePanelTitle A-GamePanelTitle-Goal"
+                src="../img/icons/A-Next-Text.png"
+                alt="Следующий"
+              />
+
+              <div class="M-GameNextBox">
+                <canvas
+                  id="next-piece-mobile"
+                  class="A-NextPieceCanvas"
+                  width="120"
+                  height="120"
+                ></canvas>
+              </div>
+
+              <div class="M-GameControls">
+                <button
+                  class="A-GameControlButton"
+                  id="start-button-mobile"
+                  type="button"
+                  aria-label="старт"
+                >
+                  <img
+                    class="A-GameControlIcon"
+                    src="../img/icons/A-Play-Icon.png"
+                    alt="старт"
+                  />
+                </button>
+
+                <button
+                  class="A-GameControlButton"
+                  id="pause-button-mobile"
+                  type="button"
+                  aria-label="пауза"
+                >
+                  <img
+                    class="A-GameControlIcon"
+                    src="../img/icons/A-Pause-Icon.png"
+                    alt="пауза"
+                  />
+                </button>
+              </div>
+            </div>
           </div>
-          <button class="A_ControlBtn" type="button" id="restartBtn">↻</button>
+
+          <div class="W-GameField">
+            <div class="O-GameField">
+              <canvas
+                id="tetris-board"
+                class="A-GameBoardCanvas"
+                width="400"
+                height="400"
+              ></canvas>
+
+              <div id="lose-modal" class="O-GameModal O-GameModal-Hidden">
+                <div class="M-GameModalCard">
+                  <div class="M-GameModalTopButtons">
+                    <button
+                      class="A-GameModalTopButton"
+                      id="lose-modal-restart-top"
+                      type="button"
+                      aria-label="ещё раз"
+                    >
+                      <img
+                        src="../img/icons/A-Restart-Icon.png"
+                        alt="ещё раз"
+                      />
+                    </button>
+                  </div>
+
+                  <img
+                    class="A-GameModalMainImage"
+                    src="../img/icons/A-Lose-Earth-Heart.png"
+                    alt="земля и разбитое сердце"
+                  />
+
+                  <img
+                    class="A-GameModalOopsImage"
+                    src="../img/icons/A-Oops-Text.png"
+                    alt="ой-ой"
+                  />
+                </div>
+              </div>
+
+              <div id="win-modal" class="O-GameModal O-GameModal-Hidden">
+                <div class="M-GameModalCard">
+                  <div class="M-GameModalTopButtons">
+                    <button
+                      class="A-GameModalTopButton"
+                      id="win-modal-restart-top"
+                      type="button"
+                      aria-label="ещё раз"
+                    >
+                      <img
+                        src="../img/icons/A-Restart-Icon.png"
+                        alt="ещё раз"
+                      />
+                    </button>
+                  </div>
+
+                  <img
+                    class="A-GameModalMainImage"
+                    src="../img/icons/A-Win-Img.png"
+                    alt="счастливая земля и сердце"
+                  />
+
+                  <img
+                    class="A-GameModalOopsImage"
+                    src="../img/icons/A-Hooray-Text.png"
+                    alt="ура"
+                  />
+
+                  <div class="A-GameModalResultText">ПОБЕДА</div>
+
+                  <div class="M-GameModalButtons">
+                    <button
+                      class="A-GameModalActionButton"
+                      id="win-modal-restart"
+                      type="button"
+                      aria-label="ещё раз"
+                    >
+                      <img
+                        class="A-GameModalActionIcon"
+                        src="../img/icons/A-Restart-Icon.png"
+                        alt="ещё раз"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="W-GamePanelRight">
+            <div class="O-GamePanelRight">
+              <img
+                class="A-GamePanelTitle A-GamePanelTitle-Goal"
+                src="../img/icons/A-Next-Text.png"
+                alt="Следующий"
+              />
+
+              <div class="M-GameNextBox">
+                <canvas
+                  id="next-piece"
+                  class="A-NextPieceCanvas"
+                  width="120"
+                  height="120"
+                ></canvas>
+              </div>
+
+              <div class="M-GameControls">
+                <button
+                  class="A-GameControlButton"
+                  id="start-button"
+                  type="button"
+                  aria-label="старт"
+                >
+                  <img
+                    class="A-GameControlIcon"
+                    src="../img/icons/A-Play-Icon.png"
+                    alt="старт"
+                  />
+                </button>
+
+                <button
+                  class="A-GameControlButton"
+                  id="pause-button"
+                  type="button"
+                  aria-label="пауза"
+                >
+                  <img
+                    class="A-GameControlIcon"
+                    src="../img/icons/A-Pause-Icon.png"
+                    alt="пауза"
+                  />
+                </button>
+              </div>
+
+              <div class="M-GameStatsBox">
+                <div class="W-GameStatItem">
+                  <span class="A-GamePanelTitle A-GamePanelTitle-Level">
+                    <span id="level-value">5</span> LEVEL
+                  </span>
+                </div>
+
+                <div class="W-GameStatItem">
+                  <span class="A-GamePanelTitle A-GamePanelTitle-Score">
+                    <span id="score-value">2419</span> SCORE
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-
-      <section class="C_GameStage" id="stage">
-        <a class="A_Back" href="/" aria-label="Назад">←</a>
-
-        <div class="M_Items" id="items">
-          <button
-            class="A_Item"
-            type="button"
-            data-type="plastic"
-            aria-label="Пластиковая бутылка"
-          >
-            <img
-              class="Q_ItemImg"
-              src="../img/game/plastic-cont-img.png"
-              alt="пластиковый контейнер"
-            />
-          </button>
-
-          <button
-            class="A_Item"
-            type="button"
-            data-type="paper"
-            aria-label="Бумага"
-          >
-            <img
-              class="Q_ItemImg"
-              src="../img/game/paper-img.png"
-              alt="бумажка"
-            />
-          </button>
-
-          <button
-            class="A_Item"
-            type="button"
-            data-type="glass"
-            aria-label="Стекло"
-          >
-            <img
-              class="Q_ItemImg"
-              src="../img/game/glass-img.png"
-              alt="осколки"
-            />
-          </button>
-
-          <button
-            class="A_Item"
-            type="button"
-            data-type="plastic"
-            aria-label="Пакет"
-          >
-            <img
-              class="Q_ItemImg"
-              src="../img/game/plastic-bottle-img.png"
-              alt="бутылка"
-            />
-          </button>
-
-          <button
-            class="A_Item"
-            type="button"
-            data-type="paper"
-            aria-label="Картон"
-          >
-            <img
-              class="Q_ItemImg"
-              src="../img/game/newspaper-img.png"
-              alt="газета"
-            />
-          </button>
-
-          <button
-            class="A_Item"
-            type="button"
-            data-type="glass"
-            aria-label="Банка"
-          >
-            <img
-              class="Q_ItemImg"
-              src="../img/game/bottle-img.png"
-              alt="бутылка"
-            />
-          </button>
-        </div>
-
-        <div class="M_Bins">
-          <!-- Пластик -->
-          <div class="C_Bin" data-accept="plastic" aria-label="Корзина пластик">
-            <div class="Q_BinImgWrap">
-              <img
-                class="Q_BinImg"
-                src="../img/game/bin-plastic.png"
-                alt="Корзина для пластика"
-              />
-            </div>
-
-            <div class="A_BinLabel">Пластик</div>
-            <div class="Q_BinDropzone"></div>
-          </div>
-
-          <!-- Бумага -->
-          <div class="C_Bin" data-accept="paper" aria-label="Корзина бумага">
-            <div class="Q_BinImgWrap">
-              <img
-                class="Q_BinImg"
-                src="../img/game/bin-paper.png"
-                alt="Корзина для бумаги"
-              />
-            </div>
-
-            <div class="A_BinLabel">Бумага</div>
-            <div class="Q_BinDropzone"></div>
-          </div>
-
-          <!-- Стекло -->
-          <div class="C_Bin" data-accept="glass" aria-label="Корзина стекло">
-            <div class="Q_BinImgWrap">
-              <img
-                class="Q_BinImg"
-                src="../img/game/bin-glass.png"
-                alt="Корзина для стекла"
-              />
-            </div>
-
-            <div class="A_BinLabel">Стекло</div>
-            <div class="Q_BinDropzone"></div>
-          </div>
-        </div>
-      </section>
-
-      <div class="C_Modal" id="modal" hidden>
-        <div
-          class="M_ModalCard"
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="modalTitle"
-        >
-          <h2 class="A_ModalTitle" id="modalTitle">Победа!</h2>
-          <p class="A_ModalText" id="modalText">
-            Ты правильно отсортировала 5 предметов.
-          </p>
-          <div class="M_ModalActions">
-            <button
-              class="A_Button A_Button--primary"
-              type="button"
-              id="modalRestart"
-            >
-              Перезапуск
-            </button>
-            <button
-              class="A_Button A_Button--ghost"
-              type="button"
-              id="modalClose"
-            >
-              Закрыть
-            </button>
-          </div>
-        </div>
-      </div>
     </main>
+
     <footer></footer>
   </body>
 </html>

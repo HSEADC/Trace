@@ -114,3 +114,1004 @@
 .isHidden {
   display: none;
 }
+
+/*  */
+.W-ScreenOne-Learn {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.W-LearnMain-Img {
+  height: 30vw;
+  width: 90%;
+  position: relative;
+  display: flex;
+}
+
+.Q-Card,
+.Q-Wallet,
+.Q-Earth,
+.Q-Rub,
+.Q-Rub1,
+.Q-Glasses {
+  position: absolute;
+  z-index: -100;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.Q-Card {
+  left: 6vw;
+  top: -2vw;
+  width: 27%;
+  transform-origin: left bottom;
+  animation: cardFloat 3s ease-in-out infinite;
+}
+
+@keyframes cardFloat {
+  0% {
+    transform: rotate(-6deg);
+  }
+  50% {
+    transform: rotate(-9deg);
+  }
+  100% {
+    transform: rotate(-6deg);
+  }
+}
+
+.Q-Wallet {
+  left: 54vw;
+  top: -3vw;
+  width: 27%;
+  transform-origin: left bottom;
+  animation: walletFloat 3.5s ease-in-out infinite;
+}
+
+@keyframes walletFloat {
+  0% {
+    transform: rotate(6deg);
+  }
+  50% {
+    transform: rotate(9deg);
+  }
+  100% {
+    transform: rotate(6deg);
+  }
+}
+
+.Q-Earth {
+  left: 27vw;
+  top: -4vw;
+  width: 40%;
+  animation: earthSpin 5s linear infinite;
+}
+
+@keyframes earthSpin {
+  0% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(-40deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+.Q-Rub {
+  left: 20vw;
+  top: 0vw;
+  width: 15%;
+  transform-origin: center center;
+  animation: rubSpin 4s linear infinite;
+}
+
+@keyframes rubSpin {
+  0% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: translate(0vw, -5vw) rotate(-40deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+.Q-Rub1 {
+  left: 71vw;
+  top: -3vw;
+  width: 9%;
+  transform-origin: center center;
+  animation: rubSmallSpin 5s linear infinite;
+}
+
+@keyframes rubSmallSpin {
+  0% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: translate(0vw, 7vw) rotate(90deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+.Q-Glasses {
+  left: 33vw;
+  top: 5vw;
+  width: 20%;
+  transform-origin: left bottom;
+  animation: glassesFloat 3.2s ease-in-out infinite;
+}
+
+@keyframes glassesFloat {
+  0% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(-2deg);
+  }
+}
+
+.A-Title-Learn,
+.A-Title-Learn-Mobile {
+  width: 98%;
+  margin-top: -10vw;
+}
+
+.A-Title-Learn-mobile {
+  display: none;
+}
+
+/*  */
+.W-ScreenTwo-Learn {
+  width: 100%;
+  height: fit-content;
+  margin-top: 2vw;
+}
+
+.W-SecScreen-Learn {
+  width: 100%;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.W-GoalsCards {
+  width: 49%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.M-MoneyGoal,
+.M-KgGoal {
+  width: 49%;
+  height: 18vw;
+  background-color: var(--color-white);
+  border-radius: 1vw;
+  padding: 1.5vw 0 0 2vw;
+}
+
+.A-Text-CurrentGoal {
+  font: var(--font-h1);
+  color: var(--color-read);
+  text-transform: uppercase;
+}
+
+.A-Text-MakeMoney {
+  font: var(--font-h3);
+  color: var(--color-read);
+  text-transform: uppercase;
+}
+
+.A-GoalInfo-Img-kg {
+  width: 71%;
+  padding: 6vw 0 1vw 0;
+}
+
+.A-GoalInfo-Img-rub {
+  width: 90%;
+  padding: 6vw 0 1vw 0;
+}
+
+.M-DailyGoals {
+  padding: 2vw;
+  width: 50%;
+  height: 18vw;
+  background-color: var(--color-white);
+  border-radius: 1vw;
+}
+
+.Q-Leaf-icon {
+  width: 8%;
+}
+
+.A-Profit {
+  color: var(--color-read);
+}
+
+/*  */
+.W-ScreenThree-Learn {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2vw;
+}
+
+.O-Card-Lesson-Two-Information,
+.O-Card-Lesson-Two-Swipe {
+  width: 49%;
+  height: 45vw;
+  border-radius: 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2vw;
+  position: relative;
+}
+
+.O-Card-Lesson-Two-Information {
+  background-color: var(--color-white);
+}
+
+.W-LessonHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.A-Lesson-Title {
+  margin: 0;
+  font: var(--font-h1);
+  text-transform: uppercase;
+  color: var(--color-read);
+  line-height: 1.05;
+  max-width: 80%;
+}
+
+.A-Lesson-Numeration {
+  margin: 0;
+  font: var(--font-h3);
+  text-transform: uppercase;
+  color: var(--color-read);
+  white-space: nowrap;
+}
+
+.W-Lesson-Intro {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8vw;
+  margin-top: 1vw;
+}
+
+.A-Ttitle-LessonIntro {
+  margin: 0;
+  font: var(--font-h1);
+  text-transform: uppercase;
+  color: var(--color-read);
+}
+
+.A-Text-Lesson {
+  margin: 0;
+  font: var(--font-h3);
+  text-transform: uppercase;
+  color: var(--color-read);
+}
+
+/* STEPS LIST */
+.steps {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 1.5vw 0 0 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6vw;
+}
+
+.steps::before {
+  content: "";
+  position: absolute;
+  left: 2.2vw;
+  top: 1vw;
+  bottom: 0.9vw;
+  width: 0.25vw;
+  background-color: var(--color-read);
+  border-radius: 1vw;
+  z-index: 0;
+}
+
+.A-Step,
+.A-A-Step {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1.2vw;
+  position: relative;
+  padding: 0.8vw 0;
+}
+
+.A-Step-Circle {
+  width: 4.4vw;
+  height: 4.4vw;
+  min-width: 4.4vw;
+  border-radius: 50%;
+  background-color: var(--color-read);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: var(--font-h1);
+  color: var(--color-white);
+  z-index: 1;
+}
+
+.A-Step-Text {
+  margin: 0;
+  font: var(--font-h1);
+  text-transform: uppercase;
+  color: var(--color-read);
+}
+
+.W-Lesson-Footer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: 1vw;
+}
+
+.W-Lesson-Footer h3 {
+  margin: 0;
+  font: var(--font-h3);
+  text-transform: uppercase;
+  color: var(--color-read);
+  white-space: nowrap;
+}
+
+/*  */
+.O-Card-Lesson-Two-Swipe {
+  background-color: var(--color-green);
+  border-bottom: 1vw solid var(--color-dark-grey);
+  border-right: 1vw solid var(--color-dark-grey);
+  display: flex;
+  justify-content: space-between;
+  padding: 2vw;
+  flex-direction: row;
+}
+
+.W-Card-Swipe-Left {
+  width: 35%;
+  height: 100%;
+  background-color: var(--color-dark-green);
+  border-radius: 1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1vw 0;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+.A-Award-Img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.A-Award-Img:hover {
+  transform: scale(120%);
+  margin: 1vw;
+  cursor: pointer;
+}
+
+.W-Card-Swipe-Right {
+  width: 63%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.W-ProgressBar {
+  width: 100%;
+  height: 5%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.A-Progress {
+  width: 100%;
+  height: 0.7vw;
+  border-radius: 0.2vw;
+  background-color: var(--color-dark-green);
+}
+
+.A-Progress-Line {
+  width: 0%;
+  height: 100%;
+  background-color: var(--color-bg-grey);
+  border-radius: 0.2vw;
+  transition: width 0.25s ease;
+}
+
+.O-Lesson-Cover {
+  background-color: var(--color-dark-green);
+  border-radius: 1vw;
+  height: 95%;
+}
+
+.W-Lesson-Cover-Titile {
+  width: 100%;
+  height: 25%;
+  padding: 1.5vw;
+}
+
+.A-Lesson-Cover-Titile {
+  font: var(--font-h1);
+  color: var(--color-bg-grey);
+  text-transform: uppercase;
+  margin-bottom: 1vw;
+}
+
+.W-Lesson-Cover-Filters {
+  width: 100%;
+  display: flex;
+  font: var(--font-h3);
+  color: var(--color-green);
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+.W-Lesson-Img {
+  width: 100%;
+  height: 75%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
+}
+
+.W-Lesson-ImgLayers {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.A-CoverLayer {
+  position: absolute;
+  display: block;
+  max-width: none;
+  user-select: none;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+.A-Lesson-NextSlide-Button {
+  width: 4vw;
+  height: 4vw;
+  display: flex;
+  background-color: var(--color-yellow);
+  border-radius: 0.5vw;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 1.5vw;
+  bottom: 1.5vw;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 10;
+}
+
+.A-Lesson-NextSlide-Button:hover {
+  background-color: #d0d33b;
+}
+
+.M-AwardSlot {
+  cursor: pointer;
+}
+
+.M-AwardSlot.isCurrent {
+  pointer-events: none;
+}
+
+.A-Arrow-Button {
+  width: 35%;
+}
+
+.M-AwardSlot {
+  width: 100%;
+  height: 22%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.A-Award-Line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 0.25vw;
+  background-color: var(--color-bg-grey);
+  border-radius: 1vw;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: 0;
+}
+
+.M-AwardSlot.isCurrent .A-Award-Line {
+  opacity: 1;
+}
+
+.M-AwardSlot .A-Award-Img {
+  position: relative;
+  z-index: 1;
+}
+
+.M-AwardSlot.isCompleted .A-Award-Line {
+  opacity: 0;
+}
+
+.O-TestFlowCard,
+.O-TestResultCard {
+  width: 100%;
+  height: 95%;
+  background-color: var(--color-white);
+  border-radius: 1vw;
+  padding: 1.7vw 1.7vw 1.5vw 1.7vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.W-TestFlowTop,
+.W-TestResultTop {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8vw;
+}
+
+.A-TestFlowLabel {
+  margin: 0;
+  font: var(--font-h3);
+  text-transform: uppercase;
+  color: var(--color-bg-grey);
+}
+
+.A-TestFlowLabel--green {
+  color: var(--color-green);
+}
+
+.A-TestFlowQuestion {
+  margin: 0;
+  font: var(--font-h1);
+  text-transform: uppercase;
+  color: var(--color-dark-grey);
+}
+
+.W-TestFlowText p {
+  font: var(--font-h4);
+  color: var(--color-dark-grey);
+  margin: 0;
+}
+
+.W-DailyTasks {
+  margin-top: 2vw;
+  flex-direction: column;
+  height: 70%;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.W-DailyTask {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.W-Text-Leaf {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1vw;
+}
+
+.C-TestLearnList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vw;
+  margin-top: 1vw;
+  flex: 1;
+}
+
+.M-TestLearnRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 1vw;
+}
+
+.A-TestLeafIcon {
+  width: 2.5vw;
+  height: 2.5vw;
+  margin-top: 0.1vw;
+}
+
+.A-TestLearnText {
+  font: var(--font-h3);
+  text-transform: uppercase;
+  color: var(--color-dark-grey);
+}
+
+.C-TestAnswers {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4vw;
+  margin-top: 1vw;
+  flex: 1;
+}
+
+.M-TestAnswer {
+  display: flex;
+  align-items: center;
+  gap: 1.2vw;
+  cursor: pointer;
+  user-select: none;
+}
+
+.A-TestBox {
+  width: 1.5vw;
+  height: 1.5vw;
+  border-radius: 50%;
+  border: 0.25vw solid var(--color-bg-grey);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.M-TestAnswer.isActive .A-TestBox {
+  background-color: var(--color-yellow);
+  border-color: var(--color-yellow);
+}
+
+.A-TestAnswerText {
+  font: var(--font-h3);
+  text-transform: uppercase;
+  color: var(--color-dark-grey);
+}
+
+.W-TestNav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.2vw;
+}
+
+.A-TestNavBtn {
+  width: 3vw;
+  height: 3vw;
+  border: none;
+  border-radius: 0.6vw;
+  background-color: var(--color-yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.A-TestNavBtn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.A-Arrow-ButtonLeft {
+  transform: rotate(180deg);
+}
+
+.O-TestResultCard {
+  background-color: var(--color-dark-green);
+  color: var(--color-white);
+}
+
+.A-TestResultTitle {
+  font: var(--font-h1);
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+
+.W-TestResultImage {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.A-TestResultArt {
+  width: 92%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.W-TestResultFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.A-TestResultBtn {
+  width: 65%;
+  height: 4vw;
+  border: none;
+  border-radius: 0.2vw;
+  background-color: var(--color-yellow);
+  font: var(--font-h4);
+  color: var(--color-dark-grey);
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0 1.6vw;
+  margin-left: 7vw;
+}
+
+.isHidden {
+  display: none !important;
+}
+
+#coverTitle {
+  margin: 0 0 1vw 0;
+}
+
+#coverLessonNumber,
+#coverDuration {
+  margin: 0;
+}
+
+.M-TestTextContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+.A-TestTextParagraph {
+  margin: 0;
+  font: var(--font-h4);
+  color: var(--color-dark-grey);
+  line-height: 1.25;
+}
+
+.W-TestFlowText {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+.A-TestFlowQuestion:empty,
+.A-TestFlowLabel:empty,
+.W-TestFlowText:empty {
+  display: none;
+}
+
+.A-CoverLayer--lesson1-wallet {
+  animation: lesson1WalletSwing 3.2s ease-in-out infinite;
+  bottom: 61%;
+  left: -4%;
+  transform-origin: 50% 100%;
+  width: 51%;
+  z-index: 1;
+}
+
+.A-CoverLayer--lesson1-flowers {
+  width: 78%;
+  left: 8%;
+  top: 8%;
+  z-index: 1;
+}
+
+.A-CoverLayer--lesson1-rubles {
+  animation: lesson1RublesSpin 4.8s linear infinite;
+  left: -7%;
+  top: 23%;
+  transform-origin: 50% 50%;
+  width: 40%;
+  z-index: 1;
+}
+
+@keyframes lesson1WalletSwing {
+  0% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+  100% {
+    transform: rotate(-4deg);
+  }
+}
+
+@keyframes lesson1RublesSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(8deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.A-CoverLayer--lesson2-bg {
+  left: 7%;
+  opacity: 0.95;
+  top: -1%;
+  width: 94%;
+  z-index: 1;
+}
+
+.A-CoverLayer--lesson2-phone {
+  animation: lesson2PhoneSwipe 2.8s ease-in-out infinite;
+  left: -10%;
+  top: 20%;
+  transform-origin: bottom center;
+  width: 46%;
+  z-index: 2;
+}
+
+@keyframes lesson2PhoneSwipe {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(8deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* ---------- УРОК 3 ---------- */
+/* мужик: база + рука */
+
+.A-CoverLayer--lesson3-base {
+  bottom: -3%;
+  left: -12%;
+  width: 104%;
+  z-index: 1;
+}
+
+.A-CoverLayer--lesson3-hand {
+  animation: lesson3HandLift 2.4s ease-in-out infinite;
+  bottom: 27%;
+  left: 36%;
+  transform-origin: 70% 70%;
+  width: 65%;
+  z-index: 0;
+}
+
+@keyframes lesson3HandLift {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.9vw);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* ---------- УРОК 4 ---------- */
+/* надгробие: база + ветка */
+
+.A-CoverLayer--lesson4-base {
+  bottom: -11%;
+  left: -8%;
+  width: 107%;
+  z-index: 1;
+}
+
+.A-CoverLayer--lesson4-branch {
+  animation: lesson4BranchSwing 3s ease-in-out infinite;
+  bottom: 29%;
+  left: -21%;
+  transform-origin: bottom;
+  width: 62%;
+  z-index: 0;
+}
+
+.A-CoverLayer--lesson1-base {
+  left: -6%;
+  top: 5%;
+  width: 99%;
+  z-index: 1;
+}
+
+@keyframes lesson4BranchSwing {
+  0% {
+    transform: rotate(3deg);
+  }
+  50% {
+    transform: rotate(12deg);
+  }
+  100% {
+    transform: rotate(3deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .W-SecScreen-Learn,
+  .W-ScreenThree-Learn {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 3vw;
+  }
+
+  .W-ScreenThree-Learn {
+    flex-direction: column;
+  }
+
+  .W-GoalsCards,
+  .M-DailyGoals {
+    width: 100%;
+  }
+
+  .M-KgGoal,
+  .M-MoneyGoal,
+  .M-DailyGoals {
+    height: 27vw;
+  }
+
+  .A-TestNavBtn,
+  .A-Lesson-NextSlide-Button {
+    height: 8vw;
+    width: 8vw;
+  }
+
+  .O-Card-Lesson-Two-Information {
+    flex-direction: column;
+    height: 61vw;
+    width: 100%;
+  }
+
+  .O-Card-Lesson-Two-Swipe {
+    height: 90vw;
+    width: 100%;
+  }
+
+  .A-Title-Learn {
+    display: none;
+  }
+
+  .A-Title-Learn-Mobile {
+    display: block;
+  }
+
+  .W-LearnMain-Img {
+    width: 120%;
+    left: 9vw;
+    top: 4vw;
+  }
+}

@@ -48,29 +48,132 @@
     <header></header>
     <main>
       <section class="W-ScreenOne-Art">
-        
-          <div class="W-ArticlesAdd-Right">
-            <img
-              class="A-ArticlesAdd-img"
-              src="../img/articles/A-Read-Articles.svg"
-              alt="реклама статей"
-            />
-            <div class="W-ReadTitile-Button">
-              <h1 class="A-ReadTitile">
-                Каждый ловкий твой бросок <br/>
-                сортирует мусорок
-              </h1>
-              <button class="A-AllArticlesButton">Все статьи</button>
+        <div class="W-Articles-Right">
+          <img
+            class="A-ArticlesAdd-img"
+            src="../img/articles/A-Read-Articles.svg"
+            alt="реклама статей"
+          />
+          <div class="W-ReadTitile-Button A-ReadTitile-Button">
+            <h1 class="A-ReadTitile">
+              выжимку полезной <br />
+              информации в нашем тг
+            </h1>
+            <button class="A-AllArticlesButton button-yellow">
+              Перейти в тг
+            </button>
+          </div>
+        </div>
+
+        <div class="W-Articles-Left">
+          <div class="O-Filters-Articles">
+            <div class="A-Searcher-Articles">
+              <input
+                id="articles-search"
+                class="A-Searcher-Articles-Input"
+                type="text"
+                placeholder="найти на trace"
+              />
             </div>
-          
+            <div class="W-Filter-Buttons">
+              <button class="A-Filter-Button">
+                <img
+                  class="A-Filter-Button-img"
+                  src="../img/articles/A-Filter-Icon.svg"
+                  alt="фильтр"
+                />
+                Каталог тем
+              </button>
+
+              <button
+                class="A-Filter-Choose-Button is-active-button"
+                data-category="all"
+              >
+                все
+              </button>
+
+              <button class="A-Filter-Choose-Button" data-category="recycling">
+                экология
+              </button>
+
+              <button
+                class="A-Filter-Choose-Button"
+                data-category="electronics"
+              >
+                электроника
+              </button>
+
+              <button
+                class="A-Filter-Choose-Button"
+                data-category="saving money"
+              >
+                выгода
+              </button>
+
+              <button
+                class="A-Filter-Choose-Button"
+                data-category="organic waste"
+              >
+                органические отходы
+              </button>
+
+              <button
+                class="A-Filter-Choose-Button"
+                data-category="daily habits"
+              >
+                бытовые привычки
+              </button>
+
+              <button class="A-Filter-Choose-Button" data-category="resources">
+                природные ресурсы
+              </button>
+
+              <button
+                class="A-Filter-Choose-Button"
+                data-category="waste reduction"
+              >
+                осознанная переработка
+              </button>
+            </div>
+          </div>
+        </div>
       </section>
-      
 
       <section class="W-ScreenTwo-Art">
-        <div class="W-ScreenTwo-Art-Right"></div>
-        <div class="W-ScreenTwo-Art-Left">
-          <div class="O_ArticleTeasers"></div>
+        <div class="W-ScreenTwo-Art-Right">
+          <div class="O-WashingArticleCard">
+            <img
+              class="A-Cursor-article"
+              src="../img/index-img/A-Cursor.svg"
+              alt="Cursor"
+            />
+            <div class="M-Bobule-Articles">
+              <h3 class="A-Degree30-Artical-Titile">
+                какая идеальная <br />
+                температура для стирки?
+              </h3>
+              <button class="A-Degree30-Artical-Button button-yellow">
+                Читать
+              </button>
+            </div>
+          </div>
         </div>
+        <div class="W-ScreenTwo-Art-Left">
+          <div id="article-card-1"></div>
+          <div id="article-card-2"></div>
+        </div>
+        <h1>
+          <a href="./articals/artical-degree.html">30 градусов</a>
+          <a href="./articals/artical-liquid-or-solid.html">шампунь</a>
+          <a href="./articals/artical-razer.html">бритва</a>
+          <a href="./articals/artical-cup.html">кружка</a>
+        </h1>
+      </section>
+      <section class="W-ScreenThree-Art">
+        <div id="article-card-3"></div>
+        <div id="article-card-4"></div>
+        <div id="article-card-5"></div>
+        <div id="article-card-6"></div>
       </section>
     </main>
     <footer></footer>

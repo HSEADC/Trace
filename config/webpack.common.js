@@ -8,6 +8,7 @@ const path = require("path");
 module.exports = {
   entry: {
     index: "./src/javascripts/index.js",
+    test1: "./src/javascripts/test1.js",
   },
 
   output: {
@@ -92,6 +93,7 @@ module.exports = {
   },
 
   resolve: {
+    extensions: [".js", ".jsx"],
     fallback: {
       stream: require.resolve("stream-browserify"),
     },

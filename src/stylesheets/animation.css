@@ -1,0 +1,33 @@
+/* 30 градусов статья 30 degree article*/
+
+/* анимация для первого блока с фото */
+@keyframes heroImageAppear {
+  0% {
+    opacity: 0;
+    transform: translateX(3vw);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* анимация инфографики для круга */
+@keyframes circleFill {
+  0% {
+    stroke-dashoffset: 502;
+  }
+
+  40% {
+    stroke-dashoffset: 100;
+  }
+
+  60% {
+    stroke-dashoffset: 100;
+  }
+
+  100% {
+    stroke-dashoffset: 502;
+  }
+}

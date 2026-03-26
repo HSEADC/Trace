@@ -8,15 +8,16 @@
 @import url("../components/button/button.css");
 
 @import "layout.css";
-@import "style-guide.css";
 @import "articles.css";
+@import "about-us.css";
 @import "game.css";
 @import "learn.css";
 @import "animation.css";
 @import "artical-degree.css";
-@import "artical-cup.css";
-@import "artical-razer.css";
 @import "artical-liquid.css";
+@import "atom.css";
+@import "molecule.css";
+@import "quark.css";
 /* adaptives */
 @import "./adaptive/adaptive-layout.css";
 @import url("./adaptive/adaptive-articals.css");
@@ -24,4 +25,3 @@
 @import "./adaptive/adaptive-degree.css";
 @import "./adaptive/adaptive-razer.css";
 @import "./adaptive/adaptive-liquid.css";
-@import "./adaptive/adaptive-style-guide.css";

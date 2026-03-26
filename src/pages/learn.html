@@ -58,51 +58,320 @@
   </head>
   <body>
     <header></header>
-    <main class="W_TestPage">
-      <section class="O_TestCard" id="testCard">
-        <div class="W_TestTop">
-          <p class="A_TestLabel" id="testLabel">ПРОВЕРЬ СЕБЯ</p>
-          <h2 class="A_TestQuestion" id="testQuestion"></h2>
+    <main>
+      <section class="W-ScreenOne-Learn">
+        <div class="W-LearnMain-Img">
+          <img class="Q-Card" src="../img/learn/Q-Card.png" alt="Фон" />
+          <img class="Q-Wallet" src="../img/learn/Q-Wallet.png" alt="Фон" />
+          <img class="Q-Earth" src="../img/learn/Q-Earth.png" alt="Фон" />
+          <img class="Q-Rub" src="../img/learn/Q-Rub.png" alt="Фон" />
+          <img class="Q-Rub1" src="../img/learn/Q-Rub1.png" alt="Фон" />
+          <img class="Q-Glasses" src="../img/learn/Q-Glasses.png" alt="Фон" />
         </div>
 
-        <div class="C_TestAnswers" id="answers"></div>
+        <img
+          class="A-Title-Learn"
+          src="../img/learn/A-TextLearnTitile.svg"
+          alt="КАК ЗАРАБОТАТЬ"
+        />
+        <img
+          class="A-Title-Learn-Mobile"
+          src="../img/learn/A-TextLearnTitile-mobile.svg"
+          alt="КАК ЗАРАБОТАТЬ"
+        />
+      </section>
 
-        <div class="W_TestNav">
-          <button
-            class="A_TestNavBtn A_TestNavBtnLeft"
-            id="prevBtn"
-            type="button"
-          >
-            ‹
-          </button>
-          <button
-            class="A_TestNavBtn A_TestNavBtnRight"
-            id="nextBtn"
-            type="button"
-          >
-            ›
-          </button>
+      <section class="W-ScreenTwo-Learn">
+        <div class="W-SecScreen-Learn">
+          <div class="W-GoalsCards">
+            <div class="M-MoneyGoal">
+              <h1 class="A-Text-CurrentGoal">Текущая цель:</h1>
+              <img
+                class="A-GoalInfo-Img-rub"
+                src="../img/learn/A-3200RUB.svg"
+                alt="3200 рублей"
+              />
+              <h3 class="A-Text-MakeMoney">заработать денег</h3>
+            </div>
+            <div class="M-KgGoal">
+              <h1 class="A-Text-CurrentGoal">Текущая цель:</h1>
+              <img
+                class="A-GoalInfo-Img-kg"
+                src="../img/learn/A-520KG.svg"
+                alt="3200 рублей"
+              />
+              <h3 class="A-Text-MakeMoney">сдать мусор</h3>
+            </div>
+          </div>
+          <div class="M-DailyGoals">
+            <h1 class="A-Text-CurrentGoal">ежедневные задания:</h1>
+            <div class="W-DailyTasks">
+              <div class="W-DailyTask">
+                <div class="W-Text-Leaf">
+                  <img
+                    class="Q-Leaf-icon"
+                    src="https://github.com/HSEADC/Trace/blob/main/src/img/learn/A-Leaf-Icon.png?raw=true"
+                    alt="листок"
+                  />
+                  <h3 class="A-Text-MakeMoney">
+                    Сдай крышечки в пункт «Вкусвилл»
+                  </h3>
+                </div>
+                <h1 class="A-Profit">+50 ₽</h1>
+              </div>
+              <!--  -->
+              <div class="W-DailyTask">
+                <div class="W-Text-Leaf">
+                  <img
+                    class="Q-Leaf-icon"
+                    src="https://github.com/HSEADC/Trace/blob/main/src/img/learn/A-Leaf-Icon.png?raw=true"
+                    alt="листок"
+                  />
+                  <h3 class="A-Text-MakeMoney">Рассортируй гардероб</h3>
+                </div>
+                <h1 class="A-Profit">+20 ₽</h1>
+              </div>
+              <!--  -->
+              <div class="W-DailyTask">
+                <div class="W-Text-Leaf">
+                  <img
+                    class="Q-Leaf-icon"
+                    src="https://github.com/HSEADC/Trace/blob/main/src/img/learn/A-Leaf-Icon.png?raw=true"
+                    alt="листок"
+                  />
+                  <h3 class="A-Text-MakeMoney">Собери старую технику</h3>
+                </div>
+                <h1 class="A-Profit">+70 ₽</h1>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="O_TestCard O_TestResult isHidden" id="resultCard">
-        <div class="W_TestTop">
-          <p class="A_TestLabel">РЕЗУЛЬТАТ</p>
-          <h2 class="A_TestQuestion" id="resultHeader"></h2>
-          <p class="A_TestResultText" id="resultText"></p>
-        </div>
+      <section class="W-ScreenThree-Learn">
+        <div class="O-Card-Lesson-Two-Information">
+          <div class="W-LessonHeader">
+            <h1 class="A-Lesson-Title">Экологичная суетология</h1>
+          </div>
 
-        <div class="W_TestNav">
-          <button
-            class="A_TestNavBtn A_TestNavBtnLeft"
-            id="restartBtn"
-            type="button"
-          >
-            ↺
-          </button>
-          <a class="A_TestNavBtn A_TestNavBtnRight" href="./articles.html">↗</a>
+          <div class="W-Lesson-Intro">
+            <h1 class="A-Ttitle-LessonIntro">Введение</h1>
+            <p class="A-Text-Lesson">
+              В этом и последующих уроках мы расскажем о способах экологичного
+              дохода, предложим реальные кейсы, поделимся советами, как спасти
+              планету и свое финансовое положение
+            </p>
+          </div>
+          <ul class="steps">
+            <li class="A-Step">
+              <div class="A-Step-Circle">1</div>
+              <div class="A-Step-Text">Что такое экобизнес</div>
+            </li>
+
+            <li class="A-Step">
+              <div class="A-Step-Circle">2</div>
+              <div class="A-Step-Text">Риски и возможности</div>
+            </li>
+
+            <li class="A-Step">
+              <div class="A-Step-Circle">3</div>
+              <div class="A-Step-Text">Подборка реальных кейсов</div>
+            </li>
+
+            <li class="A-Step">
+              <div class="A-Step-Circle">4</div>
+              <div class="A-Step-Text">Экобизнес в будущем</div>
+            </li>
+          </ul>
+          <div class="W-Lesson-Footer">
+            <h3>Время: 30мин</h3>
+          </div>
+        </div>
+        <div
+          class="O-Card-Lesson-Two-Swipe"
+          id="ecoBusinessTest"
+          data-lesson-id="1"
+        >
+          <div class="W-Card-Swipe-Left">
+            <div class="M-AwardSlot" data-award-index="1">
+              <div class="A-Award-Line"></div>
+              <img
+                class="A-Award-Img"
+                id="awardImg1"
+                src="https://github.com/HSEADC/Trace/blob/main/src/img/learn/A-Award-Zelenka-disable.png?raw=true"
+                alt="Зелёнка"
+                data-default="https://github.com/HSEADC/Trace/blob/main/src/img/learn/A-Award-Zelenka-disable.png?raw=true"
+                data-complete="https://github.com/HSEADC/Trace/blob/main/src/img/learn/A-Award-Zelenka-active.png?raw=true"
+              />
+            </div>
+
+            <div class="M-AwardSlot" data-award-index="2">
+              <div class="A-Award-Line"></div>
+              <img
+                class="A-Award-Img"
+                id="awardImg2"
+                src="https://github.com/HSEADC/Trace/blob/main/src/img/learn/A-Award-Bioactive-disable.png?raw=true"
+                alt="Биоактивный"
+                data-default="https://github.com/HSEADC/Trace/blob/main/src/img/learn/A-Award-Bioactive-disable.png?raw=true"
+                data-complete="../img/learn/A-Award-Bioactive-active.png"
+              />
+            </div>
+
+            <div class="M-AwardSlot" data-award-index="3">
+              <div class="A-Award-Line"></div>
+              <img
+                class="A-Award-Img"
+                id="awardImg3"
+                src="https://github.com/HSEADC/Trace/blob/main/src/img/learn/A-Award-Econytu-disable.png?raw=true"
+                alt="Эконутый"
+                data-default="https://github.com/HSEADC/Trace/blob/main/src/img/learn/A-Award-Econytu-disable.png?raw=true"
+                data-complete="https://github.com/HSEADC/Trace/blob/main/src/img/learn/A-Award-Econytu-active.png?raw=true"
+              />
+            </div>
+
+            <div class="M-AwardSlot" data-award-index="4">
+              <div class="A-Award-Line"></div>
+              <img
+                class="A-Award-Img"
+                id="awardImg4"
+                src="https://github.com/HSEADC/Trace/blob/main/src/img/learn/A-Award-Darvin-disable.png?raw=true"
+                alt="Дарвин"
+                data-default="https://github.com/HSEADC/Trace/blob/main/src/img/learn/A-Award-Darvin-disable.png?raw=true"
+                data-complete="https://github.com/HSEADC/Trace/blob/main/src/img/learn/A-Award-Darvin-active.png?raw=true"
+              />
+            </div>
+          </div>
+
+          <div class="W-Card-Swipe-Right">
+            <div class="W-ProgressBar">
+              <div class="A-Progress">
+                <div class="A-Progress-Line" id="testProgressLine"></div>
+              </div>
+            </div>
+
+            <div class="O-Lesson-Cover" id="coverScreen">
+              <div class="W-Lesson-Cover-Titile">
+                <h1 class="A-Lesson-Cover-Titile" id="coverTitle"></h1>
+                <div class="W-Lesson-Cover-Filters">
+                  <h3 id="coverLessonNumber"></h3>
+                  <h3 id="coverDuration"></h3>
+                </div>
+              </div>
+
+              <div class="W-Lesson-Img">
+                <div class="W-Lesson-ImgLayers" id="coverImage"></div>
+
+                <button
+                  class="A-Lesson-NextSlide-Button"
+                  id="startTestBtn"
+                  type="button"
+                  aria-label="Начать тест"
+                >
+                  <img
+                    class="A-Arrow-Button"
+                    src="../img/icons/A-Arrow-Button.svg"
+                    alt="далее"
+                  />
+                </button>
+              </div>
+            </div>
+
+            <section class="O-TestFlowCard isHidden" id="testCard">
+              <div class="W-TestFlowTop">
+                <p class="A-TestFlowLabel" id="testLabel"></p>
+                <h2 class="A-TestFlowQuestion" id="testQuestion"></h2>
+                <div class="W-TestFlowText" id="testText"></div>
+              </div>
+
+              <div class="C-TestLearnList isHidden" id="learnList"></div>
+              <div class="C-TestAnswers isHidden" id="answers"></div>
+
+              <div class="W-TestNav">
+                <button
+                  class="A-TestNavBtn A-TestNavBtnLeft"
+                  id="prevBtn"
+                  type="button"
+                  aria-label="Назад"
+                >
+                  <img
+                    class="A-Arrow-Button A-Arrow-ButtonLeft"
+                    src="../img/icons/A-Arrow-Button.svg"
+                    alt="назад"
+                  />
+                </button>
+
+                <button
+                  class="A-TestNavBtn A-TestNavBtnRight"
+                  id="nextBtn"
+                  type="button"
+                  aria-label="Далее"
+                >
+                  <img
+                    class="A-Arrow-Button"
+                    src="../img/icons/A-Arrow-Button.svg"
+                    alt="далее"
+                  />
+                </button>
+              </div>
+            </section>
+
+            <section
+              class="O-TestResultCard O-TestResultCard--win isHidden"
+              id="winCard"
+            >
+              <div class="W-TestResultTop">
+                <p class="A-TestFlowLabel A-TestFlowLabel--green">РЕЗУЛЬТАТ</p>
+                <h2 class="A-TestResultTitle">
+                  ТЫ РЕШИЛ ВСЕ ПРАВИЛЬНО!<br />
+                  ПЕРЕЙДЁМ К НОВОЙ ТЕМЕ?
+                </h2>
+              </div>
+
+              <div class="W-TestResultImage">
+                <img
+                  class="A-TestResultArt"
+                  src="https://github.com/HSEADC/Trace/blob/main/src/img/learn/A-Test-Win.png?raw=true"
+                  alt="Победа"
+                />
+              </div>
+
+              <div class="W-TestResultFooter">
+                <button class="A-TestResultBtn" id="continueBtn" type="button">
+                  ПРОДОЛЖИТЬ
+                </button>
+              </div>
+            </section>
+
+            <section
+              class="O-TestResultCard O-TestResultCard--lose isHidden"
+              id="loseCard"
+            >
+              <div class="W-TestResultTop">
+                <p class="A-TestFlowLabel A-TestFlowLabel--green">РЕЗУЛЬТАТ</p>
+                <h2 class="A-TestResultTitle">
+                  ОЙ ЧТО-ТО ПОШЛО НЕ ТАК,<br />
+                  ПОПРОБУЙ ЕЩЁ РАЗ
+                </h2>
+              </div>
+
+              <div class="W-TestResultImage">
+                <img
+                  class="A-TestResultArt"
+                  src="https://github.com/HSEADC/Trace/blob/main/src/img/learn/A-Test-Lose.png?raw=true"
+                  alt="Поражение"
+                />
+              </div>
+
+              <div class="W-TestResultFooter">
+                <button class="A-TestResultBtn" id="restartBtn" type="button">
+                  ПРОЙТИ ЕЩЁ РАЗ
+                </button>
+              </div>
+            </section>
+          </div>
         </div>
       </section>
     </main>
+    <footer></footer>
   </body>
 </html>
