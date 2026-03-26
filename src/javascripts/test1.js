@@ -5,7 +5,7 @@ const root = document.getElementById("ecoBusinessTest");
 if (!root) {
   console.warn("ecoBusinessTest not found");
 } else {
-  const initialLessonId = Number(root.dataset.lessonId || 2);
+  const initialLessonId = Number(root.dataset.lessonId || 1);
 
   const lessons = [
     {
@@ -13,8 +13,23 @@ if (!root) {
       lessonNumber: "1 урок",
       duration: "3 мин",
       coverTitle: "Псс...это эко-бизнес,<br />хочешь заработать?",
-      coverImage:
-        "https://github.com/HSEADC/Trace/blob/main/src/img/learn/A-Cover-Lesson-1.png?raw=true",
+      coverLayers: [
+        {
+          src: "../img/learn/Q-lesson1-base.png",
+          className: "A-CoverLayer A-CoverLayer--lesson1-base",
+          alt: "База с цветами",
+        },
+        {
+          src: "../img/learn/Q-lesson1-wallet.png",
+          className: "A-CoverLayer A-CoverLayer--lesson1-wallet",
+          alt: "Кошелёк",
+        },
+        {
+          src: "../img/learn/Q-lesson1-rubles.png",
+          className: "A-CoverLayer A-CoverLayer--lesson1-rubles",
+          alt: "Рубли",
+        },
+      ],
       passScore: 1,
       passed: false,
       stages: [
@@ -74,8 +89,18 @@ if (!root) {
       lessonNumber: "2 урок",
       duration: "5 мин",
       coverTitle: "Как поднять денег на «зелёных» темках",
-      coverImage:
-        "https://github.com/HSEADC/Trace/blob/main/src/img/learn/A-Finger-Img.png?raw=true",
+      coverLayers: [
+        {
+          src: "../img/learn/Q-lesson2-phone-bg.png",
+          className: "A-CoverLayer A-CoverLayer--lesson2-bg",
+          alt: "Фон телефона",
+        },
+        {
+          src: "../img/learn/Q-lesson2-phone-hand.png",
+          className: "A-CoverLayer A-CoverLayer--lesson2-phone",
+          alt: "Телефон в руке",
+        },
+      ],
       passScore: 1,
       passed: false,
       stages: [
@@ -125,8 +150,18 @@ if (!root) {
       lessonNumber: "3 урок",
       duration: "4 мин",
       coverTitle: "эй, Fashion killer, убьём твою бедность?",
-      coverImage:
-        "https://github.com/HSEADC/Trace/blob/main/src/img/learn/A-Cover-Lesson-3.png?raw=true",
+      coverLayers: [
+        {
+          src: "../img/learn/Q-lesson3-man-base.png",
+          className: "A-CoverLayer A-CoverLayer--lesson3-base",
+          alt: "Мужик",
+        },
+        {
+          src: "../img/learn/Q-lesson3-man-hand.png",
+          className: "A-CoverLayer A-CoverLayer--lesson3-hand",
+          alt: "Рука",
+        },
+      ],
       passScore: 1,
       passed: false,
       stages: [
@@ -181,8 +216,18 @@ if (!root) {
       lessonNumber: "4 урок",
       duration: "4 мин",
       coverTitle: "Пластик. Жизнь. смерть и воскрешение",
-      coverImage:
-        "https://github.com/HSEADC/Trace/blob/main/src/img/learn/A-Cover-Lesson-4.png?raw=true",
+      coverLayers: [
+        {
+          src: "../img/learn/Q-lesson4-grave-base.png",
+          className: "A-CoverLayer A-CoverLayer--lesson4-base",
+          alt: "Надгробие",
+        },
+        {
+          src: "../img/learn/Q-lesson4-branch.png",
+          className: "A-CoverLayer A-CoverLayer--lesson4-branch",
+          alt: "Ветка",
+        },
+      ],
       passScore: 1,
       passed: false,
       stages: [
@@ -314,6 +359,22 @@ if (!root) {
     progressLine.style.width = `${percent}%`;
   }
 
+  function renderCoverLayers(lesson) {
+    if (!coverImage) return;
+
+    coverImage.innerHTML = "";
+
+    if (!lesson.coverLayers || !lesson.coverLayers.length) return;
+
+    lesson.coverLayers.forEach((layer) => {
+      const img = document.createElement("img");
+      img.src = layer.src;
+      img.alt = layer.alt || "";
+      img.className = layer.className || "A-CoverLayer";
+      coverImage.appendChild(img);
+    });
+  }
+
   function renderCover() {
     const lesson = getCurrentLesson();
 
@@ -321,9 +382,7 @@ if (!root) {
     coverLessonNumber.textContent = lesson.lessonNumber;
     coverDuration.textContent = lesson.duration;
 
-    if (lesson.coverImage) {
-      coverImage.src = lesson.coverImage;
-    }
+    renderCoverLayers(lesson);
 
     coverScreen.classList.remove("isHidden");
     testCard.classList.add("isHidden");
