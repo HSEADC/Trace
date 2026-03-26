@@ -15,17 +15,17 @@ if (!root) {
       coverTitle: "Псс...это эко-бизнес,<br />хочешь заработать?",
       coverLayers: [
         {
-          src: "../img/learn/Q-lesson1-base.png",
+          src: "https://github.com/HSEADC/Trace/blob/main/src/img/learn/Q-lesson1-base.png?raw=true",
           className: "A-CoverLayer A-CoverLayer--lesson1-base",
           alt: "База с цветами",
         },
         {
-          src: "../img/learn/Q-lesson1-wallet.png",
+          src: "https://github.com/HSEADC/Trace/blob/main/src/img/learn/Q-lesson1-wallet.png?raw=true",
           className: "A-CoverLayer A-CoverLayer--lesson1-wallet",
           alt: "Кошелёк",
         },
         {
-          src: "../img/learn/Q-lesson1-rubles.png",
+          src: "https://github.com/HSEADC/Trace/blob/main/src/img/learn/Q-lesson1-flowers-rubles.png?raw=true",
           className: "A-CoverLayer A-CoverLayer--lesson1-rubles",
           alt: "Рубли",
         },
@@ -91,12 +91,12 @@ if (!root) {
       coverTitle: "Как поднять денег на «зелёных» темках",
       coverLayers: [
         {
-          src: "../img/learn/Q-lesson2-phone-bg.png",
+          src: "https://github.com/HSEADC/Trace/blob/main/src/img/learn/Q-lesson2-phone-bg.png?raw=true",
           className: "A-CoverLayer A-CoverLayer--lesson2-bg",
           alt: "Фон телефона",
         },
         {
-          src: "../img/learn/Q-lesson2-phone-hand.png",
+          src: "https://github.com/HSEADC/Trace/blob/main/src/img/learn/Q-lesson2-phone-hand.png?raw=true",
           className: "A-CoverLayer A-CoverLayer--lesson2-phone",
           alt: "Телефон в руке",
         },
@@ -152,12 +152,12 @@ if (!root) {
       coverTitle: "эй, Fashion killer, убьём твою бедность?",
       coverLayers: [
         {
-          src: "../img/learn/Q-lesson3-man-base.png",
+          src: "https://github.com/HSEADC/Trace/blob/main/src/img/learn/Q-lesson3-man-base.png?raw=true",
           className: "A-CoverLayer A-CoverLayer--lesson3-base",
           alt: "Мужик",
         },
         {
-          src: "../img/learn/Q-lesson3-man-hand.png",
+          src: "https://github.com/HSEADC/Trace/blob/main/src/img/learn/Q-lesson3-man-hand.png?raw=true",
           className: "A-CoverLayer A-CoverLayer--lesson3-hand",
           alt: "Рука",
         },
@@ -218,12 +218,12 @@ if (!root) {
       coverTitle: "Пластик. Жизнь. смерть и воскрешение",
       coverLayers: [
         {
-          src: "../img/learn/Q-lesson4-grave-base.png",
+          src: "https://github.com/HSEADC/Trace/blob/main/src/img/learn/Q-lesson4-grave-base.png?raw=true",
           className: "A-CoverLayer A-CoverLayer--lesson4-base",
           alt: "Надгробие",
         },
         {
-          src: "../img/learn/Q-lesson4-branch.png",
+          src: "https://github.com/HSEADC/Trace/blob/main/src/img/learn/Q-lesson4-branch.png?raw=true",
           className: "A-CoverLayer A-CoverLayer--lesson4-branch",
           alt: "Ветка",
         },

@@ -214,6 +214,7 @@ h1 {
   width: 46%;
   padding: 4vw 0 0 2vw;
   align-items: center;
+  margin-bottom: 2vw;
 }
 
 .A-ArticlesAdd-img {
@@ -398,6 +399,7 @@ h1 {
 
 .A-Top-Icon {
   height: auto;
+  max-height: 3.8vw;
   width: auto;
 }
 
@@ -533,6 +535,7 @@ h1 {
 }
 
 .A-Cursor {
+  width: 7%;
   position: absolute;
   z-index: 100;
   animation: cursorMove 6s ease-in-out infinite;
@@ -835,3 +838,240 @@ h1 {
   cursor: pointer;
 }
 /*  */
+@media (max-width: 768px) {
+  .W-ScreenOne,
+  .W-Screen-Four {
+    flex-direction: column;
+    gap: 1vw;
+  }
+
+  .W-Screen1-left,
+  .W-Screen1-right,
+  .O-Map,
+  .O-Post,
+  .W-Learn-Left {
+    width: 99%;
+    height: fit-content;
+  }
+
+  .O-ArticlesAdd {
+    height: fit-content;
+    width: 100%;
+    flex-direction: column;
+    gap: 1vw;
+  }
+
+  .M-AboutUs {
+    height: auto;
+    width: 99%;
+    padding: 4vw;
+  }
+
+  .W-ArticlesAdd-Right {
+    width: 100%;
+  }
+
+  .W-ArticlesAdd-Left {
+    flex-direction: column;
+    height: 100%;
+    width: 95%;
+    padding: 2vw 0 0 3vw;
+  }
+
+  .M-ArticlesCard {
+    height: 33vw;
+    width: 100%;
+  }
+
+  .W-ArticlesCard-Title {
+    justify-content: space-between;
+    height: 6vw;
+    padding: 0 2vw;
+  }
+
+  .M-TitilePost {
+    height: 6vw;
+  }
+
+  .W-ArticlesCard-img {
+    height: 17vw;
+  }
+  .A-Loop,
+  .A-Book {
+    display: none;
+  }
+
+  .W-ScreenThree {
+    flex-direction: column;
+    gap: 1vw;
+  }
+
+  .A-TrashImg {
+    display: none;
+  }
+
+  .M-Question {
+    height: 9vw;
+  }
+
+  .O-Learn {
+    flex-direction: column;
+    gap: 2vw;
+    height: 62vw;
+    padding: 5vw;
+  }
+
+  .M-PostInformation {
+    height: 62vw;
+  }
+
+  .button-yellow {
+    height: 5.5vw;
+    width: 21.5vw;
+  }
+
+  .O-Map,
+  .O-Post {
+    height: 80vw;
+  }
+
+  .A-ButtonPost {
+    left: 50vw;
+    top: 62vw;
+  }
+
+  .A-Cursor {
+    animation: cursorMove 9s ease-in-out infinite;
+  }
+
+  @keyframes cursorMove {
+    0% {
+      transform: translate(10vw, 5vw) rotate(0deg);
+    }
+
+    20% {
+      transform: translate(18vw, 26vw) rotate(-4deg);
+    }
+
+    40% {
+      transform: translate(30vw, 34vw) rotate(3deg);
+    }
+
+    60% {
+      transform: translate(40vw, 38vw) rotate(0deg);
+    }
+
+    70% {
+      transform: translate(47vw, 43vw) rotate(-2deg);
+    }
+
+    80% {
+      transform: translate(53.5vw, 53.5vw) rotate(2deg);
+    }
+
+    100% {
+      transform: translate(10vw, 5vw) rotate(0deg);
+    }
+  }
+
+  .W-ReadTitile-Button {
+    width: 92%;
+    height: 4vw;
+    margin: -6.2vw 0 0 2vw;
+    justify-content: space-between;
+    padding: 0vw 2vw;
+  }
+
+  .W-AboutUsTitile-Button {
+    width: 86%;
+    height: 4vw;
+    margin: -6.2vw 0 0 2vw;
+    justify-content: space-between;
+    padding: 0vw 2vw;
+  }
+
+  .W-LearnTitile-Button {
+    justify-content: space-between;
+    width: 86%;
+    margin: -6vw 0 0 2vw;
+  }
+
+  .W-KickGrid {
+    grid-auto-rows: 14vw;
+    margin-left: -12vw;
+  }
+  .A-KickPlayButton {
+    height: 12vw;
+    width: 11vw;
+  }
+
+  .O-KickCard {
+    height: 100vw;
+  }
+
+  .O-DayCard {
+    height: 40vw;
+  }
+
+  .A-Title {
+    margin: -4.5vw 0 0 13vw;
+  }
+
+  .W-PostIcons-Right {
+    width: 16%;
+  }
+
+  .W-Learn-Right {
+    position: relative;
+    width: 99%;
+  }
+
+  .W-Map-Top {
+    height: 11vw;
+  }
+
+  .W-Map-Centre-Bubble {
+    align-items: start;
+    background-repeat: no-repeat;
+    background-size: contain;
+    gap: 1vw;
+    height: 86%;
+    padding: 0 3vw 2vw;
+    width: 70%;
+  }
+
+  .A-Map-IconCloth,
+  .A-Map-IconCloth:hover {
+    height: 6vw;
+    width: 6vw;
+  }
+
+  .W-PlayTitile-Button {
+    width: 94%;
+  }
+
+  .A-Cloth6 {
+    left: 72vw;
+    top: -7vw;
+  }
+  .A-Cloth5 {
+    left: 67vw;
+    top: 9vw;
+  }
+  .A-Cloth3 {
+    left: 55vw;
+    top: 26vw;
+  }
+  .A-Cloth4 {
+    left: 58vw;
+    top: 37vw;
+  }
+  .A-Cloth2 {
+    left: 6vw;
+    top: 24vw;
+  }
+  .A-Cloth1 {
+    left: 4vw;
+    top: -5vw;
+  }
+}

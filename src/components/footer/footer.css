@@ -24,23 +24,22 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1vw;
+  gap: 0.5vw;
   align-items: center;
 }
 
 .A-Logo-Footer {
-  width: 5vw;
-  height: 5vw;
-  display: flex;
+  background-position-y: 39%;
+  background-position-x: 62%;
   justify-content: center;
   align-items: center;
-  border-radius: 100%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
   background-color: var(--color-read);
-  background-image: url(https://github.com/HSEADC/Trace/blob/main/src/img/icons/Q-Logo.png?raw=true);
-  flex-shrink: 0;
+  background-image: url(https://github.com/HSEADC/Trace/blob/main/src/img/icons/Q-Logo-White.png?raw=true);
+  background-repeat: no-repeat;
+  background-size: 74%;
+  border-radius: 100%;
+  height: 5vw;
+  width: 5vw;
 }
 
 .M_FooterList {
@@ -49,7 +48,6 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.4vw;
 }
 
 .M_FooterSocial {

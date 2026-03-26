@@ -366,11 +366,97 @@
   gap: 1vw;
 }
 
-.A-TelegramAdd {
+.A-TelegramAdd,
+.A-TelegramAdd-Mobile {
   width: 98%;
+}
+
+.A-TelegramAdd-Mobile {
+  display: none;
 }
 
 .A-TelegramAdd-Text {
   font: var(--font-h1);
   color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+  .W-ScreenOne-AboutUs,
+  .W-ScreenTwo-AboutUs {
+    flex-direction: column;
+    gap: 3vw;
+  }
+
+  .W-ScreenOne-AboutUs-Left,
+  .W-ScreenOne-AboutUs-Right {
+    height: 100%;
+    width: 100%;
+  }
+
+  .W-ScreenTwo-AboutUs-Left,
+  .W-ScreenTwo-AboutUs-Right {
+    height: 56vw;
+    width: 100%;
+  }
+
+  .A-Title-AboutUs {
+    margin: -4.3vw 0 0 29vw;
+  }
+
+  .W-Profile-Img {
+    height: 25vw;
+    width: 25vw;
+  }
+
+  .W-Profile-AboutUs {
+    gap: 5vw;
+  }
+
+  .A-TelegramAdd {
+    display: none;
+  }
+
+  .A-TelegramAdd-Mobile {
+    display: block;
+  }
+
+  .W-ScreenThree-AboutUs {
+    height: 50vw;
+  }
+
+  .A-TelegramAdd-Text {
+    text-align: center;
+  }
+
+  .W-Rational {
+    left: 53vw;
+    top: 7vw;
+  }
+
+  .A-Tranier-img {
+    width: 49%;
+    top: 0vw;
+    left: 30vw;
+  }
+
+  .A-Flacon-img {
+    width: 30%;
+    top: 0vw;
+    left: -1vw;
+  }
+
+  .W-Active {
+    left: 7vw;
+    top: 17vw;
+  }
+
+  .A-Kettle-img {
+    width: 47%;
+    top: 0vw;
+    left: -1vw;
+  }
+
+  .W-LettersValues {
+    margin-left: 7vw;
+  }
 }

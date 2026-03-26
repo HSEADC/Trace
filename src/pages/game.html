@@ -79,6 +79,51 @@
                 </span>
               </div>
             </div>
+
+            <div class="O-GamePanelRight-Mobile">
+              <img
+                class="A-GamePanelTitle A-GamePanelTitle-Goal"
+                src="../img/icons/A-Next-Text.png"
+                alt="Следующий"
+              />
+
+              <div class="M-GameNextBox">
+                <canvas
+                  id="next-piece-mobile"
+                  class="A-NextPieceCanvas"
+                  width="120"
+                  height="120"
+                ></canvas>
+              </div>
+
+              <div class="M-GameControls">
+                <button
+                  class="A-GameControlButton"
+                  id="start-button-mobile"
+                  type="button"
+                  aria-label="старт"
+                >
+                  <img
+                    class="A-GameControlIcon"
+                    src="../img/icons/A-Play-Icon.png"
+                    alt="старт"
+                  />
+                </button>
+
+                <button
+                  class="A-GameControlButton"
+                  id="pause-button-mobile"
+                  type="button"
+                  aria-label="пауза"
+                >
+                  <img
+                    class="A-GameControlIcon"
+                    src="../img/icons/A-Pause-Icon.png"
+                    alt="пауза"
+                  />
+                </button>
+              </div>
+            </div>
           </div>
 
           <div class="W-GameField">
@@ -90,7 +135,6 @@
                 height="400"
               ></canvas>
 
-              <!-- LOSE MODAL -->
               <div id="lose-modal" class="O-GameModal O-GameModal-Hidden">
                 <div class="M-GameModalCard">
                   <div class="M-GameModalTopButtons">
@@ -121,7 +165,6 @@
                 </div>
               </div>
 
-              <!-- WIN MODAL -->
               <div id="win-modal" class="O-GameModal O-GameModal-Hidden">
                 <div class="M-GameModalCard">
                   <div class="M-GameModalTopButtons">

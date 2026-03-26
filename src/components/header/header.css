@@ -7,6 +7,9 @@
 }
 
 .W-HeaderFrame {
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
   background-color: var(--color-text);
   border-radius: 0.2vw;
   height: 4vw;
@@ -15,7 +18,11 @@
 
 .O-Navbar {
   height: auto;
-  width: auto;
+  width: 90%;
+}
+
+.A-Logo {
+  width: 4%;
 }
 
 .M-NavGroup {

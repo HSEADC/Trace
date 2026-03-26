@@ -3,11 +3,18 @@ const ROWS = 8;
 const BLOCK_SIZE = 50;
 
 const boardCanvas = document.getElementById("tetris-board");
-const nextCanvas = document.getElementById("next-piece");
 
-if (boardCanvas && nextCanvas) {
+const nextCanvases = [
+  document.getElementById("next-piece"),
+  document.getElementById("next-piece-mobile"),
+].filter(Boolean);
+
+if (boardCanvas) {
   const boardCtx = boardCanvas.getContext("2d");
-  const nextCtx = nextCanvas.getContext("2d");
+  const nextContexts = nextCanvases.map((canvas) => ({
+    canvas,
+    ctx: canvas.getContext("2d"),
+  }));
 
   const goalPaperValue = document.getElementById("goal-paper-value");
   const goalPlasticValue = document.getElementById("goal-plastic-value");
@@ -15,9 +22,20 @@ if (boardCanvas && nextCanvas) {
   const levelValue = document.getElementById("level-value");
   const scoreValue = document.getElementById("score-value");
 
-  const startButton = document.getElementById("start-button");
-  const pauseButton = document.getElementById("pause-button");
-  const menuButton = document.getElementById("menu-button");
+  const startButtons = [
+    document.getElementById("start-button"),
+    document.getElementById("start-button-mobile"),
+  ].filter(Boolean);
+
+  const pauseButtons = [
+    document.getElementById("pause-button"),
+    document.getElementById("pause-button-mobile"),
+  ].filter(Boolean);
+
+  const menuButtons = [
+    document.getElementById("menu-button"),
+    document.getElementById("menu-button-mobile"),
+  ].filter(Boolean);
 
   // LOSE MODAL
   const loseModal = document.getElementById("lose-modal");
@@ -404,8 +422,8 @@ if (boardCanvas && nextCanvas) {
     drawPiece(currentPiece, boardCtx, currentPiece.x, currentPiece.y);
   }
 
-  function drawNextPiece() {
-    nextCtx.clearRect(0, 0, nextCanvas.width, nextCanvas.height);
+  function drawNextPieceOnCanvas(ctx, canvas) {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     if (!nextPiece) return;
 
@@ -417,8 +435,8 @@ if (boardCanvas && nextCanvas) {
     const piecePixelWidth = shapeWidth * previewCellSize;
     const piecePixelHeight = shapeHeight * previewCellSize;
 
-    const startX = (nextCanvas.width - piecePixelWidth) / 2;
-    const startY = (nextCanvas.height - piecePixelHeight) / 2;
+    const startX = (canvas.width - piecePixelWidth) / 2;
+    const startY = (canvas.height - piecePixelHeight) / 2;
 
     shape.forEach((row, y) => {
       row.forEach((value, x) => {
@@ -427,8 +445,14 @@ if (boardCanvas && nextCanvas) {
         const drawX = startX / previewCellSize + x;
         const drawY = startY / previewCellSize + y;
 
-        drawFilledCell(nextCtx, drawX, drawY, nextPiece.color, previewCellSize);
+        drawFilledCell(ctx, drawX, drawY, nextPiece.color, previewCellSize);
       });
+    });
+  }
+
+  function drawNextPiece() {
+    nextContexts.forEach(({ ctx, canvas }) => {
+      drawNextPieceOnCanvas(ctx, canvas);
     });
   }
 
@@ -720,17 +744,17 @@ if (boardCanvas && nextCanvas) {
     }
   });
 
-  if (startButton) {
-    startButton.addEventListener("click", startGame);
-  }
+  startButtons.forEach((button) => {
+    button.addEventListener("click", startGame);
+  });
 
-  if (pauseButton) {
-    pauseButton.addEventListener("click", togglePause);
-  }
+  pauseButtons.forEach((button) => {
+    button.addEventListener("click", togglePause);
+  });
 
-  if (menuButton) {
-    menuButton.addEventListener("click", handleMenuAction);
-  }
+  menuButtons.forEach((button) => {
+    button.addEventListener("click", handleMenuAction);
+  });
 
   if (loseModalRestart) {
     loseModalRestart.addEventListener("click", startGame);
@@ -763,6 +787,11 @@ if (boardCanvas && nextCanvas) {
   if (winModalMenuTop) {
     winModalMenuTop.addEventListener("click", handleMenuAction);
   }
+
+  window.addEventListener("resize", () => {
+    draw();
+    drawNextPiece();
+  });
 
   resetGame();
 }
