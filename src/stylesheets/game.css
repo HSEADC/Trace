@@ -1,19 +1,7 @@
-* {
-  box-sizing: border-box;
-}
-
-html {
-  background: var(--color-bg-gradient-primary);
-  font-size: calc(1vw / 19.2);
-  margin: calc(1vw / 19.2);
-}
-
 .W_Game {
   width: 100%;
   height: 30vw;
 }
-
-/* главный экран */
 
 .O-GameScreen {
   width: 100%;
@@ -23,8 +11,6 @@ html {
   align-items: center;
 }
 
-/* общий контейнер */
-
 .W-GameLayout {
   width: 90vw;
   height: 100%;
@@ -32,8 +18,6 @@ html {
   justify-content: center;
   align-items: stretch;
 }
-
-/* LEFT PANEL */
 
 .W-GamePanelLeft {
   width: 17vw;
@@ -46,7 +30,7 @@ html {
 .O-GamePanelLeft {
   width: 100%;
   height: 85%;
-  background: linear-gradient(180deg, #ff48c8 0%, #ff2ab8 45%, #f117ad 100%);
+  background-color: var(--color-pink);
   border-radius: 1.5vw;
   border-right: 0.7vw solid var(--color-dark-grey);
   border-bottom: 0.7vw solid var(--color-dark-grey);
@@ -54,15 +38,11 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow: inset -4.29px -4.29px 6.43px rgba(0, 0, 0, 0.2);
 }
 
-/* заголовки */
-
 .A-GamePanelTitle {
-  margin: 0;
-  font: var(--font-h1);
-  text-transform: uppercase;
-  color: var(--color-white);
+  width: 100%;
 }
 
 .A-GamePanelTitle-Goal {
@@ -75,7 +55,7 @@ html {
   width: 100%;
   height: 22%;
   border-radius: 1vw;
-  background: linear-gradient(180deg, #ef1fb1 0%, #df119f 100%);
+  background-color: var(--color-pink);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,8 +77,6 @@ html {
   color: var(--color-white);
 }
 
-/* LINES */
-
 .M-GameLinesBox {
   width: 100%;
   height: 25%;
@@ -106,8 +84,6 @@ html {
   justify-content: center;
   align-items: center;
 }
-
-/* CENTER FIELD */
 
 .W-GameField {
   width: 36vw;
@@ -119,8 +95,8 @@ html {
 
 .O-GameField {
   width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg, #ff49c8 0%, #ff29b8 46%, #ec17ac 100%);
+  height: 30vw;
+  background-color: var(--color-pink);
   border-radius: 1.8vw;
   border-right: 0.8vw solid var(--color-dark-grey);
   border-bottom: 0.8vw solid var(--color-dark-grey);
@@ -128,6 +104,9 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow:
+    inset 0 -3.94px 3.94px 0 rgba(0, 0, 0, 0.2),
+    inset 0 3.94px 3.94px 0 rgba(255, 255, 255, 0.4);
 }
 
 /* canvas */
@@ -136,10 +115,8 @@ html {
   width: 100%;
   height: 100%;
   border-radius: 0.8vw;
-  background: #ec1ba9;
+  background-color: #e51ea2;
 }
-
-/* RIGHT PANEL */
 
 .W-GamePanelRight {
   width: 17vw;
@@ -152,7 +129,7 @@ html {
 .O-GamePanelRight {
   width: 100%;
   height: 95%;
-  background: linear-gradient(180deg, #ff48c8 0%, #ff2ab8 45%, #f117ad 100%);
+  background-color: var(--color-pink);
   border-radius: 1.5vw;
   border-right: 0.7vw solid var(--color-dark-grey);
   border-bottom: 0.7vw solid var(--color-dark-grey);
@@ -160,23 +137,32 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow:
+    inset 0 -3.94px 3.94px 0 rgba(0, 0, 0, 0.2),
+    inset 0 3.94px 3.94px 0 rgba(255, 255, 255, 0.4);
 }
-
-/* NEXT */
 
 .M-GameNextBox {
   width: 100%;
   height: 30%;
   border-radius: 1vw;
-  background: linear-gradient(180deg, #ef1fb1 0%, #df119f 100%);
+  background-color: var(--color-pink);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .A-NextPieceCanvas {
-  width: 80%;
+  background-color: #e51ea2;
+  width: 100%;
   height: 80%;
+  box-shadow:
+    inset -3.94px -3.94px 3.94px 0 rgba(255, 255, 255, 0.4),
+    inset 3.94px 3.94px 3.94px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* кнопки */
@@ -191,21 +177,19 @@ html {
 }
 
 .A-GameControlButton {
-  width: 3vw;
-  height: 3vw;
-  border-radius: 50%;
-  border: none;
-  background: linear-gradient(180deg, #ff6dd5 0%, #ef35bf 100%);
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 1vw;
+  border: none;
+  border-radius: 50%;
+  height: 4vw;
+  width: 4vw;
 }
 
 .A-GameControlIcon {
-  width: 1.2vw;
+  width: 130%;
 }
-
-/* LEVEL / SCORE */
 
 .M-GameStatsBox {
   width: 100%;
@@ -224,4 +208,271 @@ html {
 .A-GamePanelTitle-Level,
 .A-GamePanelTitle-Score {
   text-align: center;
+}
+
+/* обязательно для модалок поверх поля */
+.O-GameField {
+  position: relative;
+  overflow: hidden;
+}
+
+/* МОДАЛКИ */
+
+.O-GameModal {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-bg-grey);
+  border-radius: 1.8vw;
+}
+
+.O-GameModal-Hidden {
+  display: none;
+}
+
+.M-GameModalCard {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 1vw;
+  background-color: var(--color-bg-grey);
+  border-right: 0.7vw solid var(--color-read);
+  border-bottom: 0.7vw solid var(--color-read);
+  box-shadow:
+    inset 0 0.25vw 0.35vw rgba(255, 255, 255, 0.7),
+    inset 0 -0.2vw 0.3vw rgba(0, 0, 0, 0.12);
+  padding: 1.2vw 1.2vw 1.5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.M-GameModalTopButtons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.8vw;
+  margin-bottom: 0.8vw;
+}
+
+.A-GameModalTopButton {
+  width: 2.7vw;
+  height: 2.7vw;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--color-bg-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 0;
+  box-shadow:
+    inset 0 0.18vw 0.24vw rgba(255, 255, 255, 0.85),
+    inset 0 -0.16vw 0.22vw rgba(0, 0, 0, 0.14),
+    0 0.12vw 0.18vw rgba(0, 0, 0, 0.08);
+}
+
+.A-GameModalTopButton img {
+  width: 130%;
+  height: auto;
+}
+
+.A-GameGoalIcon {
+  width: 100%;
+}
+
+.A-GameModalMainImage {
+  width: 74%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-top: -3vw;
+  margin-bottom: 0.6vw;
+}
+
+.A-GameModalOopsImage {
+  width: 82%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-top: -3vw;
+}
+
+.A-GameModalResultText {
+  font: var(--font-h3);
+  color: var(--color-white);
+  text-align: center;
+  margin-bottom: 1.3vw;
+}
+
+.M-GameModalButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2vw;
+  margin-top: auto;
+}
+
+.A-GameModalActionButton {
+  width: 4.3vw;
+  height: 4.3vw;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--color-read);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 0;
+  box-shadow:
+    inset 0 0.22vw 0.28vw rgba(255, 255, 255, 0.85),
+    inset 0 -0.2vw 0.25vw rgba(0, 0, 0, 0.12),
+    0 0.18vw 0.25vw rgba(0, 0, 0, 0.08);
+}
+
+.A-GameModalActionIcon {
+  width: 68%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.A-GameModalTopButton:hover,
+.A-GameModalActionButton:hover,
+.A-GameControlButton:hover {
+  transform: translateY(-0.05vw);
+}
+
+.A-GameModalTopButton:active,
+.A-GameModalActionButton:active,
+.A-GameControlButton:active {
+  transform: translateY(0.08vw);
+}
+
+.A-GameControlButton {
+  background-color: var(--color-pink);
+  cursor: pointer;
+  padding: 0;
+  box-shadow:
+    inset 0 0.22vw 0.28vw rgba(255, 255, 255, 0.35),
+    inset 0 -0.2vw 0.25vw rgba(0, 0, 0, 0.18),
+    0 0.18vw 0 rgba(0, 0, 0, 0.18);
+}
+
+@media (max-width: 1024px) {
+  .W_Game {
+    height: auto;
+    min-height: 60vw;
+  }
+
+  .O-GameField {
+    height: 42vw;
+  }
+
+  .M-GameModalCard {
+    width: 78%;
+    height: 90%;
+    border-radius: 2.4vw;
+  }
+
+  .A-GameModalTopButton {
+    width: 4.6vw;
+    height: 4.6vw;
+  }
+
+  .A-GameModalActionButton {
+    width: 7vw;
+    height: 7vw;
+  }
+
+  .A-GameModalResultText {
+    font-size: 2.2vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .W_Game {
+    min-height: 100vh;
+  }
+
+  .W-GameLayout {
+    width: 94vw;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 4vw;
+  }
+
+  .W-GamePanelLeft,
+  .W-GamePanelRight,
+  .W-GameField {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+  }
+
+  .O-GamePanelLeft,
+  .O-GamePanelRight {
+    width: 100%;
+    height: auto;
+  }
+
+  .O-GameField {
+    width: 100%;
+    height: 94vw;
+    border-radius: 4vw;
+  }
+
+  .A-GameBoardCanvas {
+    border-radius: 2vw;
+  }
+
+  .A-GameControlButton {
+    width: 11vw;
+    height: 11vw;
+  }
+
+  .M-GameModalCard {
+    width: 82%;
+    height: 88%;
+    border-radius: 4vw;
+    padding: 3vw 3vw 4vw;
+  }
+
+  .M-GameModalTopButtons {
+    gap: 2vw;
+    margin-bottom: 2vw;
+  }
+
+  .A-GameModalTopButton {
+    width: 9vw;
+    height: 9vw;
+  }
+
+  .A-GameModalMainImage {
+    width: 82%;
+    margin-bottom: 2vw;
+  }
+
+  .A-GameModalOopsImage {
+    width: 58%;
+    margin-bottom: 2vw;
+  }
+
+  .A-GameModalResultText {
+    font-size: 4vw;
+    margin-bottom: 3vw;
+  }
+
+  .M-GameModalButtons {
+    gap: 3vw;
+  }
+
+  .A-GameModalActionButton {
+    width: 12vw;
+    height: 12vw;
+  }
 }

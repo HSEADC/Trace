@@ -63,6 +63,7 @@
   gap: 1vw;
   flex-wrap: wrap;
   margin-top: 2vw;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .A-Filter-Button {
@@ -77,6 +78,7 @@
   align-items: center;
   display: flex;
   padding: 0 1vw;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .A-Filter-Choose-Button {
@@ -88,11 +90,13 @@
   padding: 0 1vw;
   font: var(--font-h3);
   border-radius: 2vw;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-active-button {
-  background-color: var(--color-dark-grey);
+  background-color: var(--color-green);
   color: var(--color-text);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .W-ScreenTwo-Art-Left,
@@ -121,7 +125,44 @@
   background-image: url(../img/articles/A-Washing-Machine-Img.png);
   background-repeat: no-repeat;
   background-size: contain;
-  background-position-y: 100%;
+  background-position-y: 7vw;
+  position: relative;
+}
+
+.A-Cursor-article {
+  position: absolute;
+  z-index: 100;
+  animation: cursorMove-article 6s ease-in-out infinite;
+}
+
+@keyframes cursorMove-article {
+  0% {
+    transform: translate(10vw, 5vw) rotate(2deg);
+  }
+
+  20% {
+    transform: translate(10vw, 6vw) rotate(-2deg);
+  }
+
+  40% {
+    transform: translate(18vw, 14vw) rotate(3deg);
+  }
+
+  60% {
+    transform: translate(14vw, 18vw) rotate(0deg);
+  }
+
+  70% {
+    transform: translate(15vw, 19vw) rotate(-2deg);
+  }
+
+  80% {
+    transform: translate(18vw, 18vw) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(10vw, 5vw) rotate(2deg);
+  }
 }
 
 .A-Washing-Machine-Img {
@@ -135,8 +176,12 @@
   background-size: cover;
   height: 12.5vw;
   padding: 2vw;
-  margin: 1.5vw 1vw;
+  margin: 0.5vw 1vw;
   width: 24vw;
+}
+
+.A-ReadTitile-Button {
+  gap: 8vw;
 }
 
 .A-Degree30-Artical-Titile {
@@ -145,11 +190,6 @@
   text-transform: uppercase;
   margin-bottom: 1vw;
   line-height: var(--ls-h4);
-  padding: 2vw 0 1.5vw 1.5vw;
-}
-
-.A-Degree30-Artical-Button {
-  margin-left: 1.5vw;
 }
 
 /* Articles Cards */
@@ -165,10 +205,18 @@
   height: 100%;
   overflow: hidden;
   text-decoration: none;
-  transition: transform 0.2s ease;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   width: 100%;
   padding: 1vw 1.5vw;
   max-width: 23vw;
+}
+
+.O-article-card:hover {
+  box-shadow:
+    inset 0 4px 12px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -4px 4px 0 rgba(0, 0, 0, 0.2);
+  height: 98%;
+  width: 98%;
 }
 
 #article-card-1,
@@ -193,6 +241,11 @@
   background-color: var(--color-yellow);
   padding: 1vw;
   border-radius: 1vw 1vw 0 0;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.M-article-card-top:hover {
+  background-color: #d0d33b;
 }
 
 .A-article-card-title {
@@ -206,6 +259,11 @@
   flex-shrink: 0;
   font: var(--font-h1);
   color: var(--color-dark-grey);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.M-article-card-top:hover .A-article-card-icon {
+  rotate: 45deg;
 }
 
 .W-article-card-img {

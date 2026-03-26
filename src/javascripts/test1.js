@@ -5,16 +5,18 @@ const root = document.getElementById("ecoBusinessTest");
 if (!root) {
   console.warn("ecoBusinessTest not found");
 } else {
-  const currentLessonId = Number(root.dataset.lessonId || 2);
+  const initialLessonId = Number(root.dataset.lessonId || 2);
 
-  const lessons = {
-    1: {
+  const lessons = [
+    {
+      id: 1,
       lessonNumber: "1 урок",
       duration: "3 мин",
       coverTitle: "Псс...это эко-бизнес,<br />хочешь заработать?",
-      coverImage: "../img/learn/A-Cover-Lesson-1.png",
-      nextLessonUrl: "./lesson-2.html",
+      coverImage:
+        "https://github.com/HSEADC/Trace/blob/main/src/img/learn/A-Cover-Lesson-1.png?raw=true",
       passScore: 1,
+      passed: false,
       stages: [
         {
           type: "learn-list",
@@ -67,13 +69,15 @@ if (!root) {
       ],
     },
 
-    2: {
+    {
+      id: 2,
       lessonNumber: "2 урок",
-      duration: "3 мин",
-      coverTitle: "Псс...это эко-бизнес,<br />хочешь заработать?",
-      coverImage: "../img/learn/A-Finger-Img.png",
-      nextLessonUrl: "./lesson-3.html",
+      duration: "5 мин",
+      coverTitle: "Как поднять денег на «зелёных» темках",
+      coverImage:
+        "https://github.com/HSEADC/Trace/blob/main/src/img/learn/A-Finger-Img.png?raw=true",
       passScore: 1,
+      passed: false,
       stages: [
         {
           type: "learn-list",
@@ -81,10 +85,9 @@ if (!root) {
           question: "",
           text: "",
           items: [
-            "ЧТО ТАКОЕ ЭКО-БИЗНЕС",
-            "НА ЧЕМ ЗАРАБАТЫВАЮТ В «ЗЕЛЕНОМ БИЗНЕСЕ»",
-            "РИСКИ И ВОЗМОЖНОСТИ",
-            "ГЛАВНЫЙ СЕКРЕТ УСПЕХА",
+            "Где принимают крышки за деньги",
+            "Как собрать и хранить много крышек",
+            "Сколько действительно можно заработать",
           ],
         },
         {
@@ -94,22 +97,10 @@ if (!root) {
           text: `
             <div class="M-TestTextContent">
               <p class="A-TestTextParagraph">
-                Эко-бизнес — такая штука модная, прибыльная, направлена на решение
-                экологических проблем. Из чего здесь можно сделать деньги?
-                переработка отходов, чистая энергия, кредиты карбоновые, эко-материалы.
-              </p>
-              <p class="A-TestTextParagraph">
-                Однако стартануть дорого, законы в странах разные и проч. и проч.),
-                все же спрос на такое у потребителя растёт да ещё господдержка,
-                рынок развивается.
-              </p>
-              <p class="A-TestTextParagraph">
-                Например, знаешь, углеродный след сегодня продают, кожа из грибов
-                и вечный пластик уже существуют.
-              </p>
-              <p class="A-TestTextParagraph">
-                В общем, тут главное скорость и ум, кто быстрее научится делать
-                дорогое из мусора, у того все будет на мази!
+                Поставь коробку под раковиной дома, в офисе/университете и дай пакет друзьям.
+                за неделю собери 400 пластиковых крышек, а за два месяца — 3200.
+                промой и высуши крышки. Рекомендую сдавать во «Вкусвилл» (1 ₽/крышка),
+                в «пятёрочке» (0.5 ₽/крышка), в магните не принимают
               </p>
             </div>
           `,
@@ -117,25 +108,27 @@ if (!root) {
         {
           type: "quiz",
           label: "ПРОВЕРЬ СЕБЯ",
-          question: "НА ЧЕМ ЗАРАБАТЫВАЕТ «ЗЕЛЁНЫЙ БИЗНЕС»?",
+          question: "Где выгоднее сдавать пластиковые крышки?",
           text: "",
           answers: [
-            { text: "НА ЗЕЛЁНКЕ", correct: false },
-            { text: "НА РАЗВИТИИ ТЕХНОЛОГИЙ", correct: false },
-            { text: "НА ЗАГРЯЗНЕНИИ ВОДОХРАНИЛИЩ", correct: false },
-            { text: "НА ПЕРЕРАБОТКЕ ОТХОДОВ", correct: true },
+            { text: "В пункт «пятёрочка»", correct: false },
+            { text: "В пункт «Перекрёсток»", correct: false },
+            { text: "В пункт «Вкусвилл»", correct: true },
+            { text: "В пункт «магнит»", correct: false },
           ],
         },
       ],
     },
 
-    3: {
+    {
+      id: 3,
       lessonNumber: "3 урок",
       duration: "4 мин",
-      coverTitle: "А РИСКИ ВООБЩЕ ЕСТЬ?<br />ИЛИ ТОЛЬКО ДЕНЬГИ?",
-      coverImage: "../img/learn/A-Cover-Lesson-3.png",
-      nextLessonUrl: "./lesson-4.html",
+      coverTitle: "эй, Fashion killer, убьём твою бедность?",
+      coverImage:
+        "https://github.com/HSEADC/Trace/blob/main/src/img/learn/A-Cover-Lesson-3.png?raw=true",
       passScore: 1,
+      passed: false,
       stages: [
         {
           type: "learn-list",
@@ -143,10 +136,9 @@ if (!root) {
           question: "",
           text: "",
           items: [
-            "ПОЧЕМУ ЭКО-БИЗНЕС МОЖЕТ БЫТЬ СЛОЖНЫМ",
-            "КАКИЕ ЕСТЬ ФИНАНСОВЫЕ РИСКИ",
-            "ПОЧЕМУ ВАЖНЫ ТЕХНОЛОГИИ И ЛОГИСТИКА",
-            "КАК СНИЖАТЬ РИСКИ НА СТАРТЕ",
+            "Как правильно устроить фэшн-геноцид",
+            "Какие выложить фотографии, чтобы получить деньги",
+            "Сколько можно заработать на фэшн-революции",
           ],
         },
         {
@@ -156,20 +148,15 @@ if (!root) {
           text: `
             <div class="M-TestTextContent">
               <p class="A-TestTextParagraph">
-                У эко-бизнеса есть не только возможности, но и риски: дорогой запуск,
-                сложная логистика и зависимость от технологий.
+                Проведи геноцид секонд-хенда, отбери брендовую одежду. Дальше постирай,
+                отпарь, организуй фэшн-фотосессию, щёлкни лицевую, заднюю сторону вещи,
+                бирку. размести своё объявление на авито.
               </p>
               <p class="A-TestTextParagraph">
-                Иногда идея хорошая, но без поставщиков, переработки и понятной экономики
-                она быстро ломается.
-              </p>
-              <p class="A-TestTextParagraph">
-                Поэтому важно заранее считать расходы, тестировать спрос и начинать
-                с модели попроще.
-              </p>
-              <p class="A-TestTextParagraph">
-                Самый устойчивый путь — запускать не «идею мечты», а решение,
-                которое реально можно собрать и продать.
+                Рекомендация: напиши бренд, размер, состояние причину продажи и цену с торгом
+                (Только подними сумму на 15–20%) и жди. Если продать позицию в среднем
+                за 1 500 ₽ (без наценки), то за 10 вещей выручишь 10 000 ₽ чистыми
+                (на закупку и доставку 5 000 ₽)
               </p>
             </div>
           `,
@@ -177,25 +164,27 @@ if (!root) {
         {
           type: "quiz",
           label: "ПРОВЕРЬ СЕБЯ",
-          question: "ЧТО ИЗ ЭТОГО МОЖНО СЧИТАТЬ РИСКОМ ДЛЯ ЭКО-БИЗНЕСА?",
+          question: "СКОЛЬКО МОЖНО ВЫРУЧИТЬ С ОДНОЙ ВЕЩИ С НАЦЕНКОЙ 10%?",
           text: "",
           answers: [
-            { text: "ПОНЯТНАЯ ЭКОНОМИКА ПРОЕКТА", correct: false },
-            { text: "СТАБИЛЬНЫЙ СПРОС", correct: false },
-            { text: "ДОРОГОЙ ЗАПУСК И СЛОЖНАЯ ЛОГИСТИКА", correct: true },
-            { text: "ГОТОВАЯ ИНФРАСТРУКТУРА", correct: false },
+            { text: "1 000 ₽", correct: false },
+            { text: "820 ₽", correct: false },
+            { text: "1 650 ₽", correct: true },
+            { text: "1 500 ₽", correct: false },
           ],
         },
       ],
     },
 
-    4: {
+    {
+      id: 4,
       lessonNumber: "4 урок",
       duration: "4 мин",
-      coverTitle: "ЧТО БУДЕТ ДАЛЬШЕ:<br />БУДУЩЕЕ ЭКО-БИЗНЕСА",
-      coverImage: "../img/learn/A-Cover-Lesson-4.png",
-      nextLessonUrl: "./lesson-5.html",
+      coverTitle: "Пластик. Жизнь. смерть и воскрешение",
+      coverImage:
+        "https://github.com/HSEADC/Trace/blob/main/src/img/learn/A-Cover-Lesson-4.png?raw=true",
       passScore: 1,
+      passed: false,
       stages: [
         {
           type: "learn-list",
@@ -203,10 +192,9 @@ if (!root) {
           question: "",
           text: "",
           items: [
-            "КАК МЕНЯЕТСЯ ЭКО-РЫНОК",
-            "КАКИЕ ПРОДУКТЫ БУДУТ РАСТИ",
-            "ПОЧЕМУ ВАЖНЫ НОВЫЕ МАТЕРИАЛЫ",
-            "КТО БУДЕТ ВЫИГРЫВАТЬ В БУДУЩЕМ",
+            "Что такое эко-бизнес будущего",
+            "Лидирующий участник «зеленого рынка» и его стратегия",
+            "Показатели и перспективы развития",
           ],
         },
         {
@@ -216,20 +204,14 @@ if (!root) {
           text: `
             <div class="M-TestTextContent">
               <p class="A-TestTextParagraph">
-                Эко-бизнес будет расти там, где экологичность соединяется с удобством,
-                ценой и понятной пользой для человека.
-              </p>
-              <p class="A-TestTextParagraph">
-                Будут усиливаться переработка, новые материалы, ремонт,
-                повторное использование и сервисы снижения отходов.
-              </p>
-              <p class="A-TestTextParagraph">
-                Выиграют не просто «зелёные» проекты, а те, кто умеет делать
-                экологичное решение массовым и выгодным.
-              </p>
-              <p class="A-TestTextParagraph">
-                Будущее — за теми, кто превращает экологию не в лозунг,
-                а в работающую систему.
+                Эко-бизнес будущего — это бизнес высоких технологий (биоинженерии,
+                химии и искусственного интеллекта) яркий пример — CARBIOS. Компания
+                изобрела фермент, расщепляющий пластик на мономеры, из которых
+                можно сделать новый пластик. Зарабатывает на лицензизиировании
+                своей технологии и сотрудничестве с L'Occitane, Nestlé, L'Oréal и Patagonia.
+                Выручка компании составляет около 519 тыс. евро. Сейчас carbios успешно
+                запускает заводы и масштабируется, К 2030 прогнозируется рост «зеленого
+                рынка» до 1,2 млрд €, где компания займёт лидирующую позицию
               </p>
             </div>
           `,
@@ -237,24 +219,26 @@ if (!root) {
         {
           type: "quiz",
           label: "ПРОВЕРЬ СЕБЯ",
-          question: "КТО БУДЕТ ВЫИГРЫВАТЬ В БУДУЩЕМ ЭКО-БИЗНЕСА?",
+          question: "В чем суть «вечной переработки» carbios?",
           text: "",
           answers: [
             {
-              text: "ТЕ, КТО ДЕЛАЕТ ЭКОЛОГИЧНОЕ РЕШЕНИЕ УДОБНЫМ И МАССОВЫМ",
+              text: "Пластик растирают в порошок, нагревают, из полученного вещества делают новый",
+              correct: false,
+            },
+            {
+              text: "ферменты расщепляют пластик до мономеров, из которых можно синтезировать новый",
               correct: true,
             },
-            { text: "ТЕ, КТО ИГНОРИРУЕТ СПРОС", correct: false },
-            { text: "ТЕ, КТО ДЕЛАЕТ ДОРОГО И НЕПОНЯТНО", correct: false },
-            { text: "ТЕ, КТО НЕ УЧИТЫВАЕТ ПОЛЬЗУ ДЛЯ ЛЮДЕЙ", correct: false },
+            {
+              text: "Пластик сжигают, из углекислого газа, воды и водорослей делают биомассу для производства",
+              correct: false,
+            },
           ],
         },
       ],
     },
-  };
-
-  const lesson = lessons[currentLessonId] || lessons[2];
-  const stages = lesson.stages;
+  ];
 
   const coverScreen = document.getElementById("coverScreen");
   const testCard = document.getElementById("testCard");
@@ -279,122 +263,79 @@ if (!root) {
   const answersRoot = document.getElementById("answers");
   const progressLine = document.getElementById("testProgressLine");
 
-  const awardSlots = root.querySelectorAll(".M-AwardSlot");
+  const awardSlots = [...root.querySelectorAll(".M-AwardSlot")];
 
+  let currentLessonIndex = Math.min(
+    Math.max(initialLessonId - 1, 0),
+    lessons.length - 1,
+  );
   let step = 0;
   let score = 0;
   let started = false;
-  const picks = stages.map(() => null);
+  let picks = [];
 
-  initLesson();
-  setInitialState();
+  function getCurrentLesson() {
+    return lessons[currentLessonIndex];
+  }
 
-  startTestBtn?.addEventListener("click", () => {
-    started = true;
+  function resetLessonState() {
     step = 0;
+    score = 0;
+    started = false;
+    picks = getCurrentLesson().stages.map(() => null);
+  }
 
-    coverScreen.classList.add("isHidden");
-    winCard.classList.add("isHidden");
-    loseCard.classList.add("isHidden");
-    testCard.classList.remove("isHidden");
-
-    updateAwardState();
-    renderStep();
-  });
-
-  prevBtn?.addEventListener("click", () => {
-    if (step === 0) return;
-    step -= 1;
-    renderStep();
-  });
-
-  nextBtn?.addEventListener("click", () => {
-    const stage = stages[step];
-
-    if (stage.type === "quiz" && picks[step] === null) return;
-
-    if (step < stages.length - 1) {
-      step += 1;
-      renderStep();
-    } else {
-      showResult();
-    }
-  });
-
-  restartBtn?.addEventListener("click", () => {
-    resetTest();
-    started = true;
-
-    coverScreen.classList.add("isHidden");
-    loseCard.classList.add("isHidden");
-    winCard.classList.add("isHidden");
-    testCard.classList.remove("isHidden");
-
-    updateAwardState();
-    renderStep();
-  });
-
-  continueBtn?.addEventListener("click", () => {
-    window.location.href = lesson.nextLessonUrl;
-  });
-
-  function initLesson() {
-    coverTitle.innerHTML = lesson.coverTitle;
-    coverLessonNumber.textContent = lesson.lessonNumber;
-    coverDuration.textContent = lesson.duration;
-    coverImage.src = lesson.coverImage;
-
-    awardSlots.forEach((slot) => {
-      const idx = Number(slot.dataset.awardIndex);
+  function updateAwards() {
+    awardSlots.forEach((slot, index) => {
+      const lesson = lessons[index];
       const img = slot.querySelector(".A-Award-Img");
 
       slot.classList.remove("isCurrent", "isCompleted");
 
-      if (img?.dataset.default) {
-        img.src = img.dataset.default;
+      if (!lesson || !img) return;
+
+      if (img.dataset.default) {
+        img.src = lesson.passed ? img.dataset.complete : img.dataset.default;
       }
 
-      if (idx < currentLessonId && img?.dataset.complete) {
-        img.src = img.dataset.complete;
+      if (lesson.passed) {
         slot.classList.add("isCompleted");
+      }
+
+      if (index === currentLessonIndex && started) {
+        slot.classList.add("isCurrent");
       }
     });
   }
 
-  function setInitialState() {
+  function updateProgress() {
+    const stages = getCurrentLesson().stages;
+    const percent = ((step + 1) / stages.length) * 100;
+    progressLine.style.width = `${percent}%`;
+  }
+
+  function renderCover() {
+    const lesson = getCurrentLesson();
+
+    coverTitle.innerHTML = lesson.coverTitle;
+    coverLessonNumber.textContent = lesson.lessonNumber;
+    coverDuration.textContent = lesson.duration;
+
+    if (lesson.coverImage) {
+      coverImage.src = lesson.coverImage;
+    }
+
     coverScreen.classList.remove("isHidden");
     testCard.classList.add("isHidden");
     winCard.classList.add("isHidden");
     loseCard.classList.add("isHidden");
+
     progressLine.style.width = "0%";
-    updateAwardState();
-  }
-
-  function resetTest() {
-    step = 0;
-    score = 0;
-
-    for (let i = 0; i < picks.length; i++) {
-      picks[i] = null;
-    }
-
-    const currentAwardImg = root.querySelector(
-      `[data-award-index="${currentLessonId}"] .A-Award-Img`,
-    );
-
-    const currentAwardSlot = root.querySelector(
-      `[data-award-index="${currentLessonId}"]`,
-    );
-
-    if (currentAwardImg?.dataset.default) {
-      currentAwardImg.src = currentAwardImg.dataset.default;
-    }
-
-    currentAwardSlot?.classList.remove("isCompleted");
+    updateAwards();
   }
 
   function renderStep() {
-    const stage = stages[step];
+    const stage = getCurrentLesson().stages[step];
 
     testLabel.textContent = stage.label || "";
     testQuestion.textContent = stage.question || "";
@@ -415,7 +356,8 @@ if (!root) {
 
         const icon = document.createElement("img");
         icon.className = "A-TestLeafIcon";
-        icon.src = "../img/learn/A-Leaf-Icon.svg";
+        icon.src =
+          "https://github.com/HSEADC/Trace/blob/main/src/img/learn/A-Leaf-Icon.png?raw=true";
         icon.alt = "";
 
         const text = document.createElement("div");
@@ -461,29 +403,21 @@ if (!root) {
     nextBtn.disabled = stage.type === "quiz" ? picks[step] === null : false;
 
     updateProgress();
-    updateAwardState();
+    updateAwards();
   }
 
-  function updateProgress() {
-    const percent = ((step + 1) / stages.length) * 100;
-    progressLine.style.width = `${percent}%`;
-  }
-
-  function updateAwardState() {
-    awardSlots.forEach((slot) => slot.classList.remove("isCurrent"));
-
-    if (started) {
-      const currentSlot = root.querySelector(
-        `[data-award-index="${currentLessonId}"]`,
-      );
-      currentSlot?.classList.add("isCurrent");
-    }
+  function showTest() {
+    coverScreen.classList.add("isHidden");
+    winCard.classList.add("isHidden");
+    loseCard.classList.add("isHidden");
+    testCard.classList.remove("isHidden");
+    renderStep();
   }
 
   function showResult() {
     score = 0;
 
-    stages.forEach((stage, i) => {
+    getCurrentLesson().stages.forEach((stage, i) => {
       if (stage.type !== "quiz") return;
       const pick = picks[i];
       if (pick === null) return;
@@ -492,29 +426,76 @@ if (!root) {
 
     testCard.classList.add("isHidden");
 
-    const currentAwardImg = root.querySelector(
-      `[data-award-index="${currentLessonId}"] .A-Award-Img`,
-    );
-    const currentAwardSlot = root.querySelector(
-      `[data-award-index="${currentLessonId}"]`,
-    );
-
-    currentAwardSlot?.classList.remove("isCurrent");
-
-    if (score >= lesson.passScore) {
-      if (currentAwardImg?.dataset.complete) {
-        currentAwardImg.src = currentAwardImg.dataset.complete;
-      }
-      currentAwardSlot?.classList.add("isCompleted");
+    if (score >= getCurrentLesson().passScore) {
+      getCurrentLesson().passed = true;
       winCard.classList.remove("isHidden");
       loseCard.classList.add("isHidden");
     } else {
-      if (currentAwardImg?.dataset.default) {
-        currentAwardImg.src = currentAwardImg.dataset.default;
-      }
-      currentAwardSlot?.classList.remove("isCompleted");
-      loseCard.classList.remove("isHidden");
       winCard.classList.add("isHidden");
+      loseCard.classList.remove("isHidden");
     }
+
+    started = false;
+    updateAwards();
   }
+
+  function switchLesson(index) {
+    currentLessonIndex = index;
+    resetLessonState();
+    renderCover();
+  }
+
+  startTestBtn?.addEventListener("click", () => {
+    started = true;
+    step = 0;
+    updateAwards();
+    showTest();
+  });
+
+  prevBtn?.addEventListener("click", () => {
+    if (step === 0) return;
+    step -= 1;
+    renderStep();
+  });
+
+  nextBtn?.addEventListener("click", () => {
+    const stages = getCurrentLesson().stages;
+    const stage = stages[step];
+
+    if (stage.type === "quiz" && picks[step] === null) return;
+
+    if (step < stages.length - 1) {
+      step += 1;
+      renderStep();
+    } else {
+      showResult();
+    }
+  });
+
+  restartBtn?.addEventListener("click", () => {
+    step = 0;
+    score = 0;
+    picks = getCurrentLesson().stages.map(() => null);
+    started = true;
+    showTest();
+  });
+
+  continueBtn?.addEventListener("click", () => {
+    const nextIndex = currentLessonIndex + 1;
+
+    if (nextIndex < lessons.length) {
+      switchLesson(nextIndex);
+    } else {
+      switchLesson(0);
+    }
+  });
+
+  awardSlots.forEach((slot, index) => {
+    slot.addEventListener("click", () => {
+      switchLesson(index);
+    });
+  });
+
+  resetLessonState();
+  renderCover();
 }

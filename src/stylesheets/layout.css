@@ -124,6 +124,14 @@ h1 {
   box-shadow: inset -4.29px -4.29px 6.43px rgba(0, 0, 0, 0.2);
 }
 
+.A-PlayButton {
+  margin-left: 4vw;
+}
+
+.A-KnowButton {
+  margin-left: -3vw;
+}
+
 .A-KickPlayButton {
   width: 8vw;
   height: 8vw;
@@ -135,18 +143,19 @@ h1 {
   justify-content: center;
   cursor: pointer;
   z-index: 100;
+
   box-shadow:
     inset 4.29px 6.43px 6.43px rgba(255, 255, 255, 0.5),
     inset -4.29px -4.29px 6.43px rgba(0, 0, 0, 0.2);
 }
 
 .A-KickPlayIcon {
-  width: 0;
-  height: 0;
-  border-top: 0.9vw solid transparent;
-  border-bottom: 0.9vw solid transparent;
-  border-left: 1.45vw solid var(--color-text);
-  margin-left: 0.25vw;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 80%;
+}
+
+.A-KickPlayIcon:hover {
+  width: 89%;
 }
 
 .W-KickGrid {
@@ -192,7 +201,7 @@ h1 {
 
 .O-ArticlesAdd {
   width: 100%;
-  height: 25vw;
+  height: 23vw;
   background-color: var(--color-text);
   border-bottom: 1vw solid var(--color-dark-grey);
   border-right: 1vw solid var(--color-dark-grey);
@@ -203,8 +212,7 @@ h1 {
 
 .W-ArticlesAdd-Right {
   width: 46%;
-  padding: 8vw 0 0 2vw;
-  display: flex;
+  padding: 4vw 0 0 2vw;
   align-items: center;
 }
 
@@ -224,8 +232,8 @@ h1 {
 
 .W-ReadTitile-Button {
   display: flex;
-  justify-content: space-between;
-  margin: -4.4vw 0 0 2vw;
+  gap: 1vw;
+  margin: -4.2vw 0 0 2vw;
   width: 100%;
   align-items: center;
   height: 4vw;
@@ -272,31 +280,42 @@ h1 {
   border-top-right-radius: 1vw;
   border-top-left-radius: 1vw;
   background-color: var(--color-yellow);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.W-ArticlesCard-Title:hover {
+  background-color: #d0d33b;
 }
 
 .A-ArticlesCard-Title {
+  text-transform: uppercase;
   font: var(--font-h2);
   color: var(--color-dark-grey);
 }
 
 .A-ArrowIcon {
-  height: 50%;
+  height: 40%;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.W-ArticlesCard-Title:hover .A-ArrowIcon {
+  rotate: 45deg;
 }
 
 .W-ArticlesCard-img {
-  width: 100%;
-  height: 9vw;
   background-color: var(--color-bg-grey);
+  height: 9vw;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0.5vw;
 }
 
 .A-ReadFurther {
+  margin-top: 1vw;
   font: var(--font-h3);
-  color: var(--color-read);
-  text-transform: uppercase;
-}
-
-.A-ReadFurther-link {
   color: var(--color-dark-grey);
+  text-transform: uppercase;
 }
 
 .W-ScreenThree {
@@ -314,6 +333,7 @@ h1 {
   border-bottom: 1vw solid var(--color-dark-grey);
   border-right: 1vw solid var(--color-dark-grey);
   padding: 2vw 2vw;
+  position: relative;
 }
 
 .O-Map {
@@ -417,18 +437,49 @@ h1 {
   text-transform: uppercase;
 }
 
-.A-Map-IconCloth-Grey {
+.A-Map-IconCloth {
   position: absolute;
-  width: 6%;
+  width: 3vw;
+  height: 3vw;
+  background-size: contain;
+  background-image: url(../img/index-img/A-Map-IconCloth-Grey.png);
+}
+
+.A-Map-IconCloth:hover {
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 3.5vw;
+  height: 3.5vw;
+  background-image: url(../img/index-img/A-Map-IconCloth.png);
+}
+
+.A-Cloth1 {
   top: 1vw;
   left: 1vw;
 }
 
-.A-Map-IconCloth {
-  position: absolute;
-  width: 8%;
-  top: 1vw;
-  left: 1vw;
+.A-Cloth2 {
+  top: 8vw;
+  left: 3vw;
+}
+
+.A-Cloth3 {
+  left: 22vw;
+  top: 17vw;
+}
+
+.A-Cloth4 {
+  top: 13vw;
+  left: 13vw;
+}
+
+.A-Cloth5 {
+  top: 9vw;
+  left: 32vw;
+}
+
+.A-Cloth6 {
+  top: -7vw;
+  left: 32vw;
 }
 
 .W-Map-Bottom {
@@ -440,19 +491,25 @@ h1 {
   margin: 0 0 1vw 1vw;
   background-image: url(../img/index-img/A-MapRoadsMini.png);
   background-size: contain;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.W-Map-Bottom:hover {
+  height: 22%;
+  width: 27%;
 }
 
 .M-TitilePost {
   display: flex;
   width: 100%;
   height: 3vw;
-  justify-content: space-between;
+  justify-content: start;
   gap: 1vw;
   align-items: center;
 }
 
 .A-logoPost {
-  height: 155%;
+  height: 120%;
   object-fit: contain;
 }
 
@@ -462,15 +519,59 @@ h1 {
 }
 
 .M-PostInformation {
+  background-color: var(--color-dark-green);
   background-image: url(../img/index-img/A-PostImg.svg);
   background-repeat: no-repeat;
-  object-fit: cover;
+  background-size: contain;
   width: 100%;
-  height: 28vw;
+  height: 26vw;
+  margin: 1.5vw 0;
+  border-radius: 0.4vw;
+  box-shadow:
+    inset 0 4px 12px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.A-Cursor {
+  position: absolute;
+  z-index: 100;
+  animation: cursorMove 6s ease-in-out infinite;
+}
+
+@keyframes cursorMove {
+  0% {
+    transform: translate(10vw, 5vw) rotate(0deg);
+  }
+
+  20% {
+    transform: translate(10vw, 6vw) rotate(-4deg);
+  }
+
+  40% {
+    transform: translate(20vw, 14vw) rotate(3deg);
+  }
+
+  60% {
+    transform: translate(25vw, 18vw) rotate(0deg);
+  }
+
+  70% {
+    transform: translate(25vw, 22vw) rotate(-2deg);
+  }
+
+  80% {
+    transform: translate(25.5vw, 21.5vw) rotate(2deg);
+  }
+
+  100% {
+    transform: translate(10vw, 5vw) rotate(0deg);
+  }
 }
 
 .A-ButtonPost {
-  margin: 1vw;
+  left: 25vw;
+  top: 28vw;
+  position: absolute;
 }
 
 .W-PostIcons {
@@ -509,7 +610,7 @@ h1 {
 .W-AboutUsTitile-Button {
   align-items: center;
   display: flex;
-  gap: 4vw;
+  gap: 1vw;
   height: 4vw;
   margin: -4.4vw 0 0 3vw;
   width: 100%;
@@ -577,6 +678,7 @@ h1 {
 
 .A-QuestionTitile,
 .A-QuestionText {
+  font: var(--font-h3);
   color: var(--color-dark-grey);
   text-transform: uppercase;
 }
@@ -621,4 +723,115 @@ h1 {
 .A-Loop {
   top: 20%;
   left: 50%;
+  position: absolute;
+  z-index: 100;
+  animation: LoopMove 6s ease-in-out infinite;
 }
+
+@keyframes LoopMove {
+  0% {
+    transform: translate(-3vw, -3vw) rotate(0deg);
+  }
+
+  20% {
+    transform: translate(-5vw, -4vw) rotate(-4deg);
+  }
+
+  40% {
+    transform: translate(-5vw, -8vw) rotate(3deg);
+  }
+
+  60% {
+    transform: translate(-9vw, -7vw) rotate(0deg);
+  }
+
+  80% {
+    transform: translate(-5vw, -5vw) rotate(2deg);
+  }
+
+  100% {
+    transform: translate(-3vw, -3vw) rotate(0deg);
+  }
+}
+
+/* modal window */
+.M-MapModal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: none;
+}
+
+.M-MapModal.is-open {
+  display: block;
+}
+
+.M-MapModal__overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(63, 63, 63, 0.55);
+}
+
+.M-MapModal__content {
+  position: relative;
+  width: 88%;
+  height: 82vh;
+  margin: 4vh auto 0;
+  background-color: var(--color-text);
+  border-radius: 2vw;
+  border-bottom: 1vw solid var(--color-dark-grey);
+  border-right: 1vw solid var(--color-dark-grey);
+  padding: 2vw;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vw;
+}
+
+.M-MapModal__title {
+  font: var(--font-h2);
+  color: var(--color-dark-grey);
+  text-transform: uppercase;
+  line-height: var(--ls-h2);
+  width: 85%;
+}
+
+.M-MapModal__close {
+  position: absolute;
+  top: 1.2vw;
+  right: 1.2vw;
+  width: 3.5vw;
+  height: 3.5vw;
+  border: none;
+  border-radius: 0.8vw;
+  background-color: var(--color-yellow);
+  color: var(--color-dark-grey);
+  font: var(--font-h3);
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.M-MapModal__mapWrap {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-bg-grey);
+  border-radius: 1.2vw;
+  overflow: hidden;
+}
+
+#yandex-map-container {
+  width: 100%;
+  height: 100%;
+}
+
+.O-Map,
+.O-Map [data-open-map] {
+  cursor: pointer;
+}
+/*  */

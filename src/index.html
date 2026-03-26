@@ -86,8 +86,7 @@
               </div>
               <p class="A-DayCardText">
                 загрязнения воздуха обходятся экономике в $ 8.1 трлн. Основной
-                причиной являются расходы <br />
-                на здравоохранение
+                причиной являются расходы на здравоохранение
               </p>
             </div>
             <div class="W-DayCardRight">
@@ -103,7 +102,11 @@
           <div class="O-KickCard">
             <div class="M-KickTop">
               <button class="A-KickPlayButton" aria-label="Играть">
-                <span class="A-KickPlayIcon"></span>
+                <img
+                  class="A-KickPlayIcon"
+                  src="./img/icons/A-Play-Icon.png"
+                  alt="Старт"
+                />
               </button>
 
               <div class="W-KickGrid">
@@ -136,6 +139,20 @@
                 <div class="A-KickCell A-KickCell-light"></div>
                 <div class="A-KickCell A-KickCell-light"></div>
               </div>
+            </div>
+
+            <img
+              class="A-LogoAboutUs"
+              src="./img/index-img/A-LogoPlay.svg"
+              alt="Лого о нас"
+            />
+            <div class="W-AboutUsTitile-Button">
+              <h3 class="A-ReadTitile">
+                складывай эко-блоки
+                <br />
+                и получай эко-бонусы
+              </h3>
+              <button class="A-PlayButton button-yellow">Играть</button>
             </div>
           </div>
         </div>
@@ -173,17 +190,16 @@
                 />
               </div>
               <div class="W-ArticlesCard-img">
-                <img src="#" alt="Карточка" />
+                <img src="./img/index-img/Q-Razer.png" alt="Бритва" />
               </div>
               <h3 class="A-ReadFurther">
                 Многоразовая стальная бритва срежет ваши
-                <a class="A-ReadFurther-link" href="#">Читать далее</a>
               </h3>
             </div>
             <!--  -->
             <div class="M-ArticlesCard">
               <div class="W-ArticlesCard-Title">
-                <h2 class="A-ArticlesCard-Title">Твой шанс на успех</h2>
+                <h2 class="A-ArticlesCard-Title">твёрдый шампунь избил...</h2>
                 <img
                   class="A-ArrowIcon"
                   src="./img/icons/A-ArrowIcon.svg"
@@ -191,11 +207,10 @@
                 />
               </div>
               <div class="W-ArticlesCard-img">
-                <img src="#" alt="Карточка" />
+                <img src="./img/index-img/Q-Shampoo.png" alt="Шампунь" />
               </div>
               <h3 class="A-ReadFurther">
                 Многоразовая стальная бритва срежет ваши
-                <a class="A-ReadFurther-link" href="#">Читать далее</a>
               </h3>
             </div>
           </div>
@@ -210,7 +225,7 @@
               src="./img/index-img/A-logoPost.svg"
               alt="logo"
             />
-            <h1 class="A-TitilePost">Trace — Подпишись и сортируй выгодно</h1>
+            <h1 class="A-TitilePost">Trace — сортируй выгодно</h1>
           </div>
           <div class="M-PostInformation">
             <img
@@ -218,7 +233,7 @@
               src="./img/index-img/A-Cursor.svg"
               alt="Cursor"
             />
-            <button class="A-ButtonPost button-yellow">Подпишись</button>
+            <button class="A-ButtonPost button-yellow">Подписаться</button>
           </div>
           <div class="W-PostIcons">
             <div class="W-PostIcons-Right">
@@ -229,12 +244,12 @@
             <img src="./img/icons/A-SaveIcon.svg" alt="save icon" />
           </div>
         </div>
-        <div class="O-Map">
+        <div class="O-Map" data-open-map>
           <div class="W-MapRoadImg">
-            <div class="W-Map-Top">
+            <div class="W-Map-Top" data-open-map>
               <h3 class="A-Map-Top-Titile">Сдать вторсырье</h3>
               <div class="W-Top-Icons">
-                <div class="W-Top-Icon">
+                <div class="W-Top-Icon" data-open-map>
                   <img
                     class="A-Top-Icon"
                     src="./img/index-img/A-Icon-Paper.png"
@@ -242,7 +257,7 @@
                   />
                   <h5 class="A-Icon-Title">бумага</h5>
                 </div>
-                <div class="W-Top-Icon">
+                <div class="W-Top-Icon" data-open-map>
                   <img
                     class="A-Top-Icon"
                     src="./img/index-img/A-Icon-Plastic.png"
@@ -250,7 +265,7 @@
                   />
                   <h5 class="A-Icon-Title">пластик</h5>
                 </div>
-                <div class="W-Top-Icon">
+                <div class="W-Top-Icon" data-open-map>
                   <img
                     class="A-Top-Icon"
                     src="./img/index-img/A-Icon-Glass.png"
@@ -258,7 +273,7 @@
                   />
                   <h5 class="A-Icon-Title">стекло</h5>
                 </div>
-                <div class="W-Top-Icon">
+                <div class="W-Top-Icon" data-open-map>
                   <img
                     class="A-Top-Icon"
                     src="./img/index-img/A-Icon-Cloth.png"
@@ -268,26 +283,27 @@
                 </div>
               </div>
             </div>
+
             <div class="W-Map-Centre">
               <div class="W-Map-Centre-Bubble">
                 <h3 class="A-Map-CentreIcon">
-                  Выбери точку и позаботься <br />
-                  о планете прямо сейчас
+                  Выбери точку и позаботься <br />
+                  о планете прямо сейчас
                 </h3>
-                <button class="button-yellow">выбрать</button>
-                <img
-                  class="A-Map-IconCloth"
-                  src="./img/index-img/A-Map-IconCloth.png"
-                  alt="Иконка одежды"
-                />
-                <img
-                  class="A-Map-IconCloth-Grey"
-                  src="./img/index-img/A-Map-IconCloth-Grey.png"
-                  alt="Иконка одежды"
-                />
+                <button class="button-yellow" type="button" data-open-map>
+                  выбрать
+                </button>
+
+                <div class="A-Map-IconCloth A-Cloth1" data-open-map></div>
+                <div class="A-Map-IconCloth A-Cloth2" data-open-map></div>
+                <div class="A-Map-IconCloth A-Cloth3" data-open-map></div>
+                <div class="A-Map-IconCloth A-Cloth4" data-open-map></div>
+                <div class="A-Map-IconCloth A-Cloth5" data-open-map></div>
+                <div class="A-Map-IconCloth A-Cloth6" data-open-map></div>
               </div>
             </div>
-            <div class="W-Map-Bottom"></div>
+
+            <div class="W-Map-Bottom" data-open-map></div>
           </div>
         </div>
       </section>
@@ -301,8 +317,8 @@
           />
           <div class="W-AboutUsTitile-Button">
             <h3 class="A-ReadTitile">
-              Познакомимся поближе? Научим <br />
-              Спасать и планету, и монету
+              Научим Спасать и планету, <br />
+              и монету
             </h3>
             <button class="A-DetailedButton button-yellow">Подробнее</button>
           </div>
@@ -352,12 +368,39 @@
               Каждый ловкий твой бросок <br />
               сортирует мусорок
             </h1>
-            <button class="A-Button button-yellow">Все статьи</button>
+            <button class="A-KnowButton button-yellow">Узнай</button>
           </div>
         </div>
       </div>
     </main>
 
     <footer></footer>
+    <div class="M-MapModal" id="mapModal" aria-hidden="true">
+      <div class="M-MapModal__overlay" data-close-map></div>
+
+      <div
+        class="M-MapModal__content"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="mapModalTitle"
+      >
+        <button
+          class="M-MapModal__close"
+          type="button"
+          aria-label="Закрыть карту"
+          data-close-map
+        >
+          ✕
+        </button>
+
+        <h2 class="M-MapModal__title" id="mapModalTitle">
+          Пункты приема вторсырья
+        </h2>
+
+        <div class="M-MapModal__mapWrap">
+          <div id="yandex-map-container"></div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

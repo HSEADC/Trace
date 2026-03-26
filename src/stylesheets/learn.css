@@ -125,8 +125,142 @@
   flex-direction: column;
 }
 
-.A-LearnMain-Img {
+.W-LearnMain-Img {
+  height: 30vw;
   width: 90%;
+  position: relative;
+  display: flex;
+}
+
+.Q-Card,
+.Q-Wallet,
+.Q-Earth,
+.Q-Rub,
+.Q-Rub1,
+.Q-Glasses {
+  position: absolute;
+  z-index: -100;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.Q-Card {
+  left: 6vw;
+  top: -2vw;
+  width: 27%;
+  transform-origin: left bottom;
+
+  animation: cardFloat 3s ease-in-out infinite;
+}
+
+@keyframes cardFloat {
+  0% {
+    transform: rotate(-6deg);
+  }
+  50% {
+    transform: rotate(-9deg);
+  }
+  100% {
+    transform: rotate(-6deg);
+  }
+}
+
+.Q-Wallet {
+  left: 54vw;
+  top: -3vw;
+  width: 27%;
+  transform-origin: left bottom;
+  animation: walletFloat 3.5s ease-in-out infinite;
+}
+
+@keyframes walletFloat {
+  0% {
+    transform: rotate(6deg);
+  }
+  50% {
+    transform: rotate(9deg);
+  }
+  100% {
+    transform: rotate(6deg);
+  }
+}
+
+.Q-Earth {
+  left: 27vw;
+  top: -4vw;
+  width: 40%;
+  animation: earthSpin 5s linear infinite;
+}
+
+@keyframes earthSpin {
+  0% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(-40deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+.Q-Rub {
+  left: 20vw;
+  top: 0vw;
+  width: 15%;
+  transform-origin: center center;
+  animation: rubSpin 4s linear infinite;
+}
+
+@keyframes rubSpin {
+  0% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: translate(0vw, -5vw) rotate(-40deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+.Q-Rub1 {
+  left: 71vw;
+  top: -3vw;
+  width: 9%;
+  transform-origin: center center;
+  animation: rubSmallSpin 5s linear infinite;
+}
+
+@keyframes rubSmallSpin {
+  0% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: translate(0vw, 7vw) rotate(90deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+.Q-Glasses {
+  left: 33vw;
+  top: 5vw;
+  width: 20%;
+  transform-origin: left bottom;
+  animation: glassesFloat 3.2s ease-in-out infinite;
+}
+
+@keyframes glassesFloat {
+  0% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(-2deg);
+  }
 }
 
 .A-Title-Learn {
@@ -175,16 +309,30 @@
   text-transform: uppercase;
 }
 
-.A-GoalInfo-Img {
-  width: 93%;
-  padding: 5vw 0 1vw 0;
+.A-GoalInfo-Img-kg {
+  width: 71%;
+  padding: 6vw 0 1vw 0;
+}
+
+.A-GoalInfo-Img-rub {
+  width: 90%;
+  padding: 6vw 0 1vw 0;
 }
 
 .M-DailyGoals {
+  padding: 2vw;
   width: 50%;
   height: 18vw;
   background-color: var(--color-white);
   border-radius: 1vw;
+}
+
+.Q-Leaf-icon {
+  width: 8%;
+}
+
+.A-Profit {
+  color: var(--color-read);
 }
 /*  */
 
@@ -322,7 +470,7 @@
 .W-Lesson-Footer {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: flex-end;
   margin-top: 1vw;
 }
@@ -434,20 +582,16 @@
   /* background-image: url(../img/learn/A-Phone.png); */
   background-size: cover;
   background-repeat: no-repeat;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  /* display: flex; */
+  overflow: hidden;
+  position: relative;
 }
 
 .A-Finger-Img {
-  width: 80%;
-  margin: 4vw -12vw;
+  width: 82%;
+  display: block;
+  margin: 3vw auto 0;
   transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
   transform-origin: bottom center;
-}
-
-.A-Finger-Img:hover {
-  transform: rotate(8deg);
 }
 
 .A-Lesson-NextSlide-Button {
@@ -458,11 +602,33 @@
   border-radius: 0.5vw;
   align-items: center;
   justify-content: center;
-  margin: -18vw 0 0 20vw;
+  position: absolute;
+  right: 1.5vw;
+  bottom: 1.5vw;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.A-Lesson-NextSlide-Button:hover {
+  background-color: #d0d33b;
+}
+
+.M-AwardSlot {
+  cursor: pointer;
+}
+
+.M-AwardSlot.isCurrent {
+  pointer-events: none;
 }
 
 .A-Arrow-Button {
   width: 35%;
+}
+
+.A-Finger-Img:hover {
+  transform: rotate(8deg);
 }
 
 /* ===== TEST FLOW ===== */
@@ -554,6 +720,29 @@
 
 .W-TestFlowText p {
   margin: 0;
+}
+
+.W-DailyTasks {
+  margin-top: 2vw;
+  flex-direction: column;
+  height: 70%;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.W-DailyTask {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.W-Text-Leaf {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1vw;
 }
 
 .C-TestLearnList {
