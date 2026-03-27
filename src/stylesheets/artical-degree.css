@@ -37,10 +37,35 @@ a {
   flex-direction: column;
   gap: 6vw;
   height: 100;
-  padding: 5vw 2vw;
+  padding: 2vw 2vw;
   width: 40%;
   color: var(--color-text);
   text-transform: uppercase;
+}
+
+.A_button_back_to_all_articals {
+  background-color: var(--color-yellow);
+  color: var(--color-dark-grey);
+  display: flex;
+  flex-direction: row;
+  gap: 3vw;
+  height: 3vw;
+  margin-top: -2vw;
+  position: absolute;
+  width: 12vw;
+  margin-left: -2vw;
+  align-items: center;
+  padding: 1vw;
+  border-radius: 0.5vw;
+}
+
+.A_button_back_to_all_articals img {
+  transform: scaleX(-1);
+  width: 1.3vw;
+}
+
+.A_button_back_to_all_articals:hover {
+  background-color: #d0d33b;
 }
 
 .M_First_block_all_description_art_degree {
