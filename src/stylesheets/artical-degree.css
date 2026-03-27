@@ -43,6 +43,21 @@ a {
   text-transform: uppercase;
 }
 
+.A_button_back_to_all_articals {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  margin-top: -6vw;
+  height: 3vw;
+  width: fit-content;
+  background-color: var(--color-yellow);
+  color: var(--color-dark-grey);
+}
+
+.A_button_back_to_all_articals img {
+  transform: scaleX(-1);
+}
+
 .M_First_block_all_description_art_degree {
   display: flex;
   flex-direction: row;
