@@ -42,3 +42,30 @@
   align-items: center;
   display: flex;
 }
+
+@media (max-width: 768px) {
+  .O_Second_block_fact {
+    height: 59vw;
+    gap: 4vw;
+  }
+
+  .O_Second_block_text_column_art_liquid_facts {
+    width: 166%;
+  }
+
+  .Q_Second_block_fact_number {
+    border: 0.5vw solid var(--color-read);
+    border-radius: 4vw;
+    height: 6.5vw;
+    width: 6.5vw;
+    justify-content: center;
+  }
+
+  .O_Second_block_fact img {
+    width: 29vw;
+  }
+
+  .O_Second_block_fact h1 {
+    text-align: center;
+  }
+}
