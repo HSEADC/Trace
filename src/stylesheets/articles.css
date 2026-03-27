@@ -234,6 +234,18 @@
   max-width: 23vw;
 }
 
+.A-ArticlesButton {
+  background-color: var(--color-yellow);
+  border: none;
+  border-radius: 0.5vw;
+  color: var(--color-dark-grey);
+  font: var(--font-h4);
+  height: 3.5vw;
+  margin-left: 0.3vw;
+  text-transform: uppercase;
+  width: 14.5vw;
+}
+
 .article-card:hover {
   transform: translateY(-0.4vw);
 }
