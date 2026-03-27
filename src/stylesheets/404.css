@@ -1,8 +1,92 @@
+.W-404 {
+  background-color: #e8e8e8;
+}
+
 .O-404 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
   display: flex;
+}
+
+.W-404Animation {
+  height: 29vw;
+  overflow: hidden;
+  position: relative;
+  width: 64%;
+}
+
+.Q-404-Object {
+  animation: ride404 6s linear infinite;
+  position: absolute;
+  top: 13vw;
+  width: 58%;
+}
+
+.Q-404-Conveyor {
+  width: 91%;
+  position: absolute;
+  inset: 0;
+  object-fit: contain;
+  z-index: 2;
+}
+
+.Q-404-Conveyor--1 {
+  animation: conveyor1 2.4s ease-in-out infinite;
+}
+
+.Q-404-Conveyor--2 {
+  animation: conveyor2 3.5s ease-in-out infinite;
+}
+
+@keyframes ride404 {
+  0% {
+    transform: translateX(20%);
+  }
+
+  20% {
+    transform: translateX(40%);
+  }
+
+  40% {
+    transform: translateX(60%);
+  }
+
+  50% {
+    transform: translateX(70%);
+  }
+
+  60% {
+    transform: translateX(60%);
+  }
+
+  80% {
+    transform: translateX(40%);
+  }
+
+  100% {
+    transform: translateX(20%);
+  }
+}
+
+@keyframes conveyor1 {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes conveyor2 {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 .Q-404 {
@@ -21,6 +105,9 @@
   height: 4vw;
   margin: -4.5vw 0 0 -3vw;
   width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .A-404Titile {
@@ -38,4 +125,7 @@
   text-transform: uppercase;
   height: 3.5vw;
   width: 14.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
