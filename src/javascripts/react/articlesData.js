@@ -12,7 +12,7 @@ const articlesData = [
     ],
     image:
       "https://github.com/HSEADC/Trace/blob/main/src/img/articles/A-LampCardImg.png?raw=true",
-    link: "/pages/article-1.html",
+    link: "https://hseadc.github.io/Trace/pages/404.html",
   },
   {
     id: 2,
@@ -28,7 +28,7 @@ const articlesData = [
     ],
     image:
       "https://github.com/HSEADC/Trace/blob/main/src/img/articles/A-FoodCardImg.png?raw=true",
-    link: "/pages/article-2.html",
+    link: "https://hseadc.github.io/Trace/pages/404.html",
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ const articlesData = [
     category: ["saving money", "daily habits", "recycling", "organic waste"],
     image:
       "https://github.com/HSEADC/Trace/blob/main/src/img/articles/A-CupCardImg.png?raw=true",
-    link: "/pages/article-3.html",
+    link: "https://hseadc.github.io/Trace/pages/articals/artical-cup.html",
   },
   {
     id: 4,
@@ -46,7 +46,7 @@ const articlesData = [
     category: ["recycling", "saving money", "waste reduction"],
     image:
       "https://github.com/HSEADC/Trace/blob/main/src/img/articles/A-BenefitCardImg.png?raw=true",
-    link: "/pages/article-4.html",
+    link: "https://hseadc.github.io/Trace/pages/404.html",
   },
   {
     id: 5,
@@ -61,7 +61,7 @@ const articlesData = [
     ],
     image:
       "https://github.com/HSEADC/Trace/blob/main/src/img/articles/A-RazerCardImg.png?raw=true",
-    link: "/pages/article-5.html",
+    link: "https://hseadc.github.io/Trace/pages/articals/artical-razer.html",
   },
   {
     id: 6,
@@ -76,7 +76,7 @@ const articlesData = [
     ],
     image:
       "https://github.com/HSEADC/Trace/blob/main/src/img/articles/A-ShampoCardImg.png?raw=true",
-    link: "/pages/article-6.html",
+    link: "https://hseadc.github.io/Trace/pages/articals/artical-liquid-or-solid.html",
   },
 ];
 
