@@ -125,7 +125,7 @@ h1 {
 }
 
 .A-PlayButton {
-  margin-left: 4vw;
+  margin-left: 5.9vw;
 }
 
 .A-KnowButton {
@@ -144,8 +144,7 @@ h1 {
   cursor: pointer;
   z-index: 100;
 
-  box-shadow:
-    inset 4.29px 6.43px 6.43px rgba(255, 255, 255, 0.5),
+  box-shadow: inset 4.29px 6.43px 6.43px rgba(255, 255, 255, 0.5),
     inset -4.29px -4.29px 6.43px rgba(0, 0, 0, 0.2);
 }
 
@@ -173,8 +172,7 @@ h1 {
 .A-KickCell {
   border-radius: 0.25vw;
 
-  box-shadow:
-    inset 4.29px 6.43px 6.43px rgba(255, 255, 255, 0.5),
+  box-shadow: inset 4.29px 6.43px 6.43px rgba(255, 255, 255, 0.5),
     inset -4.29px -4.29px 6.43px rgba(0, 0, 0, 0.2);
 }
 
@@ -211,14 +209,14 @@ h1 {
 }
 
 .W-ArticlesAdd-Right {
-  width: 46%;
-  padding: 4vw 0 0 2vw;
   align-items: center;
   margin-bottom: 2vw;
+  padding: 3vw 0 0 1vw;
+  width: 47%;
 }
 
 .A-ArticlesAdd-img {
-  width: 95%;
+  width: 96%;
 }
 
 .button-yellow {
@@ -252,17 +250,19 @@ h1 {
   border-radius: 0.5vw;
   color: var(--color-dark-grey);
   font: var(--font-h4);
-  text-transform: uppercase;
   height: 3.5vw;
+  margin-left: 2.4vw;
+  text-transform: uppercase;
   width: 14.5vw;
 }
 
 .W-ArticlesAdd-Left {
+  align-items: center;
   display: flex;
   height: 100%;
   justify-content: space-around;
   width: 54%;
-  align-items: center;
+  padding-right: 2vw;
 }
 
 .M-ArticlesCard {
@@ -529,8 +529,7 @@ h1 {
   height: 26vw;
   margin: 1.5vw 0;
   border-radius: 0.4vw;
-  box-shadow:
-    inset 0 4px 12px 0 rgba(255, 255, 255, 0.35),
+  box-shadow: inset 0 4px 12px 0 rgba(255, 255, 255, 0.35),
     inset 0 -4px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -573,8 +572,8 @@ h1 {
 
 .A-ButtonPost {
   left: 25vw;
-  top: 28vw;
   position: absolute;
+  top: 26vw;
 }
 
 .W-PostIcons {
@@ -803,21 +802,19 @@ h1 {
 }
 
 .M-MapModal__close {
-  position: absolute;
-  top: 1.2vw;
-  right: 1.2vw;
-  width: 3.5vw;
-  height: 3.5vw;
+  align-items: center;
+  background-color: var(--color-yellow);
   border: none;
   border-radius: 0.8vw;
-  background-color: var(--color-yellow);
-  color: var(--color-dark-grey);
-  font: var(--font-h3);
-  text-transform: uppercase;
   cursor: pointer;
   display: flex;
-  align-items: center;
+  font: var(--font-h3);
+  height: 3vw;
   justify-content: center;
+  position: absolute;
+  right: 1.2vw;
+  top: 1.2vw;
+  width: 3vw;
 }
 
 .M-MapModal__mapWrap {
@@ -936,8 +933,9 @@ h1 {
   }
 
   .A-ButtonPost {
-    left: 50vw;
-    top: 62vw;
+    left: 25vw;
+    position: absolute;
+    top: 25.5vw;
   }
 
   .A-Cursor {
