@@ -104,12 +104,12 @@ main {
 
 @media (max-width: 768px) {
   :root {
-    --font-h1: 700 20rem/24rem var(--font-family-display);
-    --font-h2: 700 18rem/24rem var(--font-family-base);
+    --font-h1: 700 27rem/30rem var(--font-family-display);
+    --font-h2: 700 22rem/27rem var(--font-family-base);
     --font-h3: 600 16rem/22rem var(--font-family-base);
     --font-h4: 500 15rem/21rem var(--font-family-base);
     --font-h5: 600 13rem/18rem var(--font-family-base);
-    --font-p: 500 16rem/22rem var(--font-family-base);
+    --font-p: 500 30rem / 37rem var(--font-family-base);
   }
 
   html {
