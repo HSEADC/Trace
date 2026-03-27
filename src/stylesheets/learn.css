@@ -782,6 +782,10 @@
 .A-TestBox {
   width: 1.5vw;
   height: 1.5vw;
+  min-width: 1.5vw;
+  min-height: 1.5vw;
+  flex: 0 0 1.5vw;
+  box-sizing: border-box;
   border-radius: 50%;
   border: 0.25vw solid var(--color-bg-grey);
   transition:
@@ -1071,6 +1075,21 @@
 
   .W-ScreenThree-Learn {
     flex-direction: column;
+  }
+
+  .A-TestBox {
+    width: 3vw;
+    height: 3vw;
+    min-width: 3vw;
+    min-height: 3vw;
+    flex: 0 0 3vw;
+    border-width: 0.5vw;
+    margin-top: 0.4vw;
+  }
+
+  .M-TestAnswer {
+    align-items: flex-start;
+    gap: 3vw;
   }
 
   .W-GoalsCards,
