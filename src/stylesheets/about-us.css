@@ -354,6 +354,7 @@
 } */
 
 .W-ScreenThree-AboutUs {
+  cursor: pointer;
   margin-top: 2vw;
   align-items: center;
   background-color: var(--color-pink);

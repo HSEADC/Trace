@@ -18,10 +18,4 @@
 @import "atom.css";
 @import "molecule.css";
 @import "quark.css";
-/* adaptives */
-@import "./adaptive/adaptive-layout.css";
-@import url("./adaptive/adaptive-articals.css");
-@import "./adaptive/adaptive-articals.css";
-@import "./adaptive/adaptive-degree.css";
-@import "./adaptive/adaptive-razer.css";
-@import "./adaptive/adaptive-liquid.css";
+@import "404.css";
