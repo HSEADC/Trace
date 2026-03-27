@@ -601,6 +601,15 @@ h1 {
   background-color: var(--color-text);
 }
 
+.W-AboutUsTitile-Button {
+  align-items: center;
+  display: flex;
+  gap: 2vw;
+  height: 3.8vw;
+  margin: -4.3vw 0 0 3vw;
+  width: 90%;
+}
+
 .A-LogoAboutUs {
   width: 97%;
   padding: 3vw 0 0 2vw;
@@ -839,6 +848,12 @@ h1 {
     gap: 1vw;
   }
 
+  .W-GameTitile-Button {
+    width: 94%;
+    gap: 28.8vw;
+    margin: -6.9vw 0 0 3vw;
+  }
+
   .W-Screen1-left,
   .W-Screen1-right,
   .O-Map,
@@ -930,9 +945,9 @@ h1 {
   }
 
   .A-ButtonPost {
-    left: 25vw;
+    left: 55vw;
     position: absolute;
-    top: 25.5vw;
+    top: 55.5vw;
   }
 
   .A-Cursor {
@@ -972,18 +987,9 @@ h1 {
   .W-ReadTitile-Button {
     width: 92%;
     height: 4vw;
-    margin: -6.2vw 0 0 2vw;
+    margin: -6.7vw 0 0 2vw;
     justify-content: space-between;
     padding: 0vw 2vw;
-  }
-
-  .W-AboutUsTitile-Button {
-    align-items: center;
-    display: flex;
-    gap: 3vw;
-    height: 3.8vw;
-    margin: -4.3vw 0 0 3vw;
-    width: 90%;
   }
 
   .W-LearnTitile-Button {
@@ -1069,5 +1075,10 @@ h1 {
   .A-Cloth1 {
     left: 4vw;
     top: -5vw;
+  }
+
+  .W-AboutUsTitile-Button {
+    gap: 12vw;
+    margin: -6.3vw 0 0 3vw;
   }
 }
