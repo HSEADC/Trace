@@ -14,6 +14,7 @@ const htmlPages = [
   createPages("./src/pages/learn.html", "./pages/learn.html", ["index"]),
   createPages("./src/pages/game.html", "./pages/game.html", ["index"]),
   createPages("./src/pages/about-us.html", "./pages/about-us.html", ["index"]),
+  createPages("./src/pages/404.html", "./pages/404.html", ["index"]),
   createPages(
     "./src/pages/articals/artical-degree.html",
     "./pages/articals/artical-degree.html",

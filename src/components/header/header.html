@@ -1,10 +1,30 @@
 <header class="O-Header">
   <div class="W-HeaderFrame">
-    <img
-      class="A-Logo"
-      src="https://github.com/HSEADC/Trace/blob/main/src/img/icons/Q-Logo.png?raw=true"
-      alt="logo"
-    />
+    <a
+      class="A-LogoLink"
+      href="https://hseadc.github.io/Trace/"
+      aria-label="На главную"
+    >
+      <img
+        class="A-Logo"
+        src="https://github.com/HSEADC/Trace/blob/main/src/img/icons/Q-Logo.png?raw=true"
+        alt="logo"
+      />
+    </a>
+
+    <button
+      class="A-BurgerButton"
+      id="burgerButton"
+      type="button"
+      aria-label="Открыть меню"
+      aria-expanded="false"
+      aria-controls="mobileMenu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
     <div class="O-Navbar">
       <div class="M-NavGroup">
         <a class="A-NavItem is-active" href="https://hseadc.github.io/Trace/"
@@ -17,8 +37,13 @@
         >
         <a
           class="A-NavItem"
-          href="https://hseadc.github.io/Trace/pages/learn.htmll"
+          href="https://hseadc.github.io/Trace/pages/learn.html"
           >Обучение</a
+        >
+        <a
+          class="A-NavItem"
+          href="https://hseadc.github.io/Trace/pages/about.html"
+          >О нас</a
         >
         <a
           class="A-NavItem"
@@ -26,6 +51,36 @@
           >Игра</a
         >
       </div>
+    </div>
+  </div>
+
+  <div class="O-MobileMenu" id="mobileMenu">
+    <div class="W-MobileMenuInner">
+      <a
+        class="A-MobileNavItem is-active"
+        href="https://hseadc.github.io/Trace/"
+        >Главная</a
+      >
+      <a
+        class="A-MobileNavItem"
+        href="https://hseadc.github.io/Trace/pages/articles.html"
+        >Статьи</a
+      >
+      <a
+        class="A-MobileNavItem"
+        href="https://hseadc.github.io/Trace/pages/learn.html"
+        >Обучение</a
+      >
+      <a
+        class="A-MobileNavItem"
+        href="https://hseadc.github.io/Trace/pages/about.html"
+        >О нас</a
+      >
+      <a
+        class="A-MobileNavItem"
+        href="https://hseadc.github.io/Trace/pages/game.html"
+        >Игра</a
+      >
     </div>
   </div>
 </header>

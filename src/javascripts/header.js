@@ -1,46 +1,101 @@
-// function setActiveNavItem(clickedItem) {
-//   // 1. Находим ВСЕ элементы навигации
-//   const navItems = document.querySelectorAll(".nav-link");
+document.addEventListener("DOMContentLoaded", () => {
+  const burgerButton = document.getElementById("burgerButton");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const headerFrame = document.querySelector(".W-HeaderFrame");
 
-//   // 2. Убираем класс 'active' у ВСЕХ элементов
-//   navItems.forEach((item) => {
-//     item.classList.remove("active");
-//   });
+  const desktopLinks = document.querySelectorAll(".A-NavItem");
+  const mobileLinks = document.querySelectorAll(".A-MobileNavItem");
 
-//   // 3. Добавляем класс 'active' к кликнутому элементу
-//   clickedItem.classList.add("active");
-// }
+  function normalizePath(path) {
+    if (!path) return "/";
 
-// // ============================================
-// // ИНИЦИАЛИЗАЦИЯ ПРИ ЗАГРУЗКЕ СТРАНИЦЫ
-// // ============================================
-// document.addEventListener("DOMContentLoaded", function () {
-//   // Находим ВСЕ ссылки в навигации
-//   const navLinks = document.querySelectorAll(".nav-link");
+    let normalized = path.toLowerCase();
 
-//   // Для КАЖДОЙ ссылки добавляем обработчик клика
-//   navLinks.forEach((link) => {
-//     link.addEventListener("click", function (e) {
-//       // Предотвращаем переход по ссылке
-//       e.preventDefault();
+    normalized = normalized.replace(/index\.html$/, "");
+    normalized = normalized.replace(/\/+$/, "");
 
-//       // Получаем ID секции из href ссылки
-//       const targetId = this.getAttribute("href");
+    if (normalized === "") normalized = "/";
 
-//       // Устанавливаем активный класс
-//       setActiveNavItem(this);
+    return normalized;
+  }
 
-//       // ДОПОЛНИТЕЛЬНО: Плавная прокрутка к секции
-//       const targetSection = document.querySelector(targetId);
-//       if (targetSection) {
-//         targetSection.scrollIntoView({
-//           behavior: "smooth", // Плавная анимация
-//           block: "start", // Выровнять по верху
-//         });
-//       }
-//     });
-//   });
+  function setActiveLinks() {
+    const currentPath = normalizePath(window.location.pathname);
 
-//   console.log("✅ Навигация готова к работе!");
-//   console.log("Кликайте по пунктам меню для переключения активного состояния");
-// });
+    const allLinks = [...desktopLinks, ...mobileLinks];
+
+    allLinks.forEach((link) => {
+      link.classList.remove("is-active");
+
+      const linkUrl = new URL(link.href, window.location.origin);
+      const linkPath = normalizePath(linkUrl.pathname);
+
+      if (linkPath === currentPath) {
+        link.classList.add("is-active");
+      }
+    });
+
+    if (![...allLinks].some((link) => link.classList.contains("is-active"))) {
+      allLinks.forEach((link) => {
+        const linkUrl = new URL(link.href, window.location.origin);
+        const linkPath = normalizePath(linkUrl.pathname);
+
+        if (linkPath === "/" || linkPath.endsWith("/trace")) {
+          if (currentPath === "/" || currentPath.endsWith("/trace")) {
+            link.classList.add("is-active");
+          }
+        }
+      });
+    }
+  }
+
+  function openMenu() {
+    if (!burgerButton || !mobileMenu || !headerFrame) return;
+
+    mobileMenu.classList.add("is-open");
+    burgerButton.classList.add("is-open");
+    headerFrame.classList.add("is-open");
+    burgerButton.setAttribute("aria-expanded", "true");
+  }
+
+  function closeMenu() {
+    if (!burgerButton || !mobileMenu || !headerFrame) return;
+
+    mobileMenu.classList.remove("is-open");
+    burgerButton.classList.remove("is-open");
+    headerFrame.classList.remove("is-open");
+    burgerButton.setAttribute("aria-expanded", "false");
+  }
+
+  function toggleMenu() {
+    if (!mobileMenu) return;
+
+    if (mobileMenu.classList.contains("is-open")) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  }
+
+  if (burgerButton && mobileMenu && headerFrame) {
+    burgerButton.addEventListener("click", toggleMenu);
+
+    mobileLinks.forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeMenu();
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 768) {
+        closeMenu();
+      }
+    });
+  }
+
+  setActiveLinks();
+});

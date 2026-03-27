@@ -1,0 +1,41 @@
+.O-404 {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.Q-404 {
+  width: 59%;
+}
+
+.A-404-img {
+  width: 74%;
+}
+
+.W-404Titile-Button {
+  align-items: center;
+  display: flex;
+  gap: 1vw;
+  justify-content: space-around;
+  height: 4vw;
+  margin: -4.5vw 0 0 -3vw;
+  width: 75%;
+}
+
+.A-404Titile {
+  color: var(--color-light-pink);
+  font: var(--font-h3);
+  line-height: var(--ls-h4);
+}
+
+.A-MainPage-button {
+  background-color: var(--color-yellow);
+  border: none;
+  border-radius: 0.5vw;
+  color: var(--color-dark-grey);
+  font: var(--font-h4);
+  text-transform: uppercase;
+  height: 3.5vw;
+  width: 14.5vw;
+}
