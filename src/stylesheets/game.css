@@ -89,8 +89,9 @@
   width: 36vw;
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: stretch;
+  align-items: center;
 }
 
 .O-GameField {
@@ -114,6 +115,24 @@
   height: 100%;
   border-radius: 0.8vw;
   background-color: #e51ea2;
+  touch-action: none;
+}
+
+.A-GameStatus {
+  position: absolute;
+  top: 1.1vw;
+  left: 50%;
+  z-index: 10;
+  transform: translateX(-50%);
+  min-width: 7vw;
+  border-radius: 999px;
+  background-color: rgba(83, 83, 83, 0.78);
+  color: var(--color-white);
+  font: var(--font-h3);
+  line-height: 1;
+  text-align: center;
+  padding: 0.45vw 0.8vw;
+  pointer-events: none;
 }
 
 .W-GamePanelRight {
@@ -366,6 +385,32 @@
     0 0.18vw 0 rgba(0, 0, 0, 0.18);
 }
 
+.M-GameTouchControls {
+  display: none;
+}
+
+.A-GameTouchButton {
+  border: none;
+  border-radius: 50%;
+  background-color: var(--color-read);
+  color: var(--color-dark-grey);
+  font: var(--font-h2);
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow:
+    inset 0 0.22vw 0.28vw rgba(255, 255, 255, 0.75),
+    inset 0 -0.2vw 0.25vw rgba(0, 0, 0, 0.16),
+    0 0.25vw 0 rgba(0, 0, 0, 0.2);
+  touch-action: manipulation;
+}
+
+.A-GameTouchButton:active {
+  transform: translateY(0.18vw);
+}
+
 @media (max-width: 1024px) {
   .W_Game {
     height: auto;
@@ -435,6 +480,34 @@
     width: 100%;
     height: 94vw;
     border-radius: 4vw;
+  }
+
+  .A-GameStatus {
+    top: 3vw;
+    min-width: 22vw;
+    font-size: 4vw;
+    padding: 1.4vw 3vw;
+  }
+
+  .M-GameTouchControls {
+    width: min(72vw, 420px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3vw;
+    margin-top: 3vw;
+  }
+
+  .A-GameTouchButton {
+    width: 18vw;
+    height: 18vw;
+    font-size: 8vw;
+    justify-self: center;
+  }
+
+  .A-GameTouchButton-Wide {
+    grid-column: span 3;
+    width: 44vw;
+    border-radius: 999px;
   }
 
   .A-GameBoardCanvas {

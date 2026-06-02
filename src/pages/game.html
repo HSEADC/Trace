@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,7 +19,7 @@
     />
     <meta
       property="og:image"
-      content="https://github.com/HSEADC/Trace/blob/main/src/img/meta-img/game.jpg?raw=true"
+      content="../img/meta-img/game.jpg"
     />
 
     <meta property="twitter:card" content="summary_large_image" />
@@ -30,8 +30,8 @@
       content="Игра Trace по сортировке мусора: ловите отходы и отправляйте их в правильные контейнеры. Лёгкий способ потренировать экопривычки и понять, что сдавать в переработку."
     />
     <meta
-      property="twitter:image"
-      content="https://github.com/HSEADC/Trace/blob/main/src/img/meta-img/game.jpg?raw=true"
+      name="twitter:image"
+      content="../img/meta-img/game.jpg"
     />
 
     <link
@@ -135,6 +135,10 @@
                 height="400"
               ></canvas>
 
+              <div id="game-status" class="A-GameStatus" aria-live="polite">
+                Готово
+              </div>
+
               <div id="lose-modal" class="O-GameModal O-GameModal-Hidden">
                 <div class="M-GameModalCard">
                   <div class="M-GameModalTopButtons">
@@ -211,6 +215,53 @@
                   </div>
                 </div>
               </div>
+            </div>
+
+            <div
+              class="M-GameTouchControls"
+              role="group"
+              aria-label="Управление игрой"
+            >
+              <button
+                id="move-left-button"
+                class="A-GameTouchButton"
+                type="button"
+                aria-label="влево"
+              >
+                ←
+              </button>
+              <button
+                id="rotate-button"
+                class="A-GameTouchButton"
+                type="button"
+                aria-label="повернуть"
+              >
+                ↻
+              </button>
+              <button
+                id="move-right-button"
+                class="A-GameTouchButton"
+                type="button"
+                aria-label="вправо"
+              >
+                →
+              </button>
+              <button
+                id="soft-drop-button"
+                class="A-GameTouchButton"
+                type="button"
+                aria-label="вниз"
+              >
+                ↓
+              </button>
+              <button
+                id="hard-drop-button"
+                class="A-GameTouchButton A-GameTouchButton-Wide"
+                type="button"
+                aria-label="быстро вниз"
+              >
+                ⇣
+              </button>
             </div>
           </div>
 

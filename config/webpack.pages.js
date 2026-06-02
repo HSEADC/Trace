@@ -35,6 +35,61 @@ const htmlPages = [
     "./pages/articals/artical-liquid-or-solid.html",
     ["index"],
   ),
+  createPages(
+    "./src/pages/articals/artical-refill.html",
+    "./pages/articals/artical-refill.html",
+    ["index"],
+  ),
+  createPages(
+    "./src/pages/articals/artical-battery-charge.html",
+    "./pages/articals/artical-battery-charge.html",
+    ["index"],
+  ),
+  createPages(
+    "./src/pages/articals/artical-reusable-paper-towels.html",
+    "./pages/articals/artical-reusable-paper-towels.html",
+    ["index"],
+  ),
+  createPages(
+    "./src/pages/articals/artical-sponges-saving.html",
+    "./pages/articals/artical-sponges-saving.html",
+    ["index"],
+  ),
+  createPages(
+    "./src/pages/articals/artical-water-saving.html",
+    "./pages/articals/artical-water-saving.html",
+    ["index"],
+  ),
+  createPages(
+    "./src/pages/articals/artical-reusable-shoe-covers.html",
+    "./pages/articals/artical-reusable-shoe-covers.html",
+    ["index"],
+  ),
+  createPages(
+    "./src/pages/articals/artical-toothbrush-saving.html",
+    "./pages/articals/artical-toothbrush-saving.html",
+    ["index"],
+  ),
+  createPages(
+    "./src/pages/articals/artical-air-drying-laundry.html",
+    "./pages/articals/artical-air-drying-laundry.html",
+    ["index"],
+  ),
+  createPages(
+    "./src/pages/articals/artical-food-storage.html",
+    "./pages/articals/artical-food-storage.html",
+    ["index"],
+  ),
+  createPages(
+    "./src/pages/articals/artical-old-clothes-rags.html",
+    "./pages/articals/artical-old-clothes-rags.html",
+    ["index"],
+  ),
+  createPages(
+    "./src/pages/articals/artical-food-waste.html",
+    "./pages/articals/artical-food-waste.html",
+    ["index"],
+  ),
 ];
 
 module.exports = htmlPages;
