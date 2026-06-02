@@ -1,83 +1,64 @@
-const articlesData = [
-  {
-    id: 1,
-    title: "Зажигайся сияй",
-    description: "Всё, что нужно знать о переработке",
-    category: [
-      "recycling",
-      "practical",
-      "electronics",
-      "resources",
-      "daily habits",
-    ],
-    image:
-      "https://github.com/HSEADC/Trace/blob/main/src/img/articles/A-LampCardImg.png?raw=true",
-    link: "https://hseadc.github.io/Trace/pages/404.html",
-  },
-  {
-    id: 2,
-    title: "Не компостируй мне",
-    description: "Компостирование органических отходов",
-    category: [
-      "recycling",
-      "waste reduction",
-      "home",
-      "organic waste",
-      "resources",
-      "daily habits",
-    ],
-    image:
-      "https://github.com/HSEADC/Trace/blob/main/src/img/articles/A-FoodCardImg.png?raw=true",
-    link: "https://hseadc.github.io/Trace/pages/404.html",
-  },
-  {
-    id: 3,
-    title: "Стакан на миллион",
-    description: "Кофейни платят вам за ваш кофе",
-    category: ["saving money", "daily habits", "recycling", "organic waste"],
-    image:
-      "https://github.com/HSEADC/Trace/blob/main/src/img/articles/A-CupCardImg.png?raw=true",
-    link: "https://hseadc.github.io/Trace/pages/articals/artical-cup.html",
-  },
-  {
-    id: 4,
-    title: "В чем выгода?",
-    description: "Как получать деньги за сортировку",
-    category: ["recycling", "saving money", "waste reduction"],
-    image:
-      "https://github.com/HSEADC/Trace/blob/main/src/img/articles/A-BenefitCardImg.png?raw=true",
-    link: "https://hseadc.github.io/Trace/pages/404.html",
-  },
-  {
-    id: 5,
-    title: "Твой шанс на успех",
-    description: "Многоразовая стальная бритва",
-    category: [
-      "personal care",
-      "sustainable products",
-      "waste reduction",
-      "daily habits",
-      "recycling",
-    ],
-    image:
-      "https://github.com/HSEADC/Trace/blob/main/src/img/articles/A-RazerCardImg.png?raw=true",
-    link: "https://hseadc.github.io/Trace/pages/articals/artical-razer.html",
-  },
-  {
-    id: 6,
-    title: "Твердый шампунь",
-    description: "Твердый шампунь намного экологичнее",
-    category: [
-      "personal care",
-      "sustainable products",
-      "daily habits",
-      "recycling",
-      "resources",
-    ],
-    image:
-      "https://github.com/HSEADC/Trace/blob/main/src/img/articles/A-ShampoCardImg.png?raw=true",
-    link: "https://hseadc.github.io/Trace/pages/articals/artical-liquid-or-solid.html",
-  },
-];
+import articles from "../../data/articles.json";
 
-export default articlesData;
+const articleImages = {
+  "articles/30degree_article_img.png": require("../../img/articles/30degree_article_img.png"),
+  "articles/A-BenefitCardImg.png": require("../../img/articles/A-BenefitCardImg.png"),
+  "articles/A-CupCardImg.png": require("../../img/articles/A-CupCardImg.png"),
+  "articles/A-FoodCardImg.png": require("../../img/articles/A-FoodCardImg.png"),
+  "articles/A-LampCardImg.png": require("../../img/articles/A-LampCardImg.png"),
+  "articles/A-RazerCardImg.png": require("../../img/articles/A-RazerCardImg.png"),
+  "articles/A-ShampoCardImg.png": require("../../img/articles/A-ShampoCardImg.png"),
+  "articles/First block art degree img.png": require("../../img/articles/First block art degree img.png"),
+  "articles/cup/Cover_video_ artical_cup.png": require("../../img/articles/cup/Cover_video_ artical_cup.png"),
+  "articles/cup/First block art cup img.png": require("../../img/articles/cup/First block art cup img.png"),
+  "articles/cup/infografica_3_cup.png": require("../../img/articles/cup/infografica_3_cup.png"),
+  "articles/cup/infografica_4_cup.png": require("../../img/articles/cup/infografica_4_cup.png"),
+  "articles/cup/infographic_1_cup.png": require("../../img/articles/cup/infographic_1_cup.png"),
+  "articles/cup/infographic_2_cup.png": require("../../img/articles/cup/infographic_2_cup.png"),
+  "articles/infografica_2_30degree_img.svg": require("../../img/articles/infografica_2_30degree_img.svg"),
+  "articles/infografica_3_30degree_img.svg": require("../../img/articles/infografica_3_30degree_img.svg"),
+  "articles/infografica_4_30degree_img.svg": require("../../img/articles/infografica_4_30degree_img.svg"),
+  "articles/liquid_article/card_infographic_1_liquid.png": require("../../img/articles/liquid_article/card_infographic_1_liquid.png"),
+  "articles/liquid_article/card_infographic_2_liquid.png": require("../../img/articles/liquid_article/card_infographic_2_liquid.png"),
+  "articles/liquid_article/card_infographic_3_liquid.png": require("../../img/articles/liquid_article/card_infographic_3_liquid.png"),
+  "articles/liquid_article/card_infographic_4_liquid.png": require("../../img/articles/liquid_article/card_infographic_4_liquid.png"),
+  "articles/liquid_article/cover_First block.png": require("../../img/articles/liquid_article/cover_First block.png"),
+  "articles/liquid_article/infographic_1_liquid.png": require("../../img/articles/liquid_article/infographic_1_liquid.png"),
+  "articles/liquid_article/infographic_2_liquid.png": require("../../img/articles/liquid_article/infographic_2_liquid.png"),
+  "articles/liquid_article/infographic_3_liquid.png": require("../../img/articles/liquid_article/infographic_3_liquid.png"),
+  "articles/liquid_article/infographic_4_liquid.png": require("../../img/articles/liquid_article/infographic_4_liquid.png"),
+  "articles/razer_artical/First block art razer img.png": require("../../img/articles/razer_artical/First block art razer img.png"),
+  "articles/razer_artical/card_infographic_1_razer.png": require("../../img/articles/razer_artical/card_infographic_1_razer.png"),
+  "articles/razer_artical/card_infographic_2_razer.png": require("../../img/articles/razer_artical/card_infographic_2_razer.png"),
+  "articles/razer_artical/card_infographic_3_razer.png": require("../../img/articles/razer_artical/card_infographic_3_razer.png"),
+  "articles/razer_artical/card_infographic_4_razer.png": require("../../img/articles/razer_artical/card_infographic_4_razer.png"),
+  "articles/razer_artical/infographic_1_razer.png": require("../../img/articles/razer_artical/infographic_1_razer.png"),
+  "articles/razer_artical/infographic_2_razer.png": require("../../img/articles/razer_artical/infographic_2_razer.png"),
+  "articles/razer_artical/infographic_3_razer.png": require("../../img/articles/razer_artical/infographic_3_razer.png"),
+  "articles/razer_artical/infographic_4_razer.png": require("../../img/articles/razer_artical/infographic_4_razer.png"),
+  "articles/video_30degree_artical_cover.png": require("../../img/articles/video_30degree_artical_cover.png"),
+};
+const imageFields = new Set(["image", "heroImage", "cover"]);
+
+function resolveArticleImages(value, key) {
+  if (Array.isArray(value)) {
+    return value.map((item) => resolveArticleImages(item));
+  }
+
+  if (value && typeof value === "object") {
+    return Object.fromEntries(
+      Object.entries(value).map(([entryKey, entryValue]) => [
+        entryKey,
+        resolveArticleImages(entryValue, entryKey),
+      ]),
+    );
+  }
+
+  if (typeof value === "string" && imageFields.has(key)) {
+    return articleImages[value] || value;
+  }
+
+  return value;
+}
+
+export default articles.map((article) => resolveArticleImages(article));

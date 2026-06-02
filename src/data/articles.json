@@ -1,0 +1,476 @@
+[
+  {
+    "id": 1,
+    "slug": "lamp-recycling",
+    "title": "Зажигайся сияй",
+    "description": "Всё, что нужно знать о переработке",
+    "category": [
+      "recycling",
+      "practical",
+      "electronics",
+      "resources",
+      "daily habits"
+    ],
+    "image": "articles/A-LampCardImg.png",
+    "link": "./404.html",
+    "content": null
+  },
+  {
+    "id": 2,
+    "slug": "composting",
+    "title": "Не компостируй мне",
+    "description": "Компостирование органических отходов",
+    "category": [
+      "recycling",
+      "waste reduction",
+      "home",
+      "organic waste",
+      "resources",
+      "daily habits"
+    ],
+    "image": "articles/A-FoodCardImg.png",
+    "link": "./404.html",
+    "content": null
+  },
+  {
+    "id": 3,
+    "slug": "reusable-cup",
+    "title": "Стакан на миллион",
+    "description": "Кофейни платят вам за ваш кофе",
+    "category": [
+      "saving money",
+      "daily habits",
+      "recycling",
+      "organic waste"
+    ],
+    "image": "articles/A-CupCardImg.png",
+    "link": "./articals/artical-cup.html",
+    "content": {
+      "pageTitle": "свой стакан спасёт твой карман",
+      "readingTime": "1 мин",
+      "views": "16,7 тыс.",
+      "authors": [
+        "Виктория Николаева",
+        "Марина Бородулина"
+      ],
+      "heroImage": "articles/cup/First block art cup img.png",
+      "infographics": [
+        {
+          "title": "во многих кофейнях действует скидка 5–10%",
+          "image": "articles/cup/infographic_1_cup.png"
+        },
+        {
+          "title": "ежегодно уходит 200–300 стаканов на человека",
+          "image": "articles/cup/infographic_2_cup.png"
+        },
+        {
+          "title": "",
+          "image": "articles/cup/infografica_3_cup.png"
+        },
+        {
+          "title": "",
+          "image": "articles/cup/infografica_4_cup.png"
+        }
+      ],
+      "paragraphs": [
+        "По сути жидкие средства — это вода в пластиковой упаковке, которая быстро заканчивается. Твёрдый формат экономит деньги, сокращает мусор и упрощает хранение",
+        "Если у вас тонкая и чувствительная кожа, стальная бритва может вызвать раздражение из‑за очень острого лезвия. В дорожных или экстремальных условиях она повышает риск порезов. В таких случаях удобнее использовать одноразовую бритву",
+        "Если вы редко берёте напитки навынос. Привычка забывать вещи зачастую снижает выгоду. Кроме того, не всегда удобно подстраиваться под стандартный объём, а мыть стакан регулярно порой просто не хочется",
+        "Экономит ваши деньги благодаря скидкам в кофейнях и сокращает количество мусора, заменяя сотни неперерабатываемых одноразовых стаканов в год",
+        "Пить кофе из своего стакана — это удобная рутина, которая экономит тысячи рублей и уменьшает вред для планеты без лишних усилий"
+      ],
+      "video": {
+        "title": "Главные плюсы складных стаканов",
+        "url": "https://vk.com/video-84318057_456239290",
+        "cover": "articles/cup/Cover_video_ artical_cup.png"
+      }
+    }
+  },
+  {
+    "id": 4,
+    "slug": "sorting-profit",
+    "title": "В чем выгода?",
+    "description": "Как получать деньги за сортировку",
+    "category": [
+      "recycling",
+      "saving money",
+      "waste reduction"
+    ],
+    "image": "articles/A-BenefitCardImg.png",
+    "link": "./404.html",
+    "content": null
+  },
+  {
+    "id": 5,
+    "slug": "safety-razor",
+    "title": "Твой шанс на успех",
+    "description": "Многоразовая стальная бритва",
+    "category": [
+      "personal care",
+      "sustainable products",
+      "waste reduction",
+      "daily habits",
+      "recycling"
+    ],
+    "image": "articles/A-RazerCardImg.png",
+    "link": "./articals/artical-razer.html",
+    "content": {
+      "pageTitle": "КАк выглядит осознанное бритьё?",
+      "readingTime": "4 мин",
+      "views": "24,6 тыс.",
+      "authors": [
+        "Мария Красная",
+        "виктория николаева"
+      ],
+      "heroImage": "articles/razer_artical/First block art razer img.png",
+      "infographics": [
+        {
+          "title": "стальные vs кассетные",
+          "description": "По сравнению с кассетными экономия от стальных бритв больше в 5–10 раз",
+          "image": "articles/razer_artical/infographic_1_razer.png"
+        },
+        {
+          "title": "1 деление — 5 одноразовых бритв",
+          "description": "Стальная бритва — замена 100–150 одноразовых",
+          "image": "articles/razer_artical/infographic_2_razer.png"
+        },
+        {
+          "title": "сравнение цен на бритвы",
+          "description": "классическое лезвие стоит в 10–20 раз дешевле кассеты",
+          "image": "articles/razer_artical/infographic_3_razer.png"
+        },
+        {
+          "title": "привыкание к бритве занимает 2–3 бритья",
+          "image": "articles/razer_artical/infographic_4_razer.png"
+        }
+      ],
+      "paragraphs": [
+        "Одноразовые бритвы зачастую нужно покупать снова и снова. Кассеты стоят дорого, а станок быстро прихоит в негодность. Все это превращается в дорогую и не экологичную привычку",
+        "Стальная бритва служит годами, лезвия стоят копейки, мусора почти нет, а качество бритья — выше. После первого бритья стальной бритвой к одноразовым возвращаться не захочется",
+        "Если у вас тонкая и чувствительная кожа, стальная бритва может вызвать раздражение из‑за очень острого лезвия. В дорожных или экстремальных условиях она повышает риск порезов. В таких случаях удобнее использовать одноразовую бритву",
+        "Многоразовая бритва экономит 5–10 раз больше средств, служит годами, не создаёт пластиковых отходов, упрощает логистику (не требует частых закупок и снижает транспортные расходы)",
+        "Стальная многоразовая бритва — это экономичная и экологичная альтернатива. При правильном уходе она служит долгие годы, экономя деньги и сокращая отходы. Для получения комфортного бритья требуется небольшая практика, но долгосрочные выгоды очевидны"
+      ],
+      "facts": [
+        {
+          "number": 1,
+          "title": "экономия денег, контроль расходов",
+          "image": "articles/razer_artical/card_infographic_1_razer.png"
+        },
+        {
+          "number": 2,
+          "title": "лезвия дешевле и служат дольше",
+          "image": "articles/razer_artical/card_infographic_2_razer.png"
+        },
+        {
+          "number": 3,
+          "title": "отсутствие мусора и упрощение логистики",
+          "image": "articles/razer_artical/card_infographic_3_razer.png"
+        },
+        {
+          "number": 4,
+          "title": "высококачественное бритьё",
+          "image": "articles/razer_artical/card_infographic_4_razer.png"
+        }
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "slug": "solid-shampoo",
+    "title": "Твердый шампунь",
+    "description": "Твердый шампунь намного экологичнее",
+    "category": [
+      "personal care",
+      "sustainable products",
+      "daily habits",
+      "recycling",
+      "resources"
+    ],
+    "image": "articles/A-ShampoCardImg.png",
+    "link": "./articals/artical-liquid-or-solid.html",
+    "content": {
+      "pageTitle": "битва шампуней: твёрдый VS жидкий",
+      "readingTime": "2 мин",
+      "views": "10,6 тыс.",
+      "authors": [
+        "Александр Зенкин",
+        "Марина Бородулина"
+      ],
+      "heroImage": "articles/liquid_article/cover_First block.png",
+      "infographics": [
+        {
+          "title": "Сокращение использования пластика на 2–5 кг пластика в год",
+          "image": "articles/liquid_article/infographic_1_liquid.png"
+        },
+        {
+          "title": "стоимость на 20–40% ниже жидких средств",
+          "image": "articles/liquid_article/infographic_2_liquid.png"
+        },
+        {
+          "title": "твёрдые средства на 70–90 применений, а не 30–40",
+          "image": "articles/liquid_article/infographic_3_liquid.png"
+        },
+        {
+          "title": "жидкий шампунь / твёрдый шампунь",
+          "image": "articles/liquid_article/infographic_4_liquid.png"
+        }
+      ],
+      "paragraphs": [
+        "По сути жидкие средства — это вода в пластиковой упаковке, которая быстро заканчивается. Твёрдый формат экономит деньги, сокращает мусор и упрощает хранение",
+        "Твёрдый шампунь лучше жидкого, потому что служит дольше, занимает меньше места, создаёт меньше отходов и стоит дешевле в долгосрочной перспективе",
+        "Жёсткая вода, которая требует дополнительного ополаскивания. Если кожа головы чувствительная, лучше выбрать менее концентрированный жидкий формат. Кроме того, чтобы привыкнуть к новой форме продукта, нужно время. Для некоторых использовать жидкий шампунь с обильной пеной привычнее",
+        "Бюджет реже заканчивается, меньше покупок — экономия в долгую. Твёрдый шампунь не проливается, подходит для долгих путешествий, компактен. Меньше пластиковой упаковки, минимальное использование воды при производстве, выбросов при транспартировке",
+        "Твёрдый формат шампуня — это экологичный и удобный вариант, потому что служит в 2–3 раза дольше, компактен, не требует много упаковки, экономичен в использовании"
+      ],
+      "facts": [
+        {
+          "number": 1,
+          "title": "жидкие средства менее концентрированные",
+          "image": "articles/liquid_article/card_infographic_1_liquid.png"
+        },
+        {
+          "number": 2,
+          "title": "зачастую упаковка минимальна",
+          "image": "articles/liquid_article/card_infographic_2_liquid.png"
+        },
+        {
+          "number": 3,
+          "title": "логика проще и экологичнее",
+          "image": "articles/liquid_article/card_infographic_3_liquid.png"
+        },
+        {
+          "number": 4,
+          "title": "современные формулы универсальны",
+          "image": "articles/liquid_article/card_infographic_4_liquid.png"
+        }
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "slug": "washing-30-degree",
+    "title": "Какая идеальная температура для стирки?",
+    "description": "Почему 30° — твой шанс на успех?",
+    "category": [
+      "saving money",
+      "daily habits",
+      "resources"
+    ],
+    "image": "articles/30degree_article_img.png",
+    "link": "./articals/artical-degree.html",
+    "featured": true,
+    "content": {
+      "pageTitle": "ПОЧЕМУ 30° — ТВОЙ ШАНС НА УСПЕХ?",
+      "readingTime": "4 мин",
+      "views": "30,8 тыс.",
+      "authors": [
+        "Рамира Сахаева",
+        "Ризат Нурмагомедов"
+      ],
+      "heroImage": "articles/First block art degree img.png",
+      "infographics": [
+        {
+          "title": "80% стирки при 30°, а 20% в особых случаях. См выше",
+          "value": "80%"
+        },
+        {
+          "title": "Около 70% электроэнергии уходит на нагрев воды",
+          "image": "articles/infografica_2_30degree_img.svg"
+        },
+        {
+          "title": "При бережной стике вещи живут на 20–40% дольше",
+          "image": "articles/infografica_3_30degree_img.svg"
+        },
+        {
+          "title": "Итого Экономия энергии около 40%",
+          "image": "articles/infografica_4_30degree_img.svg"
+        }
+      ],
+      "paragraphs": [
+        "Стирка — регулярная бытовая привычка. Мы редко задумываемся, сколько энергии, воды и ресурсов тратим. При этом изменение всего одной настройки даёт заметный эффект без усилий и трат",
+        "Стирка при 30° экономит электричество, продлевает жизнь одежде и снижает вред для окружающей среды. При этом качество стирки остаётся высоким для большинства повседневных вещей",
+        "Высокие температуры оправданы, когда приоритет — гигиена и безопасность. Например, нужно стирать белье после болезни, одежду младенцев, сильно загрязнённые вещи, кухонные полотенца, хлопковый текстиль, а также при кожных заболеваниях и аллергиях. Меньший углеродный след, экономию энергии и моющих средств, снижение микропластика стоков и продление жизни вещам",
+        "Стирка при 30 °C — это экологично и выгодно. Спаси планету и заработай вместе с Trace без усилий и вложений"
+      ],
+      "video": {
+        "title": "15 ГЛАВНЫХ ОШИБОК В СТИРКЕ",
+        "url": "https://vk.com/video-84318057_456239290",
+        "cover": "articles/video_30degree_artical_cover.png"
+      }
+    }
+  },
+  {
+    "id": 8,
+    "slug": "refill",
+    "title": "Что такое рефил?",
+    "description": "Почему покупать средства на розлив выгодно",
+    "category": [
+      "saving money",
+      "waste reduction",
+      "daily habits",
+      "sustainable products",
+      "home"
+    ],
+    "image": "articles/A-BenefitCardImg.png",
+    "link": "./articals/artical-refill.html",
+    "content": null
+  },
+  {
+    "id": 9,
+    "slug": "battery-charge",
+    "title": "Батарейка на зарядке",
+    "description": "Почему аккумуляторы выгоднее одноразовых батареек",
+    "category": [
+      "saving money",
+      "electronics",
+      "resources",
+      "waste reduction",
+      "daily habits"
+    ],
+    "image": "articles/A-BenefitCardImg.png",
+    "link": "./articals/artical-battery-charge.html",
+    "content": null
+  },
+  {
+    "id": 10,
+    "slug": "reusable-paper-towels",
+    "title": "Не(одноразовые) полотенца",
+    "description": "Чем заменить бумажные полотенца на кухне",
+    "category": [
+      "saving money",
+      "waste reduction",
+      "home",
+      "daily habits",
+      "sustainable products"
+    ],
+    "image": "articles/A-BenefitCardImg.png",
+    "link": "./articals/artical-reusable-paper-towels.html",
+    "content": null
+  },
+  {
+    "id": 11,
+    "slug": "sponges-saving",
+    "title": "Губки без переплат",
+    "description": "Как экономить на губках и реже их менять",
+    "category": [
+      "saving money",
+      "waste reduction",
+      "home",
+      "daily habits"
+    ],
+    "image": "articles/A-BenefitCardImg.png",
+    "link": "./articals/artical-sponges-saving.html",
+    "content": null
+  },
+  {
+    "id": 12,
+    "slug": "water-saving",
+    "title": "Пьём воду выгодно",
+    "description": "Как многоразовая бутылка помогает экономить",
+    "category": [
+      "saving money",
+      "resources",
+      "waste reduction",
+      "daily habits",
+      "sustainable products"
+    ],
+    "image": "articles/A-BenefitCardImg.png",
+    "link": "./articals/artical-water-saving.html",
+    "content": null
+  },
+  {
+    "id": 13,
+    "slug": "reusable-shoe-covers",
+    "title": "Многоразовые бахилы",
+    "description": "Что это такое и с чем их носить",
+    "category": [
+      "saving money",
+      "waste reduction",
+      "daily habits",
+      "sustainable products"
+    ],
+    "image": "articles/A-BenefitCardImg.png",
+    "link": "./articals/artical-reusable-shoe-covers.html",
+    "content": null
+  },
+  {
+    "id": 14,
+    "slug": "toothbrush-saving",
+    "title": "Щётки и экономия",
+    "description": "Как зубные щётки связаны с выгодой",
+    "category": [
+      "saving money",
+      "personal care",
+      "waste reduction",
+      "daily habits",
+      "sustainable products"
+    ],
+    "image": "articles/A-BenefitCardImg.png",
+    "link": "./articals/artical-toothbrush-saving.html",
+    "content": null
+  },
+  {
+    "id": 15,
+    "slug": "air-drying-laundry",
+    "title": "Сушить на воздухе выгодно",
+    "description": "Почему бельё лучше сушить без сушильной машины",
+    "category": [
+      "saving money",
+      "resources",
+      "home",
+      "daily habits"
+    ],
+    "image": "articles/A-BenefitCardImg.png",
+    "link": "./articals/artical-air-drying-laundry.html",
+    "content": null
+  },
+  {
+    "id": 16,
+    "slug": "food-storage",
+    "title": "Хранить продукты правильно",
+    "description": "Почему правильное хранение продуктов выгодно",
+    "category": [
+      "saving money",
+      "organic waste",
+      "waste reduction",
+      "home",
+      "daily habits"
+    ],
+    "image": "articles/A-BenefitCardImg.png",
+    "link": "./articals/artical-food-storage.html",
+    "content": null
+  },
+  {
+    "id": 17,
+    "slug": "old-clothes-rags",
+    "title": "Старые вещи как тряпки",
+    "description": "Почему выгодно давать вещам вторую роль",
+    "category": [
+      "saving money",
+      "waste reduction",
+      "home",
+      "daily habits",
+      "sustainable products"
+    ],
+    "image": "articles/A-BenefitCardImg.png",
+    "link": "./articals/artical-old-clothes-rags.html",
+    "content": null
+  },
+  {
+    "id": 18,
+    "slug": "food-waste",
+    "title": "Меньше пищевых отходов",
+    "description": "Почему выгодно уменьшать пищевые отходы",
+    "category": [
+      "saving money",
+      "organic waste",
+      "waste reduction",
+      "resources",
+      "daily habits"
+    ],
+    "image": "articles/A-BenefitCardImg.png",
+    "link": "./articals/artical-food-waste.html",
+    "content": null
+  }
+]

@@ -1,0 +1,383 @@
+:root {
+  --motion-fast: 160ms;
+  --motion-base: 260ms;
+  --motion-slow: 520ms;
+  --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --focus-ring: 0 0 0 0.18vw rgba(242, 245, 58, 0.7);
+}
+
+a,
+button,
+input,
+[role="button"] {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.A_Button,
+.A-Button,
+.button-yellow,
+.A-AllArticlesButton,
+.A-DetailedButton,
+.A-Filter-Button,
+.A-Filter-Choose-Button,
+.A-Lesson-NextSlide-Button,
+.A-TestNavBtn,
+.A-TestResultBtn,
+.M-MapModal__close,
+.A-GameModalTopButton,
+.A-GameModalActionButton,
+.A-GameControlButton,
+.A-GameTouchButton {
+  transition:
+    transform var(--motion-base) var(--motion-spring),
+    box-shadow var(--motion-base) var(--motion-ease),
+    background-color var(--motion-base) var(--motion-ease),
+    color var(--motion-base) var(--motion-ease),
+    opacity var(--motion-fast) ease;
+}
+
+.A_Button:hover,
+.A-Button:hover,
+.button-yellow:hover,
+.A-AllArticlesButton:hover,
+.A-DetailedButton:hover,
+.A-Filter-Button:hover,
+.A-Filter-Choose-Button:hover,
+.A-Lesson-NextSlide-Button:hover,
+.A-TestNavBtn:not(:disabled):hover,
+.A-TestResultBtn:hover,
+.M-MapModal__close:hover,
+.A-GameModalTopButton:hover,
+.A-GameModalActionButton:hover,
+.A-GameControlButton:hover,
+.A-GameTouchButton:hover {
+  transform: translateY(-0.16vw);
+  box-shadow: 0 0.55vw 1vw rgba(52, 68, 78, 0.18);
+}
+
+.A_Button:active,
+.A-Button:active,
+.button-yellow:active,
+.A-AllArticlesButton:active,
+.A-DetailedButton:active,
+.A-Filter-Button:active,
+.A-Filter-Choose-Button:active,
+.A-Lesson-NextSlide-Button:active,
+.A-TestNavBtn:not(:disabled):active,
+.A-TestResultBtn:active,
+.M-MapModal__close:active,
+.A-GameModalTopButton:active,
+.A-GameModalActionButton:active,
+.A-GameControlButton:active,
+.A-GameTouchButton:active {
+  transform: translateY(0.08vw) scale(0.98);
+  box-shadow: 0 0.2vw 0.45vw rgba(52, 68, 78, 0.16);
+}
+
+.A-NavItem,
+.A-MobileNavItem,
+.A_FooterLink,
+.Q_SocialIcon {
+  transition:
+    transform var(--motion-base) var(--motion-ease),
+    color var(--motion-base) var(--motion-ease),
+    background-color var(--motion-base) var(--motion-ease),
+    opacity var(--motion-base) var(--motion-ease);
+}
+
+.A-NavItem:hover,
+.A-NavItem:focus-visible,
+.A-MobileNavItem:hover,
+.A-MobileNavItem:focus-visible,
+.A_FooterLink:hover,
+.A_FooterLink:focus-visible {
+  transform: translateY(-0.1vw);
+}
+
+.Q_SocialIcon:hover,
+.Q_SocialIcon:focus-visible {
+  transform: translateY(-0.14vw) rotate(-4deg) scale(1.06);
+}
+
+.C_Card,
+.O-article-card,
+.M_ArticlesCard,
+.M-ArticlesCard,
+.O-DayCard,
+.O-KickCard,
+.O-ArticlesAdd,
+.O-Post,
+.O-Map,
+.M-AboutUs,
+.O-Learn,
+.O_TestCard,
+.M-MoneyGoal,
+.M-KgGoal,
+.M-DailyGoals,
+.O-Card-Lesson-Two-Information,
+.O-Card-Lesson-Two-Swipe {
+  transform: translateZ(0);
+  transition:
+    transform var(--motion-base) var(--motion-ease),
+    box-shadow var(--motion-base) var(--motion-ease),
+    filter var(--motion-base) var(--motion-ease);
+}
+
+.C_Card:hover,
+.O-article-card:hover,
+.M_ArticlesCard:hover,
+.M-ArticlesCard:hover,
+.O-DayCard:hover,
+.O-KickCard:hover,
+.O-ArticlesAdd:hover,
+.O-Post:hover,
+.O-Map:hover,
+.M-AboutUs:hover,
+.O-Learn:hover,
+.O_TestCard:hover,
+.M-MoneyGoal:hover,
+.M-KgGoal:hover,
+.M-DailyGoals:hover,
+.O-Card-Lesson-Two-Information:hover,
+.O-Card-Lesson-Two-Swipe:hover {
+  transform: translateY(-0.28vw);
+  box-shadow: 0 0.7vw 1.4vw rgba(52, 68, 78, 0.14);
+}
+
+.O-article-card:hover {
+  width: 100%;
+  height: 100%;
+}
+
+.M-article-card-top,
+.W-ArticlesCard-Title,
+.article-card__top,
+.A_CardBadge,
+.M-TestAnswer,
+.M-AwardSlot,
+.M-Question {
+  transition:
+    transform var(--motion-base) var(--motion-ease),
+    background-color var(--motion-base) var(--motion-ease),
+    box-shadow var(--motion-base) var(--motion-ease),
+    opacity var(--motion-base) var(--motion-ease);
+}
+
+.M-article-card-top:hover,
+.W-ArticlesCard-Title:hover,
+.article-card__top:hover,
+.A_CardBadge:hover,
+.M-TestAnswer:hover,
+.M-AwardSlot:hover,
+.M-Question:hover {
+  transform: translateY(-0.12vw);
+}
+
+.A-article-card-icon,
+.A-ArrowIcon,
+.Q_CardBadgeIcon,
+.A-KickPlayIcon,
+.A-Arrow-Button,
+.A-Arrow-ButtonLeft {
+  transition: transform var(--motion-base) var(--motion-spring);
+  will-change: transform;
+}
+
+.M-article-card-top:hover .A-article-card-icon,
+.W-ArticlesCard-Title:hover .A-ArrowIcon,
+.article-card__top:hover .article-card__icon {
+  transform: rotate(45deg) scale(1.04);
+}
+
+.Q_CardBadgeIcon:hover,
+.A_CardBadge:hover .Q_CardBadgeIcon {
+  transform: rotate(45deg) scale(1.04);
+}
+
+.A-KickPlayIcon {
+  width: 80%;
+}
+
+.A-KickPlayIcon:hover,
+.A-KickPlayButton:hover .A-KickPlayIcon {
+  width: 80%;
+  transform: scale(1.1);
+}
+
+.Q_CardMedia,
+.A-article-card-img,
+.W_ArticlesCard-img,
+.W-ArticlesCard-img img,
+.A-ArticlesAdd-img,
+.A-TrashImg,
+.A-Learn-img,
+.A-Award-Img,
+.A-TestResultArt {
+  transition:
+    transform var(--motion-slow) var(--motion-ease),
+    filter var(--motion-base) var(--motion-ease);
+  will-change: transform;
+}
+
+.C_Card:hover .Q_CardMedia,
+.O-article-card:hover .A-article-card-img,
+.M_ArticlesCard:hover .W_ArticlesCard-img,
+.M-ArticlesCard:hover .W-ArticlesCard-img img,
+.O-ArticlesAdd:hover .A-ArticlesAdd-img,
+.W-ScreenFour-Img:hover .A-TrashImg,
+.O-Learn:hover .A-Learn-img,
+.W-TestResultImage:hover .A-TestResultArt {
+  transform: scale(1.035);
+}
+
+.A-Award-Img:hover {
+  transform: scale(1.12);
+  margin: 0;
+}
+
+.A-Searcher-Articles,
+.A-Searcher-Articles-Input,
+.A-TestBox,
+.A-Progress-Line {
+  transition:
+    transform var(--motion-base) var(--motion-ease),
+    border-color var(--motion-base) var(--motion-ease),
+    background-color var(--motion-base) var(--motion-ease),
+    box-shadow var(--motion-base) var(--motion-ease),
+    width var(--motion-base) var(--motion-ease);
+}
+
+.A-Searcher-Articles:focus-within {
+  box-shadow:
+    inset 0 0.08vw 0.18vw rgba(255, 255, 255, 0.32),
+    0 0 0 0.16vw rgba(242, 245, 58, 0.5);
+  transform: translateY(-0.1vw);
+}
+
+.M-TestAnswer:hover .A-TestBox {
+  transform: scale(1.08);
+}
+
+.M-TestAnswer.isActive .A-TestBox {
+  transform: scale(1.08);
+}
+
+.A-Map-IconCloth {
+  transition:
+    transform var(--motion-base) var(--motion-spring),
+    background-image var(--motion-base) var(--motion-ease),
+    filter var(--motion-base) var(--motion-ease);
+}
+
+.A-Map-IconCloth:hover {
+  width: 3vw;
+  height: 3vw;
+  transform: scale(1.14) rotate(-4deg);
+  filter: drop-shadow(0 0.25vw 0.45vw rgba(52, 68, 78, 0.24));
+}
+
+.W-Map-Bottom:hover {
+  width: 25%;
+  height: 20%;
+  transform: scale(1.06);
+}
+
+.M-MapModal.is-open .M-MapModal__overlay {
+  animation: modalFadeIn var(--motion-base) ease both;
+}
+
+.M-MapModal.is-open .M-MapModal__content,
+.O-GameModal:not(.O-GameModal-Hidden) .M-GameModalCard {
+  animation: modalRiseIn var(--motion-slow) var(--motion-ease) both;
+}
+
+.u-reveal {
+  opacity: 0;
+  transform: translateY(1.1vw);
+  transition:
+    opacity var(--motion-slow) var(--motion-ease),
+    transform var(--motion-slow) var(--motion-ease);
+}
+
+.u-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalRiseIn {
+  from {
+    opacity: 0;
+    transform: translateY(1vw) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --focus-ring: 0 0 0 0.6vw rgba(242, 245, 58, 0.7);
+  }
+
+  .C_Card:hover,
+  .O-article-card:hover,
+  .M_ArticlesCard:hover,
+  .M-ArticlesCard:hover,
+  .O-DayCard:hover,
+  .O-KickCard:hover,
+  .O-ArticlesAdd:hover,
+  .O-Post:hover,
+  .O-Map:hover,
+  .M-AboutUs:hover,
+  .O-Learn:hover,
+  .O_TestCard:hover,
+  .M-MoneyGoal:hover,
+  .M-KgGoal:hover,
+  .M-DailyGoals:hover,
+  .O-Card-Lesson-Two-Information:hover,
+  .O-Card-Lesson-Two-Swipe:hover {
+    transform: translateY(-0.8vw);
+  }
+
+  .A-Map-IconCloth:hover {
+    width: 6vw;
+    height: 6vw;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .u-reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

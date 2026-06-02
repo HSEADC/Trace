@@ -21,6 +21,7 @@ if (boardCanvas) {
   const linesValue = document.getElementById("lines-value");
   const levelValue = document.getElementById("level-value");
   const scoreValue = document.getElementById("score-value");
+  const gameStatus = document.getElementById("game-status");
 
   const startButtons = [
     document.getElementById("start-button"),
@@ -36,6 +37,14 @@ if (boardCanvas) {
     document.getElementById("menu-button"),
     document.getElementById("menu-button-mobile"),
   ].filter(Boolean);
+
+  const touchButtons = {
+    left: document.getElementById("move-left-button"),
+    rotate: document.getElementById("rotate-button"),
+    right: document.getElementById("move-right-button"),
+    softDrop: document.getElementById("soft-drop-button"),
+    hardDrop: document.getElementById("hard-drop-button"),
+  };
 
   // LOSE MODAL
   const loseModal = document.getElementById("lose-modal");
@@ -331,6 +340,23 @@ if (boardCanvas) {
     ctx.restore();
   }
 
+  function drawGhostCell(ctx, x, y, color, size = BLOCK_SIZE) {
+    const radius = getCellRadius(size);
+    const xPos = x * size;
+    const yPos = y * size;
+
+    ctx.save();
+    ctx.globalAlpha = 0.28;
+    drawRoundedRect(ctx, xPos + 4, yPos + 4, size - 8, size - 8, radius);
+    ctx.fillStyle = color;
+    ctx.fill();
+    ctx.globalAlpha = 0.75;
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = "rgba(255, 255, 255, 0.75)";
+    ctx.stroke();
+    ctx.restore();
+  }
+
   function drawFilledCell(ctx, x, y, color, size = BLOCK_SIZE) {
     drawBlockCell(ctx, x, y, color, size);
   }
@@ -360,6 +386,13 @@ if (boardCanvas) {
     hideWinModal();
   }
 
+  function setStatus(message) {
+    if (gameStatus) {
+      gameStatus.textContent = message;
+      gameStatus.hidden = !message;
+    }
+  }
+
   function resetGame() {
     board = createBoard();
 
@@ -380,6 +413,7 @@ if (boardCanvas) {
     currentPiece = createPiece();
     nextPiece = createPiece();
 
+    setStatus("Готово");
     hideAllModals();
     updateStats();
     draw();
@@ -422,6 +456,41 @@ if (boardCanvas) {
     drawPiece(currentPiece, boardCtx, currentPiece.x, currentPiece.y);
   }
 
+  function getGhostPiece() {
+    if (!currentPiece) return null;
+
+    const ghostPiece = {
+      ...currentPiece,
+      shape: currentPiece.shape.map((row) => [...row]),
+    };
+
+    while (!collide(ghostPiece)) {
+      ghostPiece.y += 1;
+    }
+
+    ghostPiece.y -= 1;
+    return ghostPiece;
+  }
+
+  function drawGhostPiece() {
+    const ghostPiece = getGhostPiece();
+
+    if (!ghostPiece || ghostPiece.y === currentPiece.y) return;
+
+    ghostPiece.shape.forEach((row, y) => {
+      row.forEach((value, x) => {
+        if (!value) return;
+
+        drawGhostCell(
+          boardCtx,
+          ghostPiece.x + x,
+          ghostPiece.y + y,
+          ghostPiece.color,
+        );
+      });
+    });
+  }
+
   function drawNextPieceOnCanvas(ctx, canvas) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -458,6 +527,7 @@ if (boardCanvas) {
 
   function draw() {
     drawBoard();
+    drawGhostPiece();
     drawCurrentPiece();
   }
 
@@ -514,6 +584,7 @@ if (boardCanvas) {
       isGameOver = true;
       isRunning = false;
       cancelAnimationFrame(animationId);
+      setStatus("Победа");
       showWinModal();
       return true;
     }
@@ -583,7 +654,7 @@ if (boardCanvas) {
     draw();
   }
 
-  function dropPiece() {
+  function dropPiece({ manual = false } = {}) {
     if (!isRunning || isPaused || isGameOver) return;
 
     currentPiece.y += 1;
@@ -600,6 +671,9 @@ if (boardCanvas) {
 
       clearLines();
       spawnNextPiece();
+    } else if (manual) {
+      score += 1;
+      updateStats();
     }
 
     draw();
@@ -608,11 +682,16 @@ if (boardCanvas) {
   function hardDrop() {
     if (!isRunning || isPaused || isGameOver) return;
 
+    let droppedRows = 0;
+
     while (!collide(currentPiece)) {
       currentPiece.y += 1;
+      droppedRows += 1;
     }
 
     currentPiece.y -= 1;
+    droppedRows = Math.max(0, droppedRows - 1);
+    score += droppedRows * 2;
     merge(currentPiece);
     handleGoalsByPiece(currentPiece.type);
 
@@ -674,6 +753,7 @@ if (boardCanvas) {
   function startGame() {
     resetGame();
     isRunning = true;
+    setStatus("");
     cancelAnimationFrame(animationId);
     animationId = requestAnimationFrame(update);
   }
@@ -684,10 +764,12 @@ if (boardCanvas) {
     isPaused = !isPaused;
 
     if (isPaused) {
+      setStatus("Пауза");
       cancelAnimationFrame(animationId);
       return;
     }
 
+    setStatus("");
     lastTime = 0;
     dropCounter = 0;
     animationId = requestAnimationFrame(update);
@@ -697,11 +779,12 @@ if (boardCanvas) {
     isGameOver = true;
     isRunning = false;
     cancelAnimationFrame(animationId);
+    setStatus("Игра окончена");
     showLoseModal();
   }
 
   function handleMenuAction() {
-    window.alert("Переход в меню");
+    window.location.href = "https://hseadc.github.io/Trace/pages/articles.html";
   }
 
   document.addEventListener("keydown", (event) => {
@@ -720,7 +803,7 @@ if (boardCanvas) {
 
       case "ArrowDown":
         event.preventDefault();
-        dropPiece();
+        dropPiece({ manual: true });
         break;
 
       case "ArrowUp":
@@ -751,6 +834,22 @@ if (boardCanvas) {
   pauseButtons.forEach((button) => {
     button.addEventListener("click", togglePause);
   });
+
+  function bindTouchButton(button, action) {
+    if (!button) return;
+
+    button.addEventListener("click", action);
+    button.addEventListener("touchstart", (event) => {
+      event.preventDefault();
+      action();
+    });
+  }
+
+  bindTouchButton(touchButtons.left, () => movePiece(-1));
+  bindTouchButton(touchButtons.rotate, rotatePiece);
+  bindTouchButton(touchButtons.right, () => movePiece(1));
+  bindTouchButton(touchButtons.softDrop, () => dropPiece({ manual: true }));
+  bindTouchButton(touchButtons.hardDrop, hardDrop);
 
   menuButtons.forEach((button) => {
     button.addEventListener("click", handleMenuAction);

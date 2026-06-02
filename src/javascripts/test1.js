@@ -284,6 +284,150 @@ if (!root) {
     },
   ];
 
+  const extraLessonsCount = 20;
+  const extraLessonTemplate = lessons[0];
+
+  function createTextContent(paragraphs) {
+    return `
+      <div class="M-TestTextContent">
+        ${paragraphs
+          .map(
+            (paragraph) => `
+              <p class="A-TestTextParagraph">${paragraph}</p>
+            `,
+          )
+          .join("")}
+      </div>
+    `;
+  }
+
+  const customLessonOverrides = {
+    5: {
+      duration: "6 мин",
+      coverTitle: "Гринвошинг:<br />как промыть голову зелёным?",
+      coverLayers: [],
+      stages: [
+        {
+          type: "learn-list",
+          label: "Что вы узнаете",
+          question: "",
+          text: "",
+          items: [
+            "Что такое гринвошинг",
+            "Как распознать грин-воздуханство?",
+            "Приемы зеленого камуфляжа",
+            "В чем виновна компания Volkswagen",
+          ],
+        },
+        {
+          type: "learn-text",
+          label: "",
+          question: "",
+          text: createTextContent([
+            "Гринвошинг — это бизнес-воздуханство, когда компания тратит деньги на рекламу своей экологичности, а не на реальное устранение вреда природе.",
+            "Обычно могут покрасить упаковку в зеленый цвет, наклеить неопознанные сертификаты, написать размыто о незначительных эко-улучшениях в производстве.",
+            "Показателен уголовный пример компании Volkswagen. Машины рекламировались как «Clean Diesel», но в них был встроен код-обманка, скрывающий на тестах выброс оксида азота, превышающий норму в 40 раз.",
+            "Что по итогу? После разоблачения агентством США EPA компания понесла штрафы в 30 млрд $, менеджеры и инженеры присели на нары.",
+          ]),
+        },
+        {
+          type: "quiz",
+          label: "Проверь себя",
+          question: "Что такое гринвошинг?",
+          text: "",
+          answers: [
+            {
+              text: "Упаковка зеленого цвета, листики, капельки и непонятный сертификат вместо реальных действий",
+              correct: true,
+            },
+            { text: "Цена неоправдано высокая", correct: false },
+            { text: "Из открытой упаковки дует", correct: false },
+            { text: "Последствия разоблачения", correct: false },
+          ],
+        },
+      ],
+    },
+    6: {
+      duration: "6 мин",
+      coverTitle: "3 чит-кода,<br />и ты хакнешь собственное тело",
+      coverLayers: [],
+      stages: [
+        {
+          type: "learn-list",
+          label: "Что вы узнаете",
+          question: "",
+          text: "",
+          items: [
+            "Что такое эко-биохакинг",
+            "Что бы сделал настоящий эко-биохакер?",
+            "Сейчас будем приземляться",
+            "Правило «холодрыыггаа»",
+          ],
+        },
+        {
+          type: "learn-text",
+          label: "",
+          question: "",
+          text: createTextContent([
+            "Эко-биохакинг — это взлом организма для максимальной энергии и долголетия без вреда для природы.",
+            "Рекомендую начать с правила «заземления». Как проснешься, 10–20 минут пройдись босиком по траве, земле или песку, чтобы улучшить кровоток.",
+            "Также ты можешь в течение 30–60 секунд поднимать ледяную воду от стоп к ногам, а затем к спине — это укрепит иммунитет.",
+            "В завершение дня откажись от гаджетов и искусственного света после 21:00. Будешь спать как младенец. Надеемся, наши советы помогут обрести энергию и сохранить фокус в течение дня.",
+          ]),
+        },
+        {
+          type: "quiz",
+          label: "Проверь себя",
+          question: "Что бы сделал настоящий эко-биохакер?",
+          text: "",
+          answers: [
+            { text: "Прошелся в шлепках по траве", correct: false },
+            {
+              text: "Помылся теплой водой, в конце 30–60 секунд ледяной",
+              correct: true,
+            },
+            { text: "Отказался от гаджетов после полуночи", correct: false },
+            { text: "Циркадный детокс отложил на выходные", correct: false },
+          ],
+        },
+      ],
+    },
+  };
+
+  function cloneLesson(source, id) {
+    const lesson = {
+      ...source,
+      id,
+      lessonNumber: `${id} урок`,
+      coverTitle: `Новый урок ${id}<br />скоро настроим отдельно`,
+      coverLayers: source.coverLayers.map((layer) => ({ ...layer })),
+      stages: source.stages.map((stage) => ({
+        ...stage,
+        items: stage.items ? [...stage.items] : undefined,
+        answers: stage.answers
+          ? stage.answers.map((answer) => ({ ...answer }))
+          : undefined,
+      })),
+      passed: false,
+    };
+
+    const override = customLessonOverrides[id];
+
+    if (!override) return lesson;
+
+    return {
+      ...lesson,
+      ...override,
+      lessonNumber: `${id} урок`,
+      passed: false,
+    };
+  }
+
+  for (let i = 0; i < extraLessonsCount; i += 1) {
+    const nextId = lessons.length + 1;
+    lessons.push(cloneLesson(extraLessonTemplate, nextId));
+  }
+
   const coverScreen = document.getElementById("coverScreen");
   const testCard = document.getElementById("testCard");
   const winCard = document.getElementById("winCard");
@@ -306,6 +450,43 @@ if (!root) {
   const learnList = document.getElementById("learnList");
   const answersRoot = document.getElementById("answers");
   const progressLine = document.getElementById("testProgressLine");
+
+  const awardsRoot = root.querySelector(".W-Card-Swipe-Left");
+  const awardPlaceholderDefault =
+    "https://github.com/HSEADC/Trace/blob/main/src/img/learn/A-Award-Zelenka-disable.png?raw=true";
+  const awardPlaceholderComplete =
+    "https://github.com/HSEADC/Trace/blob/main/src/img/learn/A-Award-Zelenka-active.png?raw=true";
+
+  function createAwardSlot(index) {
+    const slot = document.createElement("div");
+    slot.className = "M-AwardSlot";
+    slot.dataset.awardIndex = String(index);
+
+    const line = document.createElement("div");
+    line.className = "A-Award-Line";
+
+    const img = document.createElement("img");
+    img.className = "A-Award-Img";
+    img.id = `awardImg${index}`;
+    img.src = awardPlaceholderDefault;
+    img.alt = `Медаль урока ${index}`;
+    img.dataset.default = awardPlaceholderDefault;
+    img.dataset.complete = awardPlaceholderComplete;
+
+    slot.appendChild(line);
+    slot.appendChild(img);
+    return slot;
+  }
+
+  if (awardsRoot) {
+    for (
+      let index = awardsRoot.children.length + 1;
+      index <= lessons.length;
+      index += 1
+    ) {
+      awardsRoot.appendChild(createAwardSlot(index));
+    }
+  }
 
   const awardSlots = [...root.querySelectorAll(".M-AwardSlot")];
 
