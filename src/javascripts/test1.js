@@ -6,6 +6,54 @@ if (!root) {
   console.warn("ecoBusinessTest not found");
 } else {
   const initialLessonId = Number(root.dataset.lessonId || 1);
+  const lesson5CarImage = require("../img/learn/Q-lesson5-car.png");
+  const lesson5TextImage = require("../img/learn/Q-lesson5-text.png");
+  const lesson6ManImage = require("../img/learn/Q-lesson6-man.png");
+  const lesson6MuscleImage = require("../img/learn/Q-lesson6-muscul.png");
+  const lesson7AppleImage = require("../img/learn/Q-lesson7-apple.png");
+  const lesson7BottleImage = require("../img/learn/Q-lesson7-bottle.png");
+  const lesson7BurgerBottomImage = require("../img/learn/Q-lesson7-burger-bottom.png");
+  const lesson7BurgerTopImage = require("../img/learn/Q-lesson7-burger-top.png");
+  const lesson8BarrelImage = require("../img/learn/Q-lesson8-barrel.png");
+  const lesson8KroshImage = require("../img/learn/Q-lesson8-krosh.png");
+  const lesson9CupImage = require("../img/learn/Q-lesson9-cup.png");
+  const lesson9ManImage = require("../img/learn/Q-lesson9-men.png");
+  const lesson9WatermelonImage = require("../img/learn/Q-lesson9-watermellon.png");
+  const lesson10CatImage = require("../img/learn/Q-lesson10-cat.png");
+  const lesson10CatArmImage = require("../img/learn/Q-lesson10-cat's-arm.png");
+  const lesson11DevilImage = require("../img/learn/Q-lesson11-devil-and-trash.png");
+  const lesson11SpearImage = require("../img/learn/Q-lesson11-spear.png");
+  const lesson11TrashImage = require("../img/learn/Q-lesson11-trash.png");
+  const lesson12BottleImage = require("../img/learn/Q-lesson12-bottle.png");
+  const lesson12FlowerImage = require("../img/learn/Q-lesson12-flower.png");
+  const lesson12WingLeftImage = require("../img/learn/Q-lesson12-wing-left.png");
+  const lesson12WingRightImage = require("../img/learn/Q-lesson12-wing-right.png");
+  const lesson13CarImage = require("../img/learn/Q-lesson13-car.png");
+  const lesson13FactoryImage = require("../img/learn/Q-lesson13-factory.png");
+  const lesson13RubImage = require("../img/learn/Q-lesson13-rub.png");
+  const lesson14FlowerLilImage = require("../img/learn/Q-lesson14-flower-lil.png");
+  const lesson14FlowerRubImage = require("../img/learn/Q-lesson14-flower-rub.png");
+  const lesson14RubImage = require("../img/learn/Q-lesson14-rub.png");
+  const lesson14ThermometerImage = require("../img/learn/Q-lesson14-ternomiter.png");
+  const lesson15BigBottleImage = require("../img/learn/Q-lesson15-big-bottle.png");
+  const lesson15CreamImage = require("../img/learn/Q-lesson15-cream.png");
+  const lesson15LilBottleImage = require("../img/learn/Q-lesson15-lil-bottle.png");
+  const lesson15RabbitImage = require("../img/learn/Q-lesson15-rebbit.png");
+  const lesson15TextImage = require("../img/learn/Q-lesson15-text.png");
+  const lesson16BagImage = require("../img/learn/Q-lesson16-bag.png");
+  const lesson16FlowerImage = require("../img/learn/Q-lesson16-flower.png");
+  const lesson16TicketImage = require("../img/learn/Q-lesson16-ticket.png");
+  const lesson17MapPointImage = require("../img/learn/Q-lesson17-map-point.png");
+  const lesson17MapImage = require("../img/learn/Q-lesson17-map.png");
+  const lesson17TrashImage = require("../img/learn/Q-lesson17-trash.png");
+  const lesson17TrashbinImage = require("../img/learn/Q-lesson17-trashbin.png");
+  const lesson18Image = require("../img/learn/Q-lesson18.png");
+  const lesson19BroccoliImage = require("../img/learn/Q-lesson19-broccoli.png");
+  const lesson19RadishImage = require("../img/learn/Q-lesson19-radish.png");
+  const lesson19SkeletonImage = require("../img/learn/Q-lesson19-sceleton.png");
+  const lesson19AsparagusImage = require("../img/learn/Q-lesson19-sparrowgrass.png");
+  const lesson20FactoryImage = require("../img/learn/Q-lesson20-factory.png");
+  const lesson20PerfumeImage = require("../img/learn/Q-lesson20-perfume.png");
 
   const lessons = [
     {
@@ -284,7 +332,7 @@ if (!root) {
     },
   ];
 
-  const extraLessonsCount = 20;
+  const extraLessonsCount = 16;
   const extraLessonTemplate = lessons[0];
 
   function createTextContent(paragraphs) {
@@ -305,7 +353,18 @@ if (!root) {
     5: {
       duration: "6 мин",
       coverTitle: "Гринвошинг:<br />как промыть голову зелёным?",
-      coverLayers: [],
+      coverLayers: [
+        {
+          src: lesson5CarImage,
+          className: "A-CoverLayer A-CoverLayer--lesson5-car",
+          alt: "Машина",
+        },
+        {
+          src: lesson5TextImage,
+          className: "A-CoverLayer A-CoverLayer--lesson5-text",
+          alt: "Эко",
+        },
+      ],
       stages: [
         {
           type: "learn-list",
@@ -350,7 +409,18 @@ if (!root) {
     6: {
       duration: "6 мин",
       coverTitle: "3 чит-кода,<br />и ты хакнешь собственное тело",
-      coverLayers: [],
+      coverLayers: [
+        {
+          src: lesson6ManImage,
+          className: "A-CoverLayer A-CoverLayer--lesson6-man",
+          alt: "Эко-биохакер",
+        },
+        {
+          src: lesson6MuscleImage,
+          className: "A-CoverLayer A-CoverLayer--lesson6-arm",
+          alt: "Рука",
+        },
+      ],
       stages: [
         {
           type: "learn-list",
@@ -389,6 +459,310 @@ if (!root) {
             { text: "Отказался от гаджетов после полуночи", correct: false },
             { text: "Циркадный детокс отложил на выходные", correct: false },
           ],
+        },
+      ],
+    },
+    7: {
+      duration: "6 мин",
+      coverTitle: "Junkfood нового<br />поколения: плюсы<br />мусорной диеты",
+      coverLayers: [
+        {
+          src: lesson7BottleImage,
+          className: "A-CoverLayer A-CoverLayer--lesson7-bottle",
+          alt: "Бутылка",
+        },
+        {
+          src: lesson7AppleImage,
+          className: "A-CoverLayer A-CoverLayer--lesson7-apple",
+          alt: "Огрызок яблока",
+        },
+        {
+          src: lesson7BurgerBottomImage,
+          className: "A-CoverLayer A-CoverLayer--lesson7-burger-bottom",
+          alt: "Нижняя часть бургера",
+        },
+        {
+          src: lesson7BurgerTopImage,
+          className: "A-CoverLayer A-CoverLayer--lesson7-burger-top",
+          alt: "Верхняя часть бургера",
+        },
+      ],
+    },
+    8: {
+      duration: "6 мин",
+      coverTitle: "Смешарики предсказали:<br />теперь действительно<br />черное море",
+      coverLayers: [
+        {
+          src: lesson8KroshImage,
+          className: "A-CoverLayer A-CoverLayer--lesson8-krosh",
+          alt: "Крош",
+        },
+        {
+          src: lesson8BarrelImage,
+          className: "A-CoverLayer A-CoverLayer--lesson8-barrel",
+          alt: "Бочка",
+        },
+      ],
+    },
+    9: {
+      duration: "6 мин",
+      coverTitle: "Треш-арт: как из мусора<br />создать шедевр и продать<br />его на авито",
+      coverLayers: [
+        {
+          src: lesson9CupImage,
+          className: "A-CoverLayer A-CoverLayer--lesson9-cup",
+          alt: "Стакан",
+        },
+        {
+          src: lesson9WatermelonImage,
+          className: "A-CoverLayer A-CoverLayer--lesson9-watermelon",
+          alt: "Арбузная корка",
+        },
+        {
+          src: lesson9ManImage,
+          className: "A-CoverLayer A-CoverLayer--lesson9-man",
+          alt: "Скульптура",
+        },
+      ],
+    },
+    10: {
+      duration: "6 мин",
+      coverTitle: "Экология по-японски<br />экстремальный ноль",
+      coverLayers: [
+        {
+          src: lesson10CatImage,
+          className: "A-CoverLayer A-CoverLayer--lesson10-cat",
+          alt: "Кот",
+        },
+        {
+          src: lesson10CatArmImage,
+          className: "A-CoverLayer A-CoverLayer--lesson10-arm",
+          alt: "Лапа кота",
+        },
+      ],
+    },
+    11: {
+      duration: "6 мин",
+      coverTitle: "Зеленая истерия. как эко-<br />движение становится<br />сектой?",
+      coverLayers: [
+        {
+          src: lesson11DevilImage,
+          className: "A-CoverLayer A-CoverLayer--lesson11-devil",
+          alt: "Эко-черт",
+        },
+        {
+          src: lesson11TrashImage,
+          className: "A-CoverLayer A-CoverLayer--lesson11-trash",
+          alt: "Мусор",
+        },
+        {
+          src: lesson11SpearImage,
+          className: "A-CoverLayer A-CoverLayer--lesson11-spear",
+          alt: "Копье",
+        },
+      ],
+    },
+    12: {
+      duration: "6 мин",
+      coverTitle: "Делать деньги из воздуха:<br />заработок на углеродных<br />кредитах",
+      coverLayers: [
+        {
+          src: lesson12WingLeftImage,
+          className: "A-CoverLayer A-CoverLayer--lesson12-wing-left",
+          alt: "Левое крыло",
+        },
+        {
+          src: lesson12WingRightImage,
+          className: "A-CoverLayer A-CoverLayer--lesson12-wing-right",
+          alt: "Правое крыло",
+        },
+        {
+          src: lesson12BottleImage,
+          className: "A-CoverLayer A-CoverLayer--lesson12-bottle",
+          alt: "Банка",
+        },
+        {
+          src: lesson12FlowerImage,
+          className: "A-CoverLayer A-CoverLayer--lesson12-flower",
+          alt: "Цветок",
+        },
+      ],
+    },
+    13: {
+      duration: "6 мин",
+      coverTitle: "Где деньги в условиях<br />низкоуглеродной<br />экономики?",
+      coverLayers: [
+        {
+          src: lesson13RubImage,
+          className: "A-CoverLayer A-CoverLayer--lesson13-rub",
+          alt: "Рубль",
+        },
+        {
+          src: lesson13FactoryImage,
+          className: "A-CoverLayer A-CoverLayer--lesson13-factory",
+          alt: "Завод",
+        },
+        {
+          src: lesson13CarImage,
+          className: "A-CoverLayer A-CoverLayer--lesson13-car",
+          alt: "Машина",
+        },
+      ],
+    },
+    14: {
+      duration: "6 мин",
+      coverTitle: "Какие инвестиции умрут<br />из-за изменяющегося<br />климата?",
+      coverLayers: [
+        {
+          src: lesson14ThermometerImage,
+          className: "A-CoverLayer A-CoverLayer--lesson14-thermometer",
+          alt: "Термометр",
+        },
+        {
+          src: lesson14FlowerLilImage,
+          className: "A-CoverLayer A-CoverLayer--lesson14-flower-lil",
+          alt: "Маленький цветок",
+        },
+        {
+          src: lesson14FlowerRubImage,
+          className: "A-CoverLayer A-CoverLayer--lesson14-flower-rub",
+          alt: "Цветок с рублем",
+        },
+        {
+          src: lesson14RubImage,
+          className: "A-CoverLayer A-CoverLayer--lesson14-rub",
+          alt: "Рубль",
+        },
+      ],
+    },
+    15: {
+      duration: "6 мин",
+      coverTitle: "Трушная сертификация<br />органической косметики",
+      coverLayers: [
+        {
+          src: lesson15CreamImage,
+          className: "A-CoverLayer A-CoverLayer--lesson15-cream",
+          alt: "Крем",
+        },
+        {
+          src: lesson15TextImage,
+          className: "A-CoverLayer A-CoverLayer--lesson15-text",
+          alt: "Эко",
+        },
+        {
+          src: lesson15RabbitImage,
+          className: "A-CoverLayer A-CoverLayer--lesson15-rabbit",
+          alt: "Кролик",
+        },
+        {
+          src: lesson15BigBottleImage,
+          className: "A-CoverLayer A-CoverLayer--lesson15-big-bottle",
+          alt: "Большой флакон",
+        },
+        {
+          src: lesson15LilBottleImage,
+          className: "A-CoverLayer A-CoverLayer--lesson15-lil-bottle",
+          alt: "Маленький флакон",
+        },
+      ],
+    },
+    16: {
+      duration: "6 мин",
+      coverTitle: "Эко-туризм: с чистой<br />совестью на чистом<br />воздухе",
+      coverLayers: [
+        {
+          src: lesson16BagImage,
+          className: "A-CoverLayer A-CoverLayer--lesson16-bag",
+          alt: "Чемодан",
+        },
+        {
+          src: lesson16TicketImage,
+          className: "A-CoverLayer A-CoverLayer--lesson16-ticket",
+          alt: "Билет",
+        },
+        {
+          src: lesson16FlowerImage,
+          className: "A-CoverLayer A-CoverLayer--lesson16-flower",
+          alt: "Цветок",
+        },
+      ],
+    },
+    17: {
+      duration: "6 мин",
+      coverTitle: "Где находится самый<br />дорогой мусор в России?",
+      coverLayers: [
+        {
+          src: lesson17MapImage,
+          className: "A-CoverLayer A-CoverLayer--lesson17-map",
+          alt: "Карта",
+        },
+        {
+          src: lesson17TrashbinImage,
+          className: "A-CoverLayer A-CoverLayer--lesson17-trashbin",
+          alt: "Контейнер",
+        },
+        {
+          src: lesson17TrashImage,
+          className: "A-CoverLayer A-CoverLayer--lesson17-trash",
+          alt: "Мусор",
+        },
+        {
+          src: lesson17MapPointImage,
+          className: "A-CoverLayer A-CoverLayer--lesson17-map-point",
+          alt: "Точка на карте",
+        },
+      ],
+    },
+    18: {
+      duration: "6 мин",
+      coverTitle: "Новый урок 18<br />скоро настроим отдельно",
+      coverLayers: [
+        {
+          src: lesson18Image,
+          className: "A-CoverLayer A-CoverLayer--lesson18-main",
+          alt: "Обложка урока",
+        },
+      ],
+    },
+    19: {
+      duration: "6 мин",
+      coverTitle: "Как «зеленая» еда<br />нас убивает?",
+      coverLayers: [
+        {
+          src: lesson19SkeletonImage,
+          className: "A-CoverLayer A-CoverLayer--lesson19-skeleton",
+          alt: "Череп",
+        },
+        {
+          src: lesson19AsparagusImage,
+          className: "A-CoverLayer A-CoverLayer--lesson19-asparagus",
+          alt: "Спаржа",
+        },
+        {
+          src: lesson19BroccoliImage,
+          className: "A-CoverLayer A-CoverLayer--lesson19-broccoli",
+          alt: "Брокколи",
+        },
+        {
+          src: lesson19RadishImage,
+          className: "A-CoverLayer A-CoverLayer--lesson19-radish",
+          alt: "Редис",
+        },
+      ],
+    },
+    20: {
+      duration: "6 мин",
+      coverTitle: "Осторожно, пахнет<br />переработкой!",
+      coverLayers: [
+        {
+          src: lesson20FactoryImage,
+          className: "A-CoverLayer A-CoverLayer--lesson20-factory",
+          alt: "Завод",
+        },
+        {
+          src: lesson20PerfumeImage,
+          className: "A-CoverLayer A-CoverLayer--lesson20-perfume",
+          alt: "Духи",
         },
       ],
     },

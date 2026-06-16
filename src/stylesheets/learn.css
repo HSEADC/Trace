@@ -566,13 +566,17 @@
   width: 100%;
   height: 25%;
   padding: 1.5vw;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65vw;
 }
 
 .A-Lesson-Cover-Titile {
   font: var(--font-h1);
   color: var(--color-bg-grey);
   text-transform: uppercase;
-  margin-bottom: 1vw;
+  margin-bottom: 0;
+  order: 2;
 }
 
 .W-Lesson-Cover-Filters {
@@ -581,6 +585,7 @@
   font: var(--font-h3);
   color: var(--color-green);
   justify-content: space-between;
+  order: 1;
   text-transform: uppercase;
 }
 
@@ -1095,6 +1100,945 @@
   }
   100% {
     transform: rotate(3deg);
+  }
+}
+
+/* ---------- УРОК 5 ---------- */
+/* машина уезжает после резкого появления надписи */
+
+.A-CoverLayer--lesson5-car {
+  animation: lesson5CarDriveAway 4.2s ease-in-out infinite;
+  left: 21%;
+  top: 4%;
+  width: 58%;
+  z-index: 1;
+}
+
+.A-CoverLayer--lesson5-text {
+  animation: lesson5TextFlyIn 4.2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  bottom: 19%;
+  left: 4%;
+  opacity: 0;
+  transform: translateX(44%) scale(0.96);
+  width: 92%;
+  z-index: 2;
+}
+
+@keyframes lesson5TextFlyIn {
+  0%,
+  8% {
+    opacity: 0;
+    transform: translateX(44%) scale(0.96);
+  }
+
+  18%,
+  78% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes lesson5CarDriveAway {
+  0%,
+  34% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  68%,
+  82% {
+    opacity: 0.18;
+    transform: translateY(-58%);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-58%);
+  }
+}
+
+/* ---------- УРОК 6 ---------- */
+/* мускул пульсирует поверх базовой фигуры */
+
+.A-CoverLayer--lesson6-man {
+  bottom: -18%;
+  left: -38%;
+  width: 162%;
+  z-index: 1;
+}
+
+.A-CoverLayer--lesson6-arm {
+  animation: lesson6MusclePulse 1.45s ease-in-out infinite;
+  bottom: 25%;
+  right: -2%;
+  transform-origin: 50% 55%;
+  width: 34%;
+  z-index: 2;
+}
+
+@keyframes lesson6MusclePulse {
+  0%,
+  100% {
+    filter: brightness(1);
+    transform: scale(1);
+  }
+
+  48% {
+    filter: brightness(1.12);
+    transform: scale(1.1);
+  }
+
+  68% {
+    filter: brightness(1.04);
+    transform: scale(1.04);
+  }
+}
+
+/* ---------- УРОК 7 ---------- */
+/* верх бургера прилетает сверху, яблоко занимает место после него */
+
+.A-CoverLayer--lesson7-bottle {
+  bottom: 7%;
+  right: -2%;
+  width: 46%;
+  z-index: 1;
+}
+
+.A-CoverLayer--lesson7-apple {
+  animation: lesson7AppleFlyIn 4s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  left: 38%;
+  opacity: 0;
+  top: 31%;
+  transform: translateX(-95%) rotate(-22deg);
+  width: 31%;
+  z-index: 2;
+}
+
+.A-CoverLayer--lesson7-burger-bottom {
+  bottom: 8%;
+  left: 4%;
+  width: 64%;
+  z-index: 3;
+}
+
+.A-CoverLayer--lesson7-burger-top {
+  animation: lesson7BurgerTopDrop 4s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  bottom: 18%;
+  left: 4%;
+  opacity: 0;
+  transform: translateY(-88%);
+  width: 64%;
+  z-index: 4;
+}
+
+@keyframes lesson7BurgerTopDrop {
+  0%,
+  8% {
+    opacity: 0;
+    transform: translateY(-88%);
+  }
+
+  23% {
+    opacity: 1;
+    transform: translateY(5%);
+  }
+
+  31%,
+  82% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
+
+@keyframes lesson7AppleFlyIn {
+  0%,
+  28% {
+    opacity: 0;
+    transform: translateX(-95%) rotate(-22deg);
+  }
+
+  43% {
+    opacity: 1;
+    transform: translateX(7%) rotate(5deg);
+  }
+
+  52%,
+  82% {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
+/* ---------- УРОК 8 ---------- */
+/* Крош вылезает из-за бочки */
+
+.A-CoverLayer--lesson8-krosh {
+  animation: lesson8KroshPeek 3.6s ease-in-out infinite;
+  bottom: 6%;
+  left: 48%;
+  transform: translateX(-42%) rotate(-3deg);
+  width: 69%;
+  z-index: 1;
+}
+
+.A-CoverLayer--lesson8-barrel {
+  bottom: 5%;
+  left: -3%;
+  width: 67%;
+  z-index: 2;
+}
+
+@keyframes lesson8KroshPeek {
+  0%,
+  20% {
+    opacity: 0.88;
+    transform: translateX(-42%) rotate(-3deg);
+  }
+
+  45%,
+  78% {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+  }
+
+  100% {
+    opacity: 0.88;
+    transform: translateX(-42%) rotate(-3deg);
+  }
+}
+
+/* ---------- УРОК 9 ---------- */
+/* мусорная композиция собирается и слегка оживает */
+
+.A-CoverLayer--lesson9-cup {
+  animation: lesson9CupPop 3.8s ease-in-out infinite;
+  bottom: 9%;
+  left: 7%;
+  transform-origin: bottom center;
+  width: 31%;
+  z-index: 3;
+}
+
+.A-CoverLayer--lesson9-watermelon {
+  animation: lesson9WatermelonRock 4.2s ease-in-out infinite;
+  bottom: 5%;
+  right: 3%;
+  transform-origin: 50% 80%;
+  width: 58%;
+  z-index: 1;
+}
+
+.A-CoverLayer--lesson9-man {
+  animation: lesson9ManFloat 4.2s ease-in-out infinite;
+  bottom: 16%;
+  left: 18%;
+  width: 70%;
+  z-index: 2;
+}
+
+@keyframes lesson9CupPop {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  28% {
+    transform: translateY(-3%) scale(1.04);
+  }
+
+  44% {
+    transform: translateY(0) scale(0.99);
+  }
+}
+
+@keyframes lesson9WatermelonRock {
+  0%,
+  100% {
+    transform: rotate(-2deg);
+  }
+
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+@keyframes lesson9ManFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-3%) rotate(1.5deg);
+  }
+}
+
+/* ---------- УРОК 10 ---------- */
+/* объединенный кот с цветами + махающая лапа */
+
+.A-CoverLayer--lesson10-cat {
+  bottom: 0;
+  left: 8%;
+  width: 84%;
+  z-index: 3;
+}
+
+.A-CoverLayer--lesson10-arm {
+  animation: lesson10CatWave 1.35s ease-in-out infinite;
+  right: 10%;
+  top: 31%;
+  transform-origin: 45% 88%;
+  width: 18%;
+  z-index: 4;
+}
+
+@keyframes lesson10CatWave {
+  0%,
+  100% {
+    transform: rotate(-7deg);
+  }
+
+  50% {
+    transform: rotate(14deg);
+  }
+}
+
+/* ---------- УРОК 11 ---------- */
+/* копье пронзает мусор */
+
+.A-CoverLayer--lesson11-devil {
+  bottom: 3%;
+  left: -6%;
+  width: 96%;
+  z-index: 1;
+}
+
+.A-CoverLayer--lesson11-trash {
+  animation: lesson11TrashHit 3.1s ease-in-out infinite;
+  bottom: 8%;
+  right: 11%;
+  transform-origin: 45% 78%;
+  width: 27%;
+  z-index: 2;
+}
+
+.A-CoverLayer--lesson11-spear {
+  animation: lesson11SpearStrike 3.1s cubic-bezier(0.2, 0.85, 0.25, 1) infinite;
+  bottom: 14%;
+  left: -3%;
+  opacity: 0;
+  transform: translate(-30%, -22%) rotate(0deg);
+  transform-origin: 83% 66%;
+  width: 102%;
+  z-index: 3;
+}
+
+@keyframes lesson11SpearStrike {
+  0%,
+  20% {
+    opacity: 0;
+    transform: translate(-42%, -22%) rotate(0deg);
+  }
+
+  34%,
+  62% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  68% {
+    opacity: 1;
+    transform: translate(0.8%, -0.5%) rotate(1deg);
+  }
+
+  76% {
+    opacity: 1;
+    transform: translate(-0.5%, 0.3%) rotate(-0.8deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes lesson11TrashHit {
+  0%,
+  32%,
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  40% {
+    transform: rotate(5deg) scale(1.04);
+  }
+
+  50% {
+    transform: rotate(-3deg) scale(0.99);
+  }
+}
+
+/* ---------- УРОК 12 ---------- */
+/* крылья качаются с разным ритмом, цветок покачивается */
+
+.A-CoverLayer--lesson12-wing-left {
+  animation: lesson12LeftWingFlap 2.6s ease-in-out infinite;
+  bottom: 30%;
+  left: -21%;
+  transform-origin: 86% 52%;
+  width: 60%;
+  z-index: 1;
+}
+
+.A-CoverLayer--lesson12-wing-right {
+  animation: lesson12RightWingFlap 3.25s ease-in-out infinite;
+  bottom: 31%;
+  right: -21%;
+  transform-origin: 15% 56%;
+  width: 60%;
+  z-index: 1;
+}
+
+.A-CoverLayer--lesson12-bottle {
+  bottom: 3%;
+  left: 19%;
+  width: 62%;
+  z-index: 3;
+}
+
+.A-CoverLayer--lesson12-flower {
+  animation: lesson12FlowerSway 2.9s ease-in-out infinite;
+  left: 31%;
+  top: 19%;
+  transform-origin: 35% 100%;
+  width: 38%;
+  z-index: 4;
+}
+
+@keyframes lesson12LeftWingFlap {
+  0%,
+  100% {
+    transform: rotate(-4deg) translateY(0);
+  }
+
+  48% {
+    transform: rotate(8deg) translateY(-2%);
+  }
+}
+
+@keyframes lesson12RightWingFlap {
+  0%,
+  100% {
+    transform: rotate(5deg) translateY(0);
+  }
+
+  42% {
+    transform: rotate(-9deg) translateY(-3%);
+  }
+
+  70% {
+    transform: rotate(-2deg) translateY(1%);
+  }
+}
+
+@keyframes lesson12FlowerSway {
+  0%,
+  100% {
+    transform: rotate(-5deg);
+  }
+
+  50% {
+    transform: rotate(6deg);
+  }
+}
+
+/* ---------- УРОК 13 ---------- */
+/* рубль крутится, машина приезжает слева */
+
+.A-CoverLayer--lesson13-rub {
+  animation: lesson13RubSpin 5s linear infinite;
+  left: 31%;
+  top: 21%;
+  width: 38%;
+  z-index: 1;
+}
+
+.A-CoverLayer--lesson13-factory {
+  bottom: 3%;
+  left: -4%;
+  width: 108%;
+  z-index: 2;
+}
+
+.A-CoverLayer--lesson13-car {
+  animation: lesson13CarDriveIn 4.4s ease-in-out infinite;
+  bottom: 7%;
+  left: 5%;
+  transform: translateX(-120%);
+  width: 55%;
+  z-index: 3;
+}
+
+@keyframes lesson13RubSpin {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(180deg) scale(1.05);
+  }
+
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes lesson13CarDriveIn {
+  0%,
+  12% {
+    transform: translateX(-120%);
+  }
+
+  45%,
+  82% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* ---------- УРОК 14 ---------- */
+/* бутоны цветов крутятся в разные стороны */
+
+.A-CoverLayer--lesson14-thermometer {
+  bottom: 10%;
+  left: 3%;
+  width: 82%;
+  z-index: 1;
+}
+
+.A-CoverLayer--lesson14-flower-lil {
+  animation: lesson14FlowerLilSpin 5.2s linear infinite;
+  left: 39%;
+  top: 43%;
+  width: 29%;
+  z-index: 3;
+}
+
+.A-CoverLayer--lesson14-flower-rub {
+  animation: lesson14FlowerRubSpin 6.4s linear infinite reverse;
+  right: 7%;
+  top: 25%;
+  width: 36%;
+  z-index: 2;
+}
+
+.A-CoverLayer--lesson14-rub {
+  bottom: 25%;
+  right: 12%;
+  width: 16%;
+  z-index: 3;
+}
+
+@keyframes lesson14FlowerLilSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes lesson14FlowerRubSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------- УРОК 15 ---------- */
+/* все элементы, кроме крема, приезжают слева с разным delay */
+
+.A-CoverLayer--lesson15-cream {
+  bottom: 11%;
+  right: 8%;
+  width: 60%;
+  z-index: 1;
+}
+
+.A-CoverLayer--lesson15-text {
+  animation: lesson15DriveInLeft 4.6s ease-in-out infinite;
+  animation-delay: 0.15s;
+  opacity: 0;
+  right: 19%;
+  top: 34%;
+  width: 45%;
+  z-index: 2;
+}
+
+.A-CoverLayer--lesson15-rabbit {
+  animation: lesson15DriveInLeft 4.6s ease-in-out infinite;
+  animation-delay: 0.35s;
+  opacity: 0;
+  right: 8%;
+  top: 31%;
+  width: 16%;
+  z-index: 3;
+}
+
+.A-CoverLayer--lesson15-big-bottle {
+  animation: lesson15DriveInLeft 4.6s ease-in-out infinite;
+  animation-delay: 0.55s;
+  bottom: 16%;
+  left: 18%;
+  opacity: 0;
+  width: 38%;
+  z-index: 4;
+}
+
+.A-CoverLayer--lesson15-lil-bottle {
+  animation: lesson15DriveInLeft 4.6s ease-in-out infinite;
+  animation-delay: 0.75s;
+  bottom: 12%;
+  left: 6%;
+  opacity: 0;
+  width: 18%;
+  z-index: 5;
+}
+
+@keyframes lesson15DriveInLeft {
+  0%,
+  18% {
+    opacity: 0;
+    transform: translateX(-130%);
+  }
+
+  42%,
+  82% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+}
+
+/* ---------- УРОК 16 ---------- */
+/* цветок крутится, билет улетает справа вверх по диагонали */
+
+.A-CoverLayer--lesson16-bag {
+  bottom: -3%;
+  left: -20%;
+  width: 82%;
+  z-index: 2;
+}
+
+.A-CoverLayer--lesson16-ticket {
+  animation: lesson16TicketFlyAway 4.2s ease-in-out infinite;
+  right: -2%;
+  top: 24%;
+  transform: translate(0, 0) rotate(0deg);
+  width: 58%;
+  z-index: 1;
+}
+
+.A-CoverLayer--lesson16-flower {
+  animation: lesson16FlowerSpin 5s linear infinite;
+  bottom: 10%;
+  right: 12%;
+  width: 38%;
+  z-index: 3;
+}
+
+@keyframes lesson16TicketFlyAway {
+  0%,
+  42% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  72%,
+  100% {
+    opacity: 0;
+    transform: translate(55%, -68%) rotate(18deg);
+  }
+}
+
+@keyframes lesson16FlowerSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------- УРОК 17 ---------- */
+/* элементы кроме карты тяжело падают сверху с разными delay */
+
+.A-CoverLayer--lesson17-map {
+  bottom: 8%;
+  left: 1%;
+  width: 92%;
+  z-index: 1;
+}
+
+.A-CoverLayer--lesson17-trashbin {
+  animation: lesson17HeavyDrop 4.4s ease-in-out infinite;
+  animation-delay: 0.1s;
+  left: 25%;
+  opacity: 0;
+  top: 31%;
+  width: 28%;
+  z-index: 3;
+}
+
+.A-CoverLayer--lesson17-trash {
+  animation: lesson17HeavyDrop 4.4s ease-in-out infinite;
+  animation-delay: 0.38s;
+  left: 44%;
+  opacity: 0;
+  top: 50%;
+  width: 33%;
+  z-index: 2;
+}
+
+.A-CoverLayer--lesson17-map-point {
+  animation: lesson17HeavyDrop 4.4s ease-in-out infinite;
+  animation-delay: 0.66s;
+  left: 43%;
+  opacity: 0;
+  top: 59%;
+  width: 12%;
+  z-index: 4;
+}
+
+@keyframes lesson17HeavyDrop {
+  0%,
+  15% {
+    opacity: 0;
+    transform: translateY(-150%) scaleY(1.05);
+  }
+
+  34% {
+    opacity: 1;
+    transform: translateY(7%) scaleY(0.9);
+  }
+
+  44% {
+    opacity: 1;
+    transform: translateY(-3%) scaleY(1.03);
+  }
+
+  54%,
+  84% {
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+/* ---------- УРОК 18 ---------- */
+/* цельная картинка с простой живой пульсацией */
+
+.A-CoverLayer--lesson18-main {
+  animation: lesson18SoftFloat 3.6s ease-in-out infinite;
+  bottom: 4%;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+@keyframes lesson18SoftFloat {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-2%) scale(1.015);
+  }
+}
+
+/* ---------- УРОК 19 ---------- */
+/* череп стоит, овощи прилетают с разных сторон */
+
+.A-CoverLayer--lesson19-skeleton {
+  bottom: 20%;
+  left: 25%;
+  width: 60%;
+  z-index: 2;
+}
+
+.A-CoverLayer--lesson19-asparagus {
+  animation: lesson19AsparagusIn 4.3s ease-in-out infinite;
+  bottom: 22%;
+  left: 6%;
+  opacity: 0;
+  width: 32%;
+  z-index: 1;
+}
+
+.A-CoverLayer--lesson19-broccoli {
+  animation: lesson19BroccoliIn 4.3s ease-in-out infinite;
+  animation-delay: 0.18s;
+  bottom: 13%;
+  left: 18%;
+  opacity: 0;
+  width: 40%;
+  z-index: 3;
+}
+
+.A-CoverLayer--lesson19-radish {
+  animation: lesson19RadishIn 4.3s ease-in-out infinite;
+  animation-delay: 0.36s;
+  bottom: 15%;
+  right: 8%;
+  opacity: 0;
+  width: 35%;
+  z-index: 3;
+}
+
+@keyframes lesson19AsparagusIn {
+  0%,
+  20% {
+    opacity: 0;
+    transform: translate(-80%, 50%) rotate(-18deg);
+  }
+
+  44%,
+  84% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes lesson19BroccoliIn {
+  0%,
+  20% {
+    opacity: 0;
+    transform: translateY(95%) rotate(10deg);
+  }
+
+  44%,
+  84% {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes lesson19RadishIn {
+  0%,
+  20% {
+    opacity: 0;
+    transform: translate(85%, -35%) rotate(22deg);
+  }
+
+  44%,
+  84% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+/* ---------- УРОК 20 ---------- */
+/* духи приходят слева и несколько раз топчутся по X */
+
+.A-CoverLayer--lesson20-factory {
+  bottom: 4%;
+  left: 3%;
+  width: 94%;
+  z-index: 1;
+}
+
+.A-CoverLayer--lesson20-perfume {
+  animation: lesson20PerfumeSteps 5s ease-in-out infinite;
+  bottom: 14%;
+  left: 38%;
+  opacity: 0;
+  width: 23%;
+  z-index: 2;
+}
+
+@keyframes lesson20PerfumeSteps {
+  0%,
+  15% {
+    opacity: 0;
+    transform: translateX(-185%);
+  }
+
+  35% {
+    opacity: 1;
+    transform: translateX(-34%);
+  }
+
+  47% {
+    opacity: 1;
+    transform: translateX(-5%);
+  }
+
+  58% {
+    opacity: 1;
+    transform: translateX(-18%);
+  }
+
+  69% {
+    opacity: 1;
+    transform: translateX(4%);
+  }
+
+  78%,
+  88% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(0);
   }
 }
 

@@ -12,6 +12,7 @@ const htmlPages = [
   createPages("./src/index.html", "./index.html", ["index"]),
   createPages("./src/pages/articles.html", "./pages/articles.html", ["index"]),
   createPages("./src/pages/learn.html", "./pages/learn.html", ["index"]),
+  createPages("./src/pages/events.html", "./pages/events.html", ["index"]),
   createPages("./src/pages/game.html", "./pages/game.html", ["index"]),
   createPages("./src/pages/about-us.html", "./pages/about-us.html", ["index"]),
   createPages("./src/pages/404.html", "./pages/404.html", ["index"]),
@@ -88,6 +89,11 @@ const htmlPages = [
   createPages(
     "./src/pages/articals/artical-food-waste.html",
     "./pages/articals/artical-food-waste.html",
+    ["index"],
+  ),
+  createPages(
+    "./src/pages/articals/artical-neskuchnoe-zemledelie.html",
+    "./pages/articals/artical-neskuchnoe-zemledelie.html",
     ["index"],
   ),
 ];
