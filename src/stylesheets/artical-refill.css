@@ -1,0 +1,61 @@
+.body_article_refill { background: var(--color-bg-grey); color: var(--color-dark-grey); overflow-x: hidden; }
+.W-RefillArticle { margin: 2vw auto 4vw; max-width: 92vw; }
+.O-RefillHero { background: var(--color-white); border-bottom: 1vw solid var(--color-dark-grey); border-radius: 2vw; border-right: 1vw solid var(--color-dark-grey); height: 30vw; padding: 1vw; position: relative; }
+.A-RefillBack { align-items: center; background: var(--color-yellow); border-radius: .5vw; display: flex; font: var(--font-h3); gap: 3vw; height: 3vw; left: 0; padding: 0 1vw; position: absolute; text-transform: uppercase; top: 0; width: 12vw; z-index: 2; }
+.A-RefillBack img { height: 1.3vw; transform: scaleX(-1); width: 1.3vw; }
+.W-RefillHeroContent { background: var(--color-read); border-radius: 1.1vw; display: flex; height: 100%; overflow: hidden; padding: 7.5vw 2vw 2.3vw; }
+.M-RefillHeroInfo { display: flex; flex: 0 0 40%; flex-direction: column; min-width: 0; }
+.M-RefillHeroInfo h1 { color: var(--color-white); font: var(--font-h1); line-height: 1.1; margin: 0; max-width: 27vw; text-transform: uppercase; }
+.C-RefillMeta { display: flex; gap: 3vw; margin-top: auto; }
+.C-RefillMetaGroup { display: grid; gap: 1vw; }
+.C-RefillMetaGroup--stats { flex: 0 0 14vw; }
+.M-RefillMetaItem { align-items: center; color: var(--color-white); display: flex; font: var(--font-h3); gap: 1vw; min-height: 3vw; text-transform: uppercase; }
+.M-RefillMetaItem img { flex: 0 0 3vw; height: 3vw; object-fit: contain; width: 3vw; }
+.W-RefillHeroVisual { align-items: center; display: flex; flex: 1; justify-content: center; min-width: 0; position: relative; }
+.C-RefillMiniBottles, .C-RefillBigBottles { align-items: end; display: flex; position: absolute; }
+.C-RefillMiniBottles { bottom: 2.2vw; gap: .7vw; left: 11%; }
+.C-RefillMiniBottles img { height: 7.3vw; object-fit: contain; }
+.C-RefillBigBottles { bottom: .2vw; gap: 1.2vw; right: 2%; }
+.C-RefillBigBottles img { height: 13vw; object-fit: contain; }
+.O-RefillArticleContent { align-items: flex-start; display: flex; gap: 2vw; margin-top: 2vw; }
+.W-RefillInfographic { display: flex; flex: 0 0 40%; flex-direction: column; gap: 4.8vw; padding: 0 1.2vw; }
+.M-RefillInfo { align-items: center; display: flex; flex-direction: column; text-align: center; width: 100%; }
+.M-RefillInfo h2, .M-RefillInfo strong { color: var(--color-read); font: var(--font-h1); line-height: 1.04; margin: 0; text-transform: uppercase; }
+.W-RefillArc, .W-RefillRulesArc { position: relative; width: 24vw; }
+.W-RefillArc img, .W-RefillRulesArc img { display: block; width: 100%; }
+.W-RefillArc strong, .W-RefillRulesArc strong { color: var(--color-yellow); left: 50%; position: absolute; top: 54%; transform: translate(-50%, -50%); }
+.M-RefillInfo--uses h2 { margin-top: 1vw; }
+.C-RefillBenefitIcons { align-items: center; display: flex; gap: 1vw; justify-content: center; width: 100%; }
+.C-RefillBenefitIcons img { height: 5vw; max-width: 22%; object-fit: contain; }
+.M-RefillInfo--benefits h2 { margin-top: 1.6vw; }
+.M-RefillInfo--ways { gap: 1.6vw; }
+.M-RefillInfo--ways > strong { color: var(--color-yellow); font-size: 150rem; line-height: .8; }
+.C-RefillWays { display: flex; gap: .8vw; }
+.C-RefillWays span { background: var(--color-white); border-radius: 1vw; box-shadow: inset 0 .25vw .35vw rgba(255,255,255,.6), inset 0 -.2vw .3vw rgba(0,0,0,.14); height: 3vw; width: 4.8vw; }
+.C-RefillWays span:nth-child(odd) { background: var(--color-yellow); }
+.M-RefillInfo--rules h2 { margin-top: 1.5vw; }
+.W-RefillArticleText { display: flex; flex: 1; flex-direction: column; gap: .7vw; min-width: 0; }
+.M-RefillTextCard, .M-RefillVideoCard { background: var(--color-white); border-radius: 1.35vw; box-shadow: inset 0 .28vw .38vw rgba(255,255,255,.6), inset 0 -.18vw .32vw rgba(0,0,0,.1), 0 .14vw .22vw rgba(83,83,83,.08); padding: 1.8vw 2.2vw; }
+.M-RefillTextCard p { color: var(--color-dark-grey); font: var(--font-p); letter-spacing: var(--ls-p); line-height: 1.14; margin: 0; }
+.M-RefillVideoCard { align-items: stretch; display: flex; flex-direction: column; min-height: 20vw; }
+.M-RefillVideoCard h2 { color: var(--color-read); font: var(--font-h1); line-height: 1; margin: 0; text-transform: uppercase; }
+.A-RefillPlay { align-self: center; background: transparent; border: 0; height: 5vw; margin: auto; position: relative; width: 5vw; }
+.A-RefillPlay::before { border-bottom: 2.5vw solid transparent; border-left: 4vw solid var(--color-read); border-top: 2.5vw solid transparent; content: ""; left: 1vw; position: absolute; top: 0; }
+
+/* Micro-animation pattern shared with the other detailed article. */
+.O-RefillHero { animation: refill-hero-in 560ms cubic-bezier(.22,1,.36,1) both; }
+.A-RefillBack, .C-RefillWays span, .M-RefillTextCard, .M-RefillVideoCard { transition: box-shadow 180ms ease, transform 180ms ease, filter 180ms ease; }
+.A-RefillBack:hover { filter: brightness(1.04); transform: translateX(.22vw); }
+.C-RefillWays span:hover, .M-RefillTextCard:hover, .M-RefillVideoCard:hover { box-shadow: inset 0 .28vw .38vw rgba(255,255,255,.7), inset 0 -.18vw .32vw rgba(0,0,0,.1), 0 .45vw .8vw rgba(83,83,83,.16); transform: translateY(-.24vw); }
+.C-RefillMiniBottles { animation: refill-mini-float 3.8s ease-in-out infinite; }
+.C-RefillBigBottles { animation: refill-big-float 4.4s ease-in-out infinite 360ms; }
+.M-RefillInfo.is-motion-ready, .M-RefillTextCard.is-motion-ready, .M-RefillVideoCard.is-motion-ready { opacity: 0; transform: translateY(1vw); }
+.M-RefillInfo.is-in-view, .M-RefillTextCard.is-in-view, .M-RefillVideoCard.is-in-view { animation: refill-reveal 520ms cubic-bezier(.22,1,.36,1) var(--refill-reveal-delay,0ms) both; }
+.M-RefillInfo--uses.is-in-view .W-RefillArc, .M-RefillInfo--rules.is-in-view .W-RefillRulesArc { animation: refill-pulse 3.6s ease-in-out infinite 500ms; }
+@keyframes refill-hero-in { from { opacity: 0; transform: translateY(.7vw); } to { opacity: 1; transform: translateY(0); } }
+@keyframes refill-mini-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-.4vw); } }
+@keyframes refill-big-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(.35vw); } }
+@keyframes refill-reveal { from { opacity: 0; transform: translateY(1vw); } to { opacity: 1; transform: translateY(0); } }
+@keyframes refill-pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.025); } }
+@media (prefers-reduced-motion: reduce) { .body_article_refill *, .body_article_refill *::before, .body_article_refill *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } .M-RefillInfo.is-motion-ready, .M-RefillTextCard.is-motion-ready, .M-RefillVideoCard.is-motion-ready { opacity: 1; transform: none; } }
+@media (max-width: 768px) { .W-RefillArticle { margin: 4vw auto 8vw; max-width: 94vw; } .O-RefillHero { height: auto; padding: 9vw 3vw 3vw; } .A-RefillBack { height: 8vw; width: 30vw; } .W-RefillHeroContent, .O-RefillArticleContent { flex-direction: column; } .W-RefillHeroContent { min-height: 72vw; padding: 7vw 5vw; } .M-RefillHeroInfo { flex-basis: auto; } .C-RefillMeta { gap: 5vw; margin-top: 6vw; } .C-RefillMetaGroup--stats { flex-basis: 30vw; } .M-RefillMetaItem img { flex-basis: 6vw; height: 6vw; width: 6vw; } .W-RefillHeroVisual { flex-basis: 38vw; width: 100%; } .C-RefillMiniBottles { bottom: 4vw; left: 13%; } .C-RefillMiniBottles img { height: 16vw; } .C-RefillBigBottles { bottom: 2vw; right: 2%; } .C-RefillBigBottles img { height: 26vw; } .W-RefillInfographic { flex-basis: auto; gap: 11vw; padding: 0; width: 100%; } .W-RefillArc, .W-RefillRulesArc { width: 54vw; } .C-RefillBenefitIcons img { height: 13vw; } .C-RefillWays span { height: 8vw; width: 12vw; } .W-RefillArticleText { gap: 2vw; width: 100%; } .M-RefillTextCard, .M-RefillVideoCard { border-radius: 3vw; padding: 5vw; } .M-RefillVideoCard { min-height: 48vw; } .A-RefillPlay { height: 14vw; width: 14vw; } .A-RefillPlay::before { border-bottom-width: 7vw; border-left-width: 11vw; border-top-width: 7vw; left: 2vw; } }
