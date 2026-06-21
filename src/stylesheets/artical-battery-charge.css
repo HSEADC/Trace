@@ -57,3 +57,44 @@
 @keyframes battery-reveal { from { opacity:0; transform:translateY(1vw); } to { opacity:1; transform:translateY(0); } }
 @media (prefers-reduced-motion: reduce) { .body_article_battery *, .body_article_battery *::before, .body_article_battery *::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; } .M-BatteryInfo.is-motion-ready, .M-BatteryTextCard.is-motion-ready, .M-BatteryVideoCard.is-motion-ready { opacity:1; transform:none; } }
 @media (max-width:768px) { .W-BatteryArticle { margin:4vw auto 8vw; max-width:94vw; }.O-BatteryHero{height:auto;padding:9vw 3vw 3vw}.A-BatteryBack{height:8vw;width:30vw}.W-BatteryHeroContent,.O-BatteryArticleContent{flex-direction:column}.W-BatteryHeroContent{min-height:72vw;padding:7vw 5vw}.M-BatteryHeroInfo{flex-basis:auto}.C-BatteryMeta{gap:5vw;margin-top:6vw}.C-BatteryMetaGroup--stats{flex-basis:30vw}.M-BatteryMetaItem img{flex-basis:6vw;height:6vw;width:6vw}.W-BatteryHeroVisual{flex-basis:38vw;width:100%}.A-BatteryCharger{width:27vw}.C-BatteryHeroCells img{height:26vw}.W-BatteryInfographic{flex-basis:auto;gap:11vw;padding:0;width:100%}.C-BatteryWasteCells img{height:27vw}.M-BatteryInfo--cycles img,.M-BatteryInfo--reduction img{max-width:62vw}.W-BatteryArticleText{gap:2vw;width:100%}.M-BatteryTextCard,.M-BatteryVideoCard{border-radius:3vw;padding:5vw}.M-BatteryVideoCard{min-height:48vw}.A-BatteryPlay{height:14vw;width:14vw}.A-BatteryPlay::before{border-bottom-width:7vw;border-left-width:11vw;border-top-width:7vw;left:2vw} }
+/* Header illustration alignment: charger and cells form one compact composition. */
+.W-BatteryHeroVisual {
+  justify-content: flex-end;
+}
+
+.A-BatteryCharger {
+  left: 3%;
+  top: 12%;
+  width: 15.5vw;
+}
+
+.A-BatteryCursor {
+  left: 22%;
+  top: 59%;
+}
+
+.C-BatteryHeroCells {
+  bottom: 2.3vw;
+  gap: 1vw;
+  right: 0;
+}
+
+.C-BatteryHeroCells img {
+  height: 14.5vw;
+}
+
+@media (max-width: 768px) {
+  .A-BatteryCharger {
+    left: 5%;
+    top: 11%;
+    width: 31vw;
+  }
+
+  .C-BatteryHeroCells {
+    bottom: 4vw;
+  }
+
+  .C-BatteryHeroCells img {
+    height: 29vw;
+  }
+}
