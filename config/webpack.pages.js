@@ -13,6 +13,7 @@ const htmlPages = [
   createPages("./src/pages/articles.html", "./pages/articles.html", ["index"]),
   createPages("./src/pages/learn.html", "./pages/learn.html", ["index"]),
   createPages("./src/pages/events.html", "./pages/events.html", ["index"]),
+  createPages("./src/pages/styleguide.html", "./pages/styleguide.html", ["index"]),
   createPages("./src/pages/game.html", "./pages/game.html", ["index"]),
   createPages("./src/pages/about-us.html", "./pages/about-us.html", ["index"]),
   createPages("./src/pages/404.html", "./pages/404.html", ["index"]),

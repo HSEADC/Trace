@@ -1,0 +1,390 @@
+.body_article_sponges {
+  background: var(--color-bg-grey);
+  color: var(--color-dark-grey);
+  overflow-x: hidden;
+}
+
+.W-SpongesArticle {
+  margin: 2vw auto 4vw;
+  max-width: 92vw;
+}
+
+.O-SpongesHero {
+  background: var(--color-white);
+  border-bottom: 0.7vw solid var(--color-dark-grey);
+  border-radius: 1.55vw;
+  border-right: 0.7vw solid var(--color-dark-grey);
+  min-height: 22vw;
+  padding: 3vw 2vw 2vw;
+  position: relative;
+}
+
+.A-SpongesBack {
+  align-items: center;
+  background: var(--color-yellow);
+  border-radius: 0.55vw 0.55vw 0 0;
+  display: flex;
+  font: var(--font-h3);
+  gap: 1vw;
+  left: 0;
+  min-height: 3.2vw;
+  padding: 0.6vw 1.4vw;
+  position: absolute;
+  text-transform: uppercase;
+  top: 0;
+}
+
+.A-SpongesBack img {
+  height: 1.2vw;
+  object-fit: contain;
+  width: 1.2vw;
+}
+
+.W-SpongesHeroContent {
+  align-items: stretch;
+  background: var(--color-read);
+  border-radius: 1.35vw;
+  display: flex;
+  min-height: 17.4vw;
+  overflow: hidden;
+  padding: 2.4vw 3vw;
+}
+
+.M-SpongesHeroInfo {
+  display: flex;
+  flex: 1 1 55%;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.M-SpongesHeroInfo h1 {
+  color: var(--color-white);
+  font: var(--font-h1);
+  line-height: 1;
+  margin: 0 0 2.4vw;
+  text-transform: uppercase;
+}
+
+.C-SpongesMeta {
+  display: grid;
+  gap: 0.8vw 2vw;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 38vw;
+}
+
+.M-SpongesMetaItem {
+  align-items: center;
+  color: var(--color-white);
+  display: flex;
+  font: var(--font-h3);
+  gap: 0.8vw;
+  min-width: 0;
+  text-transform: uppercase;
+}
+
+.M-SpongesMetaItem img {
+  height: 2.6vw;
+  object-fit: contain;
+  width: 2.6vw;
+}
+
+.W-SpongesHeroVisual {
+  align-items: center;
+  display: flex;
+  flex: 0 1 38%;
+  justify-content: center;
+  min-width: 17vw;
+  position: relative;
+}
+
+.W-SpongesHeroVisual img {
+  filter: drop-shadow(0 0.45vw 0.35vw rgba(83, 83, 83, 0.28));
+  object-fit: contain;
+  position: absolute;
+}
+
+.W-SpongesHeroVisual img:first-child {
+  right: 40%;
+  transform: rotate(-15deg);
+  width: 8.5vw;
+}
+
+.W-SpongesHeroVisual img:last-child {
+  left: 36%;
+  transform: rotate(14deg);
+  width: 11vw;
+}
+
+.O-SpongesArticleContent {
+  align-items: flex-start;
+  display: flex;
+  gap: 2.2vw;
+  margin-top: 4vw;
+}
+
+.W-SpongesInfographic {
+  display: flex;
+  flex: 0 0 35%;
+  flex-direction: column;
+  gap: 3vw;
+}
+
+.M-SpongesInfo {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.M-SpongesInfo h2,
+.M-SpongesInfo p,
+.A-SpongesStage,
+.C-SpongesHabitTiles span {
+  color: var(--color-read);
+  font: var(--font-h1);
+  line-height: 1.04;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.M-SpongesInfo--habits {
+  align-items: flex-start;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  text-align: left;
+}
+
+.Q-SpongesFour {
+  grid-row: span 2;
+  margin-right: 0.8vw;
+  width: 6.8vw;
+}
+
+.M-SpongesInfo--habits h2 {
+  align-self: center;
+}
+
+.C-SpongesHabitTiles {
+  display: flex;
+  gap: 0.5vw;
+  grid-column: 1 / -1;
+  margin-top: 2vw;
+}
+
+.C-SpongesHabitTiles span {
+  align-items: center;
+  background: var(--color-white);
+  border-radius: 0.55vw;
+  box-shadow:
+    inset 0 0.3vw 0.35vw rgba(255, 255, 255, 0.5),
+    inset 0 -0.2vw 0.35vw rgba(0, 0, 0, 0.14),
+    0 0.2vw 0.3vw rgba(83, 83, 83, 0.1);
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  min-height: 7vw;
+}
+
+.M-SpongesInfo--steps {
+  gap: 0.9vw;
+}
+
+.M-SpongesInfo--steps h2 {
+  margin-bottom: 1.3vw;
+}
+
+.A-SpongesStage {
+  background: var(--color-yellow);
+  border-radius: 1vw;
+  box-shadow: inset 0 -0.25vw 0.25vw rgba(83, 83, 83, 0.18);
+  color: var(--color-read);
+  min-width: 15vw;
+  padding: 0.7vw 1.5vw;
+}
+
+.M-SpongesInfo--steps p {
+  margin-top: 1.1vw;
+  max-width: 26vw;
+}
+
+.M-SpongesInfo--cleaning {
+  gap: 1vw;
+}
+
+.W-SpongesCleaningVisual {
+  align-items: center;
+  display: flex;
+  height: 14vw;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.W-SpongesCleaningVisual img {
+  filter: drop-shadow(0 0.35vw 0.3vw rgba(83, 83, 83, 0.22));
+  object-fit: contain;
+  position: absolute;
+}
+
+.W-SpongesCleaningVisual img:first-child {
+  left: 26%;
+  transform: rotate(-18deg);
+  width: 7vw;
+}
+
+.W-SpongesCleaningVisual img:last-child {
+  right: 21%;
+  transform: rotate(20deg);
+  width: 9vw;
+}
+
+.M-SpongesInfo--circle img {
+  max-width: 21vw;
+  width: 100%;
+}
+
+.M-SpongesInfo--circle p {
+  margin-top: 1vw;
+  max-width: 26vw;
+}
+
+.W-SpongesArticleText {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.7vw;
+  min-width: 0;
+}
+
+.M-SpongesTextCard,
+.M-SpongesVideoCard {
+  background: var(--color-white);
+  border-radius: 1.35vw;
+  box-shadow:
+    inset 0 0.28vw 0.38vw rgba(255, 255, 255, 0.6),
+    inset 0 -0.18vw 0.32vw rgba(0, 0, 0, 0.1),
+    0 0.14vw 0.22vw rgba(83, 83, 83, 0.08);
+  padding: 1.8vw 2.2vw;
+}
+
+.M-SpongesTextCard p,
+.M-SpongesTextCard li {
+  color: var(--color-dark-grey);
+  font: var(--font-p);
+  letter-spacing: var(--ls-p);
+  line-height: 1.14;
+  margin: 0;
+}
+
+.M-SpongesTextCard p + p {
+  margin-top: 1vw;
+}
+
+.M-SpongesTextCard ol,
+.M-SpongesTextCard ul {
+  margin: 0.2vw 0 0.7vw 1.7vw;
+  padding: 0;
+}
+
+.M-SpongesVideoCard {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  min-height: 20vw;
+}
+
+.M-SpongesVideoCard h2 {
+  color: var(--color-read);
+  font: var(--font-h1);
+  line-height: 1;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.A-SpongesPlay {
+  align-self: center;
+  background: transparent;
+  border: 0;
+  height: 5vw;
+  margin: auto;
+  position: relative;
+  width: 5vw;
+}
+
+.A-SpongesPlay::before {
+  border-bottom: 2.5vw solid transparent;
+  border-left: 4vw solid var(--color-read);
+  border-top: 2.5vw solid transparent;
+  content: "";
+  left: 1vw;
+  position: absolute;
+  top: 0;
+}
+
+@media (max-width: 768px) {
+  .W-SpongesArticle {
+    margin: 4vw auto 8vw;
+    max-width: 94vw;
+  }
+
+  .O-SpongesHero {
+    border-radius: 3vw;
+    padding: 10vw 4vw 4vw;
+  }
+
+  .A-SpongesBack {
+    border-radius: 1.5vw 1.5vw 0 0;
+    min-height: 8vw;
+    padding: 1.5vw 3vw;
+  }
+
+  .A-SpongesBack img {
+    height: 3vw;
+    width: 3vw;
+  }
+
+  .W-SpongesHeroContent,
+  .O-SpongesArticleContent {
+    flex-direction: column;
+  }
+
+  .W-SpongesHeroContent {
+    gap: 4vw;
+    min-height: 70vw;
+    padding: 6vw;
+  }
+
+  .C-SpongesMeta {
+    gap: 2vw;
+    max-width: none;
+  }
+
+  .M-SpongesMetaItem img {
+    height: 6vw;
+    width: 6vw;
+  }
+
+  .W-SpongesHeroVisual {
+    flex-basis: 30vw;
+    width: 100%;
+  }
+
+  .W-SpongesHeroVisual img:first-child { width: 18vw; }
+  .W-SpongesHeroVisual img:last-child { width: 23vw; }
+
+  .O-SpongesArticleContent { gap: 7vw; }
+  .W-SpongesInfographic { flex-basis: auto; gap: 8vw; width: 100%; }
+  .Q-SpongesFour { width: 16vw; }
+  .C-SpongesHabitTiles span { border-radius: 1.5vw; min-height: 17vw; }
+  .A-SpongesStage { border-radius: 2vw; min-width: 45vw; padding: 1.8vw 3vw; }
+  .W-SpongesCleaningVisual { height: 34vw; }
+  .W-SpongesCleaningVisual img:first-child { width: 18vw; }
+  .W-SpongesCleaningVisual img:last-child { width: 23vw; }
+  .M-SpongesInfo--circle img { max-width: 52vw; }
+  .W-SpongesArticleText { gap: 2vw; width: 100%; }
+  .M-SpongesTextCard,
+  .M-SpongesVideoCard { border-radius: 3vw; padding: 5vw; }
+  .M-SpongesVideoCard { min-height: 48vw; }
+  .A-SpongesPlay { height: 14vw; width: 14vw; }
+  .A-SpongesPlay::before { border-bottom-width: 7vw; border-left-width: 11vw; border-top-width: 7vw; left: 2vw; }
+}

@@ -3,6 +3,17 @@ import articles from "../../data/articles.json";
 const articleImages = {
   "articles/30degree_article_img.png": require("../../img/articles/30degree_article_img.png"),
   "articles/A-BenefitCardImg.png": require("../../img/articles/A-BenefitCardImg.png"),
+  "articles/A-icon-batteries.png": require("../../img/articles/A-icon-batteries.png"),
+  "articles/A-icon-bottle.png": require("../../img/articles/A-icon-bottle.png"),
+  "articles/A-icon-drying.png": require("../../img/articles/A-icon-drying.png"),
+  "articles/A-icon-food.png": require("../../img/articles/A-icon-food.png"),
+  "articles/A-icon-lunchbox.png": require("../../img/articles/A-icon-lunchbox.png"),
+  "articles/A-icon-paper towels.png": require("../../img/articles/A-icon-paper towels.png"),
+  "articles/A-icon-shirt.png": require("../../img/articles/A-icon-shirt.png"),
+  "articles/A-icon-shoe-covers.png": require("../../img/articles/A-icon-shoe-covers.png"),
+  "articles/A-icon-soap.png": require("../../img/articles/A-icon-soap.png"),
+  "articles/A-icon-sponge.png": require("../../img/articles/A-icon-sponge.png"),
+  "articles/A-icon-toothbrush.png": require("../../img/articles/A-icon-toothbrush.png"),
   "articles/A-CupCardImg.png": require("../../img/articles/A-CupCardImg.png"),
   "articles/A-FoodCardImg.png": require("../../img/articles/A-FoodCardImg.png"),
   "articles/A-LampCardImg.png": require("../../img/articles/A-LampCardImg.png"),
@@ -62,3 +73,4 @@ function resolveArticleImages(value, key) {
 }
 
 export default articles.map((article) => resolveArticleImages(article));
+

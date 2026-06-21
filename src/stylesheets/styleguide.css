@@ -1,0 +1,839 @@
+.body_styleguide {
+  background-color: var(--color-bg-grey);
+  color: var(--color-read);
+  overflow-x: hidden;
+}
+
+.body_styleguide
+  .A-NavItem[href="https://hseadc.github.io/Trace/pages/styleguide.html"],
+.body_styleguide
+  .A-MobileNavItem[href="https://hseadc.github.io/Trace/pages/styleguide.html"] {
+  background-color: var(--color-dark-grey);
+  border-radius: 0.3vw;
+  color: var(--color-yellow);
+  display: flex;
+  justify-content: center;
+  padding: 0.2% 1%;
+}
+
+.W-StyleguidePage {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4vw;
+  margin: 0 auto;
+  max-width: 92.7vw;
+  padding: 1.4vw 0 2.2vw;
+}
+
+.O-StyleguideHero,
+.M-StyleguideCard,
+.M-StyleguideToneCard {
+  background-color: var(--color-white);
+  border-radius: 0.8vw;
+}
+
+.O-StyleguideHero {
+  align-items: center;
+  display: flex;
+  height: 26.4vw;
+  justify-content: center;
+  overflow: hidden;
+  padding: 2vw;
+  position: relative;
+}
+
+.A-StyleguideSectionTitle,
+.M-StyleguideCard h2,
+.M-StyleguideAlphabetBlock h2,
+.M-StyleguideTone h2,
+.M-StyleguideCard p,
+.M-StyleguideToneCard p,
+.M-StyleguideValue h3,
+.M-StyleguideValue p,
+.M-StyleguideSwatch p,
+.M-StyleguideCard h3,
+.M-StyleguideCard dt,
+.M-StyleguideCard dd {
+  font-family: var(--font-family-base);
+  font-weight: 700;
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+}
+
+.A-StyleguideSectionTitle--hero {
+  font: var(--font-h1);
+  left: 1.9vw;
+  line-height: 1;
+  margin: 0;
+  position: absolute;
+  top: 1.8vw;
+  z-index: 3;
+}
+
+.Q-StyleguideHeroDecor {
+  height: 90%;
+  left: 12%;
+  object-fit: contain;
+  opacity: 0.95;
+  position: absolute;
+  top: 4%;
+  width: 76%;
+  z-index: 1;
+}
+
+.W-StyleguideHeroLogo {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1vw;
+  position: relative;
+  transform: translateY(0.6vw);
+  width: 42vw;
+  z-index: 2;
+}
+
+.Q-StyleguideLogoMain,
+.Q-StyleguideTitleImage {
+  display: block;
+  object-fit: contain;
+  width: 100%;
+}
+
+.Q-StyleguideTitleImage {
+  width: 62%;
+}
+
+.C-StyleguideIntro,
+.C-StyleguideMiddle,
+.C-StyleguideBottom {
+  display: flex;
+  gap: 1vw;
+  width: 100%;
+}
+
+.C-StyleguideIntro {
+  align-items: stretch;
+}
+
+.M-StyleguideCard {
+  display: flex;
+  flex-direction: column;
+  padding: 1.85vw;
+}
+
+.M-StyleguideCard h2,
+.M-StyleguideAlphabetBlock h2,
+.M-StyleguideTone h2 {
+  color: var(--color-read);
+  font: var(--font-h1);
+  line-height: 1;
+  margin: 0 0 2vw;
+}
+
+.M-StyleguideCard p {
+  color: var(--color-read);
+  font: var(--font-h3);
+  line-height: 1.28;
+  margin: 0;
+}
+
+.M-StyleguideCard--brand {
+  min-height: 14.2vw;
+}
+
+.M-StyleguideCard--brand p {
+  margin-top: auto;
+}
+
+.M-StyleguideCard--feature {
+  flex: 1;
+  min-height: 38.7vw;
+}
+
+.M-StyleguideCard--feature > p {
+  max-width: 45vw;
+}
+
+.W-StyleguideValues {
+  width: 100%;
+  height: auto;
+  margin-top: 7vw;
+}
+
+.C-StyleguideValues {
+  display: flex;
+  gap: 1vw;
+}
+
+.M-StyleguideValue {
+  align-items: center;
+  background-color: var(--color-bg-grey);
+  border-radius: 0.55vw;
+  box-shadow:
+    inset 0 0.25vw 0.36vw rgba(255, 255, 255, 0.5),
+    inset 0 -0.25vw 0.36vw rgba(0, 0, 0, 0.16),
+    0 0.18vw 0.25vw rgba(83, 83, 83, 0.12);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 17.9vw;
+  padding: 1.2vw 0.9vw 1.4vw;
+  text-align: center;
+}
+
+.Q-StyleguideValueIcon {
+  align-items: center;
+  display: flex;
+  height: 7.2vw;
+  justify-content: center;
+  margin-bottom: 0.8vw;
+  opacity: 0.7;
+  position: relative;
+  width: 7.2vw;
+}
+
+.Q-StyleguideValueIcon::before {
+  color: var(--color-white);
+  filter: drop-shadow(0 0.18vw 0.16vw rgba(83, 83, 83, 0.16));
+  font-size: 104rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.Q-StyleguideValueIcon--wallet::before {
+  content: "▱";
+  transform: rotate(18deg);
+}
+
+.Q-StyleguideValueIcon--earth::before {
+  content: "○";
+}
+
+.Q-StyleguideValueIcon--hand::before {
+  content: "⌙";
+}
+
+.Q-StyleguideValueIcon--bolt::before {
+  content: "↯";
+}
+
+.M-StyleguideValue h3,
+.M-StyleguideValue p {
+  color: var(--color-read);
+  font: var(--font-h3);
+  line-height: 1.08;
+  margin: 0;
+}
+
+.M-StyleguideValue h3 {
+  margin-top: auto;
+  font-weight: 700;
+}
+
+.W-StyleguideLeftColumn {
+  display: flex;
+  flex: 0 0 32%;
+  flex-direction: column;
+  gap: 1.5vw;
+}
+
+.M-StyleguideCard--colors {
+  min-height: 23.3vw;
+}
+
+.C-StyleguideSwatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.55vw 1.45vw;
+  margin-top: 0.4vw;
+}
+
+.M-StyleguideSwatch {
+  align-items: center;
+  display: flex;
+  flex: 0 0 calc(20% - 1.16vw);
+  flex-direction: column;
+  gap: 0.6vw;
+}
+
+.M-StyleguideSwatch span {
+  background-color: var(--swatch-color);
+  border: 0.08vw solid rgba(83, 83, 83, 0.14);
+  border-radius: 0.42vw;
+  display: block;
+  height: 5.65vw;
+  width: 3.65vw;
+}
+
+.M-StyleguideSwatch p {
+  font: var(--font-h5);
+  line-height: 1;
+}
+
+.M-StyleguideCard--typography {
+  min-height: 24.2vw;
+}
+
+.M-StyleguideCard--typography h2 {
+  margin-bottom: 4.6vw;
+}
+
+.M-StyleguideCard--typography h3 {
+  color: var(--color-read);
+  font: var(--font-h1);
+  line-height: 1;
+  margin: 0 0 1.7vw;
+}
+
+.M-StyleguideCard--typography h3 span {
+  color: var(--color-pink);
+}
+
+.M-StyleguideCard--typography h3 strong {
+  color: var(--color-green);
+}
+
+.M-StyleguideCard--typography dl {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2vw;
+  margin: 0 0 4.4vw;
+}
+
+.M-StyleguideCard--typography dl div {
+  display: flex;
+  gap: 4vw;
+}
+
+.M-StyleguideCard--typography dt,
+.M-StyleguideCard--typography dd {
+  color: var(--color-read);
+  font: var(--font-h1);
+  line-height: 1;
+  margin: 0;
+}
+
+.M-StyleguideCard--typography dt {
+  min-width: 7vw;
+}
+
+.M-StyleguideAlphabetBlock {
+  flex: 1;
+  padding: 0.2vw 0 0 0.6vw;
+}
+
+.M-StyleguideAlphabetBlock h2 {
+  color: var(--color-white);
+  margin-bottom: 1.2vw;
+}
+
+.C-StyleguideAlphabet {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  width: 100%;
+}
+
+.W-StyleguideAlphabetLine {
+  align-items: flex-start;
+  display: flex;
+  gap: 0.28vw;
+  height: 4.7vw;
+}
+
+.W-StyleguideAlphabetLine img {
+  display: block;
+  height: 100%;
+  object-fit: contain;
+  width: auto;
+}
+
+.W-StyleguideAlphabetLine--digits {
+  height: 4.3vw;
+  margin-top: 0.35vw;
+}
+
+.M-StyleguideLogoRules {
+  min-height: 26.4vw;
+}
+
+.W-StyleguideLogoRulesContent {
+  align-items: center;
+  display: flex;
+  gap: 3vw;
+  margin-top: auto;
+}
+
+.Q-StyleguideLogoScheme {
+  border: 0.12vw dashed var(--color-read);
+  flex: 0 0 44%;
+  height: 18.7vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.Q-StyleguideLogoScheme::before,
+.Q-StyleguideLogoScheme::after {
+  border-color: var(--color-read);
+  border-style: dashed;
+  content: "";
+  opacity: 0.9;
+  position: absolute;
+}
+
+.Q-StyleguideLogoScheme::before {
+  border-width: 0 0.12vw;
+  inset: 0 7%;
+}
+
+.Q-StyleguideLogoScheme::after {
+  border-width: 0.12vw 0;
+  inset: 24% 0;
+}
+
+.Q-StyleguideLogoScheme img {
+  height: auto;
+  left: 8%;
+  object-fit: contain;
+  object-position: top left;
+  position: absolute;
+  top: 25%;
+  width: 94%;
+}
+
+.M-StyleguideLogoRules p {
+  flex: 1;
+  font: var(--font-h1);
+  line-height: 1.15;
+  max-width: 39vw;
+}
+
+.C-StyleguideBottom {
+  align-items: stretch;
+}
+
+.M-StyleguideTone {
+  display: flex;
+  flex: 0 0 49.5%;
+  flex-direction: column;
+  padding: 1.6vw 1.9vw 0;
+}
+
+.M-StyleguideTone h2 {
+  color: var(--color-white);
+  margin-bottom: 2.7vw;
+}
+
+.C-StyleguideToneCards {
+  display: flex;
+  gap: 0.7vw;
+}
+
+.M-StyleguideToneCard {
+  align-items: center;
+  box-shadow:
+    inset 0 0.25vw 0.34vw rgba(255, 255, 255, 0.55),
+    inset 0 -0.25vw 0.34vw rgba(0, 0, 0, 0.12),
+    0 0.22vw 0.28vw rgba(83, 83, 83, 0.1);
+  display: flex;
+  flex: 1;
+  height: 18vw;
+  justify-content: center;
+  padding: 2.2vw 1.1vw;
+  text-align: center;
+}
+
+.M-StyleguideToneCard p {
+  color: var(--color-read);
+  font-size: 21rem;
+  line-height: 1.15;
+}
+
+.M-StyleguideVolume {
+  flex: 1;
+  min-height: 26.2vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.M-StyleguideVolume h2 {
+  margin-bottom: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.M-StyleguideVolume img {
+  bottom: 0.5vw;
+  display: block;
+  height: 89%;
+  object-fit: cover;
+  object-position: bottom center;
+  position: absolute;
+  right: 2.2vw;
+  width: 82%;
+}
+
+@media (max-width: 768px) {
+  .W-StyleguidePage {
+    gap: 3vw;
+    max-width: 94vw;
+    padding: 4vw 0 6vw;
+  }
+
+  .O-StyleguideHero,
+  .M-StyleguideCard,
+  .M-StyleguideToneCard {
+    border-radius: 3vw;
+  }
+
+  .O-StyleguideHero {
+    height: 58vw;
+    padding: 5vw;
+  }
+
+  .A-StyleguideSectionTitle--hero {
+    font: var(--font-h1);
+    left: 4vw;
+    top: 4vw;
+  }
+
+  .Q-StyleguideHeroDecor {
+    left: -4%;
+    width: 108%;
+  }
+
+  .W-StyleguideHeroLogo {
+    width: 70vw;
+  }
+
+  .C-StyleguideIntro,
+  .C-StyleguideMiddle,
+  .C-StyleguideBottom,
+  .W-StyleguideLogoRulesContent {
+    flex-direction: column;
+  }
+
+  .C-StyleguideIntro,
+  .C-StyleguideMiddle,
+  .C-StyleguideBottom {
+    gap: 3vw;
+  }
+
+  .M-StyleguideCard {
+    padding: 4vw;
+  }
+
+  .M-StyleguideCard h2,
+  .M-StyleguideAlphabetBlock h2,
+  .M-StyleguideTone h2 {
+    font-size: 35rem;
+    margin-bottom: 5vw;
+  }
+
+  .M-StyleguideCard p {
+    font-size: 25rem;
+  }
+
+  .M-StyleguideCard--brand,
+  .M-StyleguideCard--feature,
+  .M-StyleguideCard--colors,
+  .M-StyleguideCard--typography,
+  .M-StyleguideLogoRules,
+  .M-StyleguideVolume {
+    min-height: auto;
+  }
+
+  .C-StyleguideValues {
+    flex-wrap: wrap;
+    gap: 2.5vw;
+  }
+
+  .M-StyleguideValue {
+    border-radius: 2vw;
+    flex: 0 0 calc(50% - 1.25vw);
+    min-height: 38vw;
+    padding: 3vw;
+  }
+
+  .Q-StyleguideValueIcon {
+    height: 16vw;
+    width: 16vw;
+  }
+
+  .Q-StyleguideValueIcon::before {
+    font-size: 84rem;
+  }
+
+  .M-StyleguideValue h3,
+  .M-StyleguideValue p {
+    font-size: 22rem;
+  }
+
+  .W-StyleguideLeftColumn {
+    gap: 3vw;
+  }
+
+  .C-StyleguideSwatches {
+    gap: 3vw;
+  }
+
+  .M-StyleguideSwatch {
+    flex: 0 0 calc(20% - 2.4vw);
+    gap: 1.5vw;
+  }
+
+  .M-StyleguideSwatch span {
+    border-radius: 1.2vw;
+    height: 10vw;
+    width: 10vw;
+  }
+
+  .M-StyleguideSwatch p {
+    font-size: 13rem;
+  }
+
+  .M-StyleguideCard--typography h2 {
+    margin-bottom: 10vw;
+  }
+
+  .M-StyleguideCard--typography h3,
+  .M-StyleguideCard--typography dt,
+  .M-StyleguideCard--typography dd {
+    font: var(--font-h1);
+  }
+
+  .M-StyleguideCard--typography dt {
+    min-width: 22vw;
+  }
+
+  .M-StyleguideAlphabetBlock {
+    padding: 0;
+  }
+
+  .W-StyleguideAlphabetLine {
+    flex-wrap: wrap;
+    gap: 1vw;
+    height: auto;
+  }
+
+  .W-StyleguideAlphabetLine img {
+    height: 11vw;
+  }
+
+  .Q-StyleguideLogoScheme {
+    flex-basis: auto;
+    height: 28vw;
+    width: 100%;
+  }
+
+  .M-StyleguideLogoRules p {
+    font-size: 28rem;
+    max-width: none;
+  }
+
+  .M-StyleguideTone {
+    padding: 0;
+  }
+
+  .C-StyleguideToneCards {
+    flex-direction: column;
+    gap: 2vw;
+  }
+
+  .M-StyleguideToneCard {
+    height: 28vw;
+  }
+
+  .M-StyleguideToneCard p {
+    font-size: 27rem;
+  }
+
+  .M-StyleguideVolume {
+    min-height: 50vw;
+  }
+}
+
+/* Brand and palette column */
+.W-StyleguideIntroSidebar {
+  display: flex;
+  flex: 0 0 32%;
+  flex-direction: column;
+  gap: 1.5vw;
+}
+
+.W-StyleguideIntroSidebar .M-StyleguideCard--brand {
+  min-height: 14.2vw;
+}
+
+.W-StyleguideIntroSidebar .M-StyleguideCard--colors {
+  flex: 1;
+  min-height: 23.3vw;
+}
+
+.M-StyleguideCard--feature {
+  min-height: 38.7vw;
+}
+
+.Q-StyleguideValueIcon {
+  display: block;
+  height: 11vw;
+  margin-bottom: 0.8vw;
+  object-fit: contain;
+  opacity: 1;
+  width: 11vw;
+}
+
+.Q-StyleguideValueIcon::before,
+.Q-StyleguideValueIcon--wallet::before,
+.Q-StyleguideValueIcon--earth::before,
+.Q-StyleguideValueIcon--hand::before,
+.Q-StyleguideValueIcon--bolt::before {
+  content: none;
+}
+
+.W-StyleguideLeftColumn {
+  flex: 0 0 32%;
+}
+
+.W-StyleguideLeftColumn .M-StyleguideCard--typography {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .W-StyleguideIntroSidebar {
+    flex: none;
+    gap: 3vw;
+    width: 100%;
+  }
+
+  .W-StyleguideIntroSidebar .M-StyleguideCard--brand,
+  .W-StyleguideIntroSidebar .M-StyleguideCard--colors {
+    flex: none;
+  }
+
+  .Q-StyleguideValueIcon {
+    height: 16vw;
+    width: 16vw;
+  }
+}
+
+/* Typography alignment and subtle interactions */
+.M-StyleguideCard--typography dl {
+  width: 100%;
+}
+
+.M-StyleguideCard--typography dl div {
+  align-items: baseline;
+  display: grid;
+  gap: 16rem;
+  grid-template-columns: minmax(0, 1fr) max-content;
+}
+
+.M-StyleguideCard--typography dt {
+  min-width: 0;
+}
+
+.M-StyleguideCard--typography dd {
+  justify-self: end;
+  text-align: right;
+}
+
+.O-StyleguideHero,
+.M-StyleguideCard,
+.M-StyleguideToneCard,
+.M-StyleguideValue,
+.M-StyleguideSwatch span,
+.W-StyleguideAlphabetLine img,
+.Q-StyleguideLogoScheme {
+  transition:
+    box-shadow 260ms ease,
+    filter 260ms ease,
+    transform 320ms cubic-bezier(0.16, 0.84, 0.28, 1);
+}
+
+.Q-StyleguideHeroDecor {
+  animation: styleguideDecorFloat 7s ease-in-out infinite;
+}
+
+.W-StyleguideHeroLogo {
+  animation: styleguideLogoSettle 800ms cubic-bezier(0.16, 0.84, 0.28, 1) both;
+}
+
+.M-StyleguideCard:hover,
+.M-StyleguideToneCard:hover {
+  box-shadow: 0 8rem 18rem rgba(83, 83, 83, 0.12);
+  transform: translateY(-3rem);
+}
+
+.M-StyleguideValue:hover {
+  box-shadow:
+    inset 0 0.32vw 0.45vw rgba(255, 255, 255, 0.58),
+    inset 0 -0.3vw 0.42vw rgba(0, 0, 0, 0.17),
+    0 7rem 15rem rgba(83, 83, 83, 0.14);
+  transform: translateY(-3rem);
+}
+
+.M-StyleguideValue:hover .Q-StyleguideValueIcon {
+  filter: drop-shadow(0 5rem 6rem rgba(83, 83, 83, 0.18));
+  transform: translateY(-2rem) scale(1.05) rotate(-2deg);
+}
+
+.M-StyleguideSwatch:hover span {
+  filter: brightness(1.06);
+  transform: translateY(-2rem) scale(1.08);
+}
+
+.W-StyleguideAlphabetLine img:hover {
+  filter: drop-shadow(0 4rem 5rem rgba(255, 255, 255, 0.26));
+  transform: translateY(-2rem) scale(1.045);
+}
+
+.Q-StyleguideLogoScheme:hover {
+  box-shadow: inset 0 0 12rem rgba(255, 255, 255, 0.24);
+  transform: scale(1.01);
+}
+
+@keyframes styleguideDecorFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-5rem) rotate(0.5deg);
+  }
+}
+
+@keyframes styleguideLogoSettle {
+  0% {
+    opacity: 0;
+    transform: translateY(12rem) scale(0.97);
+  }
+
+  70% {
+    opacity: 1;
+    transform: translateY(-1rem) scale(1.01);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0.6vw) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .Q-StyleguideHeroDecor,
+  .W-StyleguideHeroLogo {
+    animation: none;
+  }
+
+  .O-StyleguideHero,
+  .M-StyleguideCard,
+  .M-StyleguideToneCard,
+  .M-StyleguideValue,
+  .M-StyleguideSwatch span,
+  .W-StyleguideAlphabetLine img,
+  .Q-StyleguideLogoScheme {
+    transition: none;
+  }
+}
