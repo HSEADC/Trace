@@ -59,3 +59,84 @@
 @keyframes refill-pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.025); } }
 @media (prefers-reduced-motion: reduce) { .body_article_refill *, .body_article_refill *::before, .body_article_refill *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } .M-RefillInfo.is-motion-ready, .M-RefillTextCard.is-motion-ready, .M-RefillVideoCard.is-motion-ready { opacity: 1; transform: none; } }
 @media (max-width: 768px) { .W-RefillArticle { margin: 4vw auto 8vw; max-width: 94vw; } .O-RefillHero { height: auto; padding: 9vw 3vw 3vw; } .A-RefillBack { height: 8vw; width: 30vw; } .W-RefillHeroContent, .O-RefillArticleContent { flex-direction: column; } .W-RefillHeroContent { min-height: 72vw; padding: 7vw 5vw; } .M-RefillHeroInfo { flex-basis: auto; } .C-RefillMeta { gap: 5vw; margin-top: 6vw; } .C-RefillMetaGroup--stats { flex-basis: 30vw; } .M-RefillMetaItem img { flex-basis: 6vw; height: 6vw; width: 6vw; } .W-RefillHeroVisual { flex-basis: 38vw; width: 100%; } .C-RefillMiniBottles { bottom: 4vw; left: 13%; } .C-RefillMiniBottles img { height: 16vw; } .C-RefillBigBottles { bottom: 2vw; right: 2%; } .C-RefillBigBottles img { height: 26vw; } .W-RefillInfographic { flex-basis: auto; gap: 11vw; padding: 0; width: 100%; } .W-RefillArc, .W-RefillRulesArc { width: 54vw; } .C-RefillBenefitIcons img { height: 13vw; } .C-RefillWays span { height: 8vw; width: 12vw; } .W-RefillArticleText { gap: 2vw; width: 100%; } .M-RefillTextCard, .M-RefillVideoCard { border-radius: 3vw; padding: 5vw; } .M-RefillVideoCard { min-height: 48vw; } .A-RefillPlay { height: 14vw; width: 14vw; } .A-RefillPlay::before { border-bottom-width: 7vw; border-left-width: 11vw; border-top-width: 7vw; left: 2vw; } }
+/* Refill-specific graphic numerals and header motion. */
+.A-RefillCursor {
+  left: 17%;
+  position: absolute;
+  top: 54%;
+  width: 3.4vw;
+  z-index: 3;
+}
+
+.C-RefillMiniBottles {
+  bottom: 1.5vw;
+  left: 7%;
+}
+
+.C-RefillMiniBottles img {
+  height: 9vw;
+}
+
+.C-RefillBigBottles {
+  bottom: -0.3vw;
+  gap: 1.5vw;
+  right: 0;
+}
+
+.C-RefillBigBottles img {
+  height: 15.5vw;
+}
+
+.C-RefillMiniBottles,
+.C-RefillBigBottles {
+  animation: none;
+}
+
+.C-RefillMiniBottles img,
+.C-RefillBigBottles img {
+  animation: refill-bottle-hop 5.4s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+.C-RefillMiniBottles img:nth-child(1) { animation-delay: 0ms; }
+.C-RefillMiniBottles img:nth-child(2) { animation-delay: 180ms; }
+.C-RefillMiniBottles img:nth-child(3) { animation-delay: 360ms; }
+.C-RefillBigBottles img:nth-child(1) { animation-delay: 540ms; }
+.C-RefillBigBottles img:nth-child(2) { animation-delay: 720ms; }
+.C-RefillBigBottles img:nth-child(3) { animation-delay: 900ms; }
+
+.W-RefillArc .A-RefillNumber,
+.W-RefillRulesArc .A-RefillNumber {
+  left: 50%;
+  position: absolute;
+  top: 54%;
+  transform: translate(-50%, -50%);
+}
+
+.A-RefillNumber--one,
+.A-RefillNumber--three {
+  height: 8vw;
+  object-fit: contain;
+  width: auto;
+}
+
+.M-RefillInfo--ways > .A-RefillNumber--four {
+  height: 9vw;
+  object-fit: contain;
+  width: auto;
+}
+
+@keyframes refill-bottle-hop {
+  0%, 10%, 100% { transform: translateY(0) scaleY(1); }
+  4% { transform: translateY(-0.65vw) scaleY(1.025); }
+  7% { transform: translateY(0.12vw) scaleY(0.98); }
+}
+
+@media (max-width: 768px) {
+  .A-RefillCursor { width: 8vw; }
+  .C-RefillMiniBottles img { height: 18vw; }
+  .C-RefillBigBottles img { height: 30vw; }
+  .A-RefillNumber--one,
+  .A-RefillNumber--three { height: 20vw; }
+  .M-RefillInfo--ways > .A-RefillNumber--four { height: 23vw; }
+}
