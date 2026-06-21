@@ -648,3 +648,45 @@
     height: 34vw;
   }
 }
+.W-SpongesCircleVisual {
+  position: relative;
+  width: 20vw;
+}
+
+.M-SpongesInfo--circle .W-SpongesCircleVisual img {
+  display: block;
+  max-width: none;
+  width: 100%;
+}
+
+.M-SpongesInfo--circle .W-SpongesCircleVisual p {
+  left: 50%;
+  margin: 0;
+  max-width: 76%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.W-SpongesCircleVisual p span,
+.W-SpongesCircleVisual p strong {
+  display: block;
+  font: var(--font-h1);
+  line-height: 1.04;
+  text-transform: uppercase;
+}
+
+.W-SpongesCircleVisual p strong {
+  color: var(--color-yellow);
+}
+
+.W-SpongesCircleVisual p span {
+  color: var(--color-read);
+}
+
+@media (max-width: 768px) {
+  .W-SpongesCircleVisual {
+    width: 52vw;
+  }
+}
