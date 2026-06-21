@@ -7,6 +7,7 @@ import "./game.js";
 import "./microinteractions.js";
 import "./events.js";
 import "./metrika.js";
+import "./sponges-animations.js";
 
 console.log("ENTRY index.js loaded");
 
