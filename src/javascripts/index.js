@@ -9,6 +9,7 @@ import "./events.js";
 import "./metrika.js";
 import "./sponges-animations.js";
 import "./refill-animations.js";
+import "./battery-animations.js";
 
 console.log("ENTRY index.js loaded");
 
