@@ -389,94 +389,262 @@
   .A-SpongesPlay::before { border-bottom-width: 7vw; border-left-width: 11vw; border-top-width: 7vw; left: 2vw; }
 }
 
-/* Hero layout matches the two-column article masthead. */
+/* The article masthead follows the shared article-card proportions. */
 .O-SpongesHero {
-  min-height: 17.2vw;
-  padding: 2.1vw 1.6vw 1.2vw;
+  background: var(--color-white);
+  border-bottom-width: 1vw;
+  border-radius: 2vw;
+  border-right-width: 1vw;
+  height: 30vw;
+  min-height: 0;
+  padding: 1vw;
 }
 
 .A-SpongesBack {
-  left: -0.7vw;
-  top: -0.7vw;
+  border-radius: 0.5vw;
+  gap: 3vw;
+  left: 0;
+  min-height: 3vw;
+  padding: 0 1vw;
+  top: 0;
+  width: 12vw;
+  z-index: 2;
+}
+
+.A-SpongesBack img {
+  height: 1.3vw;
+  transform: scaleX(-1);
+  width: 1.3vw;
 }
 
 .W-SpongesHeroContent {
-  min-height: 12.8vw;
-  padding: 1.7vw 3vw;
+  border-radius: 1.1vw;
+  height: 100%;
+  min-height: 0;
+  padding: 7.5vw 2vw 2.3vw;
+}
+
+.M-SpongesHeroInfo {
+  flex: 0 0 40%;
 }
 
 .M-SpongesHeroInfo h1 {
-  margin-bottom: 1.9vw;
+  line-height: 1.1;
+  margin: 0;
+  max-width: 26vw;
 }
 
 .C-SpongesMeta {
   display: flex;
-  gap: 5.4vw;
+  gap: 3vw;
+  margin-top: auto;
   max-width: none;
 }
 
 .C-SpongesMetaGroup {
   display: grid;
-  gap: 0.75vw;
+  gap: 1vw;
 }
 
 .C-SpongesMetaGroup--stats {
-  flex: 0 0 11.5vw;
+  flex: 0 0 14vw;
 }
 
 .C-SpongesMetaGroup--authors {
-  flex: 0 1 auto;
+  flex: 1 1 auto;
 }
 
 .M-SpongesMetaItem {
-  min-height: 2.6vw;
-  white-space: nowrap;
+  gap: 1vw;
+  min-height: 3vw;
+  white-space: normal;
+}
+
+.M-SpongesMetaItem img {
+  flex: 0 0 3vw;
+  height: 3vw;
+  width: 3vw;
+}
+
+.W-SpongesHeroVisual {
+  flex: 1 1 60%;
+  min-width: 0;
 }
 
 .W-SpongesHeroVisual img:first-child {
-  right: 42%;
-  transform: rotate(-10deg);
-  width: 10.8vw;
+  right: 48%;
+  transform: rotate(-8deg);
+  width: 14.5vw;
 }
 
 .W-SpongesHeroVisual img:last-child {
-  left: 42%;
-  transform: rotate(9deg);
-  width: 11.2vw;
+  left: 48%;
+  transform: rotate(7deg);
+  width: 15vw;
+}
+
+.O-SpongesArticleContent {
+  gap: 2vw;
+  margin-top: 2vw;
+}
+
+.W-SpongesInfographic {
+  flex: 0 0 40%;
+  gap: 4.5vw;
+  padding: 0 1.2vw;
+}
+
+.M-SpongesInfo {
+  width: 100%;
+}
+
+.Q-SpongesFour {
+  margin-right: 1vw;
+  width: 7vw;
+}
+
+.M-SpongesInfo--habits {
+  column-gap: 1vw;
+  row-gap: 1.4vw;
+}
+
+.M-SpongesInfo--habits h2 {
+  max-width: 25vw;
+}
+
+.C-SpongesHabitTiles {
+  gap: 0.55vw;
+  margin-top: 0;
+}
+
+.C-SpongesHabitTiles span {
+  flex: 0 0 calc((100% - 1.65vw) / 4);
+  min-height: 7.1vw;
+}
+
+.M-SpongesInfo--steps {
+  gap: 1vw;
+}
+
+.M-SpongesInfo--steps h2 {
+  margin-bottom: 1.8vw;
+}
+
+.A-SpongesStage {
+  min-width: 15.2vw;
+}
+
+.M-SpongesInfo--steps p {
+  margin-top: 2.3vw;
+  max-width: 23vw;
+}
+
+.M-SpongesInfo--steps p + p {
+  margin-top: 5.2vw;
+}
+
+.W-SpongesCleaningVisual {
+  height: 13vw;
+}
+
+.W-SpongesCleaningVisual img:first-child {
+  left: 25%;
+  width: 7.5vw;
+}
+
+.W-SpongesCleaningVisual img:last-child {
+  right: 18%;
+  width: 9.5vw;
+}
+
+.M-SpongesInfo--cleaning p {
+  max-width: 22vw;
+}
+
+.M-SpongesInfo--circle img {
+  max-width: 20vw;
+}
+
+.M-SpongesInfo--circle p {
+  margin-top: 2.2vw;
+  max-width: 24vw;
 }
 
 @media (max-width: 768px) {
   .O-SpongesHero {
-    min-height: 0;
-    padding: 10vw 4vw 4vw;
+    height: auto;
+    padding: 9vw 3vw 3vw;
   }
 
   .A-SpongesBack {
-    left: 0;
-    top: 0;
+    gap: 3vw;
+    min-height: 8vw;
+    width: 30vw;
   }
 
   .W-SpongesHeroContent {
-    min-height: 70vw;
+    height: auto;
+    min-height: 72vw;
+    padding: 7vw 5vw;
+  }
+
+  .M-SpongesHeroInfo,
+  .W-SpongesHeroVisual {
+    flex-basis: auto;
   }
 
   .C-SpongesMeta {
-    gap: 6vw;
+    gap: 5vw;
   }
 
   .C-SpongesMetaGroup--stats {
-    flex-basis: 29vw;
+    flex-basis: 30vw;
   }
 
   .M-SpongesMetaItem {
+    gap: 2vw;
     min-height: 6vw;
   }
 
+  .M-SpongesMetaItem img {
+    flex-basis: 6vw;
+    height: 6vw;
+    width: 6vw;
+  }
+
   .W-SpongesHeroVisual img:first-child {
-    width: 23vw;
+    right: 48%;
+    width: 25vw;
   }
 
   .W-SpongesHeroVisual img:last-child {
-    width: 25vw;
+    left: 48%;
+    width: 26vw;
+  }
+
+  .O-SpongesArticleContent {
+    gap: 7vw;
+  }
+
+  .W-SpongesInfographic {
+    gap: 10vw;
+    padding: 0;
+  }
+
+  .Q-SpongesFour {
+    width: 17vw;
+  }
+
+  .C-SpongesHabitTiles span {
+    flex-basis: calc((100% - 4.5vw) / 4);
+    min-height: 18vw;
+  }
+
+  .M-SpongesInfo--steps p + p {
+    margin-top: 10vw;
+  }
+
+  .W-SpongesCleaningVisual {
+    height: 34vw;
   }
 }
