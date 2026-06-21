@@ -312,7 +312,7 @@
       "sustainable products",
       "home"
     ],
-    "image": "articles/A-BenefitCardImg.png",
+    "image": "articles/A-icon-soap.png",
     "link": "./articals/artical-refill.html",
     "content": null
   },
@@ -328,7 +328,7 @@
       "waste reduction",
       "daily habits"
     ],
-    "image": "articles/A-BenefitCardImg.png",
+    "image": "articles/A-icon-batteries.png",
     "link": "./articals/artical-battery-charge.html",
     "content": null
   },
@@ -344,7 +344,7 @@
       "daily habits",
       "sustainable products"
     ],
-    "image": "articles/A-BenefitCardImg.png",
+    "image": "articles/A-icon-paper towels.png",
     "link": "./articals/artical-reusable-paper-towels.html",
     "content": null
   },
@@ -359,7 +359,7 @@
       "home",
       "daily habits"
     ],
-    "image": "articles/A-BenefitCardImg.png",
+    "image": "articles/A-icon-sponge.png",
     "link": "./articals/artical-sponges-saving.html",
     "content": null
   },
@@ -375,7 +375,7 @@
       "daily habits",
       "sustainable products"
     ],
-    "image": "articles/A-BenefitCardImg.png",
+    "image": "articles/A-icon-bottle.png",
     "link": "./articals/artical-water-saving.html",
     "content": null
   },
@@ -390,7 +390,7 @@
       "daily habits",
       "sustainable products"
     ],
-    "image": "articles/A-BenefitCardImg.png",
+    "image": "articles/A-icon-shoe-covers.png",
     "link": "./articals/artical-reusable-shoe-covers.html",
     "content": null
   },
@@ -406,7 +406,7 @@
       "daily habits",
       "sustainable products"
     ],
-    "image": "articles/A-BenefitCardImg.png",
+    "image": "articles/A-icon-toothbrush.png",
     "link": "./articals/artical-toothbrush-saving.html",
     "content": null
   },
@@ -421,7 +421,7 @@
       "home",
       "daily habits"
     ],
-    "image": "articles/A-BenefitCardImg.png",
+    "image": "articles/A-icon-drying.png",
     "link": "./articals/artical-air-drying-laundry.html",
     "content": null
   },
@@ -437,7 +437,7 @@
       "home",
       "daily habits"
     ],
-    "image": "articles/A-BenefitCardImg.png",
+    "image": "articles/A-icon-lunchbox.png",
     "link": "./articals/artical-food-storage.html",
     "content": null
   },
@@ -453,7 +453,7 @@
       "daily habits",
       "sustainable products"
     ],
-    "image": "articles/A-BenefitCardImg.png",
+    "image": "articles/A-icon-shirt.png",
     "link": "./articals/artical-old-clothes-rags.html",
     "content": null
   },
@@ -469,8 +469,9 @@
       "resources",
       "daily habits"
     ],
-    "image": "articles/A-BenefitCardImg.png",
+    "image": "articles/A-icon-food.png",
     "link": "./articals/artical-food-waste.html",
     "content": null
   }
 ]
+
