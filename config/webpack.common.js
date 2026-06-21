@@ -91,9 +91,10 @@ module.exports = {
         {
           from: path.resolve(__dirname, "../src/share/CNAME"),
           to: path.resolve(__dirname, "../docs"),
-        },        {
-          from: path.resolve(__dirname, "../src/img/meta-img/main-page.jpg"),
-          to: path.resolve(__dirname, "../docs/og-main.jpg"),
+        },
+        {
+          from: path.resolve(__dirname, "../src/img/meta-img"),
+          to: path.resolve(__dirname, "../docs/meta-img"),
         },
       ],
     }),
