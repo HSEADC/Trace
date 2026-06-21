@@ -388,3 +388,95 @@
   .A-SpongesPlay { height: 14vw; width: 14vw; }
   .A-SpongesPlay::before { border-bottom-width: 7vw; border-left-width: 11vw; border-top-width: 7vw; left: 2vw; }
 }
+
+/* Hero layout matches the two-column article masthead. */
+.O-SpongesHero {
+  min-height: 17.2vw;
+  padding: 2.1vw 1.6vw 1.2vw;
+}
+
+.A-SpongesBack {
+  left: -0.7vw;
+  top: -0.7vw;
+}
+
+.W-SpongesHeroContent {
+  min-height: 12.8vw;
+  padding: 1.7vw 3vw;
+}
+
+.M-SpongesHeroInfo h1 {
+  margin-bottom: 1.9vw;
+}
+
+.C-SpongesMeta {
+  display: flex;
+  gap: 5.4vw;
+  max-width: none;
+}
+
+.C-SpongesMetaGroup {
+  display: grid;
+  gap: 0.75vw;
+}
+
+.C-SpongesMetaGroup--stats {
+  flex: 0 0 11.5vw;
+}
+
+.C-SpongesMetaGroup--authors {
+  flex: 0 1 auto;
+}
+
+.M-SpongesMetaItem {
+  min-height: 2.6vw;
+  white-space: nowrap;
+}
+
+.W-SpongesHeroVisual img:first-child {
+  right: 42%;
+  transform: rotate(-10deg);
+  width: 10.8vw;
+}
+
+.W-SpongesHeroVisual img:last-child {
+  left: 42%;
+  transform: rotate(9deg);
+  width: 11.2vw;
+}
+
+@media (max-width: 768px) {
+  .O-SpongesHero {
+    min-height: 0;
+    padding: 10vw 4vw 4vw;
+  }
+
+  .A-SpongesBack {
+    left: 0;
+    top: 0;
+  }
+
+  .W-SpongesHeroContent {
+    min-height: 70vw;
+  }
+
+  .C-SpongesMeta {
+    gap: 6vw;
+  }
+
+  .C-SpongesMetaGroup--stats {
+    flex-basis: 29vw;
+  }
+
+  .M-SpongesMetaItem {
+    min-height: 6vw;
+  }
+
+  .W-SpongesHeroVisual img:first-child {
+    width: 23vw;
+  }
+
+  .W-SpongesHeroVisual img:last-child {
+    width: 25vw;
+  }
+}
