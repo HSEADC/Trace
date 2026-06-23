@@ -40,7 +40,7 @@ module.exports = {
         loader: "html-loader",
       },
       {
-        test: /\.(png|jpg|jpeg|gif|svg)$/i,
+        test: /\.(png|jpg|jpeg|gif|svg|mp3|wav|ogg|m4a)$/i,
         type: "asset/resource",
         generator: {
           filename: "images/[hash][ext][query]",

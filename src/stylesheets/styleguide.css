@@ -653,7 +653,7 @@
   }
 }
 
-/* Brand and palette column */
+
 .W-StyleguideIntroSidebar {
   display: flex;
   flex: 0 0 32%;
@@ -717,7 +717,7 @@
   }
 }
 
-/* Typography alignment and subtle interactions */
+
 .M-StyleguideCard--typography dl {
   width: 100%;
 }

@@ -1,5 +1,5 @@
 :root {
-  /* COLORS  */
+  
   --color-green: #02973b;
   --color-dark-green: #008633;
   --color-pink: #ee36b0;
@@ -12,7 +12,7 @@
   --color-dark-yellow: #d1e01b;
   --color-read: #b7b7b7;
 
-  /* COLORS — Semantic*/
+  
 
   --color-text-primary: var(--color-dark-grey);
   --color-text-secondary: var(--color-light-grey);
@@ -20,35 +20,35 @@
   --color-bg-page: var(--color-grey-white);
   --color-bg-card: var(--color-white);
 
-  /* COLORS — Gradient */
+  
 
-  /* Font families */
+  
   --font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
   --font-family-display: 'Inter', system-ui, -apple-system, sans-serif;
 
-  /* Typography scale */
+  
 
-  /* inter bold 32 / 40, letter-spacing: -4 */
+  
   --font-h1: 700 32rem/40rem var(--font-family-display);
   --ls-h2: -0.04em;
 
-  /* inter bold 24 / 32, letter-spacing: -6 */
+  
   --font-h2: 700 24rem/32rem var(--font-family-base);
   --ls-body-strong: -0.06em;
 
-  /* inter semi-bold 24 / 32, letter-spacing: -6 */
+  
   --font-h3: 600 24rem/32rem var(--font-family-base);
   --ls-h3: -0.06em;
 
-  /* inter medium 24 / 32, letter-spacing: -6 */
+  
   --font-h4: 500 24rem/32rem var(--font-family-base);
   --ls-body-lg: -0.06em;
 
-  /* inter semi-bold 16 / 32, letter-spacing: -6 */
+  
   --font-h5: 600 16rem/32rem var(--font-family-base);
   --ls-body-lg: -0.06em;
 
-  /* inter regular 32 / 40, letter-spacing: -4 */
+  
   --font-p: 500 32rem/40rem var(--font-family-base);
   --ls-p: -0.06em;
 }
@@ -62,7 +62,7 @@ html {
   font-size: calc(1vw / 19.2);
   margin: calc(1vw / 19.2);
   scroll-behavior: smooth;
-} /* 100vw / 1440 */
+} 
 
 body {
   background-image: none;

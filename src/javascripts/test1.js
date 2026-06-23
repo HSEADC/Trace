@@ -826,10 +826,37 @@ if (!root) {
   const progressLine = document.getElementById("testProgressLine");
 
   const awardsRoot = root.querySelector(".W-Card-Swipe-Left");
-  const awardPlaceholderDefault =
-    "https://github.com/HSEADC/Trace/blob/main/src/img/learn/A-Award-Zelenka-disable.png?raw=true";
-  const awardPlaceholderComplete =
-    "https://github.com/HSEADC/Trace/blob/main/src/img/learn/A-Award-Zelenka-active.png?raw=true";
+  const awardVariants = [
+    {
+      label: "Зелёнка",
+      default: "https://github.com/HSEADC/Trace/blob/main/src/img/learn/A-Award-Zelenka-disable.png?raw=true",
+      complete: "https://github.com/HSEADC/Trace/blob/main/src/img/learn/A-Award-Zelenka-active.png?raw=true",
+    },
+    {
+      label: "Биоактивный",
+      default: "https://github.com/HSEADC/Trace/blob/main/src/img/learn/A-Award-Bioactive-disable.png?raw=true",
+      complete: "https://github.com/HSEADC/Trace/blob/main/src/img/learn/A-Award-Bioactive-active.png?raw=true",
+    },
+    {
+      label: "Эконутый",
+      default: "https://github.com/HSEADC/Trace/blob/main/src/img/learn/A-Award-Econytu-disable.png?raw=true",
+      complete: "https://github.com/HSEADC/Trace/blob/main/src/img/learn/A-Award-Econytu-active.png?raw=true",
+    },
+    {
+      label: "Дарвин",
+      default: "https://github.com/HSEADC/Trace/blob/main/src/img/learn/A-Award-Darvin-disable.png?raw=true",
+      complete: "https://github.com/HSEADC/Trace/blob/main/src/img/learn/A-Award-Darvin-active.png?raw=true",
+    },
+  ];
+
+  function setAwardVariant(img, index) {
+    const variant = awardVariants[Math.min(Math.floor((index - 1) / 5), awardVariants.length - 1)];
+
+    img.src = variant.default;
+    img.alt = variant.label;
+    img.dataset.default = variant.default;
+    img.dataset.complete = variant.complete;
+  }
 
   function createAwardSlot(index) {
     const slot = document.createElement("div");
@@ -842,10 +869,7 @@ if (!root) {
     const img = document.createElement("img");
     img.className = "A-Award-Img";
     img.id = `awardImg${index}`;
-    img.src = awardPlaceholderDefault;
-    img.alt = `Медаль урока ${index}`;
-    img.dataset.default = awardPlaceholderDefault;
-    img.dataset.complete = awardPlaceholderComplete;
+    setAwardVariant(img, index);
 
     slot.appendChild(line);
     slot.appendChild(img);
@@ -863,6 +887,12 @@ if (!root) {
   }
 
   const awardSlots = [...root.querySelectorAll(".M-AwardSlot")];
+
+  awardSlots.forEach((slot, index) => {
+    const img = slot.querySelector(".A-Award-Img");
+
+    if (img) setAwardVariant(img, index + 1);
+  });
 
   let currentLessonIndex = Math.min(
     Math.max(initialLessonId - 1, 0),
@@ -1112,3 +1142,5 @@ if (!root) {
   resetLessonState();
   renderCover();
 }
+
+

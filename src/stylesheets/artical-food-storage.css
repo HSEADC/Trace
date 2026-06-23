@@ -1,0 +1,9 @@
+.C-FoodStorageHeroVisual { justify-content: flex-end; }
+.A-FoodStorageLittle { object-fit: contain; position: absolute; right: 27%; top: 4%; width: 17vw; z-index: 2; animation: food-storage-little-float 4.6s ease-in-out infinite; }
+.C-FoodStorageBigs { align-items: end; bottom: 1.7vw; display: flex; gap: 1vw; position: absolute; right: 1%; }
+.C-FoodStorageBigs img { animation: food-storage-big-float 5s ease-in-out infinite; object-fit: contain; width: 21vw; }
+.C-FoodStorageBigs img:nth-child(2) { animation-delay: 220ms; }
+.A-FoodStorageCursor { bottom: 3vw; left: 17%; position: absolute; width: 3.4vw; z-index: 3; }
+@keyframes food-storage-little-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-.42vw); } }
+@keyframes food-storage-big-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(.3vw); } }
+@media (max-width:768px) { .A-FoodStorageLittle { right:27%; width:34vw; }.C-FoodStorageBigs { bottom:3vw; gap:2vw; }.C-FoodStorageBigs img { width:41vw; }.A-FoodStorageCursor { bottom:5vw; left:18%; width:7vw; } }

@@ -1,100 +1,467 @@
-.body_article_battery { background: var(--color-bg-grey); color: var(--color-dark-grey); overflow-x: hidden; }
-.W-BatteryArticle { margin: 2vw auto 4vw; max-width: 92vw; }
-.O-BatteryHero { background: var(--color-white); border-bottom: 1vw solid var(--color-dark-grey); border-radius: 2vw; border-right: 1vw solid var(--color-dark-grey); height: 30vw; padding: 1vw; position: relative; }
-.A-BatteryBack { align-items: center; background: var(--color-yellow); border-radius: .5vw; display: flex; font: var(--font-h3); gap: 3vw; height: 3vw; left: 0; padding: 0 1vw; position: absolute; text-transform: uppercase; top: 0; width: 12vw; z-index: 2; }
-.A-BatteryBack img { height: 1.3vw; transform: scaleX(-1); width: 1.3vw; }
-.W-BatteryHeroContent { background: var(--color-read); border-radius: 1.1vw; display: flex; height: 100%; overflow: hidden; padding: 7.5vw 2vw 2.3vw; }
-.M-BatteryHeroInfo { display: flex; flex: 0 0 40%; flex-direction: column; min-width: 0; }
-.M-BatteryHeroInfo h1 { color: var(--color-white); font: var(--font-h1); line-height: 1.1; margin: 0; max-width: 26vw; text-transform: uppercase; }
-.C-BatteryMeta { display: flex; gap: 3vw; margin-top: auto; }
-.C-BatteryMetaGroup { display: grid; gap: 1vw; }
-.C-BatteryMetaGroup--stats { flex: 0 0 14vw; }
-.M-BatteryMetaItem { align-items: center; color: var(--color-white); display: flex; font: var(--font-h3); gap: 1vw; min-height: 3vw; text-transform: uppercase; }
-.M-BatteryMetaItem img { flex: 0 0 3vw; height: 3vw; object-fit: contain; width: 3vw; }
-.W-BatteryHeroVisual { align-items: center; display: flex; flex: 1; justify-content: center; min-width: 0; position: relative; }
-.A-BatteryCursor { left: 20%; position: absolute; top: 57%; width: 3.4vw; z-index: 4; }
-.A-BatteryCharger { left: 10%; position: absolute; top: 17%; transform: rotate(-15deg); width: 13vw; }
-.C-BatteryHeroCells { align-items: end; bottom: 1vw; display: flex; gap: 1.3vw; position: absolute; right: 6%; }
-.C-BatteryHeroCells img { height: 13vw; object-fit: contain; }
-.O-BatteryArticleContent { align-items: flex-start; display: flex; gap: 2vw; margin-top: 2vw; }
-.W-BatteryInfographic { display: flex; flex: 0 0 40%; flex-direction: column; gap: 5vw; padding: 0 1.2vw; }
-.M-BatteryInfo { align-items: center; display: flex; flex-direction: column; text-align: center; width: 100%; }
-.M-BatteryInfo h2 { color: var(--color-read); font: var(--font-h1); line-height: 1.04; margin: 0; text-transform: uppercase; }
-.C-BatteryWasteCells { align-items: end; display: flex; gap: 1.6vw; justify-content: center; }
-.C-BatteryWasteCells img { height: 12.5vw; object-fit: contain; }
-.M-BatteryInfo--waste h2 { margin-top: 1.5vw; max-width: 30vw; }
-.M-BatteryInfo--cycles img, .M-BatteryInfo--reduction img { max-width: 29vw; width: 100%; }
-.M-BatteryInfo--cycles h2, .M-BatteryInfo--reduction h2 { margin-top: 1.3vw; }
-.C-BatteryCost { align-items: end; display: flex; gap: 6vw; justify-content: center; }
-.C-BatteryCost div { align-items: center; display: flex; flex-direction: column; gap: 1vw; }
-.C-BatteryCost strong, .C-BatteryCost b { color: var(--color-read); font: var(--font-h1); line-height: 1; text-transform: uppercase; }
-.C-BatteryCost span { background: var(--color-read); border-radius: .8vw .8vw 0 0; box-shadow: inset 0 .3vw .3vw rgba(255,255,255,.45); display: block; height: 8vw; width: 7vw; }
-.C-BatteryCost div:last-child span { background: var(--color-yellow); height: 4vw; }
-.M-BatteryInfo--cost h2 { margin-top: 2vw; }
-.W-BatteryArticleText { display: flex; flex: 1; flex-direction: column; gap: .7vw; min-width: 0; }
-.M-BatteryTextCard, .M-BatteryVideoCard { background: var(--color-white); border-radius: 1.35vw; box-shadow: inset 0 .28vw .38vw rgba(255,255,255,.6), inset 0 -.18vw .32vw rgba(0,0,0,.1), 0 .14vw .22vw rgba(83,83,83,.08); padding: 1.8vw 2.2vw; }
-.M-BatteryTextCard p, .M-BatteryTextCard li { color: var(--color-dark-grey); font: var(--font-p); letter-spacing: var(--ls-p); line-height: 1.14; margin: 0; }
-.M-BatteryTextCard p + p { margin-top: 1vw; }
-.M-BatteryTextCard ul { margin: .4vw 0 0 1.7vw; padding: 0; }
-.M-BatteryVideoCard { align-items: stretch; display: flex; flex-direction: column; min-height: 20vw; }
-.M-BatteryVideoCard h2 { color: var(--color-read); font: var(--font-h1); line-height: 1; margin: 0; text-transform: uppercase; }
-.A-BatteryPlay { align-self: center; background: transparent; border: 0; height: 5vw; margin: auto; position: relative; width: 5vw; }
-.A-BatteryPlay::before { border-bottom: 2.5vw solid transparent; border-left: 4vw solid var(--color-read); border-top: 2.5vw solid transparent; content: ""; left: 1vw; position: absolute; top: 0; }
-
-/* Gentle motion mirrors the previous article pages. */
-.O-BatteryHero { animation: battery-hero-in 560ms cubic-bezier(.22,1,.36,1) both; }
-.A-BatteryBack, .M-BatteryTextCard, .M-BatteryVideoCard { transition: box-shadow 180ms ease, transform 180ms ease, filter 180ms ease; }
-.A-BatteryBack:hover { filter: brightness(1.04); transform: translateX(.22vw); }
-.M-BatteryTextCard:hover, .M-BatteryVideoCard:hover { box-shadow: inset 0 .28vw .38vw rgba(255,255,255,.7), inset 0 -.18vw .32vw rgba(0,0,0,.1), 0 .45vw .8vw rgba(83,83,83,.16); transform: translateY(-.24vw); }
-.A-BatteryCharger { animation: battery-charger-float 4s ease-in-out infinite; }
-.C-BatteryHeroCells img { animation: battery-cell-pulse 5.4s ease-in-out infinite; transform-origin: bottom center; }
-.C-BatteryHeroCells img:nth-child(2) { animation-delay: 180ms; }.C-BatteryHeroCells img:nth-child(3) { animation-delay: 360ms; }
-.M-BatteryInfo.is-motion-ready, .M-BatteryTextCard.is-motion-ready, .M-BatteryVideoCard.is-motion-ready { opacity: 0; transform: translateY(1vw); }
-.M-BatteryInfo.is-in-view, .M-BatteryTextCard.is-in-view, .M-BatteryVideoCard.is-in-view { animation: battery-reveal 520ms cubic-bezier(.22,1,.36,1) var(--battery-delay,0ms) both; }
-@keyframes battery-hero-in { from { opacity:0; transform:translateY(.7vw); } to { opacity:1; transform:translateY(0); } }
-@keyframes battery-charger-float { 0%,100% { transform:rotate(-15deg) translateY(0); } 50% { transform:rotate(-15deg) translateY(-.45vw); } }
-@keyframes battery-cell-pulse { 0%,10%,100% { transform:translateY(0); } 4% { transform:translateY(-.5vw); } 7% { transform:translateY(.1vw); } }
-@keyframes battery-reveal { from { opacity:0; transform:translateY(1vw); } to { opacity:1; transform:translateY(0); } }
-@media (prefers-reduced-motion: reduce) { .body_article_battery *, .body_article_battery *::before, .body_article_battery *::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; } .M-BatteryInfo.is-motion-ready, .M-BatteryTextCard.is-motion-ready, .M-BatteryVideoCard.is-motion-ready { opacity:1; transform:none; } }
-@media (max-width:768px) { .W-BatteryArticle { margin:4vw auto 8vw; max-width:94vw; }.O-BatteryHero{height:auto;padding:9vw 3vw 3vw}.A-BatteryBack{height:8vw;width:30vw}.W-BatteryHeroContent,.O-BatteryArticleContent{flex-direction:column}.W-BatteryHeroContent{min-height:72vw;padding:7vw 5vw}.M-BatteryHeroInfo{flex-basis:auto}.C-BatteryMeta{gap:5vw;margin-top:6vw}.C-BatteryMetaGroup--stats{flex-basis:30vw}.M-BatteryMetaItem img{flex-basis:6vw;height:6vw;width:6vw}.W-BatteryHeroVisual{flex-basis:38vw;width:100%}.A-BatteryCharger{width:27vw}.C-BatteryHeroCells img{height:26vw}.W-BatteryInfographic{flex-basis:auto;gap:11vw;padding:0;width:100%}.C-BatteryWasteCells img{height:27vw}.M-BatteryInfo--cycles img,.M-BatteryInfo--reduction img{max-width:62vw}.W-BatteryArticleText{gap:2vw;width:100%}.M-BatteryTextCard,.M-BatteryVideoCard{border-radius:3vw;padding:5vw}.M-BatteryVideoCard{min-height:48vw}.A-BatteryPlay{height:14vw;width:14vw}.A-BatteryPlay::before{border-bottom-width:7vw;border-left-width:11vw;border-top-width:7vw;left:2vw} }
-/* Header illustration alignment: charger and cells form one compact composition. */
-.W-BatteryHeroVisual {
-  justify-content: flex-end;
+.body_article_battery {
+  background: var(--color-bg-grey);
+  color: var(--color-dark-grey);
+  overflow-x: hidden;
 }
-
-.A-BatteryCharger {
-  left: 3%;
-  top: 12%;
-  width: 15.5vw;
+.W-BatteryArticle {
+  margin: 2vw auto 4vw;
+  max-width: 92vw;
 }
-
-.A-BatteryCursor {
-  left: 22%;
-  top: 59%;
+.O-BatteryHero {
+  background: var(--color-white);
+  border-bottom: 1vw solid var(--color-dark-grey);
+  border-radius: 2vw;
+  border-right: 1vw solid var(--color-dark-grey);
+  height: 30vw;
+  padding: 1vw;
+  position: relative;
 }
-
-.C-BatteryHeroCells {
-  bottom: 2.3vw;
+.A-BatteryBack {
+  align-items: center;
+  background: var(--color-yellow);
+  border-radius: 0.5vw;
+  display: flex;
+  font: var(--font-h3);
+  gap: 3vw;
+  height: 3vw;
+  left: 0;
+  padding: 0 1vw;
+  position: absolute;
+  text-transform: uppercase;
+  top: 0;
+  width: 12vw;
+  z-index: 2;
+}
+.A-BatteryBack img {
+  height: 1.3vw;
+  transform: scaleX(-1);
+  width: 1.3vw;
+}
+.W-BatteryHeroContent {
+  background: var(--color-read);
+  border-radius: 1.1vw;
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  padding: 7.5vw 2vw 2.3vw;
+}
+.M-BatteryHeroInfo {
+  display: flex;
+  flex: 0 0 40%;
+  flex-direction: column;
+  min-width: 0;
+}
+.M-BatteryHeroInfo h1 {
+  color: var(--color-white);
+  font: var(--font-h1);
+  line-height: 1.1;
+  margin: 0;
+  max-width: 26vw;
+  text-transform: uppercase;
+}
+.C-BatteryMeta {
+  display: flex;
+  gap: 3vw;
+  margin-top: auto;
+}
+.C-BatteryMetaGroup {
+  display: grid;
   gap: 1vw;
-  right: 0;
 }
-
+.C-BatteryMetaGroup--stats {
+  flex: 0 0 14vw;
+}
+.M-BatteryMetaItem {
+  align-items: center;
+  color: var(--color-white);
+  display: flex;
+  font: var(--font-h3);
+  gap: 1vw;
+  min-height: 3vw;
+  text-transform: uppercase;
+}
+.M-BatteryMetaItem img {
+  flex: 0 0 3vw;
+  height: 3vw;
+  object-fit: contain;
+  width: 3vw;
+}
+.W-BatteryHeroVisual {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  min-width: 0;
+  position: relative;
+}
+.A-BatteryCursor {
+  left: 20%;
+  position: absolute;
+  top: 57%;
+  width: 3.4vw;
+  z-index: 4;
+}
+.A-BatteryCharger {
+  left: 10%;
+  position: absolute;
+  top: 17%;
+  transform: rotate(-15deg);
+  width: 13vw;
+}
+.C-BatteryHeroCells {
+  align-items: end;
+  bottom: 1vw;
+  display: flex;
+  gap: 1.3vw;
+  position: absolute;
+  right: 6%;
+}
 .C-BatteryHeroCells img {
-  height: 14.5vw;
+  height: 13vw;
+  object-fit: contain;
+}
+.O-BatteryArticleContent {
+  align-items: flex-start;
+  display: flex;
+  gap: 2vw;
+  margin-top: 2vw;
+}
+.W-BatteryInfographic {
+  display: flex;
+  flex: 0 0 40%;
+  flex-direction: column;
+  gap: 5vw;
+  padding: 0 1.2vw;
+}
+.M-BatteryInfo {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+}
+.M-BatteryInfo h2 {
+  color: var(--color-read);
+  font: var(--font-h1);
+  line-height: 1.04;
+  margin: 0;
+  text-transform: uppercase;
+}
+.C-BatteryWasteCells {
+  align-items: end;
+  display: flex;
+  gap: 1.6vw;
+  justify-content: center;
+}
+.C-BatteryWasteCells img {
+  height: 12.5vw;
+  object-fit: contain;
+}
+.M-BatteryInfo--waste h2 {
+  margin-top: 1.5vw;
+  max-width: 30vw;
+}
+.M-BatteryInfo--cycles img,
+.M-BatteryInfo--reduction img {
+  max-width: 29vw;
+  width: 100%;
+}
+.M-BatteryInfo--cycles h2,
+.M-BatteryInfo--reduction h2 {
+  margin-top: 1.3vw;
+}
+.C-BatteryCost {
+  align-items: end;
+  display: flex;
+  gap: 6vw;
+  justify-content: center;
+}
+.C-BatteryCost div {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+.C-BatteryCost strong,
+.C-BatteryCost b {
+  color: var(--color-read);
+  font: var(--font-h1);
+  line-height: 1;
+  text-transform: uppercase;
+}
+.C-BatteryCost span {
+  background: var(--color-read);
+  border-radius: 0.8vw 0.8vw 0 0;
+  box-shadow: inset 0 0.3vw 0.3vw rgba(255, 255, 255, 0.45);
+  display: block;
+  height: 8vw;
+  width: 7vw;
+}
+.C-BatteryCost div:last-child span {
+  background: var(--color-yellow);
+  height: 4vw;
+}
+.M-BatteryInfo--cost h2 {
+  margin-top: 2vw;
+}
+.W-BatteryArticleText {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.7vw;
+  min-width: 0;
+}
+.M-BatteryTextCard,
+.M-BatteryVideoCard {
+  background: var(--color-white);
+  border-radius: 1.35vw;
+  box-shadow:
+    inset 0 0.28vw 0.38vw rgba(255, 255, 255, 0.6),
+    inset 0 -0.18vw 0.32vw rgba(0, 0, 0, 0.1),
+    0 0.14vw 0.22vw rgba(83, 83, 83, 0.08);
+  padding: 1.8vw 2.2vw;
+}
+.M-BatteryTextCard p,
+.M-BatteryTextCard li {
+  color: var(--color-dark-grey);
+  font: var(--font-p);
+  letter-spacing: var(--ls-p);
+  line-height: 1.14;
+  margin: 0;
+}
+.M-BatteryTextCard p + p {
+  margin-top: 1vw;
+}
+.M-BatteryTextCard ul {
+  margin: 0.4vw 0 0 1.7vw;
+  padding: 0;
+}
+.M-BatteryVideoCard {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  min-height: 20vw;
+}
+.M-BatteryVideoCard h2 {
+  color: var(--color-read);
+  font: var(--font-h1);
+  line-height: 1;
+  margin: 0;
+  text-transform: uppercase;
+}
+.A-BatteryPlay {
+  align-self: center;
+  background: transparent;
+  border: 0;
+  height: 5vw;
+  margin: auto;
+  position: relative;
+  width: 5vw;
+}
+.A-BatteryPlay::before {
+  border-bottom: 2.5vw solid transparent;
+  border-left: 4vw solid var(--color-read);
+  border-top: 2.5vw solid transparent;
+  content: "";
+  left: 1vw;
+  position: absolute;
+  top: 0;
 }
 
+
+.O-BatteryHero {
+  animation: battery-hero-in 560ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.A-BatteryBack,
+.M-BatteryTextCard,
+.M-BatteryVideoCard {
+  transition:
+    box-shadow 180ms ease,
+    transform 180ms ease,
+    filter 180ms ease;
+}
+.A-BatteryBack:hover {
+  filter: brightness(1.04);
+  transform: translateX(0.22vw);
+}
+.M-BatteryTextCard:hover,
+.M-BatteryVideoCard:hover {
+  box-shadow:
+    inset 0 0.28vw 0.38vw rgba(255, 255, 255, 0.7),
+    inset 0 -0.18vw 0.32vw rgba(0, 0, 0, 0.1),
+    0 0.45vw 0.8vw rgba(83, 83, 83, 0.16);
+  transform: translateY(-0.24vw);
+}
+.A-BatteryCharger {
+  animation: battery-charger-float 4s ease-in-out infinite;
+}
+.C-BatteryHeroCells img {
+  animation: battery-cell-pulse 5.4s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+.C-BatteryHeroCells img:nth-child(2) {
+  animation-delay: 180ms;
+}
+.C-BatteryHeroCells img:nth-child(3) {
+  animation-delay: 360ms;
+}
+.M-BatteryInfo.is-motion-ready,
+.M-BatteryTextCard.is-motion-ready,
+.M-BatteryVideoCard.is-motion-ready {
+  opacity: 0;
+  transform: translateY(1vw);
+}
+.M-BatteryInfo.is-in-view,
+.M-BatteryTextCard.is-in-view,
+.M-BatteryVideoCard.is-in-view {
+  animation: battery-reveal 520ms cubic-bezier(0.22, 1, 0.36, 1)
+    var(--battery-delay, 0ms) both;
+}
+@keyframes battery-hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.7vw);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes battery-charger-float {
+  0%,
+  100% {
+    transform: rotate(-15deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-15deg) translateY(-0.45vw);
+  }
+}
+@keyframes battery-cell-pulse {
+  0%,
+  10%,
+  100% {
+    transform: translateY(0);
+  }
+  4% {
+    transform: translateY(-0.5vw);
+  }
+  7% {
+    transform: translateY(0.1vw);
+  }
+}
+@keyframes battery-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(1vw);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .body_article_battery *,
+  .body_article_battery *::before,
+  .body_article_battery *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .M-BatteryInfo.is-motion-ready,
+  .M-BatteryTextCard.is-motion-ready,
+  .M-BatteryVideoCard.is-motion-ready {
+    opacity: 1;
+    transform: none;
+  }
+}
 @media (max-width: 768px) {
+  .W-BatteryArticle {
+    margin: 4vw auto 8vw;
+    max-width: 94vw;
+  }
+  .O-BatteryHero {
+    height: auto;
+    padding: 9vw 3vw 3vw;
+  }
+  .A-BatteryBack {
+    height: 8vw;
+    width: 30vw;
+  }
+  .W-BatteryHeroContent,
+  .O-BatteryArticleContent {
+    flex-direction: column;
+  }
+  .W-BatteryHeroContent {
+    min-height: 72vw;
+    padding: 7vw 5vw;
+  }
+  .M-BatteryHeroInfo {
+    flex-basis: auto;
+  }
+  .C-BatteryMeta {
+    gap: 5vw;
+    margin-top: 6vw;
+  }
+  .C-BatteryMetaGroup--stats {
+    flex-basis: 30vw;
+  }
+  .M-BatteryMetaItem img {
+    flex-basis: 6vw;
+    height: 6vw;
+    width: 6vw;
+  }
+  .W-BatteryHeroVisual {
+    flex-basis: 38vw;
+    width: 100%;
+  }
   .A-BatteryCharger {
-    left: 5%;
-    top: 11%;
-    width: 31vw;
+    width: 27vw;
   }
-
-  .C-BatteryHeroCells {
-    bottom: 4vw;
-  }
-
   .C-BatteryHeroCells img {
-    height: 29vw;
+    height: 26vw;
   }
+  .W-BatteryInfographic {
+    flex-basis: auto;
+    gap: 11vw;
+    padding: 0;
+    width: 100%;
+  }
+  .C-BatteryWasteCells img {
+    height: 27vw;
+  }
+  .M-BatteryInfo--cycles img,
+  .M-BatteryInfo--reduction img {
+    max-width: 62vw;
+  }
+  .W-BatteryArticleText {
+    gap: 2vw;
+    width: 100%;
+  }
+  .M-BatteryTextCard,
+  .M-BatteryVideoCard {
+    border-radius: 3vw;
+    padding: 5vw;
+  }
+  .M-BatteryVideoCard {
+    min-height: 48vw;
+  }
+  .A-BatteryPlay {
+    height: 14vw;
+    width: 14vw;
+  }
+  .A-BatteryPlay::before {
+    border-bottom-width: 7vw;
+    border-left-width: 11vw;
+    border-top-width: 7vw;
+    left: 2vw;
+  }
+}
+
+.W-BatteryHeroVisual { justify-content: flex-end; }
+.A-BatteryCursor { left: 22%; top: 59%; }
+.C-BatteryHeroCells { bottom: 2.3vw; gap: 1vw; right: 0; }
+.C-BatteryHeroCells img { height: 14.5vw; }
+@media (max-width: 768px) {
+  .C-BatteryHeroCells { bottom: 4vw; }
+  .C-BatteryHeroCells img { height: 29vw; }
 }

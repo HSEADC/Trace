@@ -1,7 +1,7 @@
 @import "reset.css";
 @import "root.css";
 @import "fonts.css";
-/* components */
+
 @import url("../components/header/header.css");
 @import url("../components/footer/footer.css");
 @import url("../components/card/card.css");
@@ -29,3 +29,41 @@
 @import "artical-refill.css";
 
 @import "artical-battery-charge.css";
+
+@import "artical-reusable-paper-towels.css";
+
+@import "artical-water-saving.css";
+
+@import "artical-reusable-shoe-covers.css";
+
+@import "artical-toothbrush-saving.css";
+
+
+.M-SpongesTextCard ul,
+.M-RefillTextCard ul,
+.M-BatteryTextCard ul,
+.M-TowelsTextCard ul,
+.M-WaterTextCard ul {
+  list-style: disc outside;
+  padding-left: 1.7vw;
+}
+
+.M-SpongesTextCard li::marker,
+.M-RefillTextCard li::marker,
+.M-BatteryTextCard li::marker,
+.M-TowelsTextCard li::marker,
+.M-WaterTextCard li::marker {
+  color: var(--color-dark-grey);
+}
+
+@import "artical-hidden-battery-costs.css";
+
+@import "artical-air-drying-laundry.css";
+
+@import "artical-food-storage.css";
+
+@import "artical-old-clothes-rags.css";
+
+@import "artical-food-waste.css";
+
+@import "podcast.css";

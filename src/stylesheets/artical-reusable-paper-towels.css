@@ -1,0 +1,499 @@
+.body_article_towels {
+  background: var(--color-bg-grey);
+  color: var(--color-dark-grey);
+  overflow-x: hidden;
+}
+.W-TowelsArticle {
+  margin: 2vw auto 4vw;
+  max-width: 92vw;
+}
+.O-TowelsHero {
+  background: var(--color-white);
+  border-bottom: 1vw solid var(--color-dark-grey);
+  border-radius: 2vw;
+  border-right: 1vw solid var(--color-dark-grey);
+  height: 30vw;
+  padding: 1vw;
+  position: relative;
+}
+.A-TowelsBack {
+  align-items: center;
+  background: var(--color-yellow);
+  border-radius: 0.5vw;
+  display: flex;
+  font: var(--font-h3);
+  gap: 3vw;
+  height: 3vw;
+  left: 0;
+  padding: 0 1vw;
+  position: absolute;
+  text-transform: uppercase;
+  top: 0;
+  width: 12vw;
+  z-index: 2;
+}
+.A-TowelsBack img {
+  height: 1.3vw;
+  transform: scaleX(-1);
+  width: 1.3vw;
+}
+.W-TowelsHeroContent {
+  background: var(--color-read);
+  border-radius: 1.1vw;
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  padding: 7.5vw 2vw 2.3vw;
+}
+.M-TowelsHeroInfo {
+  display: flex;
+  flex: 0 0 40%;
+  flex-direction: column;
+  min-width: 0;
+}
+.M-TowelsHeroInfo h1 {
+  color: var(--color-white);
+  font: var(--font-h1);
+  line-height: 1.1;
+  margin: 0;
+  max-width: 28vw;
+  text-transform: uppercase;
+}
+.C-TowelsMeta {
+  display: flex;
+  gap: 3vw;
+  margin-top: auto;
+}
+.C-TowelsMetaGroup {
+  display: grid;
+  gap: 1vw;
+}
+.C-TowelsMetaGroup--stats {
+  flex: 0 0 14vw;
+}
+.M-TowelsMetaItem {
+  align-items: center;
+  color: var(--color-white);
+  display: flex;
+  font: var(--font-h3);
+  gap: 1vw;
+  min-height: 3vw;
+  text-transform: uppercase;
+}
+.M-TowelsMetaItem img {
+  flex: 0 0 3vw;
+  height: 3vw;
+  object-fit: contain;
+  width: 3vw;
+}
+.W-TowelsHeroVisual {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  min-width: 0;
+  position: relative;
+}
+.A-TowelsCursor {
+  left: 21%;
+  position: absolute;
+  top: 55%;
+  width: 3.4vw;
+  z-index: 4;
+}
+.A-TowelsRoll--small {
+  bottom: 2vw;
+  left: 7%;
+  position: absolute;
+  width: 10vw;
+}
+.C-TowelsRolls {
+  align-items: end;
+  bottom: 1vw;
+  display: flex;
+  gap: 1.4vw;
+  position: absolute;
+  right: 5%;
+}
+.C-TowelsRolls img {
+  height: 14vw;
+  object-fit: contain;
+}
+.O-TowelsArticleContent {
+  align-items: flex-start;
+  display: flex;
+  gap: 2vw;
+  margin-top: 2vw;
+}
+.W-TowelsInfographic {
+  display: flex;
+  flex: 0 0 40%;
+  flex-direction: column;
+  gap: 5vw;
+  padding: 0 1.2vw;
+}
+.M-TowelsInfo {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+}
+.M-TowelsInfo h2 {
+  color: var(--color-read);
+  font: var(--font-h1);
+  line-height: 1.04;
+  margin: 1.2vw 0 0;
+  text-transform: uppercase;
+}
+.M-TowelsInfo--cycles img,
+.M-TowelsInfo--reduction img {
+  max-width: 30vw;
+  width: 100%;
+}
+.M-TowelsInfo--usage {
+  gap: 2vw;
+}
+.C-TowelsBars {
+  display: grid;
+  gap: 1.3vw;
+  width: 78%;
+}
+.C-TowelsBars div {
+  display: grid;
+  gap: 0.5vw;
+}
+.C-TowelsBars span {
+  background: var(--color-white);
+  border-radius: 0.7vw;
+  box-shadow:
+    inset 0 0.25vw 0.35vw rgba(255, 255, 255, 0.6),
+    inset 0 -0.2vw 0.3vw rgba(0, 0, 0, 0.14);
+  color: var(--color-read);
+  font: var(--font-h1);
+  padding: 0.6vw;
+}
+.C-TowelsBars div:last-child span {
+  background: linear-gradient(
+    90deg,
+    var(--color-yellow) 0 50%,
+    var(--color-white) 50%
+  );
+}
+.C-TowelsBars b {
+  color: var(--color-read);
+  font: var(--font-h1);
+  line-height: 1;
+  text-transform: uppercase;
+}
+.C-TowelsBars div:last-child b {
+  color: var(--color-yellow);
+}
+.W-TowelsCircle {
+  position: relative;
+  width: 30vw;
+}
+.W-TowelsCircle img {
+  display: block;
+  width: 100%;
+}
+.W-TowelsCircle p {
+  color: var(--color-read);
+  font: var(--font-h1);
+  left: 50%;
+  line-height: 1.04;
+  margin: 0;
+  position: absolute;
+  text-transform: uppercase;
+  top: 80%;
+  transform: translate(-50%, -50%);
+  width: 72%;
+}
+.W-TowelsCircle strong {
+  color: var(--color-yellow);
+  font: inherit;
+}
+.W-TowelsArticleText {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.7vw;
+  min-width: 0;
+}
+.M-TowelsTextCard {
+  background: var(--color-white);
+  border-radius: 1.35vw;
+  box-shadow:
+    inset 0 0.28vw 0.38vw rgba(255, 255, 255, 0.6),
+    inset 0 -0.18vw 0.32vw rgba(0, 0, 0, 0.1),
+    0 0.14vw 0.22vw rgba(83, 83, 83, 0.08);
+  padding: 1.8vw 2.2vw;
+}
+.M-TowelsTextCard p,
+.M-TowelsTextCard li {
+  color: var(--color-dark-grey);
+  font: var(--font-p);
+  letter-spacing: var(--ls-p);
+  line-height: 1.14;
+  margin: 0;
+}
+.M-TowelsTextCard p + p {
+  margin-top: 1vw;
+}
+.M-TowelsTextCard ul {
+  margin: 0.4vw 0 0 1.7vw;
+  padding: 0;
+}
+.O-TowelsHero {
+  animation: towels-hero-in 560ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.A-TowelsBack,
+.M-TowelsTextCard {
+  transition:
+    box-shadow 180ms ease,
+    transform 180ms ease,
+    filter 180ms ease;
+}
+.A-TowelsBack:hover {
+  filter: brightness(1.04);
+  transform: translateX(0.22vw);
+}
+.M-TowelsTextCard:hover {
+  box-shadow:
+    inset 0 0.28vw 0.38vw rgba(255, 255, 255, 0.7),
+    inset 0 -0.18vw 0.32vw rgba(0, 0, 0, 0.1),
+    0 0.45vw 0.8vw rgba(83, 83, 83, 0.16);
+  transform: translateY(-0.24vw);
+}
+.A-TowelsRoll--small {
+  animation: towels-small-float 3.8s ease-in-out infinite;
+}
+.C-TowelsRolls img {
+  animation: towels-roll-hop 5.4s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+.C-TowelsRolls img:nth-child(2) {
+  animation-delay: 180ms;
+}
+.C-TowelsRolls img:nth-child(3) {
+  animation-delay: 360ms;
+}
+.M-TowelsInfo.is-motion-ready,
+.M-TowelsTextCard.is-motion-ready {
+  opacity: 0;
+  transform: translateY(1vw);
+}
+.M-TowelsInfo.is-in-view,
+.M-TowelsTextCard.is-in-view {
+  animation: towels-reveal 520ms cubic-bezier(0.22, 1, 0.36, 1)
+    var(--towels-delay, 0ms) both;
+}
+@keyframes towels-hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.7vw);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes towels-small-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.4vw);
+  }
+}
+@keyframes towels-roll-hop {
+  0%,
+  10%,
+  100% {
+    transform: translateY(0);
+  }
+  4% {
+    transform: translateY(-0.5vw);
+  }
+  7% {
+    transform: translateY(0.1vw);
+  }
+}
+@keyframes towels-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(1vw);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .body_article_towels * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .M-TowelsInfo.is-motion-ready,
+  .M-TowelsTextCard.is-motion-ready {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (max-width: 768px) {
+  .W-TowelsArticle {
+    margin: 4vw auto 8vw;
+    max-width: 94vw;
+  }
+  .O-TowelsHero {
+    height: auto;
+    padding: 9vw 3vw 3vw;
+  }
+  .A-TowelsBack {
+    height: 8vw;
+    width: 30vw;
+  }
+  .W-TowelsHeroContent,
+  .O-TowelsArticleContent {
+    flex-direction: column;
+  }
+  .W-TowelsHeroContent {
+    min-height: 72vw;
+    padding: 7vw 5vw;
+  }
+  .M-TowelsHeroInfo {
+    flex-basis: auto;
+  }
+  .C-TowelsMeta {
+    gap: 5vw;
+    margin-top: 6vw;
+  }
+  .C-TowelsMetaGroup--stats {
+    flex-basis: 30vw;
+  }
+  .M-TowelsMetaItem img {
+    flex-basis: 6vw;
+    height: 6vw;
+    width: 6vw;
+  }
+  .W-TowelsHeroVisual {
+    flex-basis: 38vw;
+    width: 100%;
+  }
+  .A-TowelsRoll--small {
+    width: 22vw;
+  }
+  .C-TowelsRolls img {
+    height: 28vw;
+  }
+  .W-TowelsInfographic {
+    flex-basis: auto;
+    gap: 11vw;
+    padding: 0;
+    width: 100%;
+  }
+  .M-TowelsInfo--cycles img,
+  .M-TowelsInfo--reduction img {
+    max-width: 62vw;
+  }
+  .W-TowelsCircle {
+    width: 56vw;
+  }
+  .W-TowelsArticleText {
+    gap: 2vw;
+    width: 100%;
+  }
+  .M-TowelsTextCard {
+    border-radius: 3vw;
+    padding: 5vw;
+  }
+}
+
+.A-TowelsTitleVisual {
+  bottom: 1.2vw;
+  position: absolute;
+  right: 2%;
+  width: 29vw;
+  animation: towels-title-float 4.2s ease-in-out infinite;
+}
+
+.A-TowelsCursor {
+  left: 28%;
+  top: 56%;
+}
+
+@keyframes towels-title-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.38vw);
+  }
+}
+
+@media (max-width: 768px) {
+  .A-TowelsTitleVisual {
+    bottom: 3vw;
+    right: 2%;
+    width: 58vw;
+  }
+}
+
+.A-TowelsTitleVisual {
+  bottom: 2.8vw;
+  left: 3%;
+  right: auto;
+  width: 20vw;
+}
+
+.A-TowelsCursor {
+  left: 31%;
+  top: 55%;
+}
+
+@media (max-width: 768px) {
+  .A-TowelsTitleVisual {
+    bottom: 5vw;
+    left: 6%;
+    right: auto;
+    width: 40vw;
+  }
+}
+
+
+.C-TowelsTitleVisual {
+  align-items: end;
+  bottom: 2.8vw;
+  display: flex;
+  gap: 1.1vw;
+  left: 3%;
+  position: absolute;
+}
+
+.C-TowelsTitleVisual img {
+  animation: towels-title-float 4.2s ease-in-out infinite;
+  object-fit: contain;
+  width: 16.4vw;
+}
+
+.C-TowelsTitleVisual img:nth-child(2) {
+  animation-delay: 160ms;
+}
+.C-TowelsTitleVisual img:nth-child(3) {
+  animation-delay: 320ms;
+}
+
+@media (max-width: 768px) {
+  .C-TowelsTitleVisual {
+    bottom: 5vw;
+    gap: 2vw;
+    left: 6%;
+  }
+
+  .C-TowelsTitleVisual img {
+    width: 16vw;
+  }
+}

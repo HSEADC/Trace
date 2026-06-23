@@ -113,7 +113,7 @@ a {
   animation-delay: 0.4s;
 }
 
-/* анимация для первого блока с фото */
+
 @keyframes heroImageAppear {
   0% {
     opacity: 0;
@@ -126,7 +126,7 @@ a {
   }
 }
 
-/* второй блок */
+
 .O_Second_block_art_degree {
   margin-top: 2vw;
   width: 100%;
@@ -197,7 +197,7 @@ a {
     stroke-dashoffset: 502;
   }
 }
-/* анимация инфографики */
+
 .infographic_item {
   opacity: 0;
   transform: translateY(3vw) scale(0.95);
@@ -234,7 +234,7 @@ a {
   }
 }
 
-/*  */
+
 .infographic_item img {
   animation: infographicFloat 6s ease-in-out infinite;
   width: 94%;
@@ -264,12 +264,12 @@ a {
   transition: color 0.3s ease;
 }
 
-/* анимация подсвечивания текста */
+
 .infographic_item:hover img {
   filter: drop-shadow(0 0 1vw rgba(255, 255, 255, 0.6));
 }
 
-/* текстовый столбец */
+
 .M_Second_block_text_column_art_degree {
   width: 60%;
   height: auto;
@@ -305,13 +305,12 @@ a {
 }
 
 .O_Second_block_text_column_art_degree p {
-  /* font: var(--font-family-base); */
+  
   color: var(--color-dark-grey);
-  /* font-family: 'Inter';
-  font-size: 1.6vw; */
+  
   display: flex;
   flex-direction: column;
-  /* line-height: 1.6; */
+  
   gap: 1vw;
   width: 100%;
   height: fit-content;

@@ -1,0 +1,5 @@
+.C-RagsHeroVisual { justify-content: flex-end; }
+.A-RagsTitle { bottom: 1.4vw; object-fit: contain; position: absolute; right: 3%; transform-origin: center; width: 39vw; animation: rags-title-float 4.7s ease-in-out infinite; }
+.A-RagsCursor { bottom: 3.2vw; left: 18%; position: absolute; width: 3.4vw; z-index: 2; }
+@keyframes rags-title-float { 0%,100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-.35vw) rotate(.45deg); } }
+@media (max-width:768px) { .A-RagsTitle { bottom:3vw; right:1%; width:78vw; }.A-RagsCursor { bottom:5vw; left:17%; width:7vw; } }

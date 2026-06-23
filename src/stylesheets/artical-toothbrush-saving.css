@@ -1,0 +1,8 @@
+.C-ToothbrushHeroVisual { justify-content: flex-end; }
+.A-ToothpasteTitle, .A-ToothbrushTitle { object-fit: contain; position: absolute; transform-origin: center; }
+.A-ToothpasteTitle { right: 11%; top: 4%; width: 28vw; z-index: 2; animation: toothbrush-paste-float 5.2s ease-in-out infinite; }
+.A-ToothbrushTitle { bottom: 3%; right: 2%; width: 31vw; z-index: 1; animation: toothbrush-brush-float 5.2s ease-in-out infinite 260ms; }
+.A-ToothbrushCursor { bottom: 5%; left: 19%; position: absolute; width: 3.4vw; z-index: 3; }
+@keyframes toothbrush-paste-float { 0%,100% { transform: translateY(0) rotate(10deg); } 50% { transform: translateY(-.45vw) rotate(10deg); } }
+@keyframes toothbrush-brush-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(.35vw); } }
+@media (max-width:768px) { .A-ToothpasteTitle { right:8%; width:54vw; }.A-ToothbrushTitle { width:61vw; }.A-ToothbrushCursor { left:21%; width:7vw; } }

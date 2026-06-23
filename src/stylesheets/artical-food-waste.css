@@ -1,0 +1,5 @@
+.C-FoodWasteHeroVisual { justify-content: flex-end; }
+.A-FoodWasteTitle { bottom: 1.1vw; object-fit: contain; position: absolute; right: 2%; transform-origin: center; width: 42vw; animation: food-waste-title-float 4.8s ease-in-out infinite; }
+.A-FoodWasteCursor { bottom: 3vw; left: 15%; position: absolute; width: 3.4vw; z-index: 2; }
+@keyframes food-waste-title-float { 0%,100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-.38vw) rotate(-.35deg); } }
+@media (max-width:768px) { .A-FoodWasteTitle { bottom:3vw; right:0; width:84vw; }.A-FoodWasteCursor { bottom:5vw; left:15%; width:7vw; } }

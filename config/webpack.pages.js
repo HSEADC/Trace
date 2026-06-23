@@ -13,6 +13,7 @@ const htmlPages = [
   createPages("./src/pages/articles.html", "./pages/articles.html", ["index"]),
   createPages("./src/pages/learn.html", "./pages/learn.html", ["index"]),
   createPages("./src/pages/events.html", "./pages/events.html", ["index"]),
+  createPages("./src/pages/podcast.html", "./pages/podcast.html", ["index"]),
   createPages("./src/pages/styleguide.html", "./pages/styleguide.html", ["index"]),
   createPages("./src/pages/game.html", "./pages/game.html", ["index"]),
   createPages("./src/pages/about-us.html", "./pages/about-us.html", ["index"]),
@@ -95,6 +96,11 @@ const htmlPages = [
   createPages(
     "./src/pages/articals/artical-neskuchnoe-zemledelie.html",
     "./pages/articals/artical-neskuchnoe-zemledelie.html",
+    ["index"],
+  ),
+  createPages(
+    "./src/pages/articals/artical-hidden-battery-costs.html",
+    "./pages/articals/artical-hidden-battery-costs.html",
     ["index"],
   ),
 ];

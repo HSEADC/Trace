@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trace — Подкаст</title>
+    <meta
+      name="description"
+      content="Подкаст Trace о переработке, выгодных экопривычках и разумном потреблении."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://trace.adc.ac/pages/podcast.html" />
+    <meta property="og:title" content="Trace — Подкаст" />
+    <meta
+      property="og:description"
+      content="Экология за тыщу: разговоры о выгодных экопривычках."
+    />
+    <meta
+      property="og:image"
+      content="https://trace.adc.ac/meta-img/articals.jpg?v=20260621"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/icons/favicon.svg"
+      type="image/x-icon"
+    />
+  </head>
+  <body class="body_podcast">
+    <header></header>
+    <main class="W-PodcastPage">
+      <section class="O-Podcast" aria-labelledby="podcast-title">
+        <div class="M-PodcastTitle">
+          <img
+            id="podcast-title"
+            src="../img/podcast/A-Text-eco-for-1000.png"
+            alt="Экология за тыщу рублей"
+          />
+        </div>
+        <div class="W-PodcastPlayer">
+          <section class="M-PodcastNowPlaying" aria-label="Текущий эпизод">
+            <img
+              class="A-PodcastCrow"
+              src="../img/podcast/A-crow-with-flower.png"
+              alt=""
+              aria-hidden="true"
+            />
+            <div class="C-PodcastEpisode">
+              <h1>Интервью с зеленой вышкой</h1>
+              <p>Елена Маковенко x Мария Красная<br />x Виктория Николаева</p>
+            </div>
+            <div class="C-PodcastTimeline">
+              <span id="podcast-current-time">00:00:00</span
+              ><input
+                id="podcast-progress"
+                type="range"
+                min="0"
+                max="0"
+                value="0"
+                aria-label="Прогресс эпизода"
+              /><span id="podcast-duration">00:00:00</span>
+            </div>
+          </section>
+          <section
+            class="M-PodcastControls"
+            aria-label="Управление воспроизведением"
+          >
+            <button
+              type="button"
+              data-podcast-action="restart"
+              aria-label="В начало"
+            >
+              <img src="../img/podcast/A-button-back-to-start.png" alt="" />
+            </button>
+            <button
+              type="button"
+              data-podcast-action="backward"
+              aria-label="Назад на 10 секунд"
+            >
+              <img src="../img/podcast/A-button-minus-10sec.png" alt="" />
+            </button>
+            <button
+              type="button"
+              class="A-PodcastPlay"
+              data-podcast-action="toggle"
+              aria-label="Воспроизвести"
+            >
+              <img
+                id="podcast-toggle-icon"
+                src="../img/podcast/A-button-start.png"
+                alt=""
+              />
+            </button>
+            <button
+              type="button"
+              data-podcast-action="forward"
+              aria-label="Вперёд на 10 секунд"
+            >
+              <img src="../img/podcast/A-button-plus-10sec.png" alt="" />
+            </button>
+            <button
+              type="button"
+              data-podcast-action="end"
+              aria-label="В конец"
+            >
+              <img src="../img/podcast/A-button-back-to-end.png" alt="" />
+            </button>
+          </section>
+          <section
+            class="M-PodcastTurntable"
+            aria-label="Дисковый проигрыватель"
+          >
+            <img
+              class="A-PodcastBase"
+              src="../img/podcast/A-player-base.png"
+              alt=""
+              aria-hidden="true"
+            />
+            <img
+              class="A-PodcastWheel"
+              src="../img/podcast/A-player-wheel.png"
+              alt=""
+              aria-hidden="true"
+            />
+            <img
+              class="A-PodcastStylus"
+              src="../img/podcast/A-player-stylus.png"
+              alt=""
+              aria-hidden="true"
+            />
+          </section>
+        </div>
+        <audio
+          id="podcast-audio"
+          preload="metadata"
+          src="../img/podcast/Эксперт переработка.MP3"
+        ></audio>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
