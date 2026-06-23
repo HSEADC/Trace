@@ -19,4 +19,8 @@ if (refillAnimatedBlocks.length && "IntersectionObserver" in window) {
     block.style.setProperty("--refill-reveal-delay", `${(index % 3) * 90}ms`);
     refillObserver.observe(block);
   });
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> main
