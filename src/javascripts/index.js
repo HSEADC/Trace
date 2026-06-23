@@ -7,6 +7,14 @@ import "./game.js";
 import "./microinteractions.js";
 import "./events.js";
 import "./metrika.js";
+import "./sponges-animations.js";
+import "./refill-animations.js";
+import "./battery-animations.js";
+import "./towels-animations.js";
+import "./water-animations.js";
 
 console.log("ENTRY index.js loaded");
+
+
+import "./podcast.js";
 

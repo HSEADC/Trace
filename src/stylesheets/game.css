@@ -49,7 +49,7 @@
   margin-bottom: 5%;
 }
 
-/* GOAL BOX */
+
 
 .M-GameGoalBox {
   width: 100%;
@@ -187,7 +187,7 @@
   align-items: center;
 }
 
-/* кнопки */
+
 
 .M-GameControls {
   width: 100%;
@@ -232,13 +232,13 @@
   text-align: center;
 }
 
-/* обязательно для модалок поверх поля */
+
 .O-GameField {
   position: relative;
   overflow: hidden;
 }
 
-/* МОДАЛКИ */
+
 
 .O-GameModal {
   position: absolute;
@@ -562,5 +562,18 @@
   .A-GameModalActionButton {
     width: 12vw;
     height: 12vw;
+  }
+}
+@media (min-width: 769px) {
+  .W-GameScreen,
+  .W-GameLayout,
+  .W-GameField {
+    height: 36vw;
+  }
+
+  .O-GameField {
+    aspect-ratio: 1;
+    box-sizing: border-box;
+    height: 100%;
   }
 }

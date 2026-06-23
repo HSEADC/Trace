@@ -1,0 +1,5 @@
+.C-DryingHeroVisual { justify-content: flex-end; }
+.A-DryingTitle { bottom: 1.2vw; object-fit: contain; position: absolute; right: 0; transform-origin: center; width: 49vw; animation: drying-title-sway 5s ease-in-out infinite; }
+.A-DryingCursor { bottom: 2.5vw; left: 22%; position: absolute; width: 3.4vw; z-index: 2; }
+@keyframes drying-title-sway { 0%,100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-.3vw) rotate(.35deg); } }
+@media (max-width:768px) { .A-DryingTitle { bottom:2vw; right:-5vw; width:98vw; }.A-DryingCursor { bottom:4vw; left:23%; width:7vw; } }

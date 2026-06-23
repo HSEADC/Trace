@@ -936,9 +936,7 @@
   }
 
   .A-EventArticleButton {
-    border-radius: 1.2vw;
-    min-height: 10vw;
-    min-width: 34vw;
+    display: none;
   }
 
   .A-EventArticleBand {
@@ -958,35 +956,28 @@
     padding: 0;
   }
 
-  .Q-EventPlantDark {
-    left: -3vw;
-    top: -6vw;
-    width: 24vw;
-  }
-
+  .Q-EventPlantDark,
   .Q-EventPlantLight {
-    left: 12vw;
-    top: 12vw;
-    width: 58vw;
+    display: none;
   }
 
   .Q-EventBootLeft {
-    left: 14vw;
-    top: 23vw;
+    left: 0vw;
+    top: -4vw;
     width: 54vw;
   }
 
   .Q-EventBootRight {
-    left: 36vw;
-    top: 27vw;
+    left: 44vw;
+    top: 0vw;
     width: 46vw;
   }
 
   .M-EventTicket {
-    bottom: 58vw;
-    left: 4vw;
-    margin-top: 0;
-    width: calc(100% - 8vw);
+    bottom: 66vw;
+    left: 2vw;
+    margin-top: 2vw;
+    width: 96%;
   }
 
   .W-EventTicketTitle {
@@ -1020,13 +1011,19 @@
   .O-EventRules,
   .O-EventInstaPost {
     aspect-ratio: auto;
-    min-height: auto;
+    height: auto;
     padding: 5vw;
   }
 
   .M-EventRule {
     grid-template-columns: 12vw 1fr;
     min-height: 16vw;
+  }
+
+  .M-EventArticleHeroInfo p {
+    position: relative;
+    top: -2vw;
+    right: -16vw;
   }
 
   .M-EventRule img {
@@ -1075,19 +1072,21 @@
   }
 
   .M-EventRewardText img:first-child {
-    left: 15%;
-    top: 17%;
-    width: 52%;
+    left: 9%;
+    top: -7%;
+    width: 51%;
+    animation: none;
   }
 
   .M-EventRewardText p {
-    margin-top: 0;
+    margin-top: 3vw;
   }
 
   .Q-EventRewardBg {
     left: 7%;
-    top: 41%;
+    top: 47%;
     width: 82%;
+    animation: none;
   }
 
   .Q-EventApple {
@@ -1134,8 +1133,8 @@
 
   .W-EventSignup > img:first-child {
     left: 0;
-    top: 0;
-    width: 100%;
+    top: -2vw;
+    width: 120%;
   }
 
   .W-EventSignup > div {
@@ -1145,15 +1144,11 @@
   }
 
   .Q-EventPlanner {
-    right: 14vw;
-    top: -7vw;
-    width: 24vw;
+    display: none;
   }
 
   .Q-EventPen {
-    right: 5vw;
-    top: 2vw;
-    width: 7vw;
+    display: none;
   }
 
   .M-EventFaqItem summary {

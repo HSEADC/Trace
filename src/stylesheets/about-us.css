@@ -178,7 +178,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-image: url(../img/about-us/A-Trace-Letters.svg); */
+  
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -192,9 +192,7 @@
   z-index: 0;
 }
 
-/* .W-Rational, .W-Active {
-  width: 40%;
-} */
+
 
 .A-Tranier-img {
   width: 79%;
@@ -203,7 +201,7 @@
 .A-Flacon-img {
   width: 40%;
   position: absolute;
-  /* z-index: 1; */
+  
   top: 0vw;
   left: -1vw;
 }
@@ -228,19 +226,19 @@
 .W-Rational {
   left: 26vw;
   top: 7vw;
-  /* width: 30%; */
+  
 }
 
 .W-Active {
   left: 1vw;
   top: 12vw;
-  /* width: 47%; */
+  
 }
 
 .W-Economy {
   left: 28vw;
   top: 25vw;
-  /* width: 47%; */
+  
 }
 
 .A-Economy,
@@ -348,10 +346,7 @@
   position: absolute;
 }
 
-/* .A-LettersValues-Img {
-  margin-top: 3vw;
-  width: 75%;
-} */
+
 
 .W-ScreenThree-AboutUs {
   cursor: pointer;

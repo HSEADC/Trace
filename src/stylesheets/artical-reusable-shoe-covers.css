@@ -1,0 +1,8 @@
+.C-ShoesHeroVisual { justify-content: flex-end; }
+.A-ShoesSmall, .A-ShoesBig { bottom: 1vw; object-fit: contain; position: absolute; transform-origin: bottom center; }
+.A-ShoesSmall { left: 2%; width: 22vw; z-index: 2; animation: shoes-small-float 4s ease-in-out infinite; }
+.A-ShoesBig { right: 1%; width: 28vw; z-index: 1; animation: shoes-big-float 4.5s ease-in-out infinite 240ms; }
+.A-ShoesCursor { bottom: 2.2vw; left: 22%; top: auto; }
+@keyframes shoes-small-float { 0%,100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-.4vw) rotate(-2deg); } }
+@keyframes shoes-big-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(.35vw); } }
+@media (max-width:768px) { .A-ShoesSmall { width:44vw; }.A-ShoesBig { width:56vw; }.A-ShoesCursor { left:28%; } }

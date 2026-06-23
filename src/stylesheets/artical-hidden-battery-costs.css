@@ -1,0 +1,9 @@
+.C-HiddenBatteryHeroVisual { justify-content: flex-end; }
+.A-HiddenBatteryCursor { bottom: 3vw; left: 17%; position: absolute; width: 3.4vw; z-index: 2; }
+.C-HiddenBatteryCells { align-items: end; bottom: 2.2vw; display: flex; gap: 1.1vw; position: absolute; right: 6%; }
+.C-HiddenBatteryCells img { animation: hidden-battery-cell-pulse 5.4s ease-in-out infinite; object-fit: contain; transform-origin: bottom center; width: 7.5vw; }
+.C-HiddenBatteryCells img:nth-child(2) { animation-delay: 180ms; }
+.C-HiddenBatteryCells img:nth-child(3) { animation-delay: 360ms; }
+.C-HiddenBatteryCells img:nth-child(4) { animation-delay: 540ms; }
+@keyframes hidden-battery-cell-pulse { 0%,10%,100% { transform: translateY(0); } 4% { transform: translateY(-.45vw); } 7% { transform: translateY(.08vw); } }
+@media (max-width:768px) { .A-HiddenBatteryCursor { bottom:5vw; left:17%; width:7vw; }.C-HiddenBatteryCells { bottom:4vw; gap:2vw; right:1%; }.C-HiddenBatteryCells img { width:15vw; } }

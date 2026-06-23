@@ -9,6 +9,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let currentCategory = "all";
   let currentSearchValue = "";
+  const articlesGrid = document.querySelector(".W-ScreenThree-Art");
+  const featuredSection = document.querySelector(".W-ScreenTwo-Art");
+  const featuredCards = [1, 2]
+    .map((id) => document.getElementById(`article-card-${id}`))
+    .filter(Boolean);
 
   articlesData.forEach((article) => {
     const container = document.getElementById(`article-card-${article.id}`);
@@ -34,19 +39,38 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function updateVisibleArticles() {
-    articlesData.forEach((article) => {
-      const container = document.getElementById(`article-card-${article.id}`);
+    const isFiltering =
+      currentCategory !== "all" || currentSearchValue.trim() !== "";
+    const featuredCardsContainer = document.querySelector(
+      ".W-ScreenTwo-Art-Left",
+    );
+    const articleContainers = articlesData
+      .map((article) => ({
+        article,
+        container: document.getElementById(`article-card-${article.id}`),
+      }))
+      .filter(({ container }) => container);
+    const matchingContainers = articleContainers.filter(({ article }) =>
+      articleMatchesFilters(article),
+    );
+    const topCards = isFiltering
+      ? matchingContainers.slice(0, 2).map(({ container }) => container)
+      : featuredCards;
 
-      if (!container) return;
+    if (articlesGrid && featuredSection && featuredCardsContainer) {
+      featuredSection.hidden = false;
 
-      if (articleMatchesFilters(article)) {
-        container.style.display = "";
-      } else {
-        container.style.display = "none";
-      }
+      articleContainers.forEach(({ container }) => {
+        if (!topCards.includes(container)) articlesGrid.append(container);
+      });
+      topCards.forEach((container) => featuredCardsContainer.append(container));
+    }
+
+    articleContainers.forEach(({ article, container }) => {
+      container.style.display =
+        !isFiltering || articleMatchesFilters(article) ? "" : "none";
     });
   }
-
   filterButtons.forEach((button) => {
     button.addEventListener("click", () => {
       currentCategory = button.dataset.category;
@@ -70,3 +94,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
   updateVisibleArticles();
 });
+
+

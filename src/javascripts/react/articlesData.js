@@ -3,6 +3,8 @@ import articles from "../../data/articles.json";
 const articleImages = {
   "articles/30degree_article_img.png": require("../../img/articles/30degree_article_img.png"),
   "articles/A-BenefitCardImg.png": require("../../img/articles/A-BenefitCardImg.png"),
+  "articles/A-battery-title-big-charge.png": require("../../img/articles/A-battery-title-big-charge.png"),
+  "articles/Q-batteries-charge-icon.png": require("../../img/articles/Q-batteries-charge-icon.png"),
   "articles/A-icon-batteries.png": require("../../img/articles/A-icon-batteries.png"),
   "articles/A-icon-bottle.png": require("../../img/articles/A-icon-bottle.png"),
   "articles/A-icon-drying.png": require("../../img/articles/A-icon-drying.png"),
@@ -73,4 +75,7 @@ function resolveArticleImages(value, key) {
 }
 
 export default articles.map((article) => resolveArticleImages(article));
+
+
+
 

@@ -328,7 +328,7 @@
       "waste reduction",
       "daily habits"
     ],
-    "image": "articles/A-icon-batteries.png",
+    "image": "articles/Q-batteries-charge-icon.png",
     "link": "./articals/artical-battery-charge.html",
     "content": null
   },
@@ -472,6 +472,22 @@
     "image": "articles/A-icon-food.png",
     "link": "./articals/artical-food-waste.html",
     "content": null
+  },
+  {
+    "id": 19,
+    "slug": "hidden-battery-costs",
+    "title": "Батарейки: скрытые расходы",
+    "description": "Как использовать батарейки дольше и тратить меньше",
+    "category": [
+      "saving money",
+      "waste reduction",
+      "home",
+      "daily habits"
+    ],
+    "image": "articles/A-icon-batteries.png",
+    "link": "./articals/artical-hidden-battery-costs.html",
+    "content": null
   }
 ]
+
 
