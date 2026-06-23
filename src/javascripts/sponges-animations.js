@@ -18,8 +18,4 @@ if (animatedBlocks.length && "IntersectionObserver" in window) {
     block.style.setProperty("--sponges-reveal-delay", `${(index % 3) * 90}ms`);
     observer.observe(block);
   });
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> main

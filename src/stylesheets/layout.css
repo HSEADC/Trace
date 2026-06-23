@@ -170,7 +170,7 @@ h1 {
   display: grid;
   flex: 1;
   gap: 0.1vw;
-  grid-auto-rows: 7vw 206.5px;
+  grid-auto-rows: 7vw 104.5px;
   grid-template-columns: repeat(6, 1fr);
   margin-left: -9vw;
   overflow: hidden;

@@ -17,8 +17,4 @@ if (batteryAnimatedBlocks.length && "IntersectionObserver" in window) {
     block.style.setProperty("--battery-delay", `${(index % 3) * 90}ms`);
     batteryObserver.observe(block);
   });
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> main
