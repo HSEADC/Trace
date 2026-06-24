@@ -1,5 +1,6 @@
 .W-ScreenOne-Art {
   width: 100%;
+  margin-bottom: 5vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -197,7 +198,6 @@
   line-height: var(--ls-h4);
 }
 
-
 #articles-cards-root {
   width: 100%;
 }
@@ -312,7 +312,6 @@
   color: var(--color-read);
 }
 
-
 .W-ScreenThree-Art {
   width: 100%;
   height: auto;
@@ -327,7 +326,6 @@
   width: 100%;
   max-width: none;
 }
-
 
 .O_ArticleTeasers {
   width: 100%;
@@ -384,7 +382,6 @@
   color: var(--color-read);
   opacity: 0.6;
 }
-
 
 .article-card__top {
   display: flex;
@@ -526,9 +523,9 @@
   }
 }
 
-
-
-.O-ArticlesTelegram { position: relative; }
+.O-ArticlesTelegram {
+  position: relative;
+}
 .O-ArticlesTelegram .W-ReadTitile-Button {
   align-items: center;
   bottom: 4.5%;
@@ -538,7 +535,7 @@
   left: 4.5%;
   margin: 0;
   position: absolute;
-  right: 4.5%;
+  right: 6.5%;
   width: auto;
 }
 .O-ArticlesTelegram .A-ReadTitile {
@@ -554,7 +551,19 @@
   margin: 0;
   text-decoration: none;
 }
+
+.W-ReadTitile-Button {
+  right: 6.5%;
+}
+
 @media (max-width: 768px) {
-  .O-ArticlesTelegram .W-ReadTitile-Button { bottom: 5%; left: 5%; right: 5%; }
-  .O-ArticlesTelegram .A-ArticlesButton { height: 8vw; width: 28vw; }
+  .O-ArticlesTelegram .W-ReadTitile-Button {
+    bottom: 5%;
+    left: 5%;
+    right: 5%;
+  }
+  .O-ArticlesTelegram .A-ArticlesButton {
+    height: 6vw;
+    width: 28vw;
+  }
 }
